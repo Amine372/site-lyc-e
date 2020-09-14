@@ -12,10 +12,10 @@ class Manager_User{
   private $_mdp;
 
 //Inscription dans la bdd
-  public function envoiebdd(User $inscription){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('SELECT * FROM compte WHERE email = :email');
-    $req->execute(array('email'=>$inscription->getEmail()));
+  public function inscription(User $inscrit){
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
+    $req->execute(array('email'=>$inscrit->getEmail()));
     $donnee = $req->fetch();
     if($donnee)
     {
@@ -24,7 +24,7 @@ class Manager_User{
     }
     else{
       $req = $bdd->prepare('INSERT into compte (nom, prenom, email, mdp) value(?,?,?,?)');
-      $req -> execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getEmail(), SHA1($inscription->getMdp())));
+      $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
       header('Location: ../view/confirm_inscription.php');
     }
   }
@@ -42,11 +42,11 @@ class Manager_User{
       $mail->Host = "smtp.gmail.com";
       $mail->Port = 465; // or 587
       $mail->IsHTML(true);
-      $mail->Username = "quentin.lignani.schuman@gmail.com";
-      $mail->Password = "Admwb2000";
+      $mail->Username = "";
+      $mail->Password = "";
       $mail->SetFrom($inscription->getEmail());
-      $mail->Subject = "[ Création de compte réussi";
-      $mail->Body = "<center><b>Cinema</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
+      $mail->Subject = "Création de compte réussi";
+      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
       $mail->AddAddress($inscription->getMail());
       if(!$mail->Send())
       {
@@ -62,8 +62,8 @@ class Manager_User{
 
   //Connexion
   public function connexion(User $connexion){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('SELECT * from compte where email = ? AND mdp = ?');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?');
     $req->execute(array($connexion->getEmail(), SHA1($connexion->getMdp())));
     $donnee = $req->fetch();
     if ($donnee){
@@ -83,8 +83,8 @@ class Manager_User{
   //Récupération des données utilisateur pour la modification
   public function placeholder($email){
 
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('SELECT nom, prenom, email from compte where email = ?');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT nom, prenom, email from utilisateur where email = ?');
     $req->execute(array($email));
     $donnee = $req->fetch();
     return $donnee;
@@ -92,28 +92,22 @@ class Manager_User{
 
   //Update des données utilisateur dans la bdd
   public function modification(User $modif, $email){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('UPDATE compte SET nom = ?, prenom = ? WHERE email = ?');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ? WHERE email = ?');
     $req->execute(array($modif->getNom(), $modif->getPrenom(), $email));
     header('location: ../index.php');
     //actualisation du nom de l'utilisateur dans les pages
-    $req = $bdd->prepare('SELECT nom from compte where email = ?');
+    $req = $bdd->prepare('SELECT nom from utilisateur where email = ?');
     $req->execute(array($email));
     $donnee = $req->fetch();
     $_SESSION['nom'] = $donnee['nom'];
   }
 
-  //reservation dans la bdd
-  public function reservation($email, $nom, $date, $heure, $nb_pers, $film){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('INSERT into reservation (email, nom, nb_pers, film, date, heure) value(?,?,?,?,?,?)');
-    $req -> execute(array($email, $nom, $nb_pers, $film, $date, $heure));
-  }
 
   //inscription d'un compte admin
   public function inscrip_admin(User $inscription){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('SELECT * FROM compte WHERE email = :email');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscription->getEmail()));
     $donnee = $req->fetch();
     if($donnee)
@@ -122,7 +116,7 @@ class Manager_User{
       header('Location: ../view/ajout_admin.php');
     }
     else{
-      $req = $bdd->prepare('INSERT into compte (nom, prenom, email, mdp, role) value(?,?,?,?, "admin")');
+      $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp, role) value(?,?,?,?, "admin")');
       $req -> execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getEmail(), SHA1($inscription->getMdp())));
 
       $_SESSION['add_admin'] = "Un compte administrateur a été ajouter avec succès.";
@@ -132,48 +126,11 @@ class Manager_User{
 
   //récupération des données utilisateur pour un affichage
   public function recup_user(){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->query('SELECT * FROM compte');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->query('SELECT * FROM utilisateur');
     $donnee = $req->fetchall();
     return $donnee;
   }
 
-  //récupération des données réservations pour un affichage
-  public function recup_reserv(){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->query('SELECT * FROM reservation');
-    $donnee = $req->fetchall();
-    return $donnee;
-  }
-
-  //suppression des réservations
-  public function suppr_reserv(){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->query('TRUNCATE TABLE reservation');
-    echo '<script>
-    alert("Toutes les réservations ont été supprimé.");
-    window.location.href="manage_reserv.php"
-    </script>';
-  }
-
-  //récupération des données réservations pour un affichage utilisateur
-  public function recup_reserv_user($email){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('SELECT * FROM reservation WHERE email = ?');
-    $req->execute(array($email));
-    $donnee = $req->fetchall();
-    return $donnee;
-  }
-
-  //suppression des réservations utilisateurs
-  public function suppr_reserv_user($email){
-    $bdd = new PDO('mysql:host=localhost;dbname=cinema','root','');
-    $req = $bdd->prepare('DELETE FROM reservation where email = ?');
-    $req->execute(array($email));
-    echo '<script>
-    alert("Toutes vos réservations ont été supprimé.");
-    window.location.href="mon_compte.php"
-    </script>';
-  }
 }
 ?>
