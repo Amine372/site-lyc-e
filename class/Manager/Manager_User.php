@@ -26,10 +26,9 @@ class Manager_User{
       $req = $bdd->prepare('INSERT into compte (nom, prenom, email, mdp) value(?,?,?,?)');
       $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
       header('Location: ../view/confirm_inscription.php');
-    }
-  }
+
       //Envoie de mail
-      /*require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
+      require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
       require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
       require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
@@ -42,8 +41,8 @@ class Manager_User{
       $mail->Host = "smtp.gmail.com";
       $mail->Port = 465; // or 587
       $mail->IsHTML(true);
-      $mail->Username = "";
-      $mail->Password = "";
+      $mail->Username = "quentin.lignani.schuman@gmail.com";
+      $mail->Password = "Admwb2000";
       $mail->SetFrom($inscription->getEmail());
       $mail->Subject = "Création de compte réussi";
       $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
@@ -58,7 +57,7 @@ class Manager_User{
 
       header('location: ../view/connexion.php');
     }
-  }*/
+  }
 
   //Connexion
   public function connexion(User $connexion){
