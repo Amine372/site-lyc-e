@@ -15,7 +15,7 @@
                     'email'=>$_POST['email'],
                     'mdp'=>$_POST['mdp']]);
     $inscrit = new Manager_User;
-    $inscrit->envoiebdd($inscription);
+    $inscrit->inqcription($inscription);
   }
 
 ?>
