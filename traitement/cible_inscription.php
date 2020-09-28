@@ -4,8 +4,7 @@
   require '../class/manager/Manager_User.php';
   session_start();
   //Vérification du mdp
-  $_POST['mdp'] = $mdp;
-  
+
   if($_POST['mdp'] != $_POST['confirmmdp']){
     $_SESSION['erreur_inscr'] = "Erreur dans le mot de passe.";
     header('Location: ../view/form_inscription.php');
@@ -17,7 +16,7 @@
                     'email'=>$_POST['email'],
                     'mdp'=>$_POST['mdp']]);
     $inscrit = new Manager_User;
-    $inscrit->inqcription($inscription);
+    $inscrit->inscription($inscription);
   }
 
 ?>

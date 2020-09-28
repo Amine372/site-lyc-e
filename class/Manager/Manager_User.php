@@ -23,9 +23,9 @@ class Manager_User{
       header('Location: ../view/form_inscription.php');
     }
     else{
-      $req = $bdd->prepare('INSERT into compte (nom, prenom, email, mdp) value(?,?,?,?)');
+      $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
       $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
-      header('Location: ../view/confirm_inscription.php');
+      header('Location: ../view/confirm_inscription.html');
 
       //Envoie de mail
       require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
