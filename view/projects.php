@@ -18,7 +18,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
-<?php include('form.php'); ?>
+<?require('form.php'); ?>
 </head>
 
 
@@ -305,7 +305,7 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="images/icon8.png" alt=""><span>Développeur Front End</span></li>
+													<li><img src="images/icon8.png" alt=""><span><?= $Comm; ?></span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>

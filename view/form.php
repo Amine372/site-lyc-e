@@ -13,5 +13,9 @@
 *les informations relatives à celle-ci*/
 catch(PDOException $e){
 echo "Erreur : " . $e->getMessage();
+$reponse = $bdd->prepare('SELECT * FROM evenements WHERE Comm = :Comm ') ;  //on prepare la requete de php pour accéder aux identifiants et aux mdp dans la base de données en sql
+$reponse->execute(array('Comm'=>$Comm)); //on insère sous forme de tableau les données que l'on veut récupérer de la base
+$donne = $reponse->fetch(); //on execute finalement la requete
+$donne = $Comm;
 }
       ?>
