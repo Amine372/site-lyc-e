@@ -3,20 +3,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Profil de l'entreprise</title>
+<title>Lycée privé et UFA Robert Schuman</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="../css/animate.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/flatpickr.min.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="css/line-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/line-awesome-font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 
 
@@ -31,7 +31,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="../index.php" title=""><img src="images/logo.png" alt=""></a>
+						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -42,40 +42,42 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="../index.php" title="">
+								<a href="index.php" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
 							</li>
 							<li>
-								<a href="projects.html" title="">
+								<a href="view/projects.html" title="">
 									<span><img src="images/icon3.png" alt=""></span>
-									Evènements
+									Evénements
 								</a>
 							</li>
 							<li>
-								<a href="profiles.html" title="">
+								<a href="view/profiles.html" title="">
 									<span><img src="images/icon4.png" alt=""></span>
 									Profils
 								</a>
 								<ul>
-									<li><a href="user-profile.html" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
+									<li><a href="view/user-profile.html" title="">Nom d'uttilisateur</a></li>
+									<li><a href="view/my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="jobs.html" title="">
+								<a href="view/jobs.html" title="">
 									<span><img src="images/icon5.png" alt=""></span>
-									Emplois
+									Annonces
 								</a>
 							</li>
 
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
-						<a href="#" title=""><i class="fa fa-bars"></i></a>
+						<i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
+						<?php
+						echo '
 						<div class="user-info">
 							<img src="http://via.placeholder.com/30x30" alt="">
 							<a href="#" title="">John</a>
@@ -84,10 +86,11 @@
 						<div class="user-account-settingss">
 							<h3><a href="#" title="">Mon Compte</a></h3>
 							<ul class="us-links">
-								<li><a href="profile-account-setting.html" title="">Paramètre du compte</a></li>
+								<li><a href="view/profile-account-setting.html" title="">Paramètre du compte</a></li>
 							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
+							<h3 class="tc"><a href="view/sign-in.html" title="">Se déconnecter</a></h3>
+						</div><!--fin des paramètres du compte utilisateur-->';
+						?>
 					</div>
 				</div><!--fin des données d'en-tête-->
 			</div>
@@ -226,7 +229,7 @@
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="portfolio-dd">
 										<div class="portfolio-gallery-sec">
-											<h3>Portfolio</h3>
+											<h3>Gallerie</h3>
 											<div class="gallery_pf">
 												<div class="row">
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
@@ -300,16 +303,11 @@
 			<div class="footy-sec mn no-margin">
 				<div class="container">
 					<ul>
-						<li><a href="#" title="">Help Center</a></li>
-						<li><a href="#" title="">Privacy Policy</a></li>
-						<li><a href="#" title="">Community Guidelines</a></li>
-						<li><a href="#" title="">Cookies Policy</a></li>
-						<li><a href="#" title="">Career</a></li>
-						<li><a href="#" title="">Forum</a></li>
-						<li><a href="#" title="">Language</a></li>
+						<li><a href="#" title="">Annonces</a></li>
+						<li><a href="#" title="">Evenements</a></li>
 						<li><a href="#" title="">Copyright Policy</a></li>
 					</ul>
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2018</p>
+					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
 				</div>
 			</div>
