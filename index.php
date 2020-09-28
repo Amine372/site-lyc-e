@@ -1,7 +1,5 @@
 <?php
     session_start();
-    $_SESSION['nom'] = "Loic";
-    echo $_SESSION['nom'];
 
 ?>
 
@@ -82,19 +80,35 @@
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<div class="user-info">
-							<img src="http://via.placeholder.com/30x30" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3><a href="#" title="">Mon Compte</a></h3>
-							<ul class="us-links">
-								<li><a href="view/profile-account-setting.html" title="">Paramètre du compte</a></li>
-							</ul>
-							<h3 class="tc"><a href="view/sign-in.html" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
-					</div>
+            <?php
+						if (isset($_SESSION['nom'])) {
+              echo '<div class="user-info">
+  							<img src="http://via.placeholder.com/30x30" alt="">
+  							<a href="#" title="">'.$_SESSION['nom'].'</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="#" title="">Mon Compte</a></h3>
+  							<ul class="us-links">
+  								<li><a href="view/profile-account-setting.html" title="">Paramètre du compte</a></li>
+  							</ul>
+  							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            else {
+              echo '<div class="user-info">
+  							<a href="#" title="">Connectez vous</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="view/sign-in.html" title="">Connexion</a></h3>
+  							<ul class="us-links">
+  								<li><a href="view/profile-account-setting.html" title="">Inscription</a></li>
+  							</ul>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            ?>
+          </div>
 				</div><!--fin des données d'en-tête-->
 			</div>
 		</header><!--fin d'en-tête-->
