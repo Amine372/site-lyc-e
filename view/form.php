@@ -10,10 +10,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           }
 
-$reponse = $bdd->query('
-  SELECT id, id_utilisateur, titre , description ,date, Comm
-  FROM evenements
-  ORDER BY ID DESC LIMIT 0, 1');
+$reponse = $bdd->query('SELECT id, id_utilisateur, titre , description ,date, Comm FROM evenements ORDER BY ID DESC LIMIT 0, 1');
 
   while ($donnees = $reponse->fetch())
   { //Affichage avec un echo
