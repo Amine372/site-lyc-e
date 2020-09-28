@@ -280,7 +280,6 @@
 													</li>
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
 												</ul>
-												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
 										</div><!--post-bar end-->
 										<div class="post-bar">
@@ -305,7 +304,7 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="images/icon8.png" alt=""><span><?= $Comm; ?></span></li>
+													<li><img src="images/icon8.png" alt=""><span><?  echo '' . htmlspecialchars($donnees['id']) .?></span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
