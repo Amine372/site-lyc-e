@@ -3,19 +3,32 @@
           $username = 'root';
           $password = '';
 
-          try{
-  $conn = new PDO("mysql:host=$servername;dbname=projet_lycee", $username, $password);
-  //On définit le mode d'erreur de PDO sur Exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
+          try
+          {
+            $conn = new PDO("mysql:host=$servername;dbname=projet_lycee", $username, $password);
+            //On définit le mode d'erreur de PDO sur Exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          }
 
-/*On capture les exceptions si une exception est lancée et on affiche
-*les informations relatives à celle-ci*/
-catch(PDOException $e){
-echo "Erreur : " . $e->getMessage();
-$reponse = $bdd->prepare('SELECT * FROM evenements WHERE Comm = :Comm ') ;  //on prepare la requete de php pour accéder aux identifiants et aux mdp dans la base de données en sql
-$reponse->execute(array('Comm'=>$Comm)); //on insère sous forme de tableau les données que l'on veut récupérer de la base
-$donne = $reponse->fetch(); //on execute finalement la requete
-$donne = $Comm;
-}
+$reponse = $bdd->query('
+  SELECT id, id_utilisateur, titre , description ,date, Comm
+  FROM evenements
+  ORDER BY ID DESC LIMIT 0, 1');
+
+  while ($donnees = $reponse->fetch())
+  { //Affichage avec un echo
+    echo '' . htmlspecialchars($donnees['id']) .
+    '' . htmlspecialchars($donnees['nom']) .
+     '' . htmlspecialchars($donnees['mail']) .
+     '' . htmlspecialchars($donnees['film']) .
+     '' . htmlspecialchars($donnees['nbplaces']) .
+
+     '</p>';
+
+
+  }
+
+
+$reponse->closeCursor();
+
       ?>
