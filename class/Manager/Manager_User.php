@@ -4,7 +4,8 @@ require_once(__DIR__.'/../modele/User.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-class Manager_User{
+class Manager_User
+{
 
   private $_nom;
   private $_prenom;
@@ -12,7 +13,8 @@ class Manager_User{
   private $_mdp;
 
 //Inscription dans la bdd
-  public function inscription(User $inscrit){
+  public function inscription(User $inscrit)
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscrit->getEmail()));
@@ -22,7 +24,8 @@ class Manager_User{
       $_SESSION['erreur_inscr'] = "L'email est déjà utilisé.";
       header('Location: ../view/form_inscription.php');
     }
-    else{
+    else
+    {
       $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
       $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
       header('Location: ../view/confirm_inscription.html');
@@ -51,7 +54,8 @@ class Manager_User{
       {
          echo "Mailer Error: " . $mail->ErrorInfo;
       }
-      else {
+      else
+      {
          echo "Message has been sent";
       }
 
@@ -60,12 +64,14 @@ class Manager_User{
   }
 
   //Connexion
-  public function connexion(User $connexion){
+  public function connexion(User $connexion)
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?');
     $req->execute(array($connexion->getEmail(), SHA1($connexion->getMdp())));
     $donnee = $req->fetch();
-    if ($donnee){
+    if ($donnee)
+    {
       $_SESSION['email'] = $donnee['email'];
       $_SESSION['nom'] = $donnee['nom'];
       if ($donnee['role'] == "admin"){
@@ -73,14 +79,16 @@ class Manager_User{
       }
       header('location: ../index.php');
     }
-    else{
+    else
+    {
       $_SESSION['erreur_co'] = true;
       header('location: ../view/form_connexion.php');
     }
   }
 
   //Récupération des données utilisateur pour la modification
-  public function placeholder($email){
+  public function placeholder($email)
+  {
 
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT nom, prenom, email from utilisateur where email = ?');
@@ -90,7 +98,8 @@ class Manager_User{
   }
 
   //Update des données utilisateur dans la bdd
-  public function modification(User $modif, $email){
+  public function modification(User $modif, $email)
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ? WHERE email = ?');
     $req->execute(array($modif->getNom(), $modif->getPrenom(), $email));
@@ -114,7 +123,8 @@ class Manager_User{
       $_SESSION['erreur_add_admin'] = "L'identifiant est déjà utilisé.";
       header('Location: ../view/ajout_admin.php');
     }
-    else{
+    else
+    {
       $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp, role) value(?,?,?,?, "admin")');
       $req -> execute(array($inscription->getNom(), $inscription->getPrenom(), $inscription->getEmail(), SHA1($inscription->getMdp())));
 
@@ -124,7 +134,8 @@ class Manager_User{
   }
 
   //récupération des données utilisateur pour un affichage
-  public function recup_user(){
+  public function recup_user()
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->query('SELECT * FROM utilisateur');
     $donnee = $req->fetchall();
