@@ -18,10 +18,11 @@ $reponse = $bdd->query('
   while ($donnees = $reponse->fetch())
   { //Affichage avec un echo
     echo '' . htmlspecialchars($donnees['id']) .
-    '' . htmlspecialchars($donnees['nom']) .
-     '' . htmlspecialchars($donnees['mail']) .
-     '' . htmlspecialchars($donnees['film']) .
-     '' . htmlspecialchars($donnees['nbplaces']) .
+    '' . htmlspecialchars($donnees['id_utilisateur']) .
+     '' . htmlspecialchars($donnees['titre']) .
+     '' . htmlspecialchars($donnees['description']) .
+     '' . htmlspecialchars($donnees['date']) .
+     '' . htmlspecialchars($donnees['Comm']) .
 
      '</p>';
 
