@@ -48,7 +48,7 @@ catch(PDOException $e){
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="../index.html" title=""><img src="images/logo.png" alt=""></a>
+						<a href="../index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -59,7 +59,7 @@ catch(PDOException $e){
 					<nav>
 						<ul>
 							<li>
-								<a href="../index.html" title="">
+								<a href="../index.php" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
