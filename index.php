@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $_SESSION['nom'] = "Loic";
+    echo $_SESSION['nom'];
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -31,7 +37,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
+						<a href="index.html" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -42,7 +48,7 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="index.php" title="">
+								<a href="index.html" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
@@ -73,11 +79,9 @@
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
-						<i class="fa fa-bars"></i></a>
+						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<?php
-						echo '
 						<div class="user-info">
 							<img src="http://via.placeholder.com/30x30" alt="">
 							<a href="#" title="">John</a>
@@ -89,8 +93,7 @@
 								<li><a href="view/profile-account-setting.html" title="">Paramètre du compte</a></li>
 							</ul>
 							<h3 class="tc"><a href="view/sign-in.html" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->';
-						?>
+						</div><!--fin des paramètres du compte utilisateur-->
 					</div>
 				</div><!--fin des données d'en-tête-->
 			</div>
