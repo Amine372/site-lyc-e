@@ -17,6 +17,8 @@
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+
+<?php include('form.php'); ?>
 </head>
 
 
@@ -31,8 +33,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-
-						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
+						<a href="../index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -43,21 +44,20 @@
 					<nav>
 						<ul>
 							<li>
-
 								<a href="../index.php" title="">
-									<span><img src="../images/icon1.png" alt=""></span>
+									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
 							</li>
 							<li>
 								<a href="projects.php" title="">
-									<span><img src="../images/icon3.png" alt=""></span>
+									<span><img src="images/icon3.png" alt=""></span>
 									Evènements
 								</a>
 							</li>
 							<li>
 								<a href="profiles.html" title="">
-									<span><img src="../images/icon4.png" alt=""></span>
+									<span><img src="images/icon4.png" alt=""></span>
 									Profils
 								</a>
 								<ul>
@@ -67,7 +67,7 @@
 							</li>
 							<li>
 								<a href="jobs.html" title="">
-									<span><img src="../images/icon5.png" alt=""></span>
+									<span><img src="images/icon5.png" alt=""></span>
 									Emplois
 								</a>
 							</li>
@@ -229,7 +229,7 @@
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
 														<h3>John Doe</h3>
-														<span><img src="../images/clock.png" alt="">Il y a 3 minutes</span>
+														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
 												<div class="ed-opts">
@@ -245,8 +245,8 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="../images/icon8.png" alt=""><span>Développeur Front End</span></li>
-													<li><img src="../images/icon9.png" alt=""><span>Inde</span></li>
+													<li><img src="images/icon8.png" alt=""><span><? $Comm = date("Y");
+													echo $Comm;?></span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -275,10 +275,10 @@
 												<ul class="like-com">
 													<li>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
-														<img src="../images/liked-img.png" alt="">
+														<img src="images/liked-img.png" alt="">
 														<span>25</span>
 													</li>
-													<li><a href="#" title="" class="com"><img src="../images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -289,7 +289,7 @@
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
 														<h3>John Doe</h3>
-														<span><img src="../images/clock.png" alt="">Il y a 3 minutes</span>
+														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
 												<div class="ed-opts">
@@ -305,8 +305,7 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="../images/icon8.png" alt=""><span>Développeur Front End</span></li>
-													<li><img src="../images/icon9.png" alt=""><span>Inde</span></li>
+													<li><img src="images/icon8.png" alt=""><span>Développeur Front End</span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -335,10 +334,10 @@
 												<ul class="like-com">
 													<li>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
-														<img src="../images/liked-img.png" alt="">
+														<img src="images/liked-img.png" alt="">
 														<span>25</span>
 													</li>
-													<li><a href="#" title="" class="com"><img src="../images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -349,7 +348,7 @@
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
 														<h3>John Doe</h3>
-														<span><img src="../images/clock.png" alt="">Il y a 3 minutes</span>
+														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
 												<div class="ed-opts">
@@ -365,8 +364,7 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="../images/icon8.png" alt=""><span>Développeur Front End</span></li>
-													<li><img src="../images/icon9.png" alt=""><span>Inde</span></li>
+													<li><img src="images/icon8.png" alt=""><span>Développeur Front End</span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -395,10 +393,10 @@
 												<ul class="like-com">
 													<li>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
-														<img src="../images/liked-img.png" alt="">
+														<img src="images/liked-img.png" alt="">
 														<span>25</span>
 													</li>
-													<li><a href="#" title="" class="com"><img src="../images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -409,7 +407,7 @@
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
 														<h3>John Doe</h3>
-														<span><img src="../images/clock.png" alt="">Il y a 3 minutes</span>
+														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
 												<div class="ed-opts">
@@ -425,8 +423,8 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="../images/icon8.png" alt=""><span>Développeur Front End</span></li>
-													<li><img src="../images/icon9.png" alt=""><span>Inde</span></li>
+													<li><img src="images/icon8.png" alt=""><span>Développeur Front End</span></li>
+													<li><img src="images/icon9.png" alt=""><span>Inde</span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -455,10 +453,10 @@
 												<ul class="like-com">
 													<li>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
-														<img src="../images/liked-img.png" alt="">
+														<img src="images/liked-img.png" alt="">
 														<span>25</span>
 													</li>
-													<li><a href="#" title="" class="com"><img src="../images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -475,7 +473,7 @@
 							</div>
 							<div class="col-lg-3">
 								<div >
-										<img src="../images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
+										<img src="images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
 									<div class="widget widget-jobs">
 										<div class="sd-title">
 											<h3>Top Jobs</h3>
