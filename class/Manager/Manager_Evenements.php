@@ -14,14 +14,10 @@ class Manager_Evenements
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * from evenements ORDER BY `evenements`.`id` DESC');
     $req->execute(array($Evenements->getid(), $Evenements->getid_utilisateur(), $Evenements->getdescription(), $Evenements->getdate(),$Evenements->getComm()));
-    $donnee = $req->fetch();
+    $donnee = $req->fetchall();
     if ($donnee)
     {
-      echo $id;
-      echo $id_utilisateur;
-      echo $description;
-      echo $date;
-      echo $Comm;
+      return $donnee;
     }
     else
     {
