@@ -13,22 +13,20 @@ class Manager_Evenements
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * from evenements ORDER BY `evenements`.`id` DESC');
-    $req->execute(array($connexion->getEmail(), SHA1($connexion->getMdp())));
+    $req->execute(array($Evenements->getid(), $Evenements->getid_utilisateur(), $Evenements->getdescription(), $Evenements->getdate(),$Evenements->getComm()));
     $donnee = $req->fetch();
     if ($donnee)
     {
-      $_SESSION['email'] = $donnee['email'];
-      $_SESSION['nom'] = $donnee['nom'];
-      if ($donnee['role'] == "admin")
-      {
-        $_SESSION['role'] = $donnee['role'];
-      }
-      header('location: ../index.php');
+      echo $id;
+      echo $id_utilisateur;
+      echo $description;
+      echo $date;
+      echo $Comm;
     }
     else
     {
       $_SESSION['erreur_co'] = true;
-      header('location: ../view/sign-in.php');
+      header('location: ../view/projects.php');
     }
   }
 
