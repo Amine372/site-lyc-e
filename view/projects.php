@@ -18,7 +18,9 @@
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 <?php
- require ('../traitement/form.php'); ?>
+ require '../class/Manager/Manager_Evenements.php';
+ require '../class/Modele/Model_Evenements.php';
+  ?>
 </head>
 
 
