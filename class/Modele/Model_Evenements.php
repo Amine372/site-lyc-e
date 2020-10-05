@@ -1,5 +1,5 @@
 <?php
-class Manager_Evenements
+class Model_Evenements
 {
   private $_id;
   private $_id_utilisateur;
@@ -57,13 +57,22 @@ class Manager_Evenements
       $this->_description = $description;
     }
   }
-  public function setid($id)
+  public function setdate($date)
   {
-    $id = (int) $id;
+    $date = (int) $date;
 
-    if ($id >= 1 && $id <= 100)
+    if ($date >= 1 && $date <= 100)
     {
-      $this->_id = $id;
+      $this->_date = $date;
+    }
+  }
+  public function setComm($Comm)
+  {
+    $Comm = (int) $Comm;
+
+    if ($Comm >= 1 && $Comm <= 100)
+    {
+      $this->_Comm = $Comm;
     }
   }
 }
