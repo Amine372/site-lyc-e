@@ -274,11 +274,12 @@
 											<div class="job-status-bar">
 												<ul class="like-com">
 													<li>
+														<span>25</span>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
-														<span>25</span>
+
 													</li>
-													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
 											</div>
 										</div><!--post-bar end-->
@@ -332,11 +333,12 @@
 											<div class="job-status-bar">
 												<ul class="like-com">
 													<li>
+														<span>25</span>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
-														<span>25</span>
+
 													</li>
-													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -391,13 +393,14 @@
 											<div class="job-status-bar">
 												<ul class="like-com">
 													<li>
+														<span>25</span>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
-														<span>25</span>
+
 													</li>
-													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
-												<a><i class="la la-eye"></i>Views 50</a>
+												<a><i class="la la-eye"></i>50 Vues</a>
 											</div>
 										</div><!--post-bar end-->
 										<div class="post-bar">
@@ -451,11 +454,12 @@
 											<div class="job-status-bar">
 												<ul class="like-com">
 													<li>
+														<span>25</span>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
-														<span>25</span>
+
 													</li>
-													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires 15</a></li>
+													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
@@ -472,7 +476,7 @@
 							</div>
 							<div class="col-lg-3">
 								<div >
-										<img src="images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
+										<img src="../images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
 									<div class="widget widget-jobs">
 										<div class="sd-title">
 											<h3>Top Jobs</h3>
