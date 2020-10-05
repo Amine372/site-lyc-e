@@ -313,11 +313,11 @@
 												</ul>
 											</div>
 											<div class="job_descp">
-												<h3>Ios Shopping mobile app</h3>
+												<h3>Alternant Sécurité Informatique H/F</h3>
 												<ul class="job-dt">
 													<li><span>300€ - 350€</span></li>
 												</ul>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">Voir plus</a></p>
+												<p>La Direction des Systèmes d'Information de McDonald's France conçoit des solutions informatiques pour son réseau de restaurants. Elle s'articule autour des pôles qui sont le Build (Programmation), le Run (Exploitation) et le pôle Organisation et Qualité... <a href="#" title="">Voir plus</a></p>
 												<ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>
 													<li><a href="#" title="">PHP</a></li>
@@ -432,11 +432,11 @@
 												</ul>
 											</div>
 											<div class="job_descp">
-												<h3>Ios Shopping mobile app</h3>
+												<h3>Alternant Sécurité Informatique H/F</h3>
 												<ul class="job-dt">
 													<li><span>300€ - 350€</span></li>
 												</ul>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">Voir plus</a></p>
+												<p>La Direction des Systèmes d'Information de McDonald's France conçoit des solutions informatiques pour son réseau de restaurants. Elle s'articule autour des pôles qui sont le Build (Programmation), le Run (Exploitation) et le pôle Organisation et Qualité... <a href="#" title="">Voir plus</a></p>
 												<ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>
 													<li><a href="#" title="">PHP</a></li>
