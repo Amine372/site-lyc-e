@@ -74,7 +74,8 @@ class Manager_User
     {
       $_SESSION['email'] = $donnee['email'];
       $_SESSION['nom'] = $donnee['nom'];
-      if ($donnee['role'] == "admin"){
+      if ($donnee['role'] == "admin")
+      {
         $_SESSION['role'] = $donnee['role'];
       }
       header('location: ../index.php');
