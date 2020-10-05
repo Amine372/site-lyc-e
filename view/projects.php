@@ -18,7 +18,8 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
-<? require('form.php'); ?>
+<?php
+ require ('../traitement/form.php'); ?>
 </head>
 
 
