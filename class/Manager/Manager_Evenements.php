@@ -12,7 +12,7 @@ class Manager_Evenements
   public function Evenements(Evenements $Evenements)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?');
+    $req = $bdd->prepare('SELECT * from evenements ORDER BY `evenements`.`id` DESC');
     $req->execute(array($connexion->getEmail(), SHA1($connexion->getMdp())));
     $donnee = $req->fetch();
     if ($donnee)
