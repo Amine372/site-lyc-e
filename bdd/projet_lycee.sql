@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 05 oct. 2020 à 12:09
+-- Généré le :  lun. 05 oct. 2020 à 13:48
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `projet_lycee`
 --
-CREATE DATABASE IF NOT EXISTS `projet_lycee` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `projet_lycee`;
 
 -- --------------------------------------------------------
 
@@ -69,8 +67,16 @@ CREATE TABLE IF NOT EXISTS `evenements` (
   `titre` varchar(40) NOT NULL,
   `description` text NOT NULL,
   `date` date NOT NULL,
+  `Comm` text NOT NULL,
   KEY `fk_id_user_event` (`id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `evenements`
+--
+
+INSERT INTO `evenements` (`id`, `id_utilisateur`, `titre`, `description`, `date`, `Comm`) VALUES
+(1, 3, 'AMINE', 'NAKHIK', '2020-10-05', 'TEST');
 
 -- --------------------------------------------------------
 
@@ -106,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `date_connexion` date DEFAULT NULL,
   `verif` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -114,7 +120,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `role`, `date_connexion`, `verif`) VALUES
 (1, 'a', 'a', 'a@a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', NULL, NULL, 1),
-(2, 'b', 'b', 'b@b', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', NULL, NULL, 1);
+(2, 'b', 'b', 'b@b', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', NULL, NULL, 1),
+(3, 'Nakhila', 'Amine', 'qq@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, 1);
 
 --
 -- Contraintes pour les tables déchargées
