@@ -1,12 +1,9 @@
 <?php
-include('')
-          $servername = 'localhost';
-          $username = 'root';
-          $password = '';
+include('../view/projects.php');
 
           try
           {
-            $conn = new PDO("mysql:host=$servername;dbname=projet_lycee", $username, $password);
+            $conn = new PDO("mysql:host=localhost;dbname=projet_lycee", "root", "");
             //On définit le mode d'erreur de PDO sur Exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           }
