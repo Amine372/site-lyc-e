@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 14 sep. 2020 à 13:00
+-- Généré le :  lun. 05 oct. 2020 à 12:09
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -100,13 +100,21 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nom` varchar(40) NOT NULL,
   `prenom` varchar(40) NOT NULL,
-  `mail` varchar(40) NOT NULL,
+  `email` varchar(40) NOT NULL,
   `mdp` varchar(40) NOT NULL,
   `role` varchar(10) DEFAULT NULL,
   `date_connexion` date DEFAULT NULL,
   `verif` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `role`, `date_connexion`, `verif`) VALUES
+(1, 'a', 'a', 'a@a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', NULL, NULL, 1),
+(2, 'b', 'b', 'b@b', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', NULL, NULL, 1);
 
 --
 -- Contraintes pour les tables déchargées
