@@ -25,12 +25,7 @@
 
 
 <body>
-
-
-	<div class="wrapper">
-
-
-
+<div class="wrapper">
 		<header>
 			<div class="container">
 				<div class="header-data">
@@ -230,7 +225,7 @@
 												<div class="usy-dt">
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
-														<h3><?php echo '' . htmlspecialchars($donnees['id']) . ?> </h3>
+														<h3><?php echo id_utilisateur; ?> </h3>
 														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
@@ -307,7 +302,7 @@
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="images/icon8.png" alt=""><span><?  echo '' . htmlspecialchars($donnees['id']) .?></span></li>
+													<li><img src="images/icon8.png" alt=""><span><?php //echo id_utilisateur; ?></span></li>
 												</ul>
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
