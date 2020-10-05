@@ -1,5 +1,5 @@
 <?php
-include('../view/project.php')
+include('../view/projects.php')
           $servername = 'localhost';
           $username = 'root';
           $password = '';

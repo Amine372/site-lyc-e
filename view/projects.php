@@ -228,7 +228,7 @@
 												<div class="usy-dt">
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
-														<h3>John Doe</h3>
+														<h3><?php'' . htmlspecialchars($donnees['id_utilisateur']) .?></h3>
 														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>
