@@ -22,7 +22,7 @@ class Manager_User
     if($donnee)
     {
       $_SESSION['erreur_inscr'] = "L'email est déjà utilisé.";
-      header('Location: ../view/form_inscription.php');
+      header('Location: ../view/sign-in.html');
     }
     else
     {
@@ -59,7 +59,7 @@ class Manager_User
          echo "Message has been sent";
       }
 
-      header('location: ../view/connexion.php');
+      header('location: ../view/sign-in.html');
     }
   }
 
@@ -83,7 +83,7 @@ class Manager_User
     else
     {
       $_SESSION['erreur_co'] = true;
-      header('location: ../view/form_connexion.php');
+      header('location: ../view/sign-in.html');
     }
   }
 
