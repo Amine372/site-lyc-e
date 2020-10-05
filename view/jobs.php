@@ -31,8 +31,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-
-						<a href="../index.php" title=""><img src="images/logo.png" alt=""></a>
+						<a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -43,16 +42,15 @@
 					<nav>
 						<ul>
 							<li>
-
 								<a href="../index.php" title="">
-									<span><img src="images/icon1.png" alt=""></span>
+									<span><img src="../images/icon1.png" alt=""></span>
 									Accueil
 								</a>
 							</li>
 							<li>
-								<a href="projects.php" title="">
+								<a href="projects.html" title="">
 									<span><img src="../images/icon3.png" alt=""></span>
-									Evènements
+									Evénements
 								</a>
 							</li>
 							<li>
@@ -66,9 +64,9 @@
 								</ul>
 							</li>
 							<li>
-								<a href="jobs.html" title="">
+								<a href="jobs.php" title="">
 									<span><img src="../images/icon5.png" alt=""></span>
-									Emplois
+									Annonces
 								</a>
 							</li>
 
@@ -78,19 +76,35 @@
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<div class="user-info">
-							<img src="http://via.placeholder.com/30x30" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3><a href="#" title="">Mon Compte</a></h3>
-							<ul class="us-links">
-								<li><a href="profile-account-setting.html" title="">Paramètre du compte</a></li>
-							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
-					</div>
+            <?php
+						if (isset($_SESSION['nom'])) {
+              echo '<div class="user-info">
+  							<img src="http://via.placeholder.com/30x30" alt="">
+  							<a href="#" title="">'.$_SESSION['nom'].'</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="#" title="">Mon Compte</a></h3>
+  							<ul class="us-links">
+  								<li><a href="profile-account-setting.html" title="">Paramètre du compte</a></li>
+  							</ul>
+  							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            else {
+              echo '<div class="user-info">
+  							<a href="#" title="">Connectez vous</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="sign-in.html" title="">Connexion</a></h3>
+  							<ul class="us-links">
+  								<li><a href="sign-in.html" title="">Inscription</a></li>
+  							</ul>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            ?>
+          </div>
 				</div><!--fin des données d'en-tête-->
 			</div>
 		</header><!--fin d'en-tête-->
@@ -218,7 +232,7 @@
 									</div>
 								</div><!--filter-secs end-->
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-8">
 								<div class="main-ws-sec">
 									<div class="posts-section">
 										<div class="post-bar">
@@ -461,107 +475,7 @@
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
 							</div>
-							<div class="col-lg-3">
-								<div class="right-sidebar">
-									<div class="widget widget-about">
-										<img src="../images/wd-logo.png" alt="">
-										<h3>Track Time on Workwise</h3>
-										<span>Pay only for the Hours worked</span>
-										<div class="sign_link">
-											<h3><a href="#" title="">Sign up</a></h3>
-											<a href="#" title="">Learn More</a>
-										</div>
-									</div><!--widget-about end-->
-									<div class="widget widget-jobs">
-										<div class="sd-title">
-											<h3>Top Jobs</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div>
-										<div class="jobs-list">
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior Product Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior UI / UX Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Junior Seo Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior PHP Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior Developer Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-										</div><!--jobs-list end-->
-									</div><!--widget-jobs end-->
-									<div class="widget widget-jobs">
-										<div class="sd-title">
-											<h3>Most Viewed This Week</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div>
-										<div class="jobs-list">
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior Product Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior UI / UX Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Junior Seo Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>$25/hr</span>
-												</div>
-											</div><!--job-info end-->
-										</div><!--jobs-list end-->
-									</div><!--widget-jobs end-->
-								</div><!--right-sidebar end-->
-							</div>
+
 						</div>
 					</div><!-- main-section-data end-->
 				</div>
