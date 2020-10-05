@@ -3,10 +3,11 @@ require_once(__DIR__.'/../modele/Model_Evenements.php');
 class Manager_Evenements
 {
 
-  private $_id;
-  private $_prenom;
-  private $_email;
-  private $_mdp;
+  protected $_id;
+  protected $_id_utilisateur;
+  protected $_description;
+  protected $_date;
+  protected $_Comm;
 
 
  ?>
