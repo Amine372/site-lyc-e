@@ -25,7 +25,7 @@ class Manager_Evenements
       header('location: ../view/projects.php');
     }
   }
-
+}
 
 
  ?>
