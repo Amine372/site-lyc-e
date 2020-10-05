@@ -340,7 +340,7 @@
 													</li>
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
-												<a><i class="la la-eye"></i>Views 50</a>
+												<a><i class="la la-eye"></i>50 Vues</a>
 											</div>
 										</div><!--post-bar end-->
 										<div class="post-bar">
@@ -461,7 +461,7 @@
 													</li>
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
 												</ul>
-												<a><i class="la la-eye"></i>Views 50</a>
+												<a><i class="la la-eye"></i>50 Vues</a>
 											</div>
 										</div><!--post-bar end-->
 										<div class="process-comm">
@@ -588,10 +588,10 @@
 							<div class="col-lg-12">
 								<div class="inp-field">
 									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
+										<option>Categorie</option>
+										<option>Categorie 1</option>
+										<option>Categorie 2</option>
+										<option>Categorie 3</option>
 									</select>
 								</div>
 							</div>
@@ -639,10 +639,10 @@
 							<div class="col-lg-12">
 								<div class="inp-field">
 									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
+										<option>Categorie</option>
+										<option>Categorie 1</option>
+										<option>Categorie 2</option>
+										<option>Categorie 3</option>
 									</select>
 								</div>
 							</div>
