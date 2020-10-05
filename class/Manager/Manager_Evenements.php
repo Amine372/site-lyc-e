@@ -6,5 +6,65 @@ class Manager_Evenements
   private $_description;
   private $_date;
   private $_Comm;
+  // Liste des getters
+
+  public function id()
+  {
+    return $this->_id;
+  }
+
+  public function id_utilisateur()
+  {
+    return $this->_id_utilisateur;
+  }
+  public function description()
+  {
+    return $this->_description;
+  }
+  public function date()
+  {
+    return $this->_date;
+  }
+  public function Comm()
+  {
+    return $this->_Comm;
+  }
+  //Partie Setter
+  public function setid($id)
+  {
+    $id = (int) $id;
+
+    if ($id >= 1 && $id <= 100)
+    {
+      $this->_id = $id;
+    }
+  }
+  public function setid_utilisateur($id_utilisateur)
+  {
+    $id_utilisateur = (int) $id_utilisateur;
+
+    if ($id_utilisateur >= 1 && $id_utilisateur <= 100)
+    {
+      $this->_id_utilisateur = $id_utilisateur;
+    }
+  }
+  public function setdescription($description)
+  {
+    $description = (int) $description;
+
+    if ($description >= 1 && $description <= 100)
+    {
+      $this->_description = $description;
+    }
+  }
+  public function setid($id)
+  {
+    $id = (int) $id;
+
+    if ($id >= 1 && $id <= 100)
+    {
+      $this->_id = $id;
+    }
+  }
 }
 ?>
