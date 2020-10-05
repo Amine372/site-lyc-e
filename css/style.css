@@ -2178,6 +2178,7 @@ select {
 }
 .sn-field > i {
 	position: absolute;
+	color: #000;
 	top: 50%;
 	left: 15px;
 

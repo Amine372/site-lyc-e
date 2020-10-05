@@ -22,13 +22,10 @@ class Manager_User
     if($donnee)
     {
       $_SESSION['erreur_inscr'] = "L'email est déjà utilisé.";
-      header('Location: ../view/sign-in.php');
+      header('Location: ../view/inscription.php');
     }
     else
     {
-      $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
-      $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
-      header('Location: ../view/confirm_inscription.html');
 
       //Envoie de mail
       require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
@@ -46,17 +43,21 @@ class Manager_User
       $mail->IsHTML(true);
       $mail->Username = "quentin.lignani.schuman@gmail.com";
       $mail->Password = "Admwb2000";
-      $mail->SetFrom($inscription->getEmail());
+      $mail->SetFrom($inscrit->getEmail());
       $mail->Subject = "Création de compte réussi";
       $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
-      $mail->AddAddress($inscription->getMail());
+      $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
       {
          echo "Mailer Error: " . $mail->ErrorInfo;
+         $_SESSION['mail_error'] = true;
       }
       else
       {
          echo "Message has been sent";
+         $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
+         $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
+         header('Location: ../view/confirm_inscription.html');
       }
 
       header('location: ../view/sign-in.php');

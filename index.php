@@ -103,7 +103,7 @@
   						<div class="user-account-settingss">
   							<h3><a href="view/sign-in.php" title="">Connexion</a></h3>
   							<ul class="us-links">
-  								<li><a href="view/sign-in.php" title="">Inscription</a></li>
+  								<li><a href="view/inscription.php" title="">Inscription</a></li>
   							</ul>
   						</div><!--fin des paramètres du compte utilisateur-->';
             }

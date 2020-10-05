@@ -44,10 +44,10 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
-									<li data-tab="tab-1" class="current"><a href="#" title="">Se connecter</a></li>
-									<li data-tab="tab-2"><a href="#" title="">S'inscrire</a></li>
+									<li data-tab="tab-1"><a href="#" title="">Se connecter</a></li>
+									<li data-tab="tab-2" class="current"><a href="#" title="">S'inscrire</a></li>
 								</ul>
-								<div class="sign_in_sec current" id="tab-1">
+								<div class="sign_in_sec" id="tab-1">
 
 									<h3>Se connecter</h3>
 									<form method="post" action="../traitement/cible_connexion.php">
@@ -83,7 +83,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 									</form>
 
 								</div><!--sign_in_sec end-->
-								<div class="sign_in_sec" id="tab-2">
+								<div class="sign_in_sec current" id="tab-2">
 									<h3>S'inscrire</h3>
 									<div class="dff-tab current" id="tab-3">
 										<form action="../traitement/cible_inscription" method="post">
@@ -126,10 +126,10 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 												<?php
 													if (isset($_SESSION['erreur_inscr'])) {
 														echo "<div style='color:#ff0000'>
-																		L'Email est déjà utilisé";
+																		".$_SESSION['erreur_inscr'];
 														unset($_SESSION['erreur_inscr']);
 													}
-													if (isset($_SESSION['mail_error'])) {
+                          if (isset($_SESSION['mail_error'])) {
 														echo "<div style='color:#ff0000'>
 																		L'Email n'est pas valide";
 														unset($_SESSION['mail_error']);
