@@ -253,8 +253,7 @@
         											</div>
         											<div class="epi-sec">
         												<ul class="descp">
-        													<li><img src="images/icon8.png" alt=""><span><? $Comm = date("Y");
-        													echo $Comm;?></span></li>
+        													<li><img src="images/icon8.png" alt=""></li>
         												</ul>
         												<ul class="bk-links">
         													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -263,11 +262,8 @@
         												</ul>
         											</div>
         											<div class="job_descp">
-        												<h3>Simple Classified Site</h3>
-        												<ul class="job-dt">
-        													<li><span>300€ - 350€</span></li>
-        												</ul>
-        												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">Voir plus</a></p>
+        												<h3>'.$clef['titre'].'</h3>
+        												<p>'.$clef['description'].'</p>
         												<ul class="skill-tags">
         													<li><a href="#" title="">HTML</a></li>
         													<li><a href="#" title="">PHP</a></li>
@@ -277,17 +273,6 @@
         													<li><a href="#" title="">Photoshop</a></li>
         													<li><a href="#" title="">Illustrateur</a></li>
         													<li><a href="#" title="">Corel Draw</a></li>
-        												</ul>
-        											</div>
-        											<div class="job-status-bar">
-        												<ul class="like-com">
-        													<li>
-        														<span>25</span>
-        														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
-        														<img src="images/liked-img.png" alt="">
-
-        													</li>
-        													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
         												</ul>
         											</div>
         										</div><!--post-bar end--> ';
