@@ -246,19 +246,9 @@
         												<div class="usy-dt">
         													<img src="http://via.placeholder.com/50x50" alt="">
         													<div class="usy-name">
-        														<h3><?php   ?> </h3>
-        														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
+        														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
+        														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
         													</div>
-        												</div>
-        												<div class="ed-opts">
-        													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-        													<ul class="ed-options">
-        														<li><a href="#" title="">Modifier le message</a></li>
-        														<li><a href="#" title="">Non enregistré</a></li>
-        														<li><a href="#" title="">Annuler une offre</a></li>
-        														<li><a href="#" title="">Fermer</a></li>
-        														<li><a href="#" title="">Masquer</a></li>
-        													</ul>
         												</div>
         											</div>
         											<div class="epi-sec">

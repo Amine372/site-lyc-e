@@ -12,7 +12,7 @@ class Manager_Evenements
   public function Evenements()
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT * from evenements ORDER BY `evenements`.`id` DESC');
+    $req = $bdd->prepare('SELECT utilisateur.nom, utilisateur.prenom, * from evenements INNER JOIN utilisateur ON evenements.id_utilisateur = utilisateur.id ORDER BY `evenements`.`id` DESC');
     $req->execute(array($Evenements->getid(), $Evenements->getid_utilisateur(), $Evenements->getdescription(), $Evenements->getdate(),$Evenements->getComm()));
     $donnee = $req->fetchall();
     if ($donnee)
