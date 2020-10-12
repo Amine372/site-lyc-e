@@ -90,7 +90,7 @@
   						<div class="user-account-settingss">
   							<h3><a href="#" title="">Mon Compte</a></h3>
   							<ul class="us-links">
-  								<li><a href="view/profile-account-setting.php" title="">Paramètre du compte</a></li>
+  								<li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
   							</ul>
   							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
   						</div><!--fin des paramètres du compte utilisateur-->';
