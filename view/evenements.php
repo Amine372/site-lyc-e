@@ -127,7 +127,7 @@
 					<div class="main-section-data">
 						<div class="row">
 
-							<div class="col-lg-6">
+							<div class="col-lg-8" style="padding-left:20%">
 
 								<div class="main-ws-sec">
 									<div class="posts-section">
