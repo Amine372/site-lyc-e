@@ -64,7 +64,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="jobs.php" title="">
+								<a href="emploi.php" title="">
 									<span><img src="../images/icon5.png" alt=""></span>
 									Annonces
 								</a>
