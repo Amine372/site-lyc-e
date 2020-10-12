@@ -44,45 +44,10 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
-									<li data-tab="tab-1"><a href="#" title="">Se connecter</a></li>
+									<li data-tab="tab-1"><a href="sign-in.php" title="">Se connecter</a></li>
 									<li data-tab="tab-2" class="current"><a href="#" title="">S'inscrire</a></li>
 								</ul>
-								<div class="sign_in_sec" id="tab-1">
 
-									<h3>Se connecter</h3>
-									<form method="post" action="../traitement/cible_connexion.php">
-										<div class="row">
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-													<input type="text" name="email" required placeholder="Email">
-													<i class="la la-user"></i>
-												</div><!--sn-field end-->
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-													<input type="password" name="mdp" required placeholder="Mot de passe">
-													<i class="la la-lock"></i>
-												</div>
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="checky-sec">
-													<a href="mdp_oublie.html" title="">Mot de passe oublié ?</a>
-												</div>
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<button type="submit" value="submit">Se connecter</button>
-											</div>
-											<?php
-												if (isset($_SESSION['erreur_co'])) {
-													echo "<div style='color:#ff0000'>
-																	Mauvais email ou mot de passe";
-													unset($_SESSION['erreur_co']);
-												}
-											 ?>
-										</div>
-									</form>
-
-								</div><!--sign_in_sec end-->
 								<div class="sign_in_sec current" id="tab-2">
 									<h3>S'inscrire</h3>
 									<div class="dff-tab current" id="tab-3">
@@ -131,7 +96,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 													}
                           if (isset($_SESSION['mail_error'])) {
 														echo "<div style='color:#ff0000'>
-																		L'Email n'est pas valide";
+																		".$_SESSION['mail_error'];
 														unset($_SESSION['mail_error']);
 													}
 												 ?>
@@ -163,6 +128,6 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<!-- <script type="text/javascript" src="../js/script.js"></script> -->
 </body>
 </html>

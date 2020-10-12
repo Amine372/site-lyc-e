@@ -44,8 +44,8 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
-									<li data-tab="tab-1" class="current"><a href="#" title="">Se connecter</a></li>
-									<li data-tab="tab-2"><a href="#" title="">S'inscrire</a></li>
+									<li class="current"><a href="#" title="">Se connecter</a></li>
+									<li><a href="inscription.php">S'inscrire</a></li>
 								</ul>
 								<div class="sign_in_sec current" id="tab-1">
 
@@ -80,68 +80,12 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 												}
 											 ?>
 										</div>
+                    </div>
 									</form>
 
+
 								</div><!--sign_in_sec end-->
-								<div class="sign_in_sec" id="tab-2">
-									<h3>S'inscrire</h3>
-									<div class="dff-tab current" id="tab-3">
-										<form action="../traitement/cible_inscription" method="post">
-											<div class="row">
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="nom" required placeholder="Nom">
-														<i class="la la-user"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="prenom" required placeholder="Prénom">
-														<i class="la la-user"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="mail" name="email" required placeholder="Adresse email">
-														<i class="la la-globe"></i>
-													</div>
-												</div>
 
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="mdp" required placeholder="Mot de passe">
-														<i class="la la-lock"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="confirmmdp" required placeholder="Retapez le mot de passe">
-														<i class="la la-lock"></i>
-													</div>
-												</div>
-
-												<div class="col-lg-12 no-pdd">
-													<button type="submit" value="submit">Commencer</button>
-												</div>
-												<?php
-													if (isset($_SESSION['erreur_inscr'])) {
-														echo "<div style='color:#ff0000'>
-																		L'Email est déjà utilisé";
-														unset($_SESSION['erreur_inscr']);
-													}
-													if (isset($_SESSION['mail_error'])) {
-														echo "<div style='color:#ff0000'>
-																		L'Email n'est pas valide";
-														unset($_SESSION['mail_error']);
-													}
-												 ?>
-											</div>
-										</form>
-									</div><!--dff-tab end-->
-
-								</div>
-							</div><!--login-sec end-->
-						</div>
 					</div>
 				</div><!--signin-pop end-->
 			</div><!--signin-popup end-->
@@ -163,6 +107,6 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<!-- <script type="text/javascript" src="../js/script.js"></script> -->
 </body>
 </html>

@@ -30,7 +30,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="../index" title=""><img src="../images/logo.png" alt=""></a>
+						<a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -41,7 +41,7 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="../index" title="">
+								<a href="../index.php" title="">
 									<span><img src="../images/icon1.png" alt=""></span>
 									Accueil
 								</a>
@@ -49,7 +49,7 @@
 							<li>
 								<a href="evenements.php" title="">
 									<span><img src="../images/icon3.png" alt=""></span>
-									Projets
+									Evénements
 								</a>
 							</li>
 							<li>
@@ -65,7 +65,7 @@
 							<li>
 								<a href="jobs.php" title="">
 									<span><img src="../images/icon5.png" alt=""></span>
-									Emplois
+									Annonces
 								</a>
 							</li>
 
@@ -75,18 +75,34 @@
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<div class="user-info">
-							<img src="../http://via.placeholder.com/30x30" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3><a href="#" title="">Mon Compte</a></h3>
-							<ul class="us-links">
-								<li><a href="profile-account-setting.html" title="">Paramètre du compte</a></li>
-							</ul>
-							<h3 class="tc"><a href="sign-in.php" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
+						<?php
+						if (isset($_SESSION['nom'])) {
+							echo '<div class="user-info">
+								<img src="http://via.placeholder.com/30x30" alt="">
+								<a href="#" title="">'.$_SESSION['nom'].'</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss">
+								<h3><a href="#" title="">Mon Compte</a></h3>
+								<ul class="us-links">
+									<li><a href="profile-account-setting.php" title="">Paramètre du compte</a></li>
+								</ul>
+								<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						else {
+							echo '<div class="user-info">
+								<a href="#" title="">Connectez vous</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss">
+								<h3><a href="sign-in.php" title="">Connexion</a></h3>
+								<ul class="us-links">
+									<li><a href="inscription.php" title="">Inscription</a></li
+								</ul>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						?>
 					</div>
 				</div><!--fin des données d'en-tête-->
 			</div>
