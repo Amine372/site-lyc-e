@@ -93,7 +93,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 				<div class="container">
 
 
-					<p><img src="../images/copy-icon.png" alt="">Copyright 2020.</p>
+					<p><img src="../images/copy-icon.png" alt="">Copyright 2020</p>
 				</div>
 			</div><!--footy-sec end-->
 		</div><!--sign-in-page end-->
