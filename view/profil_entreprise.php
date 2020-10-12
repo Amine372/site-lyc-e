@@ -86,7 +86,7 @@
 							<ul class="us-links">
 								<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
 							</ul>
-							<h3 class="tc"><a href="sign-in.php" title="">Se déconnecter</a></h3>
+							<h3 class="tc"><a href="connexion.php" title="">Se déconnecter</a></h3>
 						</div><!--fin des paramètres du compte utilisateur-->
 					</div>
 				</div><!--fin des données d'en-tête-->
