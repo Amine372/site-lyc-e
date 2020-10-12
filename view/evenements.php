@@ -241,7 +241,66 @@
                           $donnee= $get_event->Evenements();
                           foreach ($donnee as $clef)
                           {
+                          echo '  <div class="post-bar">
+        											<div class="post_topbar">
+        												<div class="usy-dt">
+        													<img src="http://via.placeholder.com/50x50" alt="">
+        													<div class="usy-name">
+        														<h3><?php   ?> </h3>
+        														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
+        													</div>
+        												</div>
+        												<div class="ed-opts">
+        													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+        													<ul class="ed-options">
+        														<li><a href="#" title="">Modifier le message</a></li>
+        														<li><a href="#" title="">Non enregistré</a></li>
+        														<li><a href="#" title="">Annuler une offre</a></li>
+        														<li><a href="#" title="">Fermer</a></li>
+        														<li><a href="#" title="">Masquer</a></li>
+        													</ul>
+        												</div>
+        											</div>
+        											<div class="epi-sec">
+        												<ul class="descp">
+        													<li><img src="images/icon8.png" alt=""><span><? $Comm = date("Y");
+        													echo $Comm;?></span></li>
+        												</ul>
+        												<ul class="bk-links">
+        													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+        													<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+        													<li><a href="#" title="" class="bid_now">Bid Now</a></li>
+        												</ul>
+        											</div>
+        											<div class="job_descp">
+        												<h3>Simple Classified Site</h3>
+        												<ul class="job-dt">
+        													<li><span>300€ - 350€</span></li>
+        												</ul>
+        												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">Voir plus</a></p>
+        												<ul class="skill-tags">
+        													<li><a href="#" title="">HTML</a></li>
+        													<li><a href="#" title="">PHP</a></li>
+        													<li><a href="#" title="">CSS</a></li>
+        													<li><a href="#" title="">Javascript</a></li>
+        													<li><a href="#" title="">Wordpress</a></li>
+        													<li><a href="#" title="">Photoshop</a></li>
+        													<li><a href="#" title="">Illustrateur</a></li>
+        													<li><a href="#" title="">Corel Draw</a></li>
+        												</ul>
+        											</div>
+        											<div class="job-status-bar">
+        												<ul class="like-com">
+        													<li>
+        														<span>25</span>
+        														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
+        														<img src="images/liked-img.png" alt="">
 
+        													</li>
+        													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Commentaires: 15</a></li>
+        												</ul>
+        											</div>
+        										</div><!--post-bar end--> ';
                           }
                           ?>
 
@@ -305,6 +364,8 @@
 												</ul>
 											</div>
 										</div><!--post-bar end-->
+
+
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
