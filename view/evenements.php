@@ -125,7 +125,7 @@
 				<div class="container">
 					<div class="main-section-data">
 						<div class="row">
-						
+
 							<div class="col-lg-6">
 
 								<div class="main-ws-sec">
@@ -188,37 +188,9 @@
 								<div >
 										<img src="../images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
 									<div class="widget widget-jobs">
-										<div class="sd-title">
-											<h3>Top Jobs</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div>
 										<div class="jobs-list">
 											<div class="job-info">
-												<div class="job-details">
-													<h3>Concepteur de produits senior</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior UI / UX modélisateur</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Junior Seo Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
+
 											</div><!--job-info end-->
 											<div class="job-info">
 												<div class="job-details">
