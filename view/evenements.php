@@ -234,14 +234,23 @@
 								</div><!--filter-secs end-->
 							</div>
 							<div class="col-lg-6">
+
 								<div class="main-ws-sec">
 									<div class="posts-section">
+                    <?php $get_event = new Manager_Evenements;
+                          $donnee= $get_event->Evenements();
+                          foreach ($donnee as $clef)
+                          {
+
+                          }
+                          ?>
+
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
 													<img src="http://via.placeholder.com/50x50" alt="">
 													<div class="usy-name">
-														<h3><?php echo $id_utilisateur; ?> </h3>
+														<h3><?php   ?> </h3>
 														<span><img src="images/clock.png" alt="">Il y a 3 minutes</span>
 													</div>
 												</div>

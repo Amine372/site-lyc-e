@@ -9,7 +9,7 @@ class Manager_Evenements
   protected $_date;
   protected $_Comm;
 
-  public function Evenements(Evenements $Evenements)
+  public function Evenements()
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * from evenements ORDER BY `evenements`.`id` DESC');
