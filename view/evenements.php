@@ -242,7 +242,6 @@
                     $get_event = new Manager_Evenements;
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
-                          var_dump($donnee);die();
                           foreach ($donnee as $clef)
                           {
                           echo '  <div class="post-bar">

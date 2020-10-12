@@ -15,7 +15,7 @@ class Manager_Evenements
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     // SELECT * FROM Users where 0
     // execute()
-    $req = $bdd->prepare('SELECT utilisateur.nom, utilisateur.prenom, * from evenements INNER JOIN utilisateur ON evenements.id_utilisateur = utilisateur.id ORDER BY `evenements`.`id` DESC');
+    $req = $bdd->prepare('SELECT titre, description, date, Comm, utilisateur.nom, utilisateur.prenom from evenements INNER JOIN utilisateur ON evenements.id_utilisateur = utilisateur.id ORDER BY `evenements`.`id` DESC');
     $req->execute();
     $donnee = $req->fetchall();
     if ($donnee)
