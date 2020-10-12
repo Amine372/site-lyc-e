@@ -87,7 +87,7 @@
               <ul class="us-links">
                 <li><a href="profile-account-setting.php" title="">Paramètre du compte</a></li>
               </ul>
-              <h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           else {
@@ -125,114 +125,7 @@
 				<div class="container">
 					<div class="main-section-data">
 						<div class="row">
-							<div class="col-lg-3">
-								<div class="filter-secs">
-									<div class="filter-heading">
-										<h3>Filtres</h3>
-										<a href="#" title="">Effacer les filtres</a>
-									</div><!--filter-heading end-->
-									<div class="paddy">
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Compétences</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<form>
-												<input type="text" name="search-skills" placeholder="Rechercher les compétences">
-											</form>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Disponibilité</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<ul class="avail-checks">
-												<li>
-													<input type="radio" name="cc" id="c1">
-													<label for="c1">
-														<span></span>
-													</label>
-													<small>Horaire</small>
-												</li>
-												<li>
-													<input type="radio" name="cc" id="c2">
-													<label for="c2">
-														<span></span>
-													</label>
-													<small>Temps partiel</small>
-												</li>
-												<li>
-													<input type="radio" name="cc" id="c3">
-													<label for="c3">
-														<span></span>
-													</label>
-													<small>Temps plein</small>
-												</li>
-											</ul>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Type d'emploi</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<form class="job-tp">
-												<select>
-													<option>Séléctionner un Type d'emploi</option>
-													<option>Séléctionner un Type d'emploi</option>
-													<option>Séléctionner un Type d'emploi</option>
-													<option>Séléctionner un Type d'emploi</option>
-												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-											</form>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Pay Rate / H (€)</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<div class="rg-slider">
-			                                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
-			                                </div>
-			                                <div class="rg-limit">
-			                                	<h4>1</h4>
-			                                	<h4>100+</h4>
-			                                </div><!--rg-limit end-->
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Niveau d'expériences</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<form class="job-tp">
-												<select>
-													<option>Séléctionner un niveau d'expériences</option>
-													<option>Niveau BAC</option>
-													<option>Niveau BTS</option>
-													<option>Niveau Bac+2</option>
-												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-											</form>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Pays</h3>
-												<a href="#" title="">Effacer</a>
-											</div>
-											<form class="job-tp">
-												<select>
-													<option>Selectionner un Pays</option>
-													<option>France</option>
-													<option>Azerbaïdjan</option>
-													<option>Iles Caïmans</option>
-													<option>Nauru</option>
-													<option>Gilbratar</option>
-												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-											</form>
-										</div>
-									</div>
-								</div><!--filter-secs end-->
-							</div>
+
 							<div class="col-lg-6">
 
 								<div class="main-ws-sec">
@@ -294,94 +187,7 @@
 							<div class="col-lg-3">
 								<div >
 										<img src="../images/schuman.PNG" alt="Depuis 1920" height="80%" width="80%">
-									<div class="widget widget-jobs">
-										<div class="sd-title">
-											<h3>Top Jobs</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div>
-										<div class="jobs-list">
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Concepteur de produits senior</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior UI / UX modélisateur</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Junior Seo Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior PHP Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior Developer Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-										</div><!--jobs-list end-->
-									</div><!--widget-jobs end-->
-									<div class="widget widget-jobs">
-										<div class="sd-title">
-											<h3>Most Viewed This Week</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div>
-										<div class="jobs-list">
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Concepteur de produits senior</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Senior UI / UX modélisateur</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-											<div class="job-info">
-												<div class="job-details">
-													<h3>Junior Seo Designer</h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-												</div>
-												<div class="hr-rate">
-													<span>25€/h</span>
-												</div>
-											</div><!--job-info end-->
-										</div><!--jobs-list end-->
-									</div><!--widget-jobs end-->
+
 								</div><!--right-sidebar end-->
 							</div>
 						</div>
