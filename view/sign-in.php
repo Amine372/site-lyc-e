@@ -54,7 +54,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 										<div class="row">
 											<div class="col-lg-12 no-pdd">
 												<div class="sn-field">
-													<input type="text" name="email" required placeholder="Email">
+													<input type="text" name="email" required placeholder="Adresse éléctronique">
 													<i class="la la-user"></i>
 												</div><!--sn-field end-->
 											</div>
@@ -75,7 +75,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 											<?php
 												if (isset($_SESSION['erreur_co'])) {
 													echo "<div style='color:#ff0000'>
-																	Mauvais email ou mot de passe";
+																	Mauvais Mail ou mot de passe";
 													unset($_SESSION['erreur_co']);
 												}
 											 ?>

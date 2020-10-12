@@ -67,7 +67,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 												</div>
 												<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input type="mail" name="email" required placeholder="Adresse email">
+														<input type="mail" name="email" required placeholder="Adresse éléctronique">
 														<i class="la la-globe"></i>
 													</div>
 												</div>

@@ -140,9 +140,9 @@
 													</div>
 												</div>
 												<div class="cp-field">
-													<h5>Email</h5>
+													<h5>Mail</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="email" placeholder="Email">
+														<input type="text" name="email" placeholder="Adresse éléctronique">
 													</div>
 												</div>
 												<div class="save-stngs pd2">
