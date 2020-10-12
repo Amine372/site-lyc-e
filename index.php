@@ -58,7 +58,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="view/profiles.html" title="">
+								<a href="view/profils.php" title="">
 									<span><img src="images/icon4.png" alt=""></span>
 									Profils
 								</a>

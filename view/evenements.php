@@ -53,7 +53,7 @@
               </a>
             </li>
             <li>
-              <a href="profiles.html" title="">
+              <a href="profils.php" title="">
                 <span><img src="../images/icon4.png" alt=""></span>
                 Profils
               </a>
