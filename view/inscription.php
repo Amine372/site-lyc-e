@@ -44,7 +44,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
-									<li data-tab="tab-1"><a href="sign-in.php" title="">Se connecter</a></li>
+									<li data-tab="tab-1"><a href="connexion.php" title="">Se connecter</a></li>
 									<li data-tab="tab-2" class="current"><a href="#" title="">S'inscrire</a></li>
 								</ul>
 
