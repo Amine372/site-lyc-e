@@ -52,7 +52,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="view/projects.php" title="">
+								<a href="view/evenements.php" title="">
 									<span><img src="images/icon3.png" alt=""></span>
 									Evénements
 								</a>
