@@ -45,11 +45,11 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 							<div class="login-sec">
 								<ul class="sign-control">
 									<li class="current"><a href="#" title="">Se connecter</a></li>
-									<li><a href="inscription.php">S'inscrire</a></li>
+									<li><a href="inscription.php">S'Inscrire</a></li>
 								</ul>
 								<div class="sign_in_sec current" id="tab-1">
 
-									<h3>Se connecter</h3>
+									<h3>Se Connecter</h3>
 									<form method="post" action="../traitement/cible_connexion.php">
 										<div class="row">
 											<div class="col-lg-12 no-pdd">
