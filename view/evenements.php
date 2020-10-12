@@ -237,8 +237,12 @@
 
 								<div class="main-ws-sec">
 									<div class="posts-section">
-                    <?php $get_event = new Manager_Evenements;
+                    <?php
+                    // on fait une boucle pour afficher tous les évenement
+                    $get_event = new Manager_Evenements;
+                      // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
+                          var_dump($donnee);die();
                           foreach ($donnee as $clef)
                           {
                           echo '  <div class="post-bar">
