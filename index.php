@@ -63,7 +63,7 @@
 									Profils
 								</a>
 								<ul>
-									<li><a href="view/user-profile.html" title="">Nom d'uttilisateur</a></li>
+									<li><a href="view/profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
 									<li><a href="view/my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
 								</ul>
 							</li>
