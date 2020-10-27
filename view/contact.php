@@ -151,13 +151,13 @@
                           <div class="fields clearfix">
                             <div class="left-column">
                               <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="nom" class="form-control" placeholder="Nom" required="required" data-error="Nom obligatoire">
+                                <input id="form_name" type="text" name="nom" class="form-control" placeholder="Votre Nom" required="required" data-error="Votre nom est obligatoire">
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Adresse email" required="required" data-error="Email non valide">
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Votre Adresse Electronique" required="required" data-error="L'adresse mail est invalide">
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -170,14 +170,14 @@
                             </div>
                             <div class="right-column">
                               <div class="form-group form-group-with-icon">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="Votre message" rows="6" required="required" data-error="Merci de bien vouloir écrire votre message"></textarea>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Votre Message" rows="6" required="required" data-error="Merci de bien vouloir écrire votre Message"></textarea>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>
                           </div>
 
-                          <input type="submit" class="buttonsend" value="Envoyer le message">
+                          <input type="submit" class="buttonsend" value="Envoyer le Message">
                         </div>
                       </form>
 
