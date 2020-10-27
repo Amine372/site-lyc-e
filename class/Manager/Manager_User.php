@@ -79,7 +79,8 @@ class Manager_User
       {
         $_SESSION['role'] = $donnee['role'];
       }
-      if ($donnee['verif'] == 0) {
+      if ($donnee['verif'] == 0)
+      {
         header('location: ../view/changement_mdp.php');
         exit();
       }
@@ -128,7 +129,8 @@ class Manager_User
 
 
   //inscription d'un compte admin
-  public function inscrip_admin(User $inscription){
+  public function inscrip_admin(User $inscription)
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscription->getEmail()));
