@@ -271,7 +271,7 @@
 							<div class="col-lg-3">
 								<div class="right-sidebar">
 									<div class="message-btn">
-										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
+										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez nous !</a>
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
@@ -365,7 +365,7 @@
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-		
+
 
 		<div class="overview-box" id="skills-box">
 			<div class="overview-edit">
