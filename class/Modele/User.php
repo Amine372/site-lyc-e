@@ -45,13 +45,21 @@ class User
     $this->_mdp = $mdp;
   }
   //getter
-  public function getNom(){return $this->_nom;
+  public function getNom()
+  {
+    return $this->_nom;
   }
-  public function getPrenom(){return $this->_prenom;
+  public function getPrenom()
+  {
+    return $this->_prenom;
   }
-  public function getEmail(){return $this->_email;
+  public function getEmail()
+  {
+    return $this->_email;
   }
-  public function getMdp(){return $this->_mdp;
+  public function getMdp()
+  {
+    return $this->_mdp;
   }
 }
 ?>
