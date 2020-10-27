@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Emplois</title>
+<title>Annonces</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -164,7 +164,7 @@
 
 		<div class="search-sec">
 			<div class="container">
-				
+
 			</div>
 		</div><!--search-sec end-->
 
@@ -180,7 +180,7 @@
 										<h3>Annonces</h3>
 										<a  data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a>
 									</div><!--filter-heading end-->
-									
+
 								</div><!--filter-secs end-->
 							</div>
 							<div class="col-lg-8">
@@ -207,7 +207,7 @@
 													<li><img src="../images/icon8.png" alt=""><span>Quentin Lignani</span></li>
 													<li><img src="../images/icon9.png" alt=""><span>Paris</span></li>
 												</ul>
-												
+
 											</div>
 											<div class="job_descp">
 												<h3>Développeur Wordpress</h3>
@@ -223,9 +223,9 @@
 													<li><a href="#" title="">Wordpress</a></li>
 												</ul>
 											</div>
-											
+
 										</div><!--post-bar end-->
-										
+
 										</div><!--process-comm end-->
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
