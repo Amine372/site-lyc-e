@@ -11,10 +11,9 @@
    }
    //ajout dans la bdd
    else{
-     $change = new User(['email'=>$_POST['email'],
-                          'mdp'=>$_POST['mdp']]);
-     $inscrit = new Manager_User;
-     $inscrit->change_mdp($change);
+     $user = new User(['mdp'=>$_POST['mdp']]);
+     $change = new Manager_User;
+     $change->change_mdp($user, $_SESSION['email']);
    }
 
  ?>
