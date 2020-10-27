@@ -122,14 +122,14 @@
 
 
 
-											
+
 											<div class="view-more">
-												<a title="">Email :</a>
-											
+												<a title="">Mail :</a>
+
 												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
 												<br>
 												<br>
-												<a title="">Tèl :</a>
+												<a title="">Tel :</a>
 									<u><a> 01 48 37 74 26</a></u>
 									<br>
 												<br>
@@ -143,8 +143,8 @@
 			<center><div class="main-section">
 				<div class="container">
 					<center><div class="main-section-data">
-													
-							
+
+
                       <form id="contact_form" class="contact-form" action="../phpmailer/cible_contact.php" method="post">
 
                         <div class="messages"></div>
@@ -178,18 +178,18 @@
                               </div>
                             </div>
                           </div>
-      
+
                           <input type="submit" class="buttonsend" value="Envoyer le message">
                         </div>
                       </form>
-							
-							
-					
+
+
+
 					</div></center><!-- main-section-data end-->
 				</div>
 			</div>
 		</main>
-		
+
 		<div class="container">
 <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.219618889888!2d2.4132023156387215!3d48.94930390225513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66b9c6b0800f7%3A0xa35833adc1739e08!2sLyc%C3%A9e%20Robert%20Schuman!5e0!3m2!1sfr!2sfr!4v1603789401466!5m2!1sfr!2sfr" width="700" height="350" frameborder="0" style="border:5;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center>
 </div>
@@ -197,9 +197,9 @@
 			<div class="footy-sec mn no-margin">
 				<div class="container">
 					<ul>
-						<li><a href="#" title="">Annonces</a></li>
-						<li><a href="#" title="">Evenements</a></li>
-						<li><a href="#" title="">Copyright Policy</a></li>
+						<li><a href="emploi.php" title="">Annonces</a></li>
+						<li><a href="evenements.php" title="">Evenements</a></li>
+						<li><a href="#" title="">Politique de Cookies</a></li>
 					</ul>
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">

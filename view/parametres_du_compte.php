@@ -189,7 +189,7 @@
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
-													<li><button type="submit">Save Setting</button></li>
+													<li><button type="submit">Enregistrer</button></li>
 												</ul>
 											</div><!--save-stngs end-->
 										</form>

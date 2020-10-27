@@ -294,7 +294,7 @@
 							<div class="col-lg-3">
 								<div class="right-sidebar">
 									<div class="message-btn">
-										<a href="#" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
+										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
@@ -326,8 +326,8 @@
 				<div class="container">
 					<ul>
 						<li><a href="#" title="">Annonces</a></li>
-						<li><a href="#" title="">Evenements</a></li>
-						<li><a href="#" title="">Politique de Copie</a></li>
+						<li><a href="voew\emvenements.php" title="">Evenements</a></li>
+						<li><a href="#" title="">Politique de Copyright</a></li>
 					</ul>
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
