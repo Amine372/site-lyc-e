@@ -36,7 +36,7 @@ session_start();
 								<div class="cm-logo">
 									<img src="../images/cm-logo.png" alt="">
 									<p>Enseignement catholique sous contrat d'association avec l'Etat,
-Etablissement habilité à percevoir la taxe d'apprentissage</p>
+                   Etablissement habilité à percevoir la taxe d'apprentissage</p>
 								</div><!--extrémité du logo cm-->
 								<img src="../images/cm-main-img.png" alt="">
 							</div><!--fin cmp-info-->
