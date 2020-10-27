@@ -1,5 +1,9 @@
 
 <!DOCTYPE html>
+<?php
+    session_start();
+
+?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -17,7 +21,57 @@
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <!-- Lunar CSS -->
+    <link rel="stylesheet" href="assets/css/lunar.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/img/lunar.png"/>
+    <link rel="icon" href="assets/img/lunar.png" type="image/png" sizes="16x16">
 </head>
+<!-- Modal -->
+<div class="modal fade   "  id="demoModal"  tabindex="-1" role="dialog"
+     aria-labelledby="demoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg  " role="document">
+        <div class="modal-content">
+
+            <div class="container-fluid">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6 bg-img rounded-left m-h-60 d-none d-sm-block" style="background-image: url('https://images.unsplash.com/photo-1538943963832-856b555cd29b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')">
+
+                    </div>
+                    <div class="col-md-6 py-5 px-sm-5 my-auto ">
+
+                        <h2 class="pt-sm-3">Ajouter une annonce</h2>
+                        <br>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control"  placeholder="Entrer votre nom">
+								<br>
+							 <input type="text" class="form-control"   placeholder="Entrer votre adresse mail">
+							 <br>
+                                <input type="text" class="form-control"  a placeholder="Entrer le nom de poste">
+								<br>
+								          <input type="text" rows="6" class="form-control"  placeholder="Description de l'annonce">
+
+                            </div>
+
+                            <button type="submit" class="btn btn-cstm-dark btn-block btn-cta" data-dismiss="modal" aria-label="Close">Ajouter une annonce</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Ends -->
+
 
 
 <body>
@@ -124,7 +178,7 @@
 								<div class="filter-secs">
 									<div class="filter-heading">
 										<h3>Annonces</h3>
-										<a href="#" title="">Ajouter une annonce</a>
+										<a  data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a>
 									</div><!--filter-heading end-->
 									
 								</div><!--filter-secs end-->
@@ -300,5 +354,11 @@
 <script type="text/javascript" src="../js/jquery.range-min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/lunar.js"></script>
+
+<script src="assets/js/demo.js"></script>
 </body>
 </html>
