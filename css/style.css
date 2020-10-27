@@ -69,12 +69,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+body
+{
 	line-height: 1;
 	font-family: 'Source Sans Pro', sans-serif;
 	overflow-x: hidden;
 	font-weight: 400;
-	background-color: #eeeeee;
+	background-image: url("../images/bleu-cobalt-500ml.jpg");
 }
 ol, ul {
 	list-style: none;
@@ -1344,9 +1345,9 @@ main {
 }
 
 .bandecontact {
-	
+
 	border-radius : 10px;
-	
+
 }
 /* --- End of Contact Form --- */
 
@@ -1357,8 +1358,8 @@ main {
 }
 
 .buttonsend {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #008CBA;
   width : 140px;
   height : 60px;
