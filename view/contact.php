@@ -120,11 +120,11 @@
 
 
 
-											
+
 											<div class="view-more">
 												<a title="">Email :</a>
-											
-												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
+
+												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</a></u>
 												<br>
 												<br>
 												<a title="">Tèl :</a>
@@ -138,11 +138,11 @@
 									</div><!--suggestions end-->
 
 		<main>
-			<center><div class="main-section">
+      <div class="main-section">
 				<div class="container">
 					<center><div class="main-section-data">
-													
-							
+
+
                       <form id="contact_form" class="contact-form" action="../traitement/cible_contact.php" method="post">
 
                         <div class="messages"></div>
@@ -176,18 +176,18 @@
                               </div>
                             </div>
                           </div>
-      
+
                           <input type="submit" class="buttonsend" value="Envoyer le message">
                         </div>
                       </form>
-							
-							
-					
+
+
+
 					</div></center><!-- main-section-data end-->
 				</div>
 			</div>
 		</main>
-		
+
 		<div class="container">
 <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.219618889888!2d2.4132023156387215!3d48.94930390225513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66b9c6b0800f7%3A0xa35833adc1739e08!2sLyc%C3%A9e%20Robert%20Schuman!5e0!3m2!1sfr!2sfr!4v1603789401466!5m2!1sfr!2sfr" width="700" height="350" frameborder="0" style="border:5;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center>
 </div>
@@ -212,5 +212,6 @@
 <script type="text/javascript" src="../js/jquery.range-min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+</div>
 </body>
 </html>
