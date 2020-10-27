@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../css/style2.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 <?php
@@ -153,9 +153,8 @@
         													<li><img src="images/icon8.png" alt=""></li>
         												</ul>
         												<ul class="bk-links">
-        													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-        													<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-        													<li><a href="#" title="" class="bid_now">Bid Now</a></li>
+        													<li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
+        													<li><p title="" class="bid_now">Profil</p></li>
         												</ul>
         											</div>
         											<div class="job_descp">
