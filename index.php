@@ -73,7 +73,12 @@
 									Annonces
 								</a>
 							</li>
-
+<li>
+								<a href="view/contact.php" title="">
+									<span><img src="images/icon6.png" alt=""></span>
+									Contact
+								</a>
+							</li>
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
