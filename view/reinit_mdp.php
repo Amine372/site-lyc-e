@@ -19,7 +19,7 @@
 </head>
 
 
-<body class="sign-in" style="text-align: center;">
+<body class="sign-in">
 
 
 	<div class="wrapper">
@@ -27,46 +27,32 @@
 
 		<div class="sign-in-page">
 			<div class="signin-popup">
-        <div class="sign_in_sec current" id="tab-1">
+				<div style="float: left; width: 100%; background-color: #fff;border-radius: 4px;">
 
-          <div style="float: left; width: 100%; background-color: #fff;border-radius: 4px;">
-            <div style="margin-top:25%;margin-bottom:25%; font-size:24px">
-							<CENTER>
-                <span>Mot de passe oublié</span><br>
-								<br>
+										<div style="margin-top:25%;margin-bottom:25%; font-size:24px">
 
-                <form method="post" action="../traitement/traitement_mdp_oublie.php">
-                  <div class="row">
-                    <div class="col-lg-12 no-pdd">
-                      <div class="sn-field">
-                        <input type="text" name="email" required placeholder="Adresse éléctronique" style="width: 50%;">
-												<br>
-												<?php
-												session_start();
-												if(isset($_SESSION['erreur_mail'])){
-													if($_SESSION['erreur_mail'] == 1) {
-														echo "<div style='color: #e5200f'>E-mail non existant</div>";
-														$_SESSION['erreur_mail'] = 0;
-													}
-												}
-												?>
-		                      <button type="submit" value="submit">Confirmer</button>
-                      </div><!--sn-field end-->
+											<CENTER>Vous recevrez un mail avec votre mot de passe de secours dans quelques instant</CENTER>
+											<br><br><br>
+											<div class="sign_in_sec current">
+													<div class="row">
 
-                    </div>
-                   </div>
-                </form>
-								<!--gestion d'erreur-->
-
-              </CENTER>
-            </div>
-          </div>
-
-          </div>
+														<div class="col-lg-12 no-pdd">
+															<button style="color: #ffffff;
+																							font-size: 16px;
+																							background-color: #2d5c88;
+																							padding: 12px 27px;
+																							border: 0;
+																							border-radius: 4px;
+																							font-weight: 500;
+																							margin-top: 30px;
+																							cursor: pointer;" onclick="window.location.href='connexion.php'">Se connecter</button>
+														</div>
+													</div>
+											</div>
+										</div>
 
 
-
-
+				</div>
 			</div><!--signin-popup end-->
 			<div class="footy-sec">
 				<div class="container">
