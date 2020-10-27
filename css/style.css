@@ -1202,8 +1202,8 @@ main {
 	margin-right: 15px;
 }
 .job-dt li a {
-	color: #fff;
-	background-color: #53d690;
+	color: #53d690;
+	background-color: #ffffff;
 	text-transform: capitalize;
 	padding: 5px 13px;
 	-webkit-border-radius: 30px;
@@ -1246,7 +1246,21 @@ main {
 	display: inline-block;
 	color: #b2b2b2;
 	font-size: 14px;
-	background-color: #e5e5e5;
+	background-color: #fffff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	border-radius: 30px;
+	padding: 7px 15px;
+	font-weight: 600;
+}
+
+.ajouteremploi {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 14px;
+	background-color: #2d5c88;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	-ms-border-radius: 30px;
@@ -3674,7 +3688,7 @@ a:hover {
 }
 .filter-heading a {
 	float: right;
-	color: #686868;
+	color: #ffffff;
 	font-size: 14px;
 	margin-top: 4px;
 }

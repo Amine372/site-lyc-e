@@ -177,9 +177,10 @@
 							<div class="col-lg-3">
 								<div class="filter-secs">
 									<div class="filter-heading">
-										<h3>Annonces</h3>
-										<a  data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a>
-									</div><!--filter-heading end-->
+										<h3>Annonces</h3></div>
+										<div><center><a  class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
+										</div>
+									
 									
 								</div><!--filter-secs end-->
 							</div>
@@ -194,17 +195,10 @@
 														<h3>Quentin Lignani</h3>
 													</div>
 												</div>
-												<div class="ed-opts">
-													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-													<ul class="ed-options">
-														<li><a href="#" title="">Modifier</a></li>
-														<li><a href="#" title="">Supprimer</a></li>
-													</ul>
-												</div>
+												
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="../images/icon8.png" alt=""><span>Quentin Lignani</span></li>
 													<li><img src="../images/icon9.png" alt=""><span>Paris</span></li>
 												</ul>
 												
@@ -212,16 +206,18 @@
 											<div class="job_descp">
 												<h3>Développeur Wordpress</h3>
 												<ul class="job-dt">
-													<li><a href="#" title="">Temps partiel</a></li>
+													<li><a><b>Temps partiel</b></a></li>
 												</ul>
 												<p>Bonjour, je suis à la recherche d'une entreprise dans le secteur informatique qui puisse m'accueillir pour un contrat d'apprentissage ou de professionnalisation</p>
-												<ul class="skill-tags">
-													<li><a href="#" title="">HTML</a></li>
-													<li><a href="#" title="">PHP</a></li>
-													<li><a href="#" title="">CSS</a></li>
-													<li><a href="#" title="">Javascript</a></li>
-													<li><a href="#" title="">Wordpress</a></li>
-												</ul>
+												<hr>
+												<center><ul class="skill-tags">
+													<li><p>HTML</p></li>
+													<li><p>PHP</p></li>
+													<li><p>CSS</p></li>
+													<li><p>Javascript</p></li>
+													<li><p>Wordpress</p></li>
+												</ul></center>
+												
 											</div>
 											
 										</div><!--post-bar end-->
