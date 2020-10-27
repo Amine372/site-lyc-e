@@ -38,6 +38,6 @@ $mail->AddAddress("q.lignani@lprs.fr");
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    header("Location: ../validatemail.php");
+    header("Location: ../traitement/validatemail.php");
  }
  ?>
