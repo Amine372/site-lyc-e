@@ -178,7 +178,7 @@
 								<div class="filter-secs">
 									<div class="filter-heading">
 										<h3>Annonces</h3></div>
-										<div><center><a  class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
+										<div><center><a href="" class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
 										</div>
 									
 									
