@@ -124,7 +124,7 @@
 											<div class="view-more">
 												<a title="">Email :</a>
 
-												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
+												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</a></u>
 												<br>
 												<br>
 												<a title="">Tèl :</a>
@@ -138,7 +138,7 @@
 									</div><!--suggestions end-->
 
 		<main>
-			<center><div class="main-section">
+      <div class="main-section">
 				<div class="container">
 					<center><div class="main-section-data">
 
@@ -217,5 +217,6 @@
 <script type="text/javascript" src="../js/jquery.range-min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+</div>
 </body>
 </html>

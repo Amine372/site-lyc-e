@@ -1,13 +1,20 @@
-<?php
-session_start();
-$mdp = SHA1($_POST['mdp']);
-$identifiant = $_SESSION['identifiant'];
+ <?php
+   //Traitement des données entrées dans le form d'inscription
+   require '../class/modele/User.php';
+   require '../class/manager/Manager_User.php';
+   session_start();
+   //Vérification du mdp
 
-//On modifit le mdp de l'utilisateur et on lui remet l'état de vérifié
-$bdd = new PDO('mysql:host=localhost;dbname=snack','root','');
-$req = $bdd->prepare('UPDATE etudiant set verif = 1 , mdp = ?  where identifiant = ?');
-$req->execute(array($mdp, $identifiant));
-
-header('location:../view/formulaire_connexion_etudiant.php');
+   if($_POST['mdp'] != $_POST['confirmmdp']){
+     $_SESSION['erreur_change'] = "Erreur dans le mot de passe.";
+     header('Location: ../view/changement_mdp.php');
+   }
+   //ajout dans la bdd
+   else{
+     $change = new User(['email'=>$_POST['email'],
+                          'mdp'=>$_POST['mdp']]);
+     $inscrit = new Manager_User;
+     $inscrit->change_mdp($change);
+   }
 
  ?>
