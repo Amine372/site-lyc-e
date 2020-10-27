@@ -73,7 +73,7 @@
 									Annonces
 								</a>
 							</li>
-<li>
+              <li>
 								<a href="view/contact.php" title="">
 									<span><img src="images/icon6.png" alt=""></span>
 									Contact

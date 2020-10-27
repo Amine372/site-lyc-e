@@ -7,7 +7,7 @@
 
    if($_POST['mdp'] != $_POST['confirmmdp']){
      $_SESSION['erreur_change'] = "Erreur dans le mot de passe.";
-     header('Location: ../view/changement_mdp.php');
+     header('Location: ../view/recup_mdp.php');
    }
    //ajout dans la bdd
    else{

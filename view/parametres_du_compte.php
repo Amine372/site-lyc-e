@@ -148,12 +148,6 @@
 														<input type="text" name="prenom" placeholder="Prénom">
 													</div>
 												</div>
-												<div class="cp-field">
-													<h5>Mail</h5>
-													<div class="cpp-fiel">
-														<input type="text" name="email" placeholder="Adresse éléctronique">
-													</div>
-												</div>
 												<div class="save-stngs pd2">
 													<ul>
 														<li><button type="submit">Sauvegarder</button></li>

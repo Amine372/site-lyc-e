@@ -1,4 +1,4 @@
-change<?php
+<?php
 //Manager
 require_once(__DIR__.'/../modele/User.php');
 use PHPMailer\PHPMailer\PHPMailer;
@@ -80,7 +80,7 @@ class Manager_User
         $_SESSION['role'] = $donnee['role'];
       }
       if ($donnee['verif'] == 0) {
-        header('location: ../view/changement_mdp.php');
+        header('location: ../view/recup_mdp.php');
         exit();
       }
       header('location: ../index.php');
@@ -118,10 +118,10 @@ class Manager_User
   }
 
   //Update des données utilisateur dans la bdd
-  public function change_mdp(User $change, $email)
+  public function recup_mdp(User $change, $email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('UPDATE utilisateur SET mdp = ? WHERE email = ?');
+    $req = $bdd->prepare('UPDATE utilisateur SET mdp = ?, verif = 1 WHERE email = ?');
     $req->execute(array(SHA1($change->getMdp()), $email));
     header('location: ../index.php');
   }
