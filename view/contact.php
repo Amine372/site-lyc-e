@@ -143,7 +143,7 @@
 					<center><div class="main-section-data">
 													
 							
-                      <form id="contact_form" class="contact-form" action="../phpmailer/mail.php" method="post">
+                      <form id="contact_form" class="contact-form" action="../phpmailer/cible_contact.php" method="post">
 
                         <div class="messages"></div>
 
