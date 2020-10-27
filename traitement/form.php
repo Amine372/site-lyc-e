@@ -1,5 +1,5 @@
 <?php
-include('../view/projects.php');
+include('../view/evenements.php');
 
           try
           {
