@@ -178,7 +178,7 @@
 								<div class="filter-secs">
 									<div class="filter-heading">
 										<h3>Annonces</h3></div>
-										<div><center><a  class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
+										<div><center><a href="" class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
 										</div>
 									
 									
@@ -211,11 +211,11 @@
 												<p>Bonjour, je suis à la recherche d'une entreprise dans le secteur informatique qui puisse m'accueillir pour un contrat d'apprentissage ou de professionnalisation</p>
 												<hr>
 												<center><ul class="skill-tags">
-													<li><p>HTML</p></li>
-													<li><p>PHP</p></li>
-													<li><p>CSS</p></li>
-													<li><p>Javascript</p></li>
-													<li><p>Wordpress</p></li>
+													<li><u><i>HTML</u></i></li>
+													<li><u>PHP</u></li>
+													<li><u>CSS</u></li>
+													<li><u>Javascript</u></li>
+													<li><u>Wordpress</u></li>
 												</ul></center>
 												
 											</div>

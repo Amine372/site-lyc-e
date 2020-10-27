@@ -130,11 +130,11 @@
 												<br>
 												<br>
 												<a title="">Tel :</a>
-									<u><a> 01 48 37 74 26</a></u>
+									<u><a href="tel:+331 48 37 74 26" > 01 48 37 74 26</a></u>
 									<br>
 												<br>
 												<a title="">Adresse :</a>
-												<u><a>5 avenue du Général de Gaulle - 93440 Dugny</a></u>
+												<u><a href="https://www.google.fr/maps/place/5+Avenue+du+G%C3%A9n%C3%A9ral+de+Gaulle,+93440+Dugny/@48.9493039,2.4132023,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66b9c6b0800f7:0x2ea7ca67c7f41e11!8m2!3d48.9493004!4d2.415391">5 avenue du Général de Gaulle - 93440 Dugny</a></u>
 											</div>
 										</div><!--suggestions-list end-->
 									</div><!--suggestions end-->

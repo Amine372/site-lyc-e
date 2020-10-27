@@ -31,7 +31,7 @@
 
 										<div style="margin-top:25%;margin-bottom:25%; font-size:24px">
 
-											<CENTER>Votre demande de contact a bien été envoyer !</CENTER>
+											<center>Votre demande de contact a bien été envoyer !</center>
 											<br><br><br>
 											<div class="sign_in_sec current">
 													<div class="row">

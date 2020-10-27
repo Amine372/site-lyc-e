@@ -73,7 +73,7 @@
 									Annonces
 								</a>
 							</li>
-<li>
+              <li>
 								<a href="view/contact.php" title="">
 									<span><img src="images/icon6.png" alt=""></span>
 									Contact
@@ -86,7 +86,8 @@
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
             <?php
-						if (isset($_SESSION['nom'])) {
+						if (isset($_SESSION['nom']))
+            {
               echo '<div class="user-info">
   							<img src="http://via.placeholder.com/30x30" alt="">
   							<a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -100,7 +101,8 @@
   							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
   						</div><!--fin des paramètres du compte utilisateur-->';
             }
-            else {
+            else
+            {
               echo '<div class="user-info">
   							<a href="#" title="">Connectez vous</a>
   							<i class="la la-sort-down"></i>
@@ -135,29 +137,20 @@
 										<div class="user-pro-img">
 											<img src="images/logoschuman.png" alt="" width="130px" height="100px">
 										</div><!--user-pro-img end-->
-
-
-
-
 										<ul class="social_links">
 											<li><a href="http://www.lyceerobertschuman.com" title=""><i class="la la-globe"></i> Site internet</a></li>
 											<li><a href="https://www.facebook.com/pages/Lyc%C3%A9e-Priv%C3%A9-Robert-Schuman-%C3%A0-Dugny/388750161192043" title=""><i class="fa fa-facebook-square"></i> Page Facebook</a></li>
-
 											<li><a href="https://www.youtube.com/watch?v=5fQu2KygRL0&feature=youtu.be" title=""><i class="fa fa-youtube"></i> YouTube</a></li>
 										</ul>
 									</div><!--user_profile end-->
 									<div class="suggestions full-width">
 										<div class="sd-title">
-
-
-
 											<div class="suggestion-usd">
 												<img src="images/pronote.png" alt="" width="30px" height="30px">
 												<div class="sgt-text">
 													<h4>Pronote</h4>
 													<span>Logiciel</span>
 												</div>
-
 											</div>
 											<div class="view-more">
 												<a href="https://0931573e.index-education.net/pronote/" title="">Accéder</a>
@@ -172,7 +165,6 @@
 										<h3>Lycée privé et UFA Robert Schuman</h3>
 										<div class="star-descp">
 											<span>Depuis 1920 !</span>
-
 										</div><!--star-descp end-->
 										<div class="tab-feed">
 											<ul>
@@ -199,15 +191,7 @@
 									</div><!--user-tab-sec end-->
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
-
-
-
-
-
-
-
 											<div class="process-comm">
-
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
@@ -216,7 +200,6 @@
 											<h3><a href="#" title="" class="overview-open">Notre Histoire</a> <a href="#" title="" class="overview-open"></a></h3>
 											<p>L’établissement a été créé en 1920 par quelques ingénieurs centraliens chrétiens qui fondèrent une association pour alphabétiser des jeunes gens en difficultés : c’était la naissance de « l’Entraide Éducative ». Plus tard, s’ajouteront différentes formations professionnelles pour devenir le Lycée privé Robert Schuman (Sous contrat d’association avec l’État).</p>
 										</div><!--user-profile-ov end-->
-
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="esp-bx-open">Formations</a><a href="#" title="" class="esp-bx-open"></a></h3>
 											<span><center><u>Aujourd’hui le lycée Robert SCHUMAN propose des formations diverses : </u></center></span>
@@ -251,40 +234,34 @@
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="portfolio-dd">
 										<div class="portfolio-gallery-sec">
-											<h3>Gallerie</h3>
+											<h3>Galerie</h3>
 											<div class="gallery_pf">
 												<div class="row">
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/1.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/2.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/3.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/4.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/5.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
-
 												</div>
 											</div><!--gallery_pf end-->
 										</div><!--portfolio-gallery-sec end-->
@@ -294,11 +271,11 @@
 							<div class="col-lg-3">
 								<div class="right-sidebar">
 									<div class="message-btn">
-										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
+										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez nous !</a>
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
-											<h3>Portfolio</h3>
+											<h3>Galerie</h3>
 											<img src="images/photo-icon.png" alt="">
 										</div>
 										<div class="pf-gallery">
@@ -308,7 +285,6 @@
 												<li><a href="#" title=""><img src="images/3.jpg" alt=""></a></li>
 												<li><a href="#" title=""><img src="images/4.jpg" alt=""></a></li>
 												<li><a href="#" title=""><img src="images/5.jpg" alt=""></a></li>
-
 											</ul>
 										</div><!--pf-gallery end-->
 									</div><!--widget-portfolio end-->
@@ -319,8 +295,6 @@
 				</div>
 			</div>
 		</main>
-
-
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
@@ -334,31 +308,27 @@
 				</div>
 			</div>
 		</footer><!--footer end-->
-
-
 		<div class="overview-box" id="overview-box">
 			<div class="overview-edit">
-				<h3>Overview</h3>
-				<span>5000 character left</span>
+				<h3>Aperçu</h3>
+				<span>5000 caractères maximum</span>
 				<form>
 					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
-
-
 		<div class="overview-box" id="experience-box">
 			<div class="overview-edit">
 				<h3>Experience</h3>
 				<form>
 					<input type="text" name="subject" placeholder="Subject">
 					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -387,48 +357,19 @@
 					</div>
 					<input type="text" name="degree" placeholder="Degree">
 					<textarea placeholder="Description"></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-		<div class="overview-box" id="location-box">
-			<div class="overview-edit">
-				<h3>Location</h3>
-				<form>
-					<div class="datefm">
-						<select>
-							<option>Country</option>
-							<option value="pakistan">Pakistan</option>
-							<option value="england">England</option>
-							<option value="india">India</option>
-							<option value="usa">United Sates</option>
-						</select>
-						<i class="fa fa-globe"></i>
-					</div>
-					<div class="datefm">
-						<select>
-							<option>City</option>
-							<option value="london">London</option>
-							<option value="new-york">New York</option>
-							<option value="sydney">Sydney</option>
-							<option value="chicago">Chicago</option>
-						</select>
-						<i class="fa fa-map-marker"></i>
-					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
+
 
 		<div class="overview-box" id="skills-box">
 			<div class="overview-edit">
-				<h3>Skills</h3>
+				<h3>Compétences</h3>
 				<ul>
 					<li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
 					<li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
@@ -436,9 +377,9 @@
 				</ul>
 				<form>
 					<input type="text" name="skills" placeholder="Skills">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -446,9 +387,9 @@
 
 		<div class="overview-box" id="create-portfolio">
 			<div class="overview-edit">
-				<h3>Create Portfolio</h3>
+				<h3>Fonder un Portfolio</h3>
 				<form>
-					<input type="text" name="pf-name" placeholder="Portfolio Name">
+					<input type="text" name="pf-name" placeholder="Nom du Portfolio">
 					<div class="file-submit nomg">
 						<input type="file" name="file">
 					</div>
@@ -456,8 +397,8 @@
 						<img src="http://via.placeholder.com/60x60" alt="">
 					</div>
 					<input type="text" name="website-url" placeholder="htp://www.example.com">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -465,14 +406,14 @@
 
 		<div class="overview-box" id="establish-box">
 			<div class="overview-edit">
-				<h3>Establish Since</h3>
+				<h3>Depuis...</h3>
 				<form>
 					<div class="daty">
 						<input type="text" name="establish" placeholder="Select Date" class="datepicker">
 						<i class="fa fa-calendar"></i>
 					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -481,20 +422,17 @@
 
 		<div class="overview-box" id="total-employes">
 			<div class="overview-edit">
-				<h3>Total Employees</h3>
+				<h3>Total des employés</h3>
 				<form>
 					<input type="text" name="employes" placeholder="Type in numbers">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-
-
 	</div><!--theme-layout end-->
-
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
