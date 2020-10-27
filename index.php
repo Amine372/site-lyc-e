@@ -86,7 +86,8 @@
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
             <?php
-						if (isset($_SESSION['nom'])) {
+						if (isset($_SESSION['nom']))
+            {
               echo '<div class="user-info">
   							<img src="http://via.placeholder.com/30x30" alt="">
   							<a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -100,7 +101,8 @@
   							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
   						</div><!--fin des paramètres du compte utilisateur-->';
             }
-            else {
+            else
+            {
               echo '<div class="user-info">
   							<a href="#" title="">Connectez vous</a>
   							<i class="la la-sort-down"></i>
@@ -135,29 +137,20 @@
 										<div class="user-pro-img">
 											<img src="images/logoschuman.png" alt="" width="130px" height="100px">
 										</div><!--user-pro-img end-->
-
-
-
-
 										<ul class="social_links">
 											<li><a href="http://www.lyceerobertschuman.com" title=""><i class="la la-globe"></i> Site internet</a></li>
 											<li><a href="https://www.facebook.com/pages/Lyc%C3%A9e-Priv%C3%A9-Robert-Schuman-%C3%A0-Dugny/388750161192043" title=""><i class="fa fa-facebook-square"></i> Page Facebook</a></li>
-
 											<li><a href="https://www.youtube.com/watch?v=5fQu2KygRL0&feature=youtu.be" title=""><i class="fa fa-youtube"></i> YouTube</a></li>
 										</ul>
 									</div><!--user_profile end-->
 									<div class="suggestions full-width">
 										<div class="sd-title">
-
-
-
 											<div class="suggestion-usd">
 												<img src="images/pronote.png" alt="" width="30px" height="30px">
 												<div class="sgt-text">
 													<h4>Pronote</h4>
 													<span>Logiciel</span>
 												</div>
-
 											</div>
 											<div class="view-more">
 												<a href="https://0931573e.index-education.net/pronote/" title="">Accéder</a>
@@ -172,7 +165,6 @@
 										<h3>Lycée privé et UFA Robert Schuman</h3>
 										<div class="star-descp">
 											<span>Depuis 1920 !</span>
-
 										</div><!--star-descp end-->
 										<div class="tab-feed">
 											<ul>
@@ -199,15 +191,7 @@
 									</div><!--user-tab-sec end-->
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
-
-
-
-
-
-
-
 											<div class="process-comm">
-
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
@@ -216,7 +200,6 @@
 											<h3><a href="#" title="" class="overview-open">Notre Histoire</a> <a href="#" title="" class="overview-open"></a></h3>
 											<p>L’établissement a été créé en 1920 par quelques ingénieurs centraliens chrétiens qui fondèrent une association pour alphabétiser des jeunes gens en difficultés : c’était la naissance de « l’Entraide Éducative ». Plus tard, s’ajouteront différentes formations professionnelles pour devenir le Lycée privé Robert Schuman (Sous contrat d’association avec l’État).</p>
 										</div><!--user-profile-ov end-->
-
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="esp-bx-open">Formations</a><a href="#" title="" class="esp-bx-open"></a></h3>
 											<span><center><u>Aujourd’hui le lycée Robert SCHUMAN propose des formations diverses : </u></center></span>
@@ -251,40 +234,34 @@
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="portfolio-dd">
 										<div class="portfolio-gallery-sec">
-											<h3>Gallerie</h3>
+											<h3>Galerie</h3>
 											<div class="gallery_pf">
 												<div class="row">
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/1.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/2.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/3.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/4.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-4 col-6">
 														<div class="gallery_pt">
 															<img src="images/5.jpg" alt="">
-
 														</div><!--gallery_pt end-->
 													</div>
-
 												</div>
 											</div><!--gallery_pf end-->
 										</div><!--portfolio-gallery-sec end-->
@@ -298,7 +275,7 @@
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
-											<h3>Portfolio</h3>
+											<h3>Galerie</h3>
 											<img src="images/photo-icon.png" alt="">
 										</div>
 										<div class="pf-gallery">
@@ -308,7 +285,6 @@
 												<li><a href="#" title=""><img src="images/3.jpg" alt=""></a></li>
 												<li><a href="#" title=""><img src="images/4.jpg" alt=""></a></li>
 												<li><a href="#" title=""><img src="images/5.jpg" alt=""></a></li>
-
 											</ul>
 										</div><!--pf-gallery end-->
 									</div><!--widget-portfolio end-->
@@ -319,8 +295,6 @@
 				</div>
 			</div>
 		</main>
-
-
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
@@ -334,8 +308,6 @@
 				</div>
 			</div>
 		</footer><!--footer end-->
-
-
 		<div class="overview-box" id="overview-box">
 			<div class="overview-edit">
 				<h3>Aperçu</h3>
@@ -348,8 +320,6 @@
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
-
-
 		<div class="overview-box" id="experience-box">
 			<div class="overview-edit">
 				<h3>Experience</h3>
