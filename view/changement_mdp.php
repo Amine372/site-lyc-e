@@ -41,7 +41,7 @@
                       <div class="sn-field">
                         <input type="password" name="mdp" required placeholder="Nouveau mot de passe" style="width: 50%;">
 												<br><br>
-												<input type="password" name="mdp2" required placeholder="Retaper le mot de passe" style="width: 50%;">
+												<input type="password" name="confirmmdp" required placeholder="Retaper le mot de passe" style="width: 50%;">
 												<br>
 		                    <button type="submit" value="submit">Confirmer</button>
                       </div><!--sn-field end-->
