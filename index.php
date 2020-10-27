@@ -58,17 +58,17 @@
 								</a>
 							</li>
 							<li>
-								<a href="view/profiles.html" title="">
+								<a href="view/profils.php" title="">
 									<span><img src="images/icon4.png" alt=""></span>
 									Profils
 								</a>
 								<ul>
-									<li><a href="view/user-profile.html" title="">Nom d'uttilisateur</a></li>
+									<li><a href="view/profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
 									<li><a href="view/my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="view/jobs.php" title="">
+								<a href="view/emploi.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
 									Annonces
 								</a>
@@ -90,7 +90,7 @@
   						<div class="user-account-settingss">
   							<h3><a href="#" title="">Mon Compte</a></h3>
   							<ul class="us-links">
-  								<li><a href="view/profile-account-setting.php" title="">Paramètre du compte</a></li>
+  								<li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
   							</ul>
   							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
   						</div><!--fin des paramètres du compte utilisateur-->';
@@ -101,7 +101,7 @@
   							<i class="la la-sort-down"></i>
   						</div>
   						<div class="user-account-settingss">
-  							<h3><a href="view/sign-in.php" title="">Connexion</a></h3>
+  							<h3><a href="view/connexion.php" title="">Connexion</a></h3>
   							<ul class="us-links">
   								<li><a href="view/inscription.php" title="">Inscription</a></li>
   							</ul>

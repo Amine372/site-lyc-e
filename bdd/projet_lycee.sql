@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 05 oct. 2020 à 15:09
+-- Généré le :  mar. 27 oct. 2020 à 07:45
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -64,10 +64,10 @@ DROP TABLE IF EXISTS `evenements`;
 CREATE TABLE IF NOT EXISTS `evenements` (
   `id` int(11) NOT NULL,
   `id_utilisateur` int(10) UNSIGNED NOT NULL,
-  `titre` varchar(40) NOT NULL,
-  `description` text NOT NULL,
+  `titre` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `date` date NOT NULL,
-  `Comm` text NOT NULL,
+  `Comm` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   KEY `fk_id_user_event` (`id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -76,7 +76,9 @@ CREATE TABLE IF NOT EXISTS `evenements` (
 --
 
 INSERT INTO `evenements` (`id`, `id_utilisateur`, `titre`, `description`, `date`, `Comm`) VALUES
-(1, 3, 'AMINE', 'NAKHIK', '2020-10-05', 'TEST');
+(1, 3, 'AMINE', 'NAKHIK', '2020-10-05', 'TEST'),
+(2, 3, 'Dévelopeur Informatique Fullstack H/F', 'À propos d\'AtosAtos est un leader international de la transformation digitale avec plus de 110 000 collaborateurs dans 73 pays et un chiffre d\'affaires annuel de plus de 11 milliards d\'euros. Numéro un européen du Cloud, de la cybersécurité et des supercalculateurs.', '2020-10-21', 'AGEFIPH- Espace Emploi'),
+(4, 3, 'stage Developpeur informatique - H/F', 'Qui sommes-nous ? Avec 90 000 collaborateurs présents sur les cinq \r\ncontinents, SUEZ est un leader mondial dans la gestion intelligente et \r\ndurable des ressources. Le Groupe fournit des solutions de gestion de l\'eau \r\net des déchets qui permettent aux villes.', '2020-06-09', 'Jobijoba');
 
 -- --------------------------------------------------------
 
