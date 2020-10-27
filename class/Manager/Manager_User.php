@@ -143,7 +143,8 @@ class Manager_User
 
 
   //inscription d'un compte admin
-  public function inscrip_admin(User $inscription){
+  public function inscrip_admin(User $inscription)
+  {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscription->getEmail()));
