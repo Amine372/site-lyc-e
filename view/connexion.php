@@ -75,17 +75,18 @@ session_start();
 											<?php
 												if (isset($_SESSION['erreur_co'])) {
 													echo "<div style='color:#ff0000'>
-																	Mauvais Mail ou mot de passe";
+																	Mauvais Mail ou mot de passe</div>";
+
 													unset($_SESSION['erreur_co']);
 												}
 											 ?>
 										</div>
-                    </div>
 									</form>
 
 
 								</div><!--sign_in_sec end-->
-
+              </div>
+            </div>
 					</div>
 				</div><!--signin-pop end-->
 			</div><!--signin-popup end-->

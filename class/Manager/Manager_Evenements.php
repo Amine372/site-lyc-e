@@ -24,8 +24,6 @@ class Manager_Evenements
       return $donnee;
     }
 
+  }
 }
-}
-
-
- ?>
+?>

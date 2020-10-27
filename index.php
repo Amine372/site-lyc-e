@@ -219,7 +219,7 @@
 
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="esp-bx-open">Formations</a><a href="#" title="" class="esp-bx-open"></a></h3>
-											<span><center><u>Aujourd’hui le lycée Robert SCHUMAN propose des formations diverses : </u></center></center><span>
+											<span><center><u>Aujourd’hui le lycée Robert SCHUMAN propose des formations diverses : </u></center></span>
 												<br>
 												<br>
 												<center><li>3e Prépa-Pro (Découverte Professionnelle)</li>
