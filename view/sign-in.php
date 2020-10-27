@@ -66,7 +66,7 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 											</div>
 											<div class="col-lg-12 no-pdd">
 												<div class="checky-sec">
-													<a href="mdp_oublie.html" title="">Mot de passe oublié ?</a>
+													<a href="mdp_oublie.php" title="">Mot de passe oublié ?</a>
 												</div>
 											</div>
 											<div class="col-lg-12 no-pdd">
