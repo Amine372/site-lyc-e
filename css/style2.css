@@ -75,7 +75,7 @@ body
 	font-family: 'Source Sans Pro', sans-serif;
 	overflow-x: hidden;
 	font-weight: 400;
-	background-color: #eeeeee;
+	background-image: url("../images/bleu-cobalt-500ml.jpg");
 }
 ol, ul {
 	list-style: none;
