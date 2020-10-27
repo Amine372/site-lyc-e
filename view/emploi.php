@@ -52,11 +52,11 @@
                         <br>
                         <form>
                             <div class="form-group">
-                                <input type="email" class="form-control"  placeholder="Entrer votre nom">
+                                <input type="email" class="form-control"  placeholder="Entrez votre nom">
 								<br>
-							 <input type="text" class="form-control"   placeholder="Entrer votre adresse mail">
+							 <input type="text" class="form-control"   placeholder="Entrez votre adresse mail">
 							 <br>
-                                <input type="text" class="form-control"  a placeholder="Entrer le nom de poste">
+                                <input type="text" class="form-control"  a placeholder="Entrez le nom de poste">
 								<br>
 								          <input type="text" rows="6" class="form-control"  placeholder="Description de l'annonce">
 

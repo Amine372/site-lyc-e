@@ -101,14 +101,12 @@
 							<div class="company_profile_info">
 								<div class="company-up-info">
 									<img src="http://via.placeholder.com/91x91" alt="">
-									<h3>John Doe</h3>
-									<h4>Modéliste graphique</h4>
+									<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
+									<h4>Etudiant à l'UFA Robert schuman</h4>
 									<ul>>
 										<li><a href="messages.html" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-										<li><p title="" class="hire-us">Profil</p></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">Voir le Profil</a>
 							</div><!--company_profile_info end-->
 						</div>
 					</div>
