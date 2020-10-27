@@ -372,10 +372,10 @@
 					<div class="datefm">
 						<select>
 							<option>Pays</option>
-							<option value="pakistan">France</option>
-							<option value="england">Azerbaidjan</option>
-							<option value="india">Maroc</option>
-							<option value="usa">Wakanda</option>
+							<option value="france">France</option>
+							<option value="azerbaidjan">Azerbaidjan</option>
+							<option value="Maroc">Maroc</option>
+							<option value="Wakanda">Wakanda</option>
 						</select>
 						<i class="fa fa-globe"></i>
 					</div>
@@ -461,10 +461,7 @@
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-
-
 	</div><!--theme-layout end-->
-
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
