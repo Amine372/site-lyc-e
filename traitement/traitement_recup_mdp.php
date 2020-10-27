@@ -13,7 +13,7 @@
    else{
      $user = new User(['mdp'=>$_POST['mdp']]);
      $change = new Manager_User;
-     $change->change_mdp($user, $_SESSION['email']);
+     $change->recup_mdp($user, $_SESSION['email']);
    }
 
  ?>

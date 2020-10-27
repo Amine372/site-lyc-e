@@ -75,6 +75,7 @@ class Manager_User
     {
       $_SESSION['email'] = $donnee['email']; //on insère dans la session l'addresse mail entrée par l'uttilisateur dans le formulaire
       $_SESSION['nom'] = $donnee['nom']; //on insère dans la session le non de l'uttilisateur
+      $_SESSION['prenom'] = $donnee['prenom'];
       if ($donnee['role'] == "admin")
       {
         $_SESSION['role'] = $donnee['role'];
@@ -88,20 +89,10 @@ class Manager_User
     else
     {
       $_SESSION['erreur_co'] = true;
-      header('location: ../view/sign-in.php');
+      header('location: ../view/connexion.php');
     }
   }
 
-  //Récupération des données utilisateur pour la modification
-  public function placeholder($email)
-  {
-
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT nom, prenom, email from utilisateur where email = ?');
-    $req->execute(array($email));
-    $donnee = $req->fetch();
-    return $donnee;
-  }
 
   //Update des données utilisateur dans la bdd
   public function modification(User $modif, $email)
@@ -109,12 +100,36 @@ class Manager_User
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ? WHERE email = ?');
     $req->execute(array($modif->getNom(), $modif->getPrenom(), $email));
-    header('location: ../index.php');
+    $_SESSION['succes_modif'] = 'Modification enregistré';
+    header('location: ../view/parametres_du_compte.php#nav-statue');
     //actualisation du nom de l'utilisateur dans les pages
-    $req = $bdd->prepare('SELECT nom from utilisateur where email = ?');
+    $req = $bdd->prepare('SELECT * from utilisateur where email = ?');
     $req->execute(array($email));
     $donnee = $req->fetch();
     $_SESSION['nom'] = $donnee['nom'];
+    $_SESSION['prenom'] = $donnee['prenom'];
+  }
+
+  //Update des données utilisateur dans la bdd
+  public function modif_mdp(User $verif, $mdp, $email)
+  {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?');
+    $req->execute(array($email, SHA1($verif->getMdp())));
+    $donnee = $req->fetch();
+    if ($donnee)
+    {
+      $req = $bdd->prepare('UPDATE utilisateur SET mdp = ? WHERE email = ?');
+      $req->execute(array(SHA1($mdp), $email));
+      header('location: ../view/parametres_du_compte.php#nav-password');
+      $_SESSION['message_mdp'] = 'Modification enregistré';
+    }
+    else {
+      $_SESSION['message_mdp'] = 'Mauvais mot de passe';
+      header('location: ../view/parametres_du_compte.php#nav-password');
+    }
+
+
   }
 
   //Update des données utilisateur dans la bdd

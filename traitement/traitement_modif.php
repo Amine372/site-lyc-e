@@ -1,19 +1,14 @@
  <?php
-   //Traitement des données entrées dans le form d'inscription
-   require '../class/modele/User.php';
-   require '../class/manager/Manager_User.php';
-   session_start();
-   //Vérification du mdp
+  //Traitement des données entrées dans le form d'inscription
+  require '../class/modele/User.php';
+  require '../class/manager/Manager_User.php';
+  session_start();
 
-   if($_POST['mdp'] != $_POST['confirmmdp']){
-     $_SESSION['erreur_change'] = "Erreur dans le mot de passe.";
-     header('Location: ../view/recup_mdp.php');
-   }
-   //ajout dans la bdd
-   else{
-     $user = new User(['mdp'=>$_POST['mdp']]);
-     $change = new Manager_User;
-     $change->change_mdp($user, $_SESSION['email']);
-   }
+
+  $user = new User(['nom'=>$_POST['nom'],
+                    'prenom'=>$_POST['prenom']]);
+  $modif = new Manager_User;
+  $modif->modification($user, $_SESSION['email']);
+
 
  ?>
