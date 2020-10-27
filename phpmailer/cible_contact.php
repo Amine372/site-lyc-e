@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 
 	$from = $_REQUEST['email'];
     $nom = $_REQUEST['nom'];
-    $subject = $_REQUEST['subject'];
+    $sujet = $_REQUEST['sujet'];
     $message = $_REQUEST['message'];
 
     $headers = "From: $from";
@@ -32,12 +32,12 @@ $mail->Username = "quentin.lignani.schuman@gmail.com";
 $mail->Password = "Admwb2000";
 $mail->SetFrom("q.lignani@lprs.fr");
 $mail->Subject = "[Robert Schuman] : Réservation au Snack";
-$mail->Body = "<tr><td style='border:none;'><strong>Subject:</strong> {$nom}</td></tr>";
+$mail->Body = "<tr><td style='border:none;'><strong>Subject:</strong> {$nom}, <strong>Email:</strong> {$email},<strong>Sujet:</strong> {$sujet},<strong>Message:</strong> {$message}</td></tr>";
 $mail->AddAddress("q.lignani@lprs.fr");
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo "Message has been sent";
+    header("Location: ../validatemail.php");
  }
  ?>
