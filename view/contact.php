@@ -124,7 +124,7 @@
 
 
 											<div class="view-more">
-												<a title="">Email :</a>
+												<a title="">Mail :</a>
 
 												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
 												<br>

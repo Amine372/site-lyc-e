@@ -294,7 +294,7 @@
 							<div class="col-lg-3">
 								<div class="right-sidebar">
 									<div class="message-btn">
-										<a href="#" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
+										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez-nous</a>
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
