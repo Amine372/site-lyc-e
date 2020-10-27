@@ -130,7 +130,7 @@
 												<br>
 												<br>
 												<a title="">Tel :</a>
-									<u><a> 01 48 37 74 26</a></u>
+									<u><a href="tel:+331 48 37 74 26" > 01 48 37 74 26</a></u>
 									<br>
 												<br>
 												<a title="">Adresse :</a>
