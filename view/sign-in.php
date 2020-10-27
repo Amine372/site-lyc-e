@@ -36,7 +36,7 @@ session_start();
 								<div class="cm-logo">
 									<img src="../images/cm-logo.png" alt="">
 									<p>Enseignement catholique sous contrat d'association avec l'Etat,
-                   Etablissement habilité à percevoir la taxe d'apprentissage</p>
+Etablissement habilité à percevoir la taxe d'apprentissage</p>
 								</div><!--extrémité du logo cm-->
 								<img src="../images/cm-main-img.png" alt="">
 							</div><!--fin cmp-info-->
@@ -45,11 +45,11 @@ session_start();
 							<div class="login-sec">
 								<ul class="sign-control">
 									<li class="current"><a href="#" title="">Se connecter</a></li>
-									<li><a href="inscription.php">S'Inscrire</a></li>
+									<li><a href="inscription.php">S'inscrire</a></li>
 								</ul>
 								<div class="sign_in_sec current" id="tab-1">
 
-									<h3>Se Connecter</h3>
+									<h3>Se connecter</h3>
 									<form method="post" action="../traitement/cible_connexion.php">
 										<div class="row">
 											<div class="col-lg-12 no-pdd">
@@ -93,7 +93,7 @@ session_start();
 				<div class="container">
 
 
-					<p><img src="../images/copy-icon.png" alt="">Copyright 2020</p>
+					<p><img src="../images/copy-icon.png" alt="">Copyright 2020.</p>
 				</div>
 			</div><!--footy-sec end-->
 		</div><!--sign-in-page end-->

@@ -79,6 +79,10 @@ class Manager_User
       {
         $_SESSION['role'] = $donnee['role'];
       }
+      if ($donnee['verif'] == 0) {
+        header('location: ../view/changement_mdp.php');
+        exit();
+      }
       header('location: ../index.php');
     }
     else
