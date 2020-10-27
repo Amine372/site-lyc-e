@@ -356,9 +356,9 @@
 				<form>
 					<input type="text" name="subject" placeholder="Subject">
 					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -387,9 +387,9 @@
 					</div>
 					<input type="text" name="degree" placeholder="Degree">
 					<textarea placeholder="Description"></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -397,30 +397,30 @@
 
 		<div class="overview-box" id="location-box">
 			<div class="overview-edit">
-				<h3>Location</h3>
+				<h3>Localisation</h3>
 				<form>
 					<div class="datefm">
 						<select>
-							<option>Country</option>
-							<option value="pakistan">Pakistan</option>
-							<option value="england">England</option>
-							<option value="india">India</option>
-							<option value="usa">United Sates</option>
+							<option>Pays</option>
+							<option value="pakistan">France</option>
+							<option value="england">Azerbaidjan</option>
+							<option value="india">Maroc</option>
+							<option value="usa">Wakanda</option>
 						</select>
 						<i class="fa fa-globe"></i>
 					</div>
 					<div class="datefm">
 						<select>
-							<option>City</option>
-							<option value="london">London</option>
-							<option value="new-york">New York</option>
-							<option value="sydney">Sydney</option>
-							<option value="chicago">Chicago</option>
+							<option>Ville</option>
+							<option value="london">Oujda</option>
+							<option value="new-york">Noisy-le-sec</option>
+							<option value="sydney">Marly-Gommont</option>
+							<option value="chicago">Casablanca</option>
 						</select>
 						<i class="fa fa-map-marker"></i>
 					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -428,7 +428,7 @@
 
 		<div class="overview-box" id="skills-box">
 			<div class="overview-edit">
-				<h3>Skills</h3>
+				<h3>Compétences</h3>
 				<ul>
 					<li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
 					<li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
@@ -436,9 +436,9 @@
 				</ul>
 				<form>
 					<input type="text" name="skills" placeholder="Skills">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="save-add">Sauvegarder et Ajouter</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -446,9 +446,9 @@
 
 		<div class="overview-box" id="create-portfolio">
 			<div class="overview-edit">
-				<h3>Create Portfolio</h3>
+				<h3>Fonder un Portfolio</h3>
 				<form>
-					<input type="text" name="pf-name" placeholder="Portfolio Name">
+					<input type="text" name="pf-name" placeholder="Nom du Portfolio">
 					<div class="file-submit nomg">
 						<input type="file" name="file">
 					</div>
@@ -456,8 +456,8 @@
 						<img src="http://via.placeholder.com/60x60" alt="">
 					</div>
 					<input type="text" name="website-url" placeholder="htp://www.example.com">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -465,14 +465,14 @@
 
 		<div class="overview-box" id="establish-box">
 			<div class="overview-edit">
-				<h3>Establish Since</h3>
+				<h3>Depuis...</h3>
 				<form>
 					<div class="daty">
 						<input type="text" name="establish" placeholder="Select Date" class="datepicker">
 						<i class="fa fa-calendar"></i>
 					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -481,11 +481,11 @@
 
 		<div class="overview-box" id="total-employes">
 			<div class="overview-edit">
-				<h3>Total Employees</h3>
+				<h3>Total des employés</h3>
 				<form>
 					<input type="text" name="employes" placeholder="Type in numbers">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" class="save">Sauvegarder</button>
+					<button type="submit" class="cancel">Annuler</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
