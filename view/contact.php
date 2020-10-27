@@ -194,10 +194,15 @@
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					<ul>
-						<li><a href="#" title="">Annonces</a></li>
-						<li><a href="#" title="">Evenements</a></li>
-						<li><a href="#" title="">Copyright Policy</a></li>
+          <ul>
+						<li><a href="#" title="">Centre d'aide</a></li>
+						<li><a href="#" title="">Politique de confidentialité</a></li>
+						<li><a href="#" title="">Règles de la communauté</a></li>
+						<li><a href="#" title="">Politique de Cookies</a></li>
+						<li><a href="#" title="">Carières</a></li>
+						<li><a href="#" title="">Forum</a></li>
+						<li><a href="#" title="">Langage</a></li>
+						<li><a href="#" title="">Politique de Cookies</a></li>
 					</ul>
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
