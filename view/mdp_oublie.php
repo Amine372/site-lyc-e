@@ -31,7 +31,7 @@
 
           <div style="float: left; width: 100%; background-color: #fff;border-radius: 4px;">
             <div style="margin-top:25%;margin-bottom:25%; font-size:24px">
-							<CENTER>
+							<center>
                 <span>Mot de passe oublié</span><br>
 								<br>
 
@@ -58,7 +58,7 @@
                 </form>
 								<!--gestion d'erreur-->
 
-              </CENTER>
+              </center>
             </div>
           </div>
 

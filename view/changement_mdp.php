@@ -31,7 +31,7 @@
 
           <div style="float: left; width: 100%; background-color: #fff;border-radius: 4px;">
             <div style="margin-top:25%;margin-bottom:25%; font-size:24px">
-							<CENTER>
+							<center>
                 <span>Changement de mot de passe</span><br>
 								<br>
 
@@ -48,7 +48,7 @@
                     </div>
                    </div>
                 </form>
-              </CENTER>
+              </center>
             </div>
           </div>
 
