@@ -154,7 +154,7 @@
         												</ul>
         												<ul class="bk-links">
         													<li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
-        													<li><a href="#" title="" class="bid_now">Profil</a></li>
+        													<li><p title="" class="bid_now">Profil</p></li>
         												</ul>
         											</div>
         											<div class="job_descp">
