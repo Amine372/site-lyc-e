@@ -127,7 +127,7 @@
 												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</a></u>
 												<br>
 												<br>
-												<a title="">Tèl :</a>
+												<a title="">Tel :</a>
 									<u><a> 01 48 37 74 26</a></u>
 									<br>
 												<br>
@@ -177,7 +177,7 @@
                             </div>
                           </div>
 
-                          <input type="submit" class="buttonsend" value="Envoyer le Message">
+                          <input type="button" class="buttonsend" value="Envoyer le Message">
                         </div>
                       </form>
 
