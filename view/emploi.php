@@ -56,7 +56,7 @@
 								<br>
 							 <input type="text" class="form-control"   placeholder="Entrez votre adresse mail">
 							 <br>
-                                <input type="text" class="form-control"  a placeholder="Entrez le nom de poste">
+                                <input type="text" class="form-control"  a placeholder="Entrez l'intitulé du poste">
 								<br>
 								          <input type="text" rows="6" class="form-control"  placeholder="Description de l'annonce">
 
