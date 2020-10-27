@@ -62,8 +62,6 @@
 				</div>
 			</div><!--footy-sec end-->
 		</div><!--sign-in-page end-->
-
-
 	</div><!--theme-layout end-->
 
 
