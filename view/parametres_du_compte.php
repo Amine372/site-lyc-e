@@ -135,28 +135,28 @@
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
 							  			<h3>Mon Compte</h3>
-											<form>
+											<form method="post" action="../traitement/traitement_modif.php">
 												<div class="cp-field">
 													<h5>Nom</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="nom" placeholder="Nom">
+														<input type="text" name="nom" placeholder="Nom" value="<?php echo $_SESSION['nom']; ?>" required>
 													</div>
 												</div>
 												<div class="cp-field">
 													<h5>Prénom</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="prenom" placeholder="Prénom">
-													</div>
-												</div>
-												<div class="cp-field">
-													<h5>Mail</h5>
-													<div class="cpp-fiel">
-														<input type="text" name="email" placeholder="Adresse éléctronique">
+														<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $_SESSION['prenom']; ?>" required>
 													</div>
 												</div>
 												<div class="save-stngs pd2">
 													<ul>
 														<li><button type="submit">Sauvegarder</button></li>
+
+                              <?php if(isset($_SESSION['succes_modif'])){
+                                echo $_SESSION['succes_modif'];
+                                unset($_SESSION['succes_modif']);
+                              } ?>
+
 													</ul>
 												</div><!--save-stngs end-->
 											</form>
@@ -165,31 +165,35 @@
 							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
 							  		<div class="acc-setting">
 										<h3>Changement de mot de passe</h3>
-										<form>
+										<form method="post" action="../traitement/traitement_modif_mdp.php">
 											<div class="cp-field">
 												<h5>Ancien mot de passe</h5>
 												<div class="cpp-fiel">
-													<input type="password" name="old-psw" placeholder="">
+													<input type="password" name="amdp" placeholder="" required>
 													<i class="fa fa-lock"></i>
 												</div>
 											</div>
 											<div class="cp-field">
 												<h5>Nouveau mot de passe</h5>
 												<div class="cpp-fiel">
-													<input type="password" name="new-psw" placeholder="">
+													<input type="password" name="mdp" placeholder="" required>
 													<i class="fa fa-lock"></i>
 												</div>
 											</div>
 											<div class="cp-field">
 												<h5>Retapez le mot de passe</h5>
 												<div class="cpp-fiel">
-													<input type="password" name="repeat-psw" placeholder="">
+													<input type="password" name="confirmmdp" placeholder="" required>
 													<i class="fa fa-lock"></i>
 												</div>
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
-													<li><button type="submit">Enregistrer</button></li>
+													<li><button type="submit">Enregistré</button></li>
+                          <?php if(isset($_SESSION['message_mdp'])){
+                            echo $_SESSION['message_mdp'];
+                            unset($_SESSION['message_mdp']);
+                          } ?>
 												</ul>
 											</div><!--save-stngs end-->
 										</form>
