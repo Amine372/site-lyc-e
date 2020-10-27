@@ -365,36 +365,7 @@
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-		<div class="overview-box" id="location-box">
-			<div class="overview-edit">
-				<h3>Localisation</h3>
-				<form>
-					<div class="datefm">
-						<select>
-							<option>Pays</option>
-							<option value="france">France</option>
-							<option value="azerbaidjan">Azerbaidjan</option>
-							<option value="Maroc">Maroc</option>
-							<option value="Wakanda">Wakanda</option>
-						</select>
-						<i class="fa fa-globe"></i>
-					</div>
-					<div class="datefm">
-						<select>
-							<option>Ville</option>
-							<option value="london">Oujda</option>
-							<option value="new-york">Noisy-le-sec</option>
-							<option value="sydney">Marly-Gommont</option>
-							<option value="chicago">Casablanca</option>
-						</select>
-						<i class="fa fa-map-marker"></i>
-					</div>
-					<button type="submit" class="save">Sauvegarder</button>
-					<button type="submit" class="cancel">Annuler</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
+		
 
 		<div class="overview-box" id="skills-box">
 			<div class="overview-edit">
