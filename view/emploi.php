@@ -347,6 +347,15 @@
 
 	</div><!--theme-layout end-->
 
+		<footer>
+			<div class="footy-sec mn no-margin">
+				<div class="container">
+					
+					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+					<img class="fl-rgt" src="images/logo2.png" alt="">
+				</div>
+			</div>
+		</footer><!--footer end-->
 
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -361,4 +370,5 @@
 <script src="assets/js/lunar.js"></script>
 <script src="assets/js/demo.js"></script>
 </body>
+
 </html>
