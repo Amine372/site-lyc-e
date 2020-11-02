@@ -123,10 +123,17 @@ class Manager_User
       $req->execute(array(SHA1($mdp), $email));
       header('location: ../view/parametres_du_compte.php#nav-password');
       $_SESSION['message_mdp'] = 'Modification enregistré';
+      echo '<scrip>$(document).ready(function()){
+        $("nav").toggleClass("active");
+        return false;
+      });</script>';
     }
     else {
       $_SESSION['message_mdp'] = 'Mauvais mot de passe';
       header('location: ../view/parametres_du_compte.php#nav-password');
+      echo '<scrip>$(document).ready(function(){
+        console.log( "ready!" );
+      });</script>';
     }
 
 

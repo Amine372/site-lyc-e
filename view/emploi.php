@@ -80,7 +80,7 @@
 	<div class="wrapper">
 
 
-		<header>
+    <header>
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
@@ -112,7 +112,7 @@
 									Profils
 								</a>
 								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'utilisateur</a></li>
+									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
 									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
 								</ul>
 							</li>
@@ -122,54 +122,55 @@
 									Annonces
 								</a>
 							</li>
-  <li>
+              <li>
 								<a href="contact.php" title="">
 									<span><img src="../images/icon6.png" alt=""></span>
 									Contact
 								</a>
 							</li>
+
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-            <?php
+						<?php
 						if (isset($_SESSION['nom'])) {
-              echo '<div class="user-info">
-  							<img src="http://via.placeholder.com/30x30" alt="">
-  							<a href="#" title="">'.$_SESSION['nom'].'</a>
-  							<i class="la la-sort-down"></i>
-  						</div>
-  						<div class="user-account-settingss">
-  							<h3><a href="#" title="">Mon Compte</a></h3>
-  							<ul class="us-links">
-  								<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-  							</ul>
-  							<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
-  						</div><!--fin des paramètres du compte utilisateur-->';
-            }
-            else {
-              echo '<div class="user-info">
-  							<a href="#" title="">Connectez vous</a>
-  							<i class="la la-sort-down"></i>
-  						</div>
-  						<div class="user-account-settingss">
-  							<h3><a href="connexion.php" title="">Connexion</a></h3>
-  							<ul class="us-links">
-  								<li><a href="inscription.php" title="">Inscription</a></li
-  							</ul>
-  						</div><!--fin des paramètres du compte utilisateur-->';
-            }
-            ?>
-          </div>
+							echo '<div class="user-info">
+								<img src="http://via.placeholder.com/30x30" alt="">
+								<a href="#" title="">'.$_SESSION['nom'].'</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss">
+								<h3>Mon Compte</h3>
+								<ul class="us-links">
+									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+								</ul>
+								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						else {
+							echo '<div class="user-info">
+								<a href="#" title="">Connectez vous</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss">
+								<h3><a href="connexion.php" title="">Connexion</a></h3>
+								<ul class="us-links">
+									<li><a href="inscription.php" title="">Inscription</a></li
+								</ul>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						?>
+					</div>
 				</div><!--fin des données d'en-tête-->
 			</div>
 		</header><!--fin d'en-tête-->
 
 		<div class="search-sec">
 			<div class="container">
-				
+
 			</div>
 		</div><!--search-sec end-->
 
@@ -185,8 +186,8 @@
 										<h3>Annonces</h3></div>
 										<div><center><a href="" class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
 										</div>
-									
-									
+
+
 								</div><!--filter-secs end-->
 							</div>
 							<div class="col-lg-8">
@@ -200,13 +201,13 @@
 														<h3>Quentin Lignani</h3>
 													</div>
 												</div>
-												
+
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
 													<li><img src="../images/icon9.png" alt=""><span>Paris</span></li>
 												</ul>
-												
+
 											</div>
 											<div class="job_descp">
 												<h3>Développeur Wordpress</h3>
@@ -216,17 +217,17 @@
 												<p>Bonjour, je suis à la recherche d'une entreprise dans le secteur informatique qui puisse m'accueillir pour un contrat d'apprentissage ou de professionnalisation</p>
 												<hr>
 												<center><ul class="skill-tags">
-													<li><u><i>HTML</u></i></li>
-													<li><u>PHP</u></li>
-													<li><u>CSS</u></li>
-													<li><u>Javascript</u></li>
-													<li><u>Wordpress</u></li>
+													<li>HTML</li>
+													<li>PHP</li>
+													<li>CSS</li>
+													<li>Javascript</li>
+													<li>Wordpress</li>
 												</ul></center>
-												
+
 											</div>
-											
+
 										</div><!--post-bar end-->
-										
+
 										</div><!--process-comm end-->
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
@@ -235,118 +236,22 @@
 						</div>
 					</div><!-- main-section-data end-->
 				</div>
-			</div>
+
 		</main>
 
 
 
-
-		<div class="post-popup pst-pj">
-			<div class="post-project">
-				<h3>Post a project</h3>
-				<div class="post-project-fields">
-					<form>
-						<div class="row">
-							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
-							</div>
-							<div class="col-lg-12">
-								<div class="inp-field">
-									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
-							</div>
-							<div class="col-lg-12">
-								<div class="price-sec">
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
-									</div>
-									<span>To</span>
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" placeholder="Description"></textarea>
-							</div>
-							<div class="col-lg-12">
-								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div><!--post-project-fields end-->
-				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
-			</div><!--post-project end-->
-		</div><!--post-project-popup end-->
-
-		<div class="post-popup job_post">
-			<div class="post-project">
-				<h3>Post a job</h3>
-				<div class="post-project-fields">
-					<form>
-						<div class="row">
-							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
-							</div>
-							<div class="col-lg-12">
-								<div class="inp-field">
-									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
-							</div>
-							<div class="col-lg-6">
-								<div class="price-br">
-									<input type="text" name="price1" placeholder="Price">
-									<i class="la la-dollar"></i>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="inp-field">
-									<select>
-										<option>Full Time</option>
-										<option>Half time</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" placeholder="Description"></textarea>
-							</div>
-							<div class="col-lg-12">
-								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div><!--post-project-fields end-->
-				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
-			</div><!--post-project end-->
-		</div><!--post-project-popup end-->
-
-
 	</div><!--theme-layout end-->
 
+		<footer>
+			<div class="footy-sec mn no-margin">
+				<div class="container">
+
+					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+					<img class="fl-rgt" src="images/logo2.png" alt="">
+				</div>
+			</div>
+		</footer><!--footer end-->
 
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -361,4 +266,5 @@
 <script src="assets/js/lunar.js"></script>
 <script src="assets/js/demo.js"></script>
 </body>
+
 </html>
