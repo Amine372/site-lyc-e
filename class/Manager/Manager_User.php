@@ -21,7 +21,7 @@ class Manager_User
     $donnee = $req->fetch();
     if($donnee)
     {
-      $_SESSION['erreur_inscr'] = "L'email est déjà utilisé.";
+      $_SESSION['erreur_inscr'] = "L'adresse éléctronique est déjà associée à un compte.";
       header('Location: ../view/inscription.php');
     }
     else
@@ -45,7 +45,7 @@ class Manager_User
       $mail->Password = "Admwb2000";
       $mail->SetFrom($inscrit->getEmail());
       $mail->Subject = "Création de compte réussi";
-      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
+      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
       $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
       {

@@ -35,26 +35,26 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="row">
-                    <div class="col-md-6 bg-img rounded-left m-h-60 d-none d-sm-block" style="background-image: url('https://images.unsplash.com/photo-1538943963832-856b555cd29b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')">
+                    <div class="col-md-6 bg-img rounded-left m-h-60 d-none d-sm-block" style="">
 
                     </div>
                     <div class="col-md-6 py-5 px-sm-5 my-auto ">
 
                         <h2 class="pt-sm-3">Ajouter une annonce</h2>
                         <br>
-                        <form>
+                        <form action="../class/Manager/manager_job.php" method="POST">
                             <div class="form-group">
-                                <input type="email" class="form-control"  placeholder="Entrer votre nom">
+                                <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom">
 								<br>
-							 <input type="text" class="form-control"   placeholder="Entrer votre adresse mail">
+							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse mail">
 							 <br>
-                                <input type="text" class="form-control"  a placeholder="Entrer le nom de poste">
+                                <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste">
 								<br>
-								          <input type="text" rows="6" class="form-control"  placeholder="Description de l'annonce">
+							 <textarea name="description_poste" class="form-control"  placeholder="Description de l'annonce" ></textarea>
 
                             </div>
 
-                            <button type="submit" class="btn btn-cstm-dark btn-block btn-cta" data-dismiss="modal" aria-label="Close">Ajouter une annonce</button>
+                            <button type="submit" class="btn btn-cstm-dark btn-block btn-cta" >Ajouter une annonce</button>
                         </form>
                     </div>
                 </div>
