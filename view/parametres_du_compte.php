@@ -124,7 +124,7 @@
 						<div class="col-lg-3">
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="fa fa-line-chart"></i>Modifier son profil</a>
+								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Modifier son profil</a>
 								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Modifier son mot de passe</a>
 								  </div>
 							</div><!--acc-leftbar end-->

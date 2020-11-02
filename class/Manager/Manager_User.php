@@ -50,7 +50,7 @@ class Manager_User
       if(!$mail->Send())
       {
          echo "Mailer Error: " . $mail->ErrorInfo;
-         $_SESSION['mail_error'] = 'Erreur dans l\'email';
+         $_SESSION['erreur_inscr'] = 'Email invalide';
          header('Location: ../view/inscription.php');
       }
       else
