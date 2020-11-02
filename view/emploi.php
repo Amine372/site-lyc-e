@@ -54,7 +54,7 @@
                             <div class="form-group">
                                 <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom" required>
 								<br>
-							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse mail" required>
+							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse éléctronique" required>
 							 <br>
                                 <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste" required>
 								<br>
