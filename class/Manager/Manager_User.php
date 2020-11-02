@@ -21,7 +21,7 @@ class Manager_User
     $donnee = $req->fetch();
     if($donnee)
     {
-      $_SESSION['erreur_inscr'] = "L'email est déjà utilisé.";
+      $_SESSION['erreur_inscr'] = "L'adresse éléctronique est déjà associée à un compte.";
       header('Location: ../view/inscription.php');
     }
     else
