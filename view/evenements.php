@@ -99,7 +99,8 @@ session_start();
               <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
-          else {
+          else
+          {
             echo '<div class="user-info">
               <a href="#" title="">Connectez vous</a>
               <i class="la la-sort-down"></i>
