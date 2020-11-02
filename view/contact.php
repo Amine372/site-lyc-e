@@ -126,7 +126,7 @@
 											<div class="view-more">
 												<a title="">Mail :</a>
 
-												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
+												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</a></u>
 												<br>
 												<br>
 												<a title="">Tel :</a>
@@ -187,7 +187,7 @@
 
 					</div></center><!-- main-section-data end-->
 				</div>
-			</div>
+			</div></center>
 		</main>
 
 		<div class="container">
@@ -201,7 +201,7 @@
 				</div>
 			</div>
 		</footer><!--footer end-->
-
+</div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
