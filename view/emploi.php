@@ -122,7 +122,12 @@
 									Annonces
 								</a>
 							</li>
-
+  <li>
+								<a href="contact.php" title="">
+									<span><img src="../images/icon6.png" alt=""></span>
+									Contact
+								</a>
+							</li>
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
@@ -354,7 +359,6 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/lunar.js"></script>
-
 <script src="assets/js/demo.js"></script>
 </body>
 </html>
