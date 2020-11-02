@@ -21,15 +21,7 @@
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
-    <!-- Lunar CSS -->
-    <link rel="stylesheet" href="assets/css/lunar.css">
-    <link rel="stylesheet" href="assets/css/demo.css">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/img/lunar.png"/>
-    <link rel="icon" href="assets/img/lunar.png" type="image/png" sizes="16x16">
+
 </head>
 <!-- Modal -->
 <div class="modal fade   "  id="demoModal"  tabindex="-1" role="dialog"
@@ -240,7 +232,7 @@
 						</div>
 					</div><!-- main-section-data end-->
 				</div>
-			</div>
+
 		</main>
 
 

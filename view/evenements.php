@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -140,8 +143,10 @@
                     $get_event = new Manager_Evenements;
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
-                          try
-                          {
+                          if(is_null($donnee)){
+                            echo "Aucune annonce";
+                          }
+                          else{
                             foreach ($donnee as $clef)
                             {
                               echo '  <div class="post-bar">
@@ -179,19 +184,9 @@
         											</div>
         										</div><!--post-bar end--> ';
                           }
-                          }
-                          catch (Throwable $e)
-                          {
-                            echo "Captured Throwable: " . $e->getMessage() . PHP_EOL;
-                          }
+                        }
                           ?>
-										<div class="process-comm">
-											<div class="spinner">
-												<div class="bounce1"></div>
-												<div class="bounce2"></div>
-												<div class="bounce3"></div>
-											</div>
-										</div><!--process-comm end-->
+
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
 							</div>
