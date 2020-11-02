@@ -92,7 +92,7 @@
 								<i class="la la-sort-down"></i>
 							</div>
 							<div class="user-account-settingss">
-								<h3><a href="#" title="">Mon Compte</a></h3>
+								<h3>Mon Compte</h3>
 								<ul class="us-links">
 									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
 								</ul>
@@ -189,7 +189,7 @@
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
-													<li><button type="submit">Enregistré</button></li>
+													<li><button type="submit">Enregistrer</button></li>
                           <?php if(isset($_SESSION['message_mdp'])){
                             echo $_SESSION['message_mdp'];
                             unset($_SESSION['message_mdp']);
@@ -211,8 +211,6 @@
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					<ul>
-					</ul>
 					<p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="../images/logo2.png" alt="">
 				</div>

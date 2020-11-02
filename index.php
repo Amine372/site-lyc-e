@@ -298,11 +298,7 @@
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					<ul>
-						<li><a href="#" title="">Annonces</a></li>
-						<li><a href="voew\emvenements.php" title="">Evenements</a></li>
-						<li><a href="#" title="">Politique de Copyright</a></li>
-					</ul>
+
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
 				</div>
