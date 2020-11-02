@@ -1,7 +1,7 @@
 <?php
 require_once 'model_job.php';
 require_once 'traitement_job.php';
-class Manager{ //Déclaration de la classe Manager
+class jobannonce{ //Déclaration de la classe Manager
 public function jobannonce($donnee){
 
       $bdd=new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8', 'root', ''); //Connexion à la BDD
@@ -13,7 +13,7 @@ public function jobannonce($donnee){
      header("location: index.php");
     }
     else{
-     header("location: https://www.paypal.com/fr/signin"); //Redirection vers le lien de la page de paiement
+     header("location: erreur.php"); //Redirection
     }
 
           }

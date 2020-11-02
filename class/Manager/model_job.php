@@ -1,7 +1,7 @@
 <?php
 require_once 'manager_job.php';
 require_once 'traitement_job.php';
-class job { //Déclaration de la classe réservation
+class jobannonce { //Déclaration de la classe réservation
 //Déclaration des attributs
   private $_nom;
   private $_email;
@@ -10,9 +10,9 @@ class job { //Déclaration de la classe réservation
 
   public function __construct($nom, $email, $poste, $description_poste){
 //Partie SET
-      $this->setNom($nom);
+      $this->setnom($nom);
       $this->setemail($email);
-      $this->setemail($poste);
+      $this->setposte($poste);
       $this->setdescription_poste($description_poste);
 }
 
