@@ -94,7 +94,7 @@
   							<i class="la la-sort-down"></i>
   						</div>
   						<div class="user-account-settingss">
-  							<h3><a href="#" title="">Mon Compte</a></h3>
+  							<h3>Mon Compte</h3>
   							<ul class="us-links">
   								<li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
   							</ul>
@@ -109,9 +109,9 @@
   						</div>
   						<div class="user-account-settingss">
   							<h3><a href="view/connexion.php" title="">Connexion</a></h3>
-  							<ul class="us-links">
-  								<li><a href="view/inscription.php" title="">Inscription</a></li>
-  							</ul>
+
+  							<h3><a href="view/inscription.php" title="">Inscription</a></h3>
+
   						</div><!--fin des paramètres du compte utilisateur-->';
             }
             ?>
