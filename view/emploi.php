@@ -182,9 +182,14 @@
 							<div class="col-lg-3">
 								<div class="filter-secs">
 									<div class="filter-heading">
-										<h3>Annonces</h3></div>
-										<div><center><a href="" class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
+										<h3>Annonces</h3>
+											</div>
+										<div >
+										<center><a href="" class="ajouteremploi" data-toggle="modal" data-target="#demoModal" >Ajouter une annonce</a></center>
+										<br>
+										<br>
 										</div>
+									
 									
 									
 								</div><!--filter-secs end-->
