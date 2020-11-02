@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -182,7 +185,7 @@
                           }
                         }
                           ?>
-										
+
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
 							</div>
