@@ -28,92 +28,92 @@
 <body>
 <div class="wrapper">
   <header>
-			<div class="container">
-				<div class="header-data">
-					<div class="logo">
-						<a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
-					</div><!--fin du logotype-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-					</div><!--fin de la barre de recherche-->
-					<nav>
-						<ul>
-							<li>
-								<a href="../index.php" title="">
-									<span><img src="../images/icon1.png" alt=""></span>
-									Accueil
-								</a>
-							</li>
-							<li>
-								<a href="evenements.php" title="">
-									<span><img src="../images/icon3.png" alt=""></span>
-									Evénements
-								</a>
-							</li>
-							<li>
-								<a href="profils.php" title="">
-									<span><img src="../images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="emploi.php" title="">
-									<span><img src="../images/icon5.png" alt=""></span>
-									Annonces
-								</a>
-							</li>
-              <li>
-								<a href="contact.php" title="">
-									<span><img src="../images/icon6.png" alt=""></span>
-									Contact
-								</a>
-							</li>
+    <div class="container">
+      <div class="header-data">
+        <div class="logo">
+          <a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
+        </div><!--fin du logotype-->
+        <div class="search-bar">
+          <form>
+            <input type="text" name="search" placeholder="Recherchez...">
+            <button type="submit"><i class="la la-search"></i></button>
+          </form>
+        </div><!--fin de la barre de recherche-->
+        <nav>
+          <ul>
+            <li>
+              <a href="../index.php" title="">
+                <span><img src="../images/icon1.png" alt=""></span>
+                Accueil
+              </a>
+            </li>
+            <li>
+              <a href="evenements.php" title="">
+                <span><img src="../images/icon3.png" alt=""></span>
+                Evénements
+              </a>
+            </li>
+            <li>
+              <a href="profils.php" title="">
+                <span><img src="../images/icon4.png" alt=""></span>
+                Profils
+              </a>
+              <ul>
+                <li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
+                <li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="emploi.php" title="">
+                <span><img src="../images/icon5.png" alt=""></span>
+                Annonces
+              </a>
+            </li>
+            <li>
+              <a href="contact.php" title="">
+                <span><img src="../images/icon6.png" alt=""></span>
+                Contact
+              </a>
+            </li>
 
-						</ul>
-					</nav><!--fin de la barre de navigation-->
-					<div class="menu-btn">
-						<a href="#" title=""><i class="fa fa-bars"></i></a>
-					</div><!--fin du menu bouton-->
-					<div class="user-account">
-						<?php
-						if (isset($_SESSION['nom'])) {
-							echo '<div class="user-info">
-								<img src="http://via.placeholder.com/30x30" alt="">
-								<a href="#" title="">'.$_SESSION['nom'].'</a>
-								<i class="la la-sort-down"></i>
-							</div>
-							<div class="user-account-settingss">
-								<h3><a href="#" title="">Mon Compte</a></h3>
-								<ul class="us-links">
-									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-								</ul>
-								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
-							</div><!--fin des paramètres du compte utilisateur-->';
-						}
-						else {
-							echo '<div class="user-info">
-								<a href="#" title="">Connectez vous</a>
-								<i class="la la-sort-down"></i>
-							</div>
-							<div class="user-account-settingss">
-								<h3><a href="connexion.php" title="">Connexion</a></h3>
-								<ul class="us-links">
-									<li><a href="inscription.php" title="">Inscription</a></li
-								</ul>
-							</div><!--fin des paramètres du compte utilisateur-->';
-						}
-						?>
-					</div>
-				</div><!--fin des données d'en-tête-->
-			</div>
-		</header><!--fin d'en-tête-->
+          </ul>
+        </nav><!--fin de la barre de navigation-->
+        <div class="menu-btn">
+          <a href="#" title=""><i class="fa fa-bars"></i></a>
+        </div><!--fin du menu bouton-->
+        <div class="user-account">
+          <?php
+          if (isset($_SESSION['nom'])) {
+            echo '<div class="user-info">
+              <img src="http://via.placeholder.com/30x30" alt="">
+              <a href="#" title="">'.$_SESSION['nom'].'</a>
+              <i class="la la-sort-down"></i>
+            </div>
+            <div class="user-account-settingss">
+              <h3>Mon Compte</h3>
+              <ul class="us-links">
+                <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+              </ul>
+              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+            </div><!--fin des paramètres du compte utilisateur-->';
+          }
+          else {
+            echo '<div class="user-info">
+              <a href="#" title="">Connectez vous</a>
+              <i class="la la-sort-down"></i>
+            </div>
+            <div class="user-account-settingss">
+              <h3><a href="connexion.php" title="">Connexion</a></h3>
+              <ul class="us-links">
+                <li><a href="inscription.php" title="">Inscription</a></li
+              </ul>
+            </div><!--fin des paramètres du compte utilisateur-->';
+          }
+          ?>
+        </div>
+      </div><!--fin des données d'en-tête-->
+    </div>
+  </header><!--fin d'en-tête-->
 <section class="cover-sec">
 			<img src="../images/couverture.jpg" alt="" width="auto" height="280px">
 		</section><!--cover-sec end-->
@@ -126,7 +126,7 @@
 											<div class="view-more">
 												<a title="">Mail :</a>
 
-												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</u>
+												<u><a href="mailto:administration@lyceerobertschuman.com">administration@lyceerobertschuman.com</a></u>
 												<br>
 												<br>
 												<a title="">Tel :</a>
@@ -187,7 +187,7 @@
 
 					</div></center><!-- main-section-data end-->
 				</div>
-			</div>
+			</div></center>
 		</main>
 
 		<div class="container">
@@ -196,13 +196,12 @@
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
 				</div>
 			</div>
 		</footer><!--footer end-->
-
+</div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
