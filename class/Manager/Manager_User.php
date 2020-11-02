@@ -45,7 +45,7 @@ class Manager_User
       $mail->Password = "Admwb2000";
       $mail->SetFrom($inscrit->getEmail());
       $mail->Subject = "Création de compte réussi";
-      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été créé.</p></center></html>";
+      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
       $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
       {
