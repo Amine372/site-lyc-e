@@ -94,11 +94,6 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 																		".$_SESSION['erreur_inscr'];
 														unset($_SESSION['erreur_inscr']);
 													}
-                          if (isset($_SESSION['mail_error'])) {
-														echo "<div style='color:#ff0000'>
-																		".$_SESSION['mail_error'];
-														unset($_SESSION['mail_error']);
-													}
 												 ?>
 											</div>
 										</form>
