@@ -84,7 +84,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
+						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -169,7 +169,7 @@
 
 		<div class="search-sec">
 			<div class="container">
-				
+
 			</div>
 		</div><!--search-sec end-->
 
@@ -189,9 +189,9 @@
 										<br>
 										<br>
 										</div>
-									
-									
-									
+
+
+
 								</div><!--filter-secs end-->
 							</div>
 							<div class="col-lg-8">
@@ -205,13 +205,13 @@
 														<h3>Quentin Lignani</h3>
 													</div>
 												</div>
-												
+
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
 													<li><img src="../images/icon9.png" alt=""><span>Paris</span></li>
 												</ul>
-												
+
 											</div>
 											<div class="job_descp">
 												<h3>Développeur Wordpress</h3>
@@ -227,11 +227,11 @@
 													<li>Javascript</li>
 													<li>Wordpress</li>
 												</ul></center>
-												
+
 											</div>
-											
+
 										</div><!--post-bar end-->
-										
+
 										</div><!--process-comm end-->
 									</div><!--posts-section end-->
 								</div><!--main-ws-sec end-->
@@ -250,7 +250,7 @@
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					
+
 					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="images/logo2.png" alt="">
 				</div>
@@ -264,11 +264,6 @@
 <script type="text/javascript" src="../js/jquery.range-min.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/lunar.js"></script>
-<script src="assets/js/demo.js"></script>
 </body>
 
 </html>

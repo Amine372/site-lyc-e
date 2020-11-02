@@ -30,7 +30,7 @@
     <div class="container">
       <div class="header-data">
         <div class="logo">
-          <a href="../.html" title=""><img src="../images/logo.png" alt=""></a>
+          <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
         <div class="search-bar">
           <form>
