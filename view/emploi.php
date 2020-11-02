@@ -21,7 +21,15 @@
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
-
+    <!-- Lunar CSS -->
+    <link rel="stylesheet" href="assets/css/lunar.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/img/lunar.png"/>
+    <link rel="icon" href="assets/img/lunar.png" type="image/png" sizes="16x16">
 </head>
 <!-- Modal -->
 <div class="modal fade   "  id="demoModal"  tabindex="-1" role="dialog"
@@ -44,13 +52,13 @@
                         <br>
                         <form action="../class/Manager/manager_job.php" method="POST">
                             <div class="form-group">
-                                <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom">
+                                <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom" required>
 								<br>
-							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse mail">
+							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse mail" required>
 							 <br>
-                                <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste">
+                                <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste" required>
 								<br>
-							 <textarea name="description_poste" class="form-control"  placeholder="Description de l'annonce" ></textarea>
+							 <textarea name="description_poste" class="form-control"  placeholder="Description de l'annonce" required ></textarea>
 
                             </div>
 
@@ -72,7 +80,7 @@
 	<div class="wrapper">
 
 
-    <header>
+		<header>
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
@@ -104,7 +112,7 @@
 									Profils
 								</a>
 								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
+									<li><a href="profil_utilisateur.php" title="">Nom d'utilisateur</a></li>
 									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
 								</ul>
 							</li>
@@ -114,47 +122,47 @@
 									Annonces
 								</a>
 							</li>
-              <li>
+  <li>
 								<a href="contact.php" title="">
 									<span><img src="../images/icon6.png" alt=""></span>
 									Contact
 								</a>
 							</li>
-
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<?php
+            <?php
 						if (isset($_SESSION['nom'])) {
-							echo '<div class="user-info">
-								<img src="http://via.placeholder.com/30x30" alt="">
-								<a href="#" title="">'.$_SESSION['nom'].'</a>
-								<i class="la la-sort-down"></i>
-							</div>
-							<div class="user-account-settingss">
-								<h3>Mon Compte</h3>
-								<ul class="us-links">
-									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-								</ul>
-								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
-							</div><!--fin des paramètres du compte utilisateur-->';
-						}
-						else {
-							echo '<div class="user-info">
-								<a href="#" title="">Connectez vous</a>
-								<i class="la la-sort-down"></i>
-							</div>
-							<div class="user-account-settingss">
-								<h3><a href="connexion.php" title="">Connexion</a></h3>
-
-								<h3><a href="inscription.php" title="">Inscription</a></h3>
-							</div><!--fin des paramètres du compte utilisateur-->';
-						}
-						?>
-					</div>
+              echo '<div class="user-info">
+  							<img src="http://via.placeholder.com/30x30" alt="">
+  							<a href="#" title="">'.$_SESSION['nom'].'</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="#" title="">Mon Compte</a></h3>
+  							<ul class="us-links">
+  								<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+  							</ul>
+  							<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            else {
+              echo '<div class="user-info">
+  							<a href="#" title="">Connectez vous</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="connexion.php" title="">Connexion</a></h3>
+  							<ul class="us-links">
+  								<li><a href="inscription.php" title="">Inscription</a></li
+  							</ul>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            ?>
+          </div>
 				</div><!--fin des données d'en-tête-->
 			</div>
 		</header><!--fin d'en-tête-->
@@ -232,7 +240,7 @@
 						</div>
 					</div><!-- main-section-data end-->
 				</div>
-
+			</div>
 		</main>
 
 
