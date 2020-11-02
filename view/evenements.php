@@ -136,9 +136,11 @@
                     $get_event = new Manager_Evenements;
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
-                          foreach ($donnee as $clef)
+                          try
                           {
-                          echo '  <div class="post-bar">
+                            foreach ($donnee as $clef)
+                            {
+                              echo '  <div class="post-bar">
         											<div class="post_topbar">
         												<div class="usy-dt">
         													<img src="http://via.placeholder.com/50x50" alt="">
@@ -172,6 +174,11 @@
         												</ul>
         											</div>
         										</div><!--post-bar end--> ';
+                          }
+                          }
+                          catch (Throwable $e)
+                          {
+                            echo "Captured Throwable: " . $e->getMessage() . PHP_EOL;
                           }
                           ?>
 										<div class="process-comm">
