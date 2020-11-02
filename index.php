@@ -273,21 +273,7 @@
 									<div class="message-btn">
 										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez nous !</a>
 									</div>
-									<div class="widget widget-portfolio">
-										<div class="wd-heady">
-											<h3>Galerie</h3>
-											<img src="images/photo-icon.png" alt="">
-										</div>
-										<div class="pf-gallery">
-											<ul>
-												<li><a href="#" title=""><img src="images/1.jpg" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/2.jpg" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/3.jpg" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/4.jpg" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/5.jpg" alt=""></a></li>
-											</ul>
-										</div><!--pf-gallery end-->
-									</div><!--widget-portfolio end-->
+									
 								</div><!--right-sidebar end-->
 							</div>
 						</div>

@@ -3018,11 +3018,7 @@ footer {
 	position: relative;
 	overflow: hidden;
 }
-.gallery_pt:hover:before {
-	opacity: 1;
-	visibility: visible;
-	height: 100%;
-}
+
 .gallery_pt:before {
 	content: '';
 	position: absolute;
@@ -3057,11 +3053,7 @@ footer {
 	opacity: 0;
 	visibility: hidden;
 }
-.gallery_pt:hover > a {
-	opacity: 1;
-	visibility: visible;
-	top: 50%;
-}
+
 .gallery_pt > a img {
 	float: none;
 	width: auto;
