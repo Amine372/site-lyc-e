@@ -104,9 +104,8 @@
             </div>
             <div class="user-account-settingss">
               <h3><a href="connexion.php" title="">Connexion</a></h3>
-              <ul class="us-links">
-                <li><a href="inscription.php" title="">Inscription</a></li
-              </ul>
+
+              <h3><a href="inscription.php" title="">Inscription</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           ?>
