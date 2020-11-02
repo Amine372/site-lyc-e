@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 27 oct. 2000 à 07:45
+-- Généré le :  lun. 02 nov. 2020 à 12:42
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `evenements` (
 --
 
 INSERT INTO `evenements` (`id`, `id_utilisateur`, `titre`, `description`, `date`, `Comm`) VALUES
-(1, 3, 'AMINE', 'NAKHIL', '2020-10-05', 'TEST'),
+(1, 3, 'AMINE', 'NAKHIK', '2020-10-05', 'TEST'),
 (2, 3, 'Dévelopeur Informatique Fullstack H/F', 'À propos d\'AtosAtos est un leader international de la transformation digitale avec plus de 110 000 collaborateurs dans 73 pays et un chiffre d\'affaires annuel de plus de 11 milliards d\'euros. Numéro un européen du Cloud, de la cybersécurité et des supercalculateurs.', '2020-10-21', 'AGEFIPH- Espace Emploi'),
 (4, 3, 'stage Developpeur informatique - H/F', 'Qui sommes-nous ? Avec 90 000 collaborateurs présents sur les cinq \r\ncontinents, SUEZ est un leader mondial dans la gestion intelligente et \r\ndurable des ressources. Le Groupe fournit des solutions de gestion de l\'eau \r\net des déchets qui permettent aux villes.', '2020-06-09', 'Jobijoba');
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `role`, `date_connexion`, `verif`) VALUES
 (1, 'a', 'a', 'a@a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', NULL, NULL, 1),
 (2, 'b', 'b', 'b@b', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', NULL, NULL, 1),
-(3, 'Nakhil', 'Amine', 'nakhila@orange.fr', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, 1);
+(3, 'Nakhil', 'Amine', 'nakhila@orange.fr', '265545635d1704996ba4dbb482377aa542cdf5c0', NULL, NULL, 0);
 
 --
 -- Contraintes pour les tables déchargées
