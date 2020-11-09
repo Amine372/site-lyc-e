@@ -47,7 +47,7 @@ public function setdescription_poste($description_poste)
 {
   if(empty($description_poste))
   {
-    trigger_error('la variable doit etre un caractere');
+    trigger_error('La variable doit etre un caractere');
     return;
   }
   $this->_description_poste = $description_poste;
