@@ -58,16 +58,6 @@
 								</a>
 							</li>
 							<li>
-								<a href="view/profils.php" title="">
-									<span><img src="images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="view/profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="view/my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-								</ul>
-							</li>
-							<li>
 								<a href="view/emploi.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
 									Annonces
@@ -77,6 +67,12 @@
 								<a href="view/contact.php" title="">
 									<span><img src="images/icon6.png" alt=""></span>
 									Contact
+								</a>
+							</li>
+              <li>
+								<a href="view/messages.php" title="">
+									<span><img src="images/icon4.png" alt=""></span>
+									Messages
 								</a>
 							</li>
 						</ul>
@@ -273,7 +269,7 @@
 									<div class="message-btn">
 										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez nous !</a>
 									</div>
-									
+
 								</div><!--right-sidebar end-->
 							</div>
 						</div>
