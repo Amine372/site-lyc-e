@@ -97,7 +97,8 @@
               <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
-          else {
+          else
+          {
             echo '<div class="user-info">
               <a href="#" title="">Connectez vous</a>
               <i class="la la-sort-down"></i>
@@ -158,7 +159,7 @@
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Adresse email" required="required" data-error="Email non valide">
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Adresse éléctronique" required="required" data-error="Email non valide">
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>

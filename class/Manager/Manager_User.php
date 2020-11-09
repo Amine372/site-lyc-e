@@ -44,18 +44,18 @@ class Manager_User
       $mail->Username = "quentin.lignani.schuman@gmail.com";
       $mail->Password = "Admwb2000";
       $mail->SetFrom($inscrit->getEmail());
-      $mail->Subject = "Création de compte réussi";
+      $mail->Subject = "Ouverture de compte réussie";
       $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
       $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
       {
          echo "Mailer Error: " . $mail->ErrorInfo;
-         $_SESSION['mail_error'] = 'Erreur dans l\'email';
+         $_SESSION['erreur_inscr'] = 'Addrese mail invalide';
          header('Location: ../view/inscription.php');
       }
       else
       {
-         echo "Message has been sent";
+         echo "Le message a été envoyé";
          $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
          $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
          header('Location: ../view/confirm_inscription.html');

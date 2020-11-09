@@ -9,6 +9,4 @@
                     'prenom'=>$_POST['prenom']]);
   $modif = new Manager_User;
   $modif->modification($user, $_SESSION['email']);
-
-
- ?>
+?>
