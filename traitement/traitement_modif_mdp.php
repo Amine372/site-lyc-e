@@ -5,8 +5,8 @@
 	session_start();
 	//Vérification du mdp
 	if($_POST['mdp'] != $_POST['confirmmdp']){
-		$_SESSION['erreur_change'] = "Erreur dans le mot de passe.";
-		header('Location: ../view/recup_mdp.php');
+		$_SESSION['message_mdp'] = "Erreur dans le mot de passe.";
+		header('Location: ../view/parametres_du_compte.php');
 		exit();
 	}
 
