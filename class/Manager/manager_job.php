@@ -1,29 +1,30 @@
 <?php
-require_once ' ../class/Modele/model_job.php';
-require_once '../traitement/traitement_job.php';
-
-class Manager{ //Déclaration de la classe Manager
-
-public function reservation($donnee){
-
-public function job($donnee)
+require (__DIR__.'/../modele/model_job.php');
+class Manager_Annonces
 {
 
-      $bdd=new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8', 'root', ''); //Connexion à la BDD
-    $req=$bdd->prepare('INSERT into annonces (nom, email, poste, description_poste) VALUES(:nom, :email, :poste, :description_poste)'); //Préparation de la table réservations avec les valeurs de la table
-    $req->execute(array('nom'=>$donnee->getnom(),'email'=>$donnee->getemail(), 'poste'=>$donnee->getposte(), 'description_poste'=>$donnee->getdescription_poste())); //Execution des requêtes
-    $a = $req->fetch();
-	//Conditions de redirection
-    if ($a ==true)
-    {
-     header("location: index.php");
-    }
-    else
-    {
-     header("location: https://www.paypal.com/fr/signin"); //Redirection vers le lien de la page de paiement
-    }
+  protected $_id;
+  protected $_id_utilisateur;
+  protected $_nom;
+  protected $_poste;
+  protected $_description_poste;
 
-          }
+  public function Annonces()
+  {
+
+      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $bdd->exec("SET CHARACTER SET utf8");
+      // SELECT * FROM Users where 0
+      // execute()
+      $req = $bdd->prepare('SELECT id, id_utilisateur, nom, poste, description_poste');
+      $req->execute();
+      $donnee = $req->fetchall();
+      if ($donnee)
+      {
+        return $donnee;
+      }
+
+}
 }
 
-?>
+ ?>

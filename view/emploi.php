@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <?php
     session_start();
-	require_once '../bdd/connexion.php';
+?>
+<?php
+ require '../class/Manager/manager_job.php';
 ?>
 
 <html>
@@ -135,7 +137,7 @@
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-            <?php
+         			   <?php
 						if (isset($_SESSION['nom'])) {
               echo '<div class="user-info">
   							<img src="http://via.placeholder.com/30x30" alt="">
@@ -162,7 +164,7 @@
   							</ul>
   						</div><!--fin des paramètres du compte utilisateur-->';
             }
-            ?>
+    			        ?>
           </div>
 				</div><!--fin des données d'en-tête-->
 			</div>
@@ -216,16 +218,12 @@
 											</div>
 											
 											<div class="job_descp">
-												<ul class="job-dt">
-													 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-													<h3><td><?php echo htmlspecialchars($row['nom']); ?></td></h3>
-													<li><a><b>Temps partiel</b></a></li>
-												</ul>
+												
 												    <?php
                     // on fait une boucle pour afficher tous les évenement
-                    $get_event = new Manager_Evenements;
+                    $get_event = new Manager_Annonces;
                       // $donnee doit être le tableau avec tous les evennements
-                          $donnee= $get_event->Evenements();
+                          $donnee= $get_event->Annonces();
                           if(is_null($donnee)){
                             echo "Aucun évènement";
                           }
@@ -237,8 +235,8 @@
         												<div class="usy-dt">
         													<img src="http://via.placeholder.com/50x50" alt="">
         													<div class="usy-name">
-        														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-        														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
+        														<h3> '.$clef['nom'].' '.$clef['poste'].'</h3>
+        														<span><img src="images/clock.png" alt="">'.$clef['email'].'</span>
         													</div>
         												</div>
         											</div>
