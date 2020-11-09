@@ -140,7 +140,7 @@
 										<ul class="social_links">
 											<li><a href="http://www.lyceerobertschuman.com" title=""><i class="la la-globe"></i> Site internet</a></li>
 											<li><a href="https://www.facebook.com/pages/Lyc%C3%A9e-Priv%C3%A9-Robert-Schuman-%C3%A0-Dugny/388750161192043" title=""><i class="fa fa-facebook-square"></i> Page Facebook</a></li>
-											<iframe width="280" height="160" src="https://www.youtube.com/embed/5fQu2KygRL0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											<li><a href="https://www.youtube.com/channel/UCYv3GxDZ9U7iWU2XEoXFDVw" title=""><i class="fa fa-youtube"></i> YouTube</a></li>
 										</ul>
 									</div><!--user_profile end-->
 									<div class="suggestions full-width">
