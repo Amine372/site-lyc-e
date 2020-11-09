@@ -52,7 +52,7 @@ if($donne) // si la perssone existe bel et bien, on applique la condition qui su
    {
       echo "Mailer Error: " . $mail->ErrorInfo;
    } else {
-      echo "Message has been sent";
+      echo "Le message a été envoyé";
 
       //hashé le mdp pour le rajouté dans la bdd
       $smdp= SHA1($mdp);
