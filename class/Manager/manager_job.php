@@ -14,8 +14,8 @@ class Manager_Annonces
 
       $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
       $bdd->exec("SET CHARACTER SET utf8");
-      // SELECT * FROM Users where 0
-      // execute()
+      // SELECT * FROM annonce
+      //execute()
       $req = $bdd->prepare('SELECT id, id_utilisateur, nom, poste, description_poste');
       $req->execute();
       $donnee = $req->fetchall();
