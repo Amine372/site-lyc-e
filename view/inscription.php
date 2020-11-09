@@ -34,13 +34,13 @@ session_start();
 						<div class="col-lg-6">
 							<div class="cmp-info">
 								<div class="cm-logo">
-                  <a href="..index.php">
-									<img src="../images/cm-logo.png" alt="">
+                  <a href="../index.php">
+									<img src="..\images/cm-logo.png" alt="">
                   </a>
 									<p>Enseignement catholique sous contrat d'association avec l'Etat
 Etablissement habilité à percevoir la taxe d'apprentissage</p>
 								</div><!--extrémité du logo cm-->
-                <a href="..index.php">
+                <a href="../index.php">
 								<img src="../images/cm-main-img.png" alt="">
                 </a>
 							</div><!--fin cmp-info-->
