@@ -2,13 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <title>rediriger_youtube</title>
 </head>
 <body>
-  ...
-  <!-- Le reste du contenu -->
-  ...
+<meta http-equiv="refresh" content="0;URL=www.google.com"> 
 </body>
 </html>
