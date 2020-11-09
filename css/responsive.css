@@ -2,32 +2,60 @@
 
 @media (max-width: 1200px)
 {
-	header nav {position: fixed;top: 0;left: 0;width: 200px;height: 100%;background-color: #2d5c88;padding: 25px 20px;opacity: 0;visibility: hidden;z-index: 0}
-	header nav.active {opacity: 1;visibility: visible;z-index: 9999;
+	header nav
+	{
+		position: fixed;top: 0;left: 0;width: 200px;height: 100%;background-color: #2d5c88;padding: 25px 20px;opacity: 0;visibility: hidden;z-index: 0}
+	header nav.active
+	{
+		opacity: 1;visibility: visible;z-index: 9999;
 	}
-	header nav ul li {float: left;width: 100%;text-align: left;padding: 0 0 0 0;margin-bottom: 20px;
+	header nav ul li
+	{
+		float: left;width: 100%;text-align: left;padding: 0 0 0 0;margin-bottom: 20px;
 	}
-	.menu-btn {display: block;
+	.menu-btn
+	{
+		display: block;
 	}
-	header nav ul li span {display: inline-block;margin-right: 10px;
+	header nav ul li span
+	{
+		display: inline-block;margin-right: 10px;
 	}
-	.widget-about h3 {font-size: 16px;
+	.widget-about h3
+	{
+		font-size: 16px;
 	}
-	.widget-about span {font-size: 13px;
+	.widget-about span
+	{
+		font-size: 13px;
 	}
-	.suggestion-usd {padding: 15px 5px;
+	.suggestion-usd
+	{
+		padding: 15px 5px;
 	}
-	.cp-sec p {margin-top: 10px;float: none;
+	.cp-sec p
+	{
+		margin-top: 10px;float: none;
 	}
-	.comment_box input {width: 281px;
+	.comment_box input
+	{
+		width: 281px;
 	}
-	.job-details {width: 112px;
+	.job-details
+	{
+		width: 112px;
 	}
-	.job-details h3 {line-height: 18px;
+	.job-details h3
+	{
+		line-height: 18px;
 	}
-	.sd-title h3 {font-size: 15px;
+	.sd-title h3
+	{
+		font-size: 15px;
 	}
-	.cp-sec > img {text-align: center;float: none;
+	.cp-sec > img
+	{
+		text-align: center;float: none;
 	}
 	.cp-sec
 	{
