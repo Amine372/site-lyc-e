@@ -50,12 +50,12 @@ class Manager_User
       if(!$mail->Send())
       {
          echo "Mailer Error: " . $mail->ErrorInfo;
-         $_SESSION['erreur_inscr'] = 'Email invalide';
+         $_SESSION['erreur_inscr'] = 'Adrese mail invalide';
          header('Location: ../view/inscription.php');
       }
       else
       {
-         echo "Message has been sent";
+         echo "Le message a été envoyé";
          $req = $bdd->prepare('INSERT into utilisateur (nom, prenom, email, mdp) value(?,?,?,?)');
          $req -> execute(array($inscrit->getNom(), $inscrit->getPrenom(), $inscrit->getEmail(), SHA1($inscrit->getMdp())));
          header('Location: ../view/confirm_inscription.html');
