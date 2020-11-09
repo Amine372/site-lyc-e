@@ -27,22 +27,28 @@ public function setnom($nom)
   }
   $this->_nom = $nom;
 }
-public function setemail($email){
-  if(empty($email)){
+public function setemail($email)
+{
+  if(empty($email))
+  {
     trigger_error('la variable doit etre un caractere');
     return;
   }
   $this->_email = $email;
 }
-public function setposte($poste){
-  if(empty($poste)){
+public function setposte($poste)
+{
+  if(empty($poste))
+  {
     trigger_error('la variable doit etre un caractere');
     return;
   }
   $this->_poste = $poste;
 }
-public function setdescription_poste($description_poste){
-  if(empty($description_poste)){
+public function setdescription_poste($description_poste)
+{
+  if(empty($description_poste))
+  {
     trigger_error('la variable doit etre un caractere');
     return;
   }
