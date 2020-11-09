@@ -144,7 +144,7 @@ session_start();
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
                           if(is_null($donnee)){
-                            echo "Aucune annonce";
+                            echo "Aucun évènement";
                           }
                           else{
                             foreach ($donnee as $clef)
