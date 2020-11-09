@@ -9,10 +9,12 @@ public function job($donnee){
     $req->execute(array('nom'=>$donnee->getnom(),'email'=>$donnee->getemail(), 'poste'=>$donnee->getposte(), 'description_poste'=>$donnee->getdescription_poste())); //Execution des requêtes
     $a = $req->fetch();
 	//Conditions de redirection
-    if ($a ==true){
+    if ($a ==true)
+    {
      header("location: index.php");
     }
-    else{
+    else
+    {
      header("location: https://www.paypal.com/fr/signin"); //Redirection vers le lien de la page de paiement
     }
 

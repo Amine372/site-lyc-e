@@ -44,7 +44,7 @@ class Manager_User
       $mail->Username = "quentin.lignani.schuman@gmail.com";
       $mail->Password = "Admwb2000";
       $mail->SetFrom($inscrit->getEmail());
-      $mail->Subject = "Création de compte réussi";
+      $mail->Subject = "Ouverture de compte réussie";
       $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
       $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
