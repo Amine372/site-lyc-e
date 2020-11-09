@@ -1,4 +1,9 @@
 <?php
+require_once '../class/Modele/model_job.php';
+require_once '../class/Manager/manager_job.php';
+require_once '../traitement/traitement_job.php';
+class reservation { //Déclaration de la classe réservation
+
 require_once 'manager_job.php';
 require_once 'traitement_job.php';
 class job //Déclaration de la classe réservation
@@ -9,12 +14,14 @@ class job //Déclaration de la classe réservation
   private $_poste;
   private $_description_poste;
 
+  public function __construct($nom, $email, $poste, $description_poste, $troisd){
+
   public function __construct($nom, $email, $poste, $description_poste)
   {
 //Partie SET
       $this->setNom($nom);
       $this->setemail($email);
-      $this->setemail($poste);
+      $this->setposte($poste);
       $this->setdescription_poste($description_poste);
 }
 
@@ -57,6 +64,11 @@ public function getnom()
 {
   return $this->_nom;
 }
+public function getemail(){
+  return $this->_email;
+}
+public function getposte(){
+
 public function getmail()
 {
   return $this->_email;
