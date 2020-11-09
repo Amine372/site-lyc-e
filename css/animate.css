@@ -187,28 +187,34 @@
   }
 }
 
-.pulse {
+.pulse
+{
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
 
-@-webkit-keyframes rubberBand {
-  from {
+@-webkit-keyframes rubberBand
+{
+  from
+  {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
-  30% {
+  30%
+  {
     -webkit-transform: scale3d(1.25, 0.75, 1);
     transform: scale3d(1.25, 0.75, 1);
   }
 
-  40% {
+  40%
+  {
     -webkit-transform: scale3d(0.75, 1.25, 1);
     transform: scale3d(0.75, 1.25, 1);
   }
 
-  50% {
+  50%
+  {
     -webkit-transform: scale3d(1.15, 0.85, 1);
     transform: scale3d(1.15, 0.85, 1);
   }
