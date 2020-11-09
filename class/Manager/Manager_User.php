@@ -27,7 +27,7 @@ class Manager_User
     else
     {
 
-      //Envoie de mail
+      //Envoi de mail
       require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
       require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
       require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
