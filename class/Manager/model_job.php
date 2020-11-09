@@ -2,23 +2,26 @@
 require_once 'manager_job.php';
 require_once 'traitement_job.php';
 class jobannonce //Déclaration de la classe réservation
-{ //Déclaration de la classe réservation
+{
 //Déclaration des attributs
   private $_nom;
   private $_email;
   private $_poste;
   private $_description_poste;
 
-  public function __construct($nom, $email, $poste, $description_poste){
-//Partie SET
+  public function __construct($nom, $email, $poste, $description_poste)
+  {
+    //Partie SET
       $this->setnom($nom);
       $this->setemail($email);
       $this->setposte($poste);
       $this->setdescription_poste($description_poste);
 }
 
-public function setnom($nom){
-  if(empty($nom)){
+public function setnom($nom)
+{
+  if(empty($nom))
+  {
     trigger_error('la variable doit etre un caractere');
     return;
   }
