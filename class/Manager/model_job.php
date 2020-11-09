@@ -1,7 +1,8 @@
 <?php
 require_once 'manager_job.php';
 require_once 'traitement_job.php';
-class jobannonce { //Déclaration de la classe réservation
+class jobannonce //Déclaration de la classe réservation
+{ //Déclaration de la classe réservation
 //Déclaration des attributs
   private $_nom;
   private $_email;
