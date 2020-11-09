@@ -1,9 +1,14 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+	header('location: ../view/connexion.php');
+}
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>WorkWise Html Template</title>
+<title>Vos messages</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -31,9 +36,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-
 						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
-
 					</div><!--fin du logotype-->
 					<div class="search-bar">
 						<form>
@@ -44,33 +47,33 @@
 					<nav>
 						<ul>
 							<li>
-
 								<a href="../index.php" title="">
 									<span><img src="../images/icon1.png" alt=""></span>
-
 									Accueil
 								</a>
 							</li>
 							<li>
 								<a href="evenements.php" title="">
 									<span><img src="../images/icon3.png" alt=""></span>
-									Evènements
+									Evénements
 								</a>
-							</li>
-							<li>
-								<a href="profils.php" title="">
-									<span><img src="../images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-								</ul>
 							</li>
 							<li>
 								<a href="emploi.php" title="">
 									<span><img src="../images/icon5.png" alt=""></span>
-									Emplois
+									Annonces
+								</a>
+							</li>
+              <li>
+								<a href="contact.php" title="">
+									<span><img src="../images/icon6.png" alt=""></span>
+									Contact
+								</a>
+							</li>
+							<li>
+								<a href="messages.php" title="">
+									<span><img src="../images/icon4.png" alt=""></span>
+									Messages
 								</a>
 							</li>
 
@@ -80,18 +83,33 @@
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<div class="user-info">
-							<img src="http://via.placeholder.com/30x30" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3><a href="#" title="">Mon Compte</a></h3>
-							<ul class="us-links">
-								<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-							</ul>
-							<h3 class="tc"><a href="connexion.php" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
+						<?php
+						if (isset($_SESSION['nom'])) {
+							echo '<div class="user-info">
+								<img src="http://via.placeholder.com/30x30" alt="">
+								<a href="#" title="">'.$_SESSION['nom'].'</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss" style=";">
+								<h3>Mon Compte</h3>
+								<ul class="us-links">
+									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+								</ul>
+								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						else {
+							echo '<div class="user-info">
+								<a href="#" title="">Connectez vous</a>
+								<i class="la la-sort-down"></i>
+							</div>
+							<div class="user-account-settingss">
+								<h3><a href="connexion.php" title="">Connexion</a></h3>
+
+								<h3><a href="inscription.php" title="">Inscription</a></h3>
+							</div><!--fin des paramètres du compte utilisateur-->';
+						}
+						?>
 					</div>
 				</div><!--fin des données d'en-tête-->
 			</div>
@@ -107,10 +125,7 @@
 							<div class="msgs-list">
 								<div class="msg-title">
 									<h3>Messages</h3>
-									<ul>
-										<li><a href="#" title=""><i class="fa fa-cog"></i></a></li>
-										<li><a href="#" title=""><i class="fa fa-ellipsis-v"></i></a></li>
-									</ul>
+
 								</div><!--msg-title end-->
 								<div class="messages-list">
 									<ul>
@@ -118,14 +133,11 @@
 											<div class="usr-msg-details">
 												<div class="usr-ms-img">
 													<img src="http://via.placeholder.com/50x50" alt="">
-													<span class="msg-status"></span>
 												</div>
 												<div class="usr-mg-info">
 													<h3>John Doe</h3>
-													<p>Lorem ipsum dolor <img src="../images/smley.png" alt=""></p>
+													<p></p>
 												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-												<span class="msg-notifc">1</span>
 											</div><!--usr-msg-details end-->
 										</li>
 										<li>
@@ -134,72 +146,9 @@
 													<img src="http://via.placeholder.com/50x50" alt="">
 												</div>
 												<div class="usr-mg-info">
-													<h3>David Vane</h3>
-													<p>Vestibulum ac diam..</p>
+													<h3>John Doe</h3>
+													<p></p>
 												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-												</div>
-												<div class="usr-mg-info">
-													<h3>Nancy Dilan</h3>
-													<p>Quam vehicula.</p>
-												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-													<span class="msg-status"></span>
-												</div>
-												<div class="usr-mg-info">
-													<h3>Norman Kenney</h3>
-													<p>Nulla quis lorem ut..</p>
-												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-													<span class="msg-status"></span>
-												</div>
-												<div class="usr-mg-info">
-													<h3>James Dilan</h3>
-													<p>Vivamus magna just..</p>
-												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-												</div>
-												<div class="usr-mg-info">
-													<h3>Mike Dorn</h3>
-													<p>Praesent sapien massa.</p>
-												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-												</div>
-												<div class="usr-mg-info">
-													<h3>Patrick Morison</h3>
-													<p>Convallis a pellente...</p>
-												</div><!--usr-mg-info end-->
-												<span class="posted_time">1:55 PM</span>
 											</div><!--usr-msg-details end-->
 										</li>
 									</ul>
@@ -208,32 +157,40 @@
 						</div>
 						<div class="col-lg-8 col-md-12 pd-right-none pd-left-none">
 							<div class="main-conversation-box">
-								<div class="message-bar-head">
+								<div class="message-bar-head" style="position:static;">
 									<div class="usr-msg-details">
 										<div class="usr-ms-img">
 											<img src="http://via.placeholder.com/50x50" alt="">
 										</div>
 										<div class="usr-mg-info">
 											<h3>John Doe</h3>
-											<p>Online</p>
 										</div><!--usr-mg-info end-->
 									</div>
 									<a href="#" title=""><i class="fa fa-ellipsis-v"></i></a>
 								</div><!--message-bar-head end-->
 								<div class="messages-line">
-									<div class="main-message-box">
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
+									<div class="main-message-box ta-right">
 										<div class="message-dt">
-											<div class="message-inner-dt img-bx">
-												<img src="http://via.placeholder.com/151x125" alt="">
-												<img src="http://via.placeholder.com/151x125" alt="">
-												<img src="http://via.placeholder.com/151x125" alt="">
+											<div class="message-inner-dt">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
 											</div><!--message-inner-dt end-->
 											<span>Sat, Aug 23, 1:08 PM</span>
 										</div><!--message-dt end-->
+										<div class="messg-usr-img">
+											John
+										</div><!--messg-usr-img end-->
 									</div><!--main-message-box end-->
+									<div class="main-message-box st3">
+										<div class="message-dt st3">
+											<div class="message-inner-dt">
+												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
+											</div><!--message-inner-dt end-->
+											<span>5 minutes ago</span>
+										</div><!--message-dt end-->
+										<div class="messg-usr-img">
+											John
+										</div><!--messg-usr-img end-->
+									</div>
 									<div class="main-message-box ta-right">
 										<div class="message-dt">
 											<div class="message-inner-dt">
@@ -252,10 +209,7 @@
 											</div><!--message-inner-dt end-->
 											<span>5 minutes ago</span>
 										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
+									</div>
 									<div class="main-message-box ta-right">
 										<div class="message-dt">
 											<div class="message-inner-dt">
@@ -270,14 +224,11 @@
 									<div class="main-message-box st3">
 										<div class="message-dt st3">
 											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet</p>
+												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
 											</div><!--message-inner-dt end-->
-											<span>2 minutes ago</span>
+											<span>5 minutes ago</span>
 										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
+									</div>
 									<div class="main-message-box ta-right">
 										<div class="message-dt">
 											<div class="message-inner-dt">
@@ -292,14 +243,31 @@
 									<div class="main-message-box st3">
 										<div class="message-dt st3">
 											<div class="message-inner-dt">
-												<p>....</p>
+												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
 											</div><!--message-inner-dt end-->
-											<span>Typing...</span>
+											<span>5 minutes ago</span>
+										</div><!--message-dt end-->
+									</div>
+									<div class="main-message-box ta-right">
+										<div class="message-dt">
+											<div class="message-inner-dt">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
+											</div><!--message-inner-dt end-->
+											<span>Sat, Aug 23, 1:08 PM</span>
 										</div><!--message-dt end-->
 										<div class="messg-usr-img">
 											<img src="http://via.placeholder.com/50x50" alt="">
 										</div><!--messg-usr-img end-->
 									</div><!--main-message-box end-->
+									<div class="main-message-box st3">
+										<div class="message-dt st3">
+											<div class="message-inner-dt">
+												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
+											</div><!--message-inner-dt end-->
+											<span>5 minutes ago</span>
+										</div><!--message-dt end-->
+									</div>
+
 								</div><!--messages-line end-->
 								<div class="message-send-area">
 									<form>
@@ -307,11 +275,6 @@
 											<input type="text" name="message" placeholder="Type a message here">
 											<button type="submit">Send</button>
 										</div>
-										<ul>
-											<li><a href="#" title=""><i class="fa fa-smile-o"></i></a></li>
-											<li><a href="#" title=""><i class="fa fa-camera"></i></a></li>
-											<li><a href="#" title=""><i class="fa fa-paperclip"></i></a></li>
-										</ul>
 									</form>
 								</div><!--message-send-area end-->
 							</div><!--main-conversation-box end-->

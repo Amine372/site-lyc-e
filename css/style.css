@@ -4694,7 +4694,8 @@ a:hover {
 	cursor: pointer;
 }
 .messages-list ul li.active {
-	background-color: #efefef;
+	background-color: #e6e6e6;
+	border: 2px solid #2d5c88;
 }
 .usr-msg-details {
 	float: left;

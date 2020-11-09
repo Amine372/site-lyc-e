@@ -5,12 +5,14 @@
   session_start();
   //Vérification du mdp
 
-  if($_POST['mdp'] != $_POST['confirmmdp']){
+  if($_POST['mdp'] != $_POST['confirmmdp'])
+  {
     $_SESSION['erreur_inscr'] = "Erreur dans le mot de passe.";
     header('Location: ../view/inscription.php');
   }
   //ajout dans la bdd
-  else{
+  else
+  {
     $inscription = new User(['nom'=>$_POST['nom'],
                     'prenom'=>$_POST['prenom'],
                     'email'=>$_POST['email'],

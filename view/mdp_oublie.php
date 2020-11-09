@@ -39,7 +39,7 @@
                   <div class="row">
                     <div class="col-lg-12 no-pdd">
                       <div class="sn-field">
-                        <input type="text" name="email" required placeholder="Adresse éléctronique" style="width: 50%;">
+                        <input type="mail" name="email" required placeholder="Adresse éléctronique" style="width: 50%;">
 												<br>
 												<?php
 												session_start();

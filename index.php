@@ -58,16 +58,6 @@
 								</a>
 							</li>
 							<li>
-								<a href="view/profils.php" title="">
-									<span><img src="images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="view/profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="view/my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-								</ul>
-							</li>
-							<li>
 								<a href="view/emploi.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
 									Annonces
@@ -77,6 +67,12 @@
 								<a href="view/contact.php" title="">
 									<span><img src="images/icon6.png" alt=""></span>
 									Contact
+								</a>
+							</li>
+              <li>
+								<a href="view/messages.php" title="">
+									<span><img src="images/icon4.png" alt=""></span>
+									Messages
 								</a>
 							</li>
 						</ul>
@@ -140,7 +136,7 @@
 										<ul class="social_links">
 											<li><a href="http://www.lyceerobertschuman.com" title=""><i class="la la-globe"></i> Site internet</a></li>
 											<li><a href="https://www.facebook.com/pages/Lyc%C3%A9e-Priv%C3%A9-Robert-Schuman-%C3%A0-Dugny/388750161192043" title=""><i class="fa fa-facebook-square"></i> Page Facebook</a></li>
-											<li><a href="https://www.youtube.com/watch?v=5fQu2KygRL0&feature=youtu.be" title=""><i class="fa fa-youtube"></i> YouTube</a></li>
+											<li><a href="https://www.youtube.com/channel/UCYv3GxDZ9U7iWU2XEoXFDVw" title=""><i class="fa fa-youtube"></i> YouTube</a></li>
 										</ul>
 									</div><!--user_profile end-->
 									<div class="suggestions full-width">
@@ -273,7 +269,7 @@
 									<div class="message-btn">
 										<a href="view\contact.php" title=""><i class="fa fa-envelope"></i> Contactez nous !</a>
 									</div>
-									
+
 								</div><!--right-sidebar end-->
 							</div>
 						</div>

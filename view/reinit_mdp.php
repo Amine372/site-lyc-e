@@ -31,7 +31,7 @@
 
 										<div style="margin-top:25%;margin-bottom:25%; font-size:24px">
 
-											<center>Vous recevrez un mail avec votre mot de passe de secours dans quelques instant</center >
+											<center>Vous recevrez un mail avec un mot de passe provisoire dans quelques instant</center >
 											<br><br><br>
 											<div class="sign_in_sec current">
 													<div class="row">
