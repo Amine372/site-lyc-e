@@ -2,7 +2,8 @@
 require_once 'model_job.php';
 require_once 'traitement_job.php';
 class Manager{ //Déclaration de la classe Manager
-public function job($donnee){
+public function job($donnee)
+{
 
       $bdd=new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8', 'root', ''); //Connexion à la BDD
     $req=$bdd->prepare('INSERT into job (nom, email, poste, description_poste) VALUES(:nom, :email, :poste, :description_poste)'); //Préparation de la table réservations avec les valeurs de la table
