@@ -55,16 +55,20 @@ public function setdescription_poste($description_poste)
   $this->_description_poste = $description_poste;
 }
 //Partie Get
-public function getnom(){
+public function getnom()
+{
   return $this->_nom;
 }
-public function getmail(){
+public function getmail()
+{
   return $this->_email;
 }
-public function getemail(){
+public function getemail()
+{
   return $this->_poste;
 }
-public function getdescription_poste(){
+public function getdescription_poste()
+{
   return $this->_description_poste;
 
 }
