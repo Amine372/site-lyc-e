@@ -1,11 +1,9 @@
 <?php
-class Model_Evenements
+class Model_Admin
 {
-  private $_id;
-  private $_id_utilisateur;
-  private $_description;
-  private $_date;
-  private $_Comm;
+  protected $_id;
+  protected $_nom;
+  protected $_prenom;
   // Liste des getters
 
   public function id()
