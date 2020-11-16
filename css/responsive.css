@@ -2,85 +2,161 @@
 
 @media (max-width: 1200px)
 {
-	header nav {position: fixed;top: 0;left: 0;width: 200px;height: 100%;background-color: #2d5c88;padding: 25px 20px;opacity: 0;visibility: hidden;z-index: 0}
-	header nav.active {opacity: 1;visibility: visible;z-index: 9999;
+	header nav
+	{
+		position: fixed;top: 0;left: 0;width: 200px;height: 100%;background-color: #2d5c88;padding: 25px 20px;opacity: 0;visibility: hidden;z-index: 0}
+	header nav.active
+	{
+		opacity: 1;visibility: visible;z-index: 9999;
 	}
-	header nav ul li {float: left;width: 100%;text-align: left;padding: 0 0 0 0;margin-bottom: 20px;
+	header nav ul li
+	{
+		float: left;width: 100%;text-align: left;padding: 0 0 0 0;margin-bottom: 20px;
 	}
-	.menu-btn {display: block;
+	.menu-btn
+	{
+		display: block;
 	}
-	header nav ul li span {display: inline-block;margin-right: 10px;
+	header nav ul li span
+	{
+		display: inline-block;margin-right: 10px;
 	}
-	.widget-about h3 {font-size: 16px;
+	.widget-about h3
+	{
+		font-size: 16px;
 	}
-	.widget-about span {font-size: 13px;
+	.widget-about span
+	{
+		font-size: 13px;
 	}
-	.suggestion-usd {padding: 15px 5px;
+	.suggestion-usd
+	{
+		padding: 15px 5px;
 	}
-	.cp-sec p {margin-top: 10px;float: none;
+	.cp-sec p
+	{
+		margin-top: 10px;float: none;
 	}
-	.comment_box input {width: 281px;
+	.comment_box input
+	{
+		width: 281px;
 	}
-	.job-details {width: 112px;
+	.job-details
+	{
+		width: 112px;
 	}
-	.job-details h3 {line-height: 18px;
+	.job-details h3
+	{
+		line-height: 18px;
 	}
-	.sd-title h3 {font-size: 15px;
+	.sd-title h3
+	{
+		font-size: 15px;
 	}
-	.cp-sec > img {text-align: center;float: none;
+	.cp-sec > img
+	{
+		text-align: center;float: none;
 	}
-	.cp-sec {text-align: center;
+	.cp-sec
+	{
+		text-align: center;
 	}
-	.flw-status li {margin-right: 10px;
+	.flw-status li
+	{
+		margin-right: 10px;
 	}
-	.flw-status li span {font-size: 16px;
+	.flw-status li span
+	{
+		font-size: 16px;
 	}
-	.social_links li a {font-size: 10px;
+	.social_links li a
+	{
+		font-size: 10px;
 	}
-	.footy-sec ul {width: 100%;text-align: center;
+	.footy-sec ul
+	{
+		width: 100%;text-align: center;
 	}
-	.fl-rgt {float: none;margin-top: 0;padding-bottom: 20px;width: auto;padding-right: 0;
+	.fl-rgt
+	{
+		float: none;margin-top: 0;padding-bottom: 20px;width: auto;padding-right: 0;
 	}
-	.footy-sec.mn p {margin-top: 0;padding-bottom: 20px;
+	.footy-sec.mn p
+	{
+		margin-top: 0;padding-bottom: 20px;
 	}
-	.footy-sec.mn ul {padding: 30px 0 25px 0;
+	.footy-sec.mn ul
+	{
+		padding: 30px 0 25px 0;
 	}
-	.hr-rate {margin-top: 10px;
+	.hr-rate
+	{
+		margin-top: 10px;
 	}
-	.filter-secs {margin-bottom: 40px;
+	.filter-secs
+	{
+		margin-bottom: 40px;
 	}
-	.tab-feed ul li {margin-bottom: 30px;
+	.tab-feed ul li
+	{
+		margin-bottom: 30px;
 	}
-	.star-descp > a {float: left;width: 100%;margin-left: 0;margin-top: 10px;
+	.star-descp > a
+	{
+		float: left;width: 100%;margin-left: 0;margin-top: 10px;
 	}
-	.tab-feed {margin-bottom: 30px;
+	.tab-feed
+	{
+		margin-bottom: 30px;
 	}
-	.footy-sec p {width: 100%;text-align: center;margin-top: 15px;
+	.footy-sec p
+	{
+		width: 100%;text-align: center;margin-top: 15px;
 	}
-	.footy-sec p img {float: none;top: 2px;
+	.footy-sec p img
+	{
+		float: none;top: 2px;
 	}
-	.footy-sec {text-align: center;
+	.footy-sec
+	{
+		text-align: center;
 	}
 
-	.search-bar.st2 {display: none;
+	.search-bar.st2
+	{
+		display: none;
 	}
-	.usr_quest {width: 85%;
+	.usr_quest
+	{
+		width: 85%;
 	}
-	.full-pagi {display: block !important;
+	.full-pagi
+	{
+		display: block !important;
 	}
 	.post_comment_sec
 	{
 		width: 85%;
 	}
-	.acc-leftbar .nav-tabs > a i {width: 30px;
+	.acc-leftbar .nav-tabs > a i
+	{
+		width: 30px;
 	}
-	.acc-leftbar .nav-tabs > a {font-size: 14px;
+	.acc-leftbar .nav-tabs > a
+	{
+		font-size: 14px;
 	}
-	.notification-box {left: 100%;top: 0;
+	.notification-box
+	{
+		left: 100%;top: 0;
 	}
-	nav ul ul {left: 50%;top: 0;border: 1px solid #e4e4e4;padding-left: 20px;padding-right: 20px;
+	nav ul ul
+	{
+		left: 50%;top: 0;border: 1px solid #e4e4e4;padding-left: 20px;padding-right: 20px;
 	}
-	.sgt-text span {font-size: 12px;
+	.sgt-text span
+	{
+		font-size: 12px;
 	}
 }
 
