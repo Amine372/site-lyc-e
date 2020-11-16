@@ -184,15 +184,15 @@
                                 {
                                   foreach ($donnee as $clef)
                                   {
-                                    echo '  <div class="post-bar">
-              											<div class="post_topbar">
-              												<div class="usy-dt">
-              														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-                                        </div>
-                                      </div>
-                                      ';
+                                    $id = $this->id;
+                                    $nom = $this->nom;
+                                    $prenom = $this->prenom;
+                                    echo '<option value=$id '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }** .'>'.$id. ". " .$nom. "</option>";
+                                      ;
                                     }
                                     }
+                                    echo "</optgroup>
+                                    </select>";
                                 ?>
 												</div>
 											</div>
@@ -219,7 +219,8 @@
 											<div class="save-stngs pd2">
 												<ul>
 													<li><button name="xcv" type="submit">Continuer</button></li>
-                          <?php if(isset($_POST['xcv'])
+                          <?php
+                          if(isset($_POST['xcv'])
                           {
                             if(isset($_POST['mettre_en_admin'])
                             {
@@ -237,7 +238,8 @@
                             {
 
                             }
-                          } ?>
+                          }
+                          ?>
 												</ul>
 											</div><!--save-stngs end-->
 										</form>
