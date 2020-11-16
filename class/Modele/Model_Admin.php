@@ -10,22 +10,13 @@ class Model_Admin
   {
     return $this->_id;
   }
-
-  public function id_utilisateur()
+  public function nom()
   {
-    return $this->_id_utilisateur;
+    return $this->_nom;
   }
-  public function description()
+  public function prenom()
   {
-    return $this->_description;
-  }
-  public function date()
-  {
-    return $this->_date;
-  }
-  public function Comm()
-  {
-    return $this->_Comm;
+    return $this->_prenom;
   }
   //Partie Setter
   public function setid($id)
