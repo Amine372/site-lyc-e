@@ -139,13 +139,9 @@ session_start();
                         <br>
                         <form action="../class/Manager/manager_job.php" method="POST">
                             <div class="form-group">
-                                <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom" required>
-                <br>
-               <input type="text" name="id_utilisateur" class="form-control"   placeholder="Entrer votre adresse éléctronique" required>
-               <br>
+                                
                                 <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste" required>
-                <br>
-               <textarea name="description_poste" class="form-control"  placeholder="Description de l'annonce" required ></textarea>
+                
 
                             </div>
 
@@ -200,8 +196,7 @@ session_start();
                                 <div class="usy-dt">
                                   <img src="http://via.placeholder.com/50x50" alt="">
                                   <div class="usy-name">
-                                    <h3> '.$clef['nom'].' '.$clef['id'].'</h3>
-                                    <span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
+                                   
                                   </div>
                                 </div>
                               </div>
@@ -216,8 +211,8 @@ session_start();
                               </div>
                               <div class="job_descp">
                                 <h3>'.$clef['poste'].'</h3>
-                                <p>'.$clef['description_poste'].'</p>
-                                <ul class="skill-tags">
+								<p>'.$clef['description_poste'].'</p>
+                                  <ul class="skill-tags">
                                   <li><a href="#" title="">HTML</a></li>
                                   <li><a href="#" title="">PHP</a></li>
                                   <li><a href="#" title="">CSS</a></li>
