@@ -205,16 +205,24 @@
 											<div class="cp-field">
 												<h5>Que voulez vous faire ?</h5>
 												<div class="cpp-fiel">
-													<input type="password" name="mdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
+													<input type="radio" name="mdp" required>
 												</div>
 											</div>
 											<div class="cp-field">
 												<h5>Retapez le mot de passe</h5>
 												<div class="cpp-fiel">
-													<input type="password" name="confirmmdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
+                          <div>
+													<input type="radio" name="mettre_en_admine" id="mettre_en_admin" value="Mettre en Admin<" required>
+                          <label for="mettre_en_admin">Mettre en Admin</label>
 												</div>
+                        <div>
+                        <input type="radio" name="action_faite" id="action_faite" value="action_faite" required>
+                        <label for="action_faite">Mettre en Admin</label>
+                      </div>
+                      <div>
+                      <input type="radio" name="action_faite" id="action_faite" value="action_faite" required>
+                      <label for="action_faite">Mettre en Admin</label>
+                    </div>
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
