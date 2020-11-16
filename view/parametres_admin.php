@@ -164,10 +164,10 @@
 											</form>
 							  		</div><!--acc-setting end-->
 							  	</div>
-							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+							  	<div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
 										<h3>Messages Utilisateurs</h3>
-										<form method="post" action="../traitement/traitement_admin.php">
+										<form method="post" action="../class/Modele/traitement_admin.php">
 											</div>
 											<div class="cp-field">
 												<h5>A qui voulez vous avoir affaire ?</h5>
@@ -188,25 +188,10 @@
                                     echo '  <div class="post-bar">
               											<div class="post_topbar">
               												<div class="usy-dt">
-              													<img src="http://via.placeholder.com/50x50" alt="">
-              													<div class="usy-name">
               														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-              														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
-              													</div>
-              												</div>
-              											</div>
-              											<div class="epi-sec">
-              												<ul class="descp">
-              													<li><img src="images/icon8.png" alt=""></li>
-              												</ul>
-              											</div>
-              											<div class="job_descp">
-              												<h3>'.$clef['titre'].'</h3>
-              												<p>'.$clef['description'].'</p>
-              											</div>
-              										</div> ';
-                                }
-                              }
+                                        </div>
+                                      </div>
+                                      '}}
                                 ?>
 												</div>
 											</div>
