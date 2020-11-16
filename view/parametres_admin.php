@@ -218,11 +218,37 @@
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
-													<li><button type="submit">Continuer</button></li>
-                          <?php if(isset($_SESSION['message_mdp']))
+													<li><button name="xcv" type="submit">Continuer</button></li>
+                          <?php if(isset($_POST['xcv'])
                           {
-                            echo $_SESSION['message_mdp'];
-                            unset($_SESSION['message_mdp']);
+                            if(isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+
+                            }
+                            elseif (isset($_POST['mettre_en_admin'])
+                            {
+                              
+                            }
                           } ?>
 												</ul>
 											</div><!--save-stngs end-->
