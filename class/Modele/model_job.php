@@ -1,6 +1,4 @@
 <?php
-require '../class/traitement/traitement_job.php';
-require '../class/Manager/manager_job.php';
 class Model_Job
 {
   private $_id;
