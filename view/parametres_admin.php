@@ -167,7 +167,7 @@
 							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
 							  		<div class="acc-setting">
 										<h3>Messages Utilisateurs</h3>
-										<form method="post" action="../traitement/traitement_modif_mdp.php">
+										<form method="post" action="../traitement/traitement_admin.php">
                           <?php
                           if (isset($_SESSION['nom']))
                           {
@@ -201,7 +201,35 @@
 											<div class="cp-field">
 												<h5>A qui voulez vous avoir affaire ?</h5>
 												<div class="cpp-fiel">
-													<input type="radio" name="mdp" requir
+                          <?php
+                          if (isset($_SESSION['nom']))
+                          {
+                            echo '<div class="user-info">
+                              <img src="http://via.placeholder.com/30x30" alt="">
+                              <a href="#" title="">'.$_SESSION['nom'].'</a>
+                              <i class="la la-sort-down"></i>
+                            </div>
+                            <div class="user-account-settingss">
+                              <h3>Mon Compte</h3>
+                              <ul class="us-links">
+                                <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+                              </ul>
+                              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+                            </div><!--fin des paramètres du compte utilisateur-->';
+                          }
+                          else
+                          {
+                            echo '<div class="user-info">
+                              <a href="#" title="">Connectez vous</a>
+                              <i class="la la-sort-down"></i>
+                            </div>
+                            <div class="user-account-settingss">
+                              <h3><a href="connexion.php" title="">Connexion</a></h3>
+
+                              <h3><a href="inscription.php" title="">Inscription</a></h3>
+                            </div><!--fin des paramètres du compte utilisateur-->';
+                          }
+                          ?>
 												</div>
 											</div>
 											<div class="cp-field">
