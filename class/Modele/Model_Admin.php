@@ -28,22 +28,22 @@ class Model_Admin
       $this->_id = $id;
     }
   }
-  public function setid_utilisateur($id_utilisateur)
+  public function setnom($nom)
   {
-    $id_utilisateur = (int) $id_utilisateur;
+    $nom = (int) $nom;
 
-    if ($id_utilisateur >= 1 && $id_utilisateur <= 100)
+    if ($nom >= 1 && $nom <= 100)
     {
-      $this->_id_utilisateur = $id_utilisateur;
+      $this->_nom = $nom;
     }
   }
-  public function setdescription($description)
+  public function setprenom($prenom)
   {
-    $description = (int) $description;
+    $prenom = (int) $prenom;
 
-    if ($description >= 1 && $description <= 100)
+    if ($prenom >= 1 && $prenom <= 100)
     {
-      $this->_description = $description;
+      $this->_prenom = $prenom;
     }
   }
   public function setdate($date)
