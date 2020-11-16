@@ -143,10 +143,12 @@ session_start();
                     $get_event = new Manager_Evenements;
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Evenements();
-                          if(is_null($donnee)){
+                          if(is_null($donnee))
+                          {
                             echo "Aucun évènement";
                           }
-                          else{
+                          else
+                          {
                             foreach ($donnee as $clef)
                             {
                               echo '  <div class="post-bar">
