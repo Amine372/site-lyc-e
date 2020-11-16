@@ -127,7 +127,7 @@
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Inscrits</a>
-								    <a class="nav-item nav-link active" id="nav-status-tab1" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false"><i class="fa fa-lock"></i>Messages Inscrits</a>
+								    <a class="nav-item nav-link active" id="nav-status-tab2" data-toggle="tab" href="nav-status-tab2" role="tab" aria-controls="nav-status-tab2" aria-selected="false"><i class="fa fa-lock"></i>Messages Inscrits</a>
 								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
@@ -164,7 +164,7 @@
 											</form>
 							  		</div><!--acc-setting end-->
 							  	</div>
-							  	<div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+							  	<div class="tab-pane fade" id="nav-status-tab2" role="tabpanel" aria-labelledby="nav-status-tab2">
 							  		<div class="acc-setting">
 										<h3>Messages Utilisateurs</h3>
 										<form method="post" action="../class/Modele/traitement_admin.php">
@@ -213,7 +213,7 @@
                     <div>
                     <input type="radio" name="envoyer_un_mail" id="envoyer_un_mail" value="Envoyer un Mail" required>
                     <label for="envoyer_un_mail">Envoyer un Mail</label>
-                    y</div>
+                    </div>
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
