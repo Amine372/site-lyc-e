@@ -136,7 +136,7 @@
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
 							  			<h3>Inscrits</h3>
-											<form method="post" action="../traitement/traitement_modif.php">
+											<form method="post" action="../traitement/traitement_admin.php">
 												<div class="cp-field">
 													<h5>Nom</h5>
 													<div class="cpp-fiel">
