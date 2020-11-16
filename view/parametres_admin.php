@@ -216,12 +216,16 @@
                           <label for="mettre_en_admin">Mettre en Admin</label>
 												</div>
                         <div>
-                        <input type="radio" name="action_faite" id="action_faite" value="action_faite" required>
-                        <label for="action_faite">Mettre en Admin</label>
+                        <input type="radio" name="supprimer_les_droits_admin" id="supprimer_les_droits_admin" value="Supprimer les droits Admin" required>
+                        <label for="supprimer_les_droits_admin">Supprimer les droits Admin</label>
                       </div>
                       <div>
-                      <input type="radio" name="action_faite" id="action_faite" value="action_faite" required>
-                      <label for="action_faite">Mettre en Admin</label>
+                      <input type="radio" name="envoyer_un_message" id="envoyer_un_message" value="Envoyer un Message" required>
+                      <label for="envoyer_un_message">Envoyer un Message</label>
+                    </div>
+                    <div>
+                    <input type="radio" name="envoyer_un_message" id="envoyer_un_message" value="Envoyer un Message" required>
+                    <label for="envoyer_un_message">Envoyer un Message</label>
                     </div>
 											</div>
 											<div class="save-stngs pd2">
