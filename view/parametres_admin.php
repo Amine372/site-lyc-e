@@ -173,34 +173,55 @@
 												<h5>A qui voulez vous avoir affaire ?</h5>
 												<div class="cpp-fiel">
                           <?php
-                          if (isset($_SESSION['nom']))
-                          {
-                            echo '<div class="user-info">
-                              <img src="http://via.placeholder.com/30x30" alt="">
-                              <a href="#" title="">'.$_SESSION['nom'].'</a>
-                              <i class="la la-sort-down"></i>
-                            </div>
-                            <div class="user-account-settingss">
-                              <h3>Mon Compte</h3>
-                              <ul class="us-links">
-                                <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-                              </ul>
-                              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
-                            </div><!--fin des paramètres du compte utilisateur-->';
-                          }
-                          else
-                          {
-                            echo '<div class="user-info">
-                              <a href="#" title="">Connectez vous</a>
-                              <i class="la la-sort-down"></i>
-                            </div>
-                            <div class="user-account-settingss">
-                              <h3><a href="connexion.php" title="">Connexion</a></h3>
-
-                              <h3><a href="inscription.php" title="">Inscription</a></h3>
-                            </div><!--fin des paramètres du compte utilisateur-->';
-                          }
-                          ?>
+                          // on fait une boucle pour afficher tous les évenement
+                          $get_event = new Manager_Evenements;
+                            // $donnee doit être le tableau avec tous les evennements
+                                $donnee= $get_event->Evenements();
+                                if(is_null($donnee))
+                                {
+                                  echo "Aucun évènement";
+                                }
+                                else
+                                {
+                                  foreach ($donnee as $clef)
+                                  {
+                                    echo '  <div class="post-bar">
+              											<div class="post_topbar">
+              												<div class="usy-dt">
+              													<img src="http://via.placeholder.com/50x50" alt="">
+              													<div class="usy-name">
+              														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
+              														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
+              													</div>
+              												</div>
+              											</div>
+              											<div class="epi-sec">
+              												<ul class="descp">
+              													<li><img src="images/icon8.png" alt=""></li>
+              												</ul>
+              												<ul class="bk-links">
+              													<li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
+              													<li><p title="" class="bid_now">Profil</p></li>
+              												</ul>
+              											</div>
+              											<div class="job_descp">
+              												<h3>'.$clef['titre'].'</h3>
+              												<p>'.$clef['description'].'</p>
+              												<ul class="skill-tags">
+              													<li><a href="#" title="">HTML</a></li>
+              													<li><a href="#" title="">PHP</a></li>
+              													<li><a href="#" title="">CSS</a></li>
+              													<li><a href="#" title="">Javascript</a></li>
+              													<li><a href="#" title="">Wordpress</a></li>
+              													<li><a href="#" title="">Photoshop</a></li>
+              													<li><a href="#" title="">Illustrateur</a></li>
+              													<li><a href="#" title="">Corel Draw</a></li>
+              												</ul>
+              											</div>
+              										</div><!--post-bar end--> ';
+                                }
+                              }
+                                ?>
 												</div>
 											</div>
 											<div class="cp-field">
