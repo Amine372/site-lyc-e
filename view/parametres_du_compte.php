@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>WorkWise Html Template</title>
+<title>Paramètres du compte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -62,7 +62,7 @@
 								</a>
 								<ul>
 									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
+									<li><a href="my-profile-feed.html" title="">L'Alimentation de mon profil</a></li>
 								</ul>
 							</li>
 							<li>
@@ -85,7 +85,8 @@
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
 						<?php
-						if (isset($_SESSION['nom'])) {
+						if (isset($_SESSION['nom']))
+            {
 							echo '<div class="user-info">
 								<img src="http://via.placeholder.com/30x30" alt="">
 								<a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -99,7 +100,8 @@
 								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
 							</div><!--fin des paramètres du compte utilisateur-->';
 						}
-						else {
+						else
+            {
 							echo '<div class="user-info">
 								<a href="#" title="">Connectez vous</a>
 								<i class="la la-sort-down"></i>
@@ -151,7 +153,8 @@
 													<ul>
 														<li><button type="submit">Sauvegarder</button></li>
 
-                              <?php if(isset($_SESSION['succes_modif'])){
+                              <?php if(isset($_SESSION['succes_modif']))
+                              {
                                 echo $_SESSION['succes_modif'];
                                 unset($_SESSION['succes_modif']);
                               } ?>
@@ -189,7 +192,8 @@
 											<div class="save-stngs pd2">
 												<ul>
 													<li><button type="submit">Enregistrer</button></li>
-                          <?php if(isset($_SESSION['message_mdp'])){
+                          <?php if(isset($_SESSION['message_mdp']))
+                          {
                             echo $_SESSION['message_mdp'];
                             unset($_SESSION['message_mdp']);
                           } ?>
