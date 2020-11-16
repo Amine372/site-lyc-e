@@ -184,9 +184,9 @@
                                 {
                                   foreach ($donnee as $clef)
                                   {
-                                    echo '  <div class="post-bar">
-              											<div class="post_topbar">
-              												<div class="usy-dt">
+                                    echo '  $id = $this->id;
+                                            $id = $this->id;
+                                            $id = $this->id;
               														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
                                         </div>
                                       </div>
@@ -219,7 +219,8 @@
 											<div class="save-stngs pd2">
 												<ul>
 													<li><button name="xcv" type="submit">Continuer</button></li>
-                          <?php if(isset($_POST['xcv'])
+                          <?php
+                          if(isset($_POST['xcv'])
                           {
                             if(isset($_POST['mettre_en_admin'])
                             {
@@ -237,7 +238,8 @@
                             {
 
                             }
-                          } ?>
+                          }
+                          ?>
 												</ul>
 											</div><!--save-stngs end-->
 										</form>
