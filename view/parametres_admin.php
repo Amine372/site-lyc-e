@@ -185,11 +185,9 @@
                                   foreach ($donnee as $clef)
                                   {
                                     echo '  $id = $this->id;
-                                            $id = $this->id;
-                                            $id = $this->id;
-              														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-                                        </div>
-                                      </div>
+                                            $nom = $this->nom;
+                                            $prenom = $this->prenom;
+                                            echo '<option value=$ID '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }**
                                       ';
                                     }
                                     }
