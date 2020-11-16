@@ -224,13 +224,13 @@
                       <label for="envoyer_un_message">Envoyer un Message</label>
                     </div>
                     <div>
-                    <input type="radio" name="envoyer_un_message" id="envoyer_un_message" value="Envoyer un Message" required>
-                    <label for="envoyer_un_message">Envoyer un Message</label>
-                    </div>
+                    <input type="radio" name="envoyer_un_mail" id="envoyer_un_mail" value="Envoyer un Mail" required>
+                    <label for="envoyer_un_mail">Envoyer un Mail</label>
+                    y</div>
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
-													<li><button type="submit">Enregistrer</button></li>
+													<li><button type="submit">Continuer</button></li>
                           <?php if(isset($_SESSION['message_mdp']))
                           {
                             echo $_SESSION['message_mdp'];
