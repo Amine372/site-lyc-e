@@ -2,10 +2,9 @@
 class Model_Job
 {
   private $_id;
-  private $_id_utilisateur;
-  private $_nom;
   private $_poste;
   private $_description_poste;
+  
   // Liste des getters
 
   public function id()
@@ -13,22 +12,16 @@ class Model_Job
     return $this->_id;
   }
 
-  public function id_utilisateur()
-  {
-    return $this->_id_utilisateur;
-  }
-  public function nom()
-  {
-    return $this->_nom;
-  }
   public function poste()
   {
     return $this->_poste;
   }
-  public function description_poste()
+  
+public function description_poste()
   {
-    return $this->_description_poste;
+    return $this->_description_posteposte;
   }
+  
   //Partie Setter
   public function setid($id)
   {
@@ -39,24 +32,7 @@ class Model_Job
       $this->_id = $id;
     }
   }
-  public function setid_utilisateur($id_utilisateur)
-  {
-    $id_utilisateur = (int) $id_utilisateur;
-
-    if ($id_utilisateur >= 1 && $id_utilisateur <= 100)
-    {
-      $this->_id_utilisateur = $id_utilisateur;
-    }
-  }
-  public function setnom($nom)
-  {
-    $nom = (int) $nom;
-
-    if ($nom >= 1 && $nom <= 100)
-    {
-      $this->_nom = $nom;
-    }
-  }
+ 
   public function setposte($poste)
   {
     $poste = (int) $poste;
@@ -66,6 +42,8 @@ class Model_Job
       $this->_poste = $poste;
     }
   }
+ 
+  
   public function setdescription_poste($description_poste)
   {
     $description_poste = (int) $description_poste;
