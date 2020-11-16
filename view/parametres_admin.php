@@ -184,11 +184,11 @@
                                 {
                                   foreach ($donnee as $clef)
                                   {
-                                    echo '  $id = $this->id;
-                                            $nom = $this->nom;
-                                            $prenom = $this->prenom;
-                                            echo '<option value=$ID '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }** .'>'.$id. ". " .$nom. "</option>";
-                                      ';
+                                    $id = $this->id;
+                                    $nom = $this->nom;
+                                    $prenom = $this->prenom;
+                                    echo '<option value=$id '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }** .'>'.$id. ". " .$nom. "</option>";
+                                      ;
                                     }
                                     }
                                     echo "</optgroup>
