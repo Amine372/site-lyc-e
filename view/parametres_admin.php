@@ -225,29 +225,17 @@
                             {
 
                             }
-                            elseif (isset($_POST['mettre_en_admin'])
+                            elseif (isset($_POST['supprimer_les_droits_admin'])
                             {
 
                             }
-                            elseif (isset($_POST['mettre_en_admin'])
+                            elseif (isset($_POST['envoyer_un_message'])
                             {
 
                             }
-                            elseif (isset($_POST['mettre_en_admin'])
+                            elseif (isset($_POST['envoyer_un_mail'])
                             {
 
-                            }
-                            elseif (isset($_POST['mettre_en_admin'])
-                            {
-
-                            }
-                            elseif (isset($_POST['mettre_en_admin'])
-                            {
-
-                            }
-                            elseif (isset($_POST['mettre_en_admin'])
-                            {
-                              
                             }
                           } ?>
 												</ul>
