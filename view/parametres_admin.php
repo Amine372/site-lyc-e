@@ -168,9 +168,6 @@
 							  		<div class="acc-setting">
 										<h3>Messages Utilisateurs</h3>
 										<form method="post" action="../traitement/traitement_modif_mdp.php">
-											<div class="cp-field">
-												<h5>Choisir un utilisateur</h5>
-												<div class="cpp-fiel">
                           <?php
                           if (isset($_SESSION['nom']))
                           {
@@ -200,19 +197,18 @@
                             </div><!--fin des paramètres du compte utilisateur-->';
                           }
                           ?>
+											</div>
+											<div class="cp-field">
+												<h5>A qui voulez vous avoir affaire ?</h5>
+												<div class="cpp-fiel">
+													<input type="radio" name="mdp" requir
 												</div>
 											</div>
 											<div class="cp-field">
 												<h5>Que voulez vous faire ?</h5>
 												<div class="cpp-fiel">
-													<input type="radio" name="mdp" required>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Retapez le mot de passe</h5>
-												<div class="cpp-fiel">
                           <div>
-													<input type="radio" name="mettre_en_admine" id="mettre_en_admin" value="Mettre en Admin<" required>
+													<input type="radio" name="mettre_en_admin" id="mettre_en_admin" value="Mettre en Admin<" required>
                           <label for="mettre_en_admin">Mettre en Admin</label>
 												</div>
                         <div>
