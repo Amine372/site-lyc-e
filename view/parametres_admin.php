@@ -187,10 +187,12 @@
                                     echo '  $id = $this->id;
                                             $nom = $this->nom;
                                             $prenom = $this->prenom;
-                                            echo '<option value=$ID '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }**
+                                            echo '<option value=$ID '.**if(isset($_POST['form']) &&  $_POST['form'] == $id ){  .' selected="selected" '. } else { .''. }** .'>'.$id. ". " .$nom. "</option>";
                                       ';
                                     }
                                     }
+                                    echo "</optgroup>
+                                    </select>";
                                 ?>
 												</div>
 											</div>
