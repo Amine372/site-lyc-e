@@ -122,36 +122,36 @@
 		<section class="profile-account-setting">
 			<div class="container">
 				<div class="account-tabs-setting">
-					<div class="row">
-						<div class="col-lg-3">
-							<div class="acc-leftbar">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-								    <a class="nav-item nav-link active"  data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Inscrits</a>
-								    <a class="nav-item nav-link"  data-toggle="tab" href="#nav-status-tab2" role="tab" aria-controls="nav-status-tab2" aria-selected="false"><i class="fa fa-lock"></i>Messages Inscrits</a>
-								  </div>
-							</div><!--acc-leftbar end-->
-						</div>
-						<div class="col-lg-9">
-							<div class="tab-content" id="nav-tabContent">
-							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
-							  		<div class="acc-setting">
-							  			<h3>Inscrits</h3>
-											<form method="post" action="../traitement/traitement_admin.php">
-												<div class="cp-field">
-													<h5>Nom</h5>
-													<div class="cpp-fiel">
-														<input type="text" name="nom" placeholder="Nom" value="<?php echo $_SESSION['nom']; ?>" required>
-													</div>
-												</div>
-												<div class="cp-field">
-													<h5>Prénom</h5>
-													<div class="cpp-fiel">
-														<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $_SESSION['prenom']; ?>" required>
-													</div>
-												</div>
-												<div class="save-stngs pd2">
-													<ul>
-														<li><button type="submit">Sauvegarder</button></li>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="acc-leftbar">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Modifier son profil</a>
+                    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Modifier son mot de passe</a>
+                  </div>
+              </div><!--acc-leftbar end-->
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+                    <div class="acc-setting">
+                      <h3>Mon Compte</h3>
+                      <form method="post" action="../traitement/traitement_modif.php">
+                        <div class="cp-field">
+                          <h5>Nom</h5>
+                          <div class="cpp-fiel">
+                            <input type="text" name="nom" placeholder="Nom" value="<?php echo $_SESSION['nom']; ?>" required>
+                          </div>
+                        </div>
+                        <div class="cp-field">
+                          <h5>Prénom</h5>
+                          <div class="cpp-fiel">
+                            <input type="text" name="prenom" placeholder="Prénom" value="<?php echo $_SESSION['prenom']; ?>" required>
+                          </div>
+                        </div>
+                        <div class="save-stngs pd2">
+                          <ul>
+                            <li><button type="submit">Sauvegarder</button></li>
 
                               <?php if(isset($_SESSION['succes_modif']))
                               {
@@ -159,80 +159,52 @@
                                 unset($_SESSION['succes_modif']);
                               } ?>
 
-													</ul>
-												</div><!--save-stngs end-->
-											</form>
-							  		</div><!--acc-setting end-->
-							  	</div>
-							  	<div class="tab-pane fade" id="nav-status-tab2" role="tabpanel" aria-labelledby="nav-status-tab2">
-							  		<div class="acc-setting">
-										<h3>Messages Utilisateurs</h3>
-										<form method="post" action="../class/Modele/traitement_admin.php">
-											</div>
-											<div class="cp-field">
-												<h5>A qui voulez vous avoir affaire ?</h5>
-												<div class="cpp-fiel">
-                          <?php
-                          // on fait une boucle pour afficher tous les évenement
-                          $get_event = new Manager_Evenements;
-                            // $donnee doit être le tableau avec tous les evennements
-                                $donnee= $get_event->Admin();
-                                if(is_null($donnee))
-                                {
-                                  echo "Aucun Inscrit";
-                                }
-                                else
-                                {
-                                  foreach ($donnee as $clef)
-                                  {
-                                    echo '  <div class="post-bar">
-              											<div class="post_topbar">
-              												<div class="usy-dt">
-              														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-                                        </div>
-                                      </div>
-                                      ';
-                                    }
-                                    }
-                                ?>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Que voulez vous faire ?</h5>
-												<div class="cpp-fiel">
-                          <div>
-													<input type="radio" name="mettre_en_admin" id="mettre_en_admin" value="Mettre en Admin<" required>
-                          <label for="mettre_en_admin">Mettre en Admin</label>
-												</div>
-                        <div>
-                        <input type="radio" name="supprimer_les_droits_admin" id="supprimer_les_droits_admin" value="Supprimer les droits Admin" required>
-                        <label for="supprimer_les_droits_admin">Supprimer les droits Admin</label>
+                          </ul>
+                        </div><!--save-stngs end-->
+                      </form>
+                    </div><!--acc-setting end-->
+                  </div>
+                  <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+                    <div class="acc-setting">
+                    <h3>Changement de mot de passe</h3>
+                    <form method="post" action="../traitement/traitement_modif_mdp.php">
+                      <div class="cp-field">
+                        <h5>Ancien mot de passe</h5>
+                        <div class="cpp-fiel">
+                          <input type="password" name="amdp" placeholder="" required>
+                          <i class="fa fa-lock"></i>
+                        </div>
                       </div>
-                      <div>
-                      <input type="radio" name="envoyer_un_message" id="envoyer_un_message" value="Envoyer un Message" required>
-                      <label for="envoyer_un_message">Envoyer un Message</label>
-                    </div>
-                    <div>
-                    <input type="radio" name="envoyer_un_mail" id="envoyer_un_mail" value="Envoyer un Mail" required>
-                    <label for="envoyer_un_mail">Envoyer un Mail</label>
-                    </div>
-											</div>
-											<div class="save-stngs pd2">
-												<ul>
-													<li><button type="submit">Continuer</button></li>
+                      <div class="cp-field">
+                        <h5>Nouveau mot de passe</h5>
+                        <div class="cpp-fiel">
+                          <input type="password" name="mdp" placeholder="" required>
+                          <i class="fa fa-lock"></i>
+                        </div>
+                      </div>
+                      <div class="cp-field">
+                        <h5>Retapez le mot de passe</h5>
+                        <div class="cpp-fiel">
+                          <input type="password" name="confirmmdp" placeholder="" required>
+                          <i class="fa fa-lock"></i>
+                        </div>
+                      </div>
+                      <div class="save-stngs pd2">
+                        <ul>
+                          <li><button type="submit">Enregistrer</button></li>
                           <?php if(isset($_SESSION['message_mdp']))
                           {
                             echo $_SESSION['message_mdp'];
                             unset($_SESSION['message_mdp']);
                           } ?>
-												</ul>
-											</div><!--save-stngs end-->
-										</form>
-									</div><!--acc-setting end-->
-							  	</div>
-							</div>
-						</div>
-					</div>
+                        </ul>
+                      </div><!--save-stngs end-->
+                    </form>
+                  </div><!--acc-setting end-->
+                  </div>
+              </div>
+            </div>
+          </div>
 				</div><!--account-tabs-setting end-->
 			</div>
 		</section>
