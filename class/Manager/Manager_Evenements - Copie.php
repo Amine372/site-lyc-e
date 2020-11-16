@@ -4,12 +4,10 @@ class Manager_Admin
 {
 
   protected $_id;
-  protected $_id_utilisateur;
-  protected $_description;
-  protected $_date;
-  protected $_Comm;
+  protected $_nom;
+  protected $_prenom;
 
-  public function Evenements()
+  public function Admin()
   {
 
       $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
