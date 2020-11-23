@@ -1,8 +1,27 @@
 <?php
+require '../class/Modele/Model_Message.php';
+require '../class/Manager/Manager_Message.php';
 session_start();
 if(!isset($_SESSION['email'])){
 	header('location: ../view/connexion.php');
 }
+$first = true;
+$manager = new Manager_Message;
+
+$discussion_list = $manager->get_discussion_list($_SESSION['email']);
+
+$discussion = $manager->get_discussion($_SESSION['email']);
+
+if(isset($_POST['discussion_active'])){
+	$discussion_id = $_POST['discussion_active'];
+	$first = false;
+	$messages = $manager->get_messages($discussion_id);
+}
+else {
+	$discussion_id = $discussion_list[0]['id'];
+	$messages = $manager->get_messages($discussion_id);
+}
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +41,10 @@ if(!isset($_SESSION['email'])){
 <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+
 </head>
 
 
@@ -121,7 +144,7 @@ if(!isset($_SESSION['email'])){
 			<div class="container">
 				<div class="messages-sec">
 					<div class="row">
-						<div class="col-lg-4 col-md-12 no-pdd">
+						<div class="col-lg-3 col-md-12 no-pdd">
 							<div class="msgs-list">
 								<div class="msg-title">
 									<h3>Messages</h3>
@@ -129,28 +152,73 @@ if(!isset($_SESSION['email'])){
 								</div><!--msg-title end-->
 								<div class="messages-list">
 									<ul>
-										<li class="active">
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-												</div>
-												<div class="usr-mg-info">
-													<h3>John Doe</h3>
-													<p></p>
-												</div><!--usr-mg-info end-->
-											</div><!--usr-msg-details end-->
-										</li>
-										<li>
-											<div class="usr-msg-details">
-												<div class="usr-ms-img">
-													<img src="http://via.placeholder.com/50x50" alt="">
-												</div>
-												<div class="usr-mg-info">
-													<h3>John Doe</h3>
-													<p></p>
-												</div><!--usr-mg-info end-->
-											</div><!--usr-msg-details end-->
-										</li>
+										<form method="post" action="messages.php">
+										<?php
+										$i = 0;
+											foreach ($discussion as $key) {
+												if($first){
+													echo '
+														<li class="active">
+															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+																<div class="usr-msg-details">
+																	<div class="usr-mg-info">
+																		<h3>'.$key[0]['nom'].'</h3>
+																		<p></p>
+																	</div><!--usr-mg-info end-->
+																</div><!--usr-msg-details end-->
+															</button>
+														</li>';
+													$nom_interloq = $key[0]['nom'];
+													$id_interloq = $discussion_list[$i]['id'];
+													$first = false;
+												}
+												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active']) {
+													echo '
+														<li class="active">
+															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+																<div class="usr-msg-details">
+																	<div class="usr-mg-info">
+																		<h3>'.$key[0]['nom'].'</h3>
+																		<p></p>
+																	</div><!--usr-mg-info end-->
+																</div><!--usr-msg-details end-->
+															</button>
+														</li>';
+													$nom_interloq = $key[0]['nom'];
+													$id_interloq = $discussion_list[$i]['id'];
+												}
+												else {
+													echo '
+													<li>
+														<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+															<div class="usr-msg-details">
+																<div class="usr-mg-info">
+																	<h3>'.$key[0]['nom'].'</h3>
+																	<p></p>
+																</div><!--usr-mg-info end-->
+															</div><!--usr-msg-details end-->
+														</button>
+													</li>';
+												}
+												$i = $i + 1;
+											}
+										 ?>
+
+									 </form>
+									 <li>
+											 <div class="usr-msg-details">
+												 <div class="usr-mg-info">
+													 <p>Nouvelle discussion</p>
+														<select id="select-state" placeholder="Pick a state...">
+															<option value="">Select a state...</option>
+															<option value="AL">Alabama</option>
+															<option value="AK">Alaska</option>
+															<option value="AZ">Arizona</option>
+														</select>
+													 <p></p>
+												 </div><!--usr-mg-info end-->
+											 </div><!--usr-msg-details end-->
+									 </li>
 									</ul>
 								</div><!--messages-list end-->
 							</div><!--msgs-list end-->
@@ -159,114 +227,56 @@ if(!isset($_SESSION['email'])){
 							<div class="main-conversation-box">
 								<div class="message-bar-head" style="position:static;">
 									<div class="usr-msg-details">
-										<div class="usr-ms-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div>
 										<div class="usr-mg-info">
-											<h3>John Doe</h3>
+											<h3>
+											<?php
+												echo $nom_interloq;
+											 ?>
+										 	</h3>
 										</div><!--usr-mg-info end-->
 									</div>
 									<a href="#" title=""><i class="fa fa-ellipsis-v"></i></a>
 								</div><!--message-bar-head end-->
+
 								<div class="messages-line">
-									<div class="main-message-box ta-right">
-										<div class="message-dt">
-											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
-											</div><!--message-inner-dt end-->
-											<span>Sat, Aug 23, 1:08 PM</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											John
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
-									<div class="main-message-box st3">
-										<div class="message-dt st3">
-											<div class="message-inner-dt">
-												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
-											</div><!--message-inner-dt end-->
-											<span>5 minutes ago</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											John
-										</div><!--messg-usr-img end-->
-									</div>
-									<div class="main-message-box ta-right">
-										<div class="message-dt">
-											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
-											</div><!--message-inner-dt end-->
-											<span>Sat, Aug 23, 1:08 PM</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
-									<div class="main-message-box st3">
-										<div class="message-dt st3">
-											<div class="message-inner-dt">
-												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
-											</div><!--message-inner-dt end-->
-											<span>5 minutes ago</span>
-										</div><!--message-dt end-->
-									</div>
-									<div class="main-message-box ta-right">
-										<div class="message-dt">
-											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
-											</div><!--message-inner-dt end-->
-											<span>Sat, Aug 23, 1:08 PM</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
-									<div class="main-message-box st3">
-										<div class="message-dt st3">
-											<div class="message-inner-dt">
-												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
-											</div><!--message-inner-dt end-->
-											<span>5 minutes ago</span>
-										</div><!--message-dt end-->
-									</div>
-									<div class="main-message-box ta-right">
-										<div class="message-dt">
-											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
-											</div><!--message-inner-dt end-->
-											<span>Sat, Aug 23, 1:08 PM</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
-									<div class="main-message-box st3">
-										<div class="message-dt st3">
-											<div class="message-inner-dt">
-												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
-											</div><!--message-inner-dt end-->
-											<span>5 minutes ago</span>
-										</div><!--message-dt end-->
-									</div>
-									<div class="main-message-box ta-right">
-										<div class="message-dt">
-											<div class="message-inner-dt">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
-											</div><!--message-inner-dt end-->
-											<span>Sat, Aug 23, 1:08 PM</span>
-										</div><!--message-dt end-->
-										<div class="messg-usr-img">
-											<img src="http://via.placeholder.com/50x50" alt="">
-										</div><!--messg-usr-img end-->
-									</div><!--main-message-box end-->
-									<div class="main-message-box st3">
-										<div class="message-dt st3">
-											<div class="message-inner-dt">
-												<p>Cras ultricies ligula.<img src="../images/smley.png" alt=""></p>
-											</div><!--message-inner-dt end-->
-											<span>5 minutes ago</span>
-										</div><!--message-dt end-->
-									</div>
+								<?php
+								if(!is_null($messages)) {
+
+									foreach ($messages as $key) {
+										if($key['id_utilisateur'] == $id_interloq){
+											echo
+											'<div class="main-message-box st3">
+												<div class="message-dt st3">
+													<div class="message-inner-dt">
+														<p>'.$key['message'].'</p>
+													</div><!--message-inner-dt end-->
+													<span>'.$key['date'].'</span>
+												</div><!--message-dt end-->
+												<div class="messg-usr-img">
+													'.$nom_interloq.'
+												</div><!--messg-usr-img end-->
+											</div>';
+										}
+
+										else {
+											echo
+											'<div class="main-message-box ta-right">
+												<div class="message-dt">
+													<div class="message-inner-dt">
+														<p>'.$key['message'].'</p>
+													</div><!--message-inner-dt end-->
+													<span>'.$key['date'].'</span>
+												</div><!--message-dt end-->
+												<div class="messg-usr-img">
+													'.$_SESSION['nom'].'
+												</div><!--messg-usr-img end-->
+											</div><!--main-message-box end-->';
+										}
+									}
+								}
+
+								 ?>
+
 
 								</div><!--messages-line end-->
 								<div class="message-send-area">
@@ -309,13 +319,20 @@ if(!isset($_SESSION['email'])){
 
 
 
-<script type="text/javascript" src="../js/jquery.min.js"></script>
+
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>
 <script type="text/javascript" src="../lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="../js/scrollbar.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+<script>
+$(document).ready(function () {
+		$('select').selectize({
+				sortField: 'text'
+		});
+});
+</script>
 
 </body>
 </html>

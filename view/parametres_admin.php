@@ -188,7 +188,7 @@
                                     }
                                     }
                                     echo "</optgroup>
-                                    <select>name='nomprenometid'</select>";
+                                    <select name='nomprenometid'></select>";
                                 ?>
 												</div>
 											</div>
