@@ -22,9 +22,7 @@ session_start();
 
 
 <?php
- require '../class/Manager/manager_job.php';
-// require '../class/Modele/Model_Evenements.php';
-  ?>
+ require '../class/Manager/manager_job.php';  ?>
 </head>
 
 
@@ -139,9 +137,9 @@ session_start();
                         <br>
                         <form action="../class/Manager/manager_job.php" method="POST">
                             <div class="form-group">
-                                
+
                                 <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste" required>
-                
+
 
                             </div>
 
@@ -196,7 +194,7 @@ session_start();
                                 <div class="usy-dt">
                                   <img src="http://via.placeholder.com/50x50" alt="">
                                   <div class="usy-name">
-                                   
+
                                   </div>
                                 </div>
                               </div>
