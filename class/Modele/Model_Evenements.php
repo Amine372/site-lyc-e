@@ -31,6 +31,14 @@ class Model_Evenements
   {
     return $this->_Comm;
   }
+  public function nom()
+  {
+    return $this->_nom;
+  }
+  public function prenom()
+  {
+    return $this->_prenom;
+  }
   //Partie Setter
   public function setid($id)
   {
@@ -75,6 +83,24 @@ class Model_Evenements
     if ($Comm >= 1 && $Comm <= 100)
     {
       $this->_Comm = $Comm;
+    }
+  }
+  public function setnom($nom)
+  {
+    $nom = (int) $nom;
+
+    if ($nom >= 1 && $nom <= 100)
+    {
+      $this->_nom = $nom;
+    }
+  }
+  public function setprenom($prenom)
+  {
+    $prenom = (int) $prenom;
+
+    if ($prenom >= 1 && $prenom <= 100)
+    {
+      $this->_prenom = $prenom;
     }
   }
 }
