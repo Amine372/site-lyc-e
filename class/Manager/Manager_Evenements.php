@@ -44,12 +44,12 @@ public function Admin()
       echo " erreur, contactez Amine, Loic ou Quentin";
     }
 
-    public function Admin()
+    public function Admin_ajout($nomprenometid)
     {
 
         $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
         $bdd->exec("SET CHARACTER SET utf8");
-        $req = $bdd->prepare('SELECT nom, prenom, id from utilisateur');
+        $req = $bdd->prepare('UPDATE utilisateur SET role = "ADMIN" WHERE id=:id;');
         $req->execute();
         $donnee = $req->fetchall();
         if ($donnee)
