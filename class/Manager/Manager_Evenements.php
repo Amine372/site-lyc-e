@@ -8,6 +8,8 @@ class Manager_Evenements
   protected $_description;
   protected $_date;
   protected $_Comm;
+  protected $_nom;
+  protected $_prenom;
 
   public function Evenements()
   {
@@ -23,6 +25,26 @@ class Manager_Evenements
       {
         return $donnee;
       }
+
+}
+public function Admin()
+{
+
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd->exec("SET CHARACTER SET utf8");
+    // SELECT * FROM Users where 0
+    // execute()
+    $req = $bdd->prepare('SELECT nom, prenom, id from utilisateur');
+    $req->execute();
+    $donnee = $req->fetchall();
+    if ($donnee)
+    {
+      return $donnee;
+    }
+  else:
+    {
+      echo" erreur, contactez Amine, Loic ou Quentin";
+    }
 
 }
 }

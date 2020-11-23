@@ -1,11 +1,13 @@
 <?php
 class Model_Evenements
 {
-  private $_id;
-  private $_id_utilisateur;
-  private $_description;
-  private $_date;
-  private $_Comm;
+  protected $_id;
+  protected $_id_utilisateur;
+  protected $_description;
+  protected $_date;
+  protected $_Comm;
+  protected $_nom;
+  protected $_prenom;
   // Liste des getters
 
   public function id()
