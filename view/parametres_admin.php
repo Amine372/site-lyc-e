@@ -184,8 +184,7 @@
                                 {
                                   foreach ($donnee as $clef)
                                   {
-                                    $estpostive = ((isset($_POST['form']) &&  $_POST['form'] == $id )?   .' selected="selected" '.  :  .''. );
-                                    echo '<option value=$id '.** .'>'.$id. ". " .$nom. "</option>";
+                                    echo '<option value=$id '.$estpostive = ((isset($_POST['form']) &&  $_POST['form'] == $id )?   .' selected="selected" '.  :  .''. );** .'>'.$id. ". " .$nom. "</option>";
                                     }
                                     }
                                     echo "</optgroup>
