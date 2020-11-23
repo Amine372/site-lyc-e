@@ -44,6 +44,23 @@ public function Admin()
       echo " erreur, contactez Amine, Loic ou Quentin";
     }
 
+    public function Admin()
+    {
+
+        $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+        $bdd->exec("SET CHARACTER SET utf8");
+        $req = $bdd->prepare('SELECT nom, prenom, id from utilisateur');
+        $req->execute();
+        $donnee = $req->fetchall();
+        if ($donnee)
+        {
+          return $donnee;
+        }
+        else
+        {
+          echo " erreur, contactez Amine, Loic ou Quentin";
+        }
+
 }
 }
 
