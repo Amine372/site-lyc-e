@@ -2,9 +2,8 @@
 <!DOCTYPE html>
 <?php
     session_start();
-	require_once '../bdd/connexion.php';
-?>
 
+?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -55,7 +54,7 @@
                             <div class="form-group">
                                 <input type="text" name="nom" class="form-control"  placeholder="Entrer votre nom" required>
 								<br>
-							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse éléctronique" required>
+							 <input type="email" name="email" class="form-control"   placeholder="Entrer votre adresse mail" required>
 							 <br>
                                 <input type="text" name="poste" class="form-control"  placeholder="Entrer le nom de poste" required>
 								<br>
@@ -214,63 +213,13 @@
 												</ul>
 
 											</div>
-											
 											<div class="job_descp">
+												<h3>Développeur Wordpress</h3>
 												<ul class="job-dt">
-													 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-													<h3><td><?php echo htmlspecialchars($row['nom']); ?></td></h3>
 													<li><a><b>Temps partiel</b></a></li>
 												</ul>
-												    <?php
-                    // on fait une boucle pour afficher tous les évenement
-                    $get_event = new Manager_Evenements;
-                      // $donnee doit être le tableau avec tous les evennements
-                          $donnee= $get_event->Evenements();
-                          if(is_null($donnee)){
-                            echo "Aucun évènement";
-                          }
-                          else{
-                            foreach ($donnee as $clef)
-                            {
-                              echo '  <div class="post-bar">
-        											<div class="post_topbar">
-        												<div class="usy-dt">
-        													<img src="http://via.placeholder.com/50x50" alt="">
-        													<div class="usy-name">
-        														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-        														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
-        													</div>
-        												</div>
-        											</div>
-        											<div class="epi-sec">
-        												<ul class="descp">
-        													<li><img src="images/icon8.png" alt=""></li>
-        												</ul>
-        												<ul class="bk-links">
-        													<li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
-        													<li><p title="" class="bid_now">Profil</p></li>
-        												</ul>
-        											</div>
-        											<div class="job_descp">
-        												<h3>'.$clef['titre'].'</h3>
-        												<p>'.$clef['description'].'</p>
-        												<ul class="skill-tags">
-        													<li><a href="#" title="">HTML</a></li>
-        													<li><a href="#" title="">PHP</a></li>
-        													<li><a href="#" title="">CSS</a></li>
-        													<li><a href="#" title="">Javascript</a></li>
-        													<li><a href="#" title="">Wordpress</a></li>
-        													<li><a href="#" title="">Photoshop</a></li>
-        													<li><a href="#" title="">Illustrateur</a></li>
-        													<li><a href="#" title="">Corel Draw</a></li>
-        												</ul>
-        											</div>
-        										</div><!--post-bar end--> ';
-                          }
-                        }
-                          ?>
-
-										  		 <hr>
+												<p>Bonjour, je suis à la recherche d'une entreprise dans le secteur informatique qui puisse m'accueillir pour un contrat d'apprentissage ou de professionnalisation</p>
+												<hr>
 												<center><ul class="skill-tags">
 													<li>HTML</li>
 													<li>PHP</li>
@@ -306,7 +255,6 @@
 				</div>
 			</div>
 		</footer><!--footer end-->
-
 
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
