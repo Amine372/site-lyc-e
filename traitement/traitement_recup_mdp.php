@@ -5,12 +5,14 @@
    session_start();
    //Vérification du mdp
 
-   if($_POST['mdp'] != $_POST['confirmmdp']){
+   if($_POST['mdp'] != $_POST['confirmmdp'])
+   {
      $_SESSION['erreur_change'] = "Erreur dans le mot de passe.";
      header('Location: ../view/recup_mdp.php');
    }
    //ajout dans la bdd
-   else{
+   else
+   {
      $user = new User(['mdp'=>$_POST['mdp']]);
      $change = new Manager_User;
      $change->recup_mdp($user, $_SESSION['email']);

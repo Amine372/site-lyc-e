@@ -6,20 +6,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Paramètres du compte</title>
+<title>Evenements</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="../css/animate.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/animate.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/line-awesome.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/line-awesome-font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/lib/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/style.css">
+<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/responsive.css">
 </head>
 
 
@@ -224,12 +224,12 @@
 
 
 
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/popper.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>
-<script type="text/javascript" src="../lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="/site-lyc-e/js/jquery.min.js"></script>
+<script type="text/javascript" src="/site-lyc-e/js/popper.js"></script>
+<script type="text/javascript" src="/site-lyc-e/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/site-lyc-e/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="/site-lyc-e/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="/site-lyc-e/js/script.js"></script>
 
 
 </body>

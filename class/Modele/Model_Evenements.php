@@ -1,11 +1,13 @@
 <?php
 class Model_Evenements
 {
-  private $_id;
-  private $_id_utilisateur;
-  private $_description;
-  private $_date;
-  private $_Comm;
+  protected $_id;
+  protected $_id_utilisateur;
+  protected $_description;
+  protected $_date;
+  protected $_Comm;
+  protected $_nom;
+  protected $_prenom;
   // Liste des getters
 
   public function id()
@@ -28,6 +30,14 @@ class Model_Evenements
   public function Comm()
   {
     return $this->_Comm;
+  }
+  public function nom()
+  {
+    return $this->_nom;
+  }
+  public function prenom()
+  {
+    return $this->_prenom;
   }
   //Partie Setter
   public function setid($id)
@@ -73,6 +83,24 @@ class Model_Evenements
     if ($Comm >= 1 && $Comm <= 100)
     {
       $this->_Comm = $Comm;
+    }
+  }
+  public function setnom($nom)
+  {
+    $nom = (int) $nom;
+
+    if ($nom >= 1 && $nom <= 100)
+    {
+      $this->_nom = $nom;
+    }
+  }
+  public function setprenom($prenom)
+  {
+    $prenom = (int) $prenom;
+
+    if ($prenom >= 1 && $prenom <= 100)
+    {
+      $this->_prenom = $prenom;
     }
   }
 }

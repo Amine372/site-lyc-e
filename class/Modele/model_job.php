@@ -1,86 +1,57 @@
 <?php
-require_once '../class/Modele/model_job.php';
-require_once '../class/Manager/manager_job.php';
-require_once '../traitement/traitement_job.php';
-class reservation { //Déclaration de la classe réservation
-
-require_once 'manager_job.php';
-require_once 'traitement_job.php';
-class job //Déclaration de la classe réservation
- {
-//Déclaration des attributs
-  private $_nom;
-  private $_email;
+class Model_Job
+{
+  private $_id;
   private $_poste;
   private $_description_poste;
+  
+  // Liste des getters
 
-  public function __construct($nom, $email, $poste, $description_poste, $troisd){
-
-  public function __construct($nom, $email, $poste, $description_poste)
+  public function id()
   {
-//Partie SET
-      $this->setNom($nom);
-      $this->setemail($email);
-      $this->setposte($poste);
-      $this->setdescription_poste($description_poste);
-}
+    return $this->_id;
+  }
 
-public function setnom($nom)
-{
-  if(empty($nom)){
-    trigger_error('la variable doit etre un caractere');
-    return;
-  }
-  $this->_nom = $nom;
-}
-public function setemail($email)
-{
-  if(empty($email)){
-    trigger_error('la variable doit etre un caractere');
-    return;
-  }
-  $this->_email = $email;
-}
-public function setposte($poste)
-{
-  if(empty($poste))
+  public function poste()
   {
-    trigger_error('la variable doit etre un caractere');
-    return;
+    return $this->_poste;
   }
-  $this->_poste = $poste;
-}
-public function setdescription_poste($description_poste)
-{
-  if(empty($description_poste))
+  
+public function description_poste()
   {
-    trigger_error('La variable doit etre un caractere');
-    return;
+    return $this->_description_posteposte;
   }
-  $this->_description_poste = $description_poste;
-}
-//Partie Get
-public function getnom()
-{
-  return $this->_nom;
-}
-public function getemail(){
-  return $this->_email;
-}
-public function getposte(){
+  
+  //Partie Setter
+  public function setid($id)
+  {
+    $id = (int) $id;
 
-public function getmail()
-{
-  return $this->_email;
-}
-public function getemail()
-{
-  return $this->_poste;
-}
-public function getdescription_poste()
-{
-  return $this->_description_poste;
+    if ($id >= 1 && $id <= 100)
+    {
+      $this->_id = $id;
+    }
+  }
+ 
+  public function setposte($poste)
+  {
+    $poste = (int) $poste;
 
-}
+    if ($poste >= 1 && $poste <= 100)
+    {
+      $this->_poste = $poste;
+    }
+  }
+ 
+  
+  public function setdescription_poste($description_poste)
+  {
+    $description_poste = (int) $description_poste;
+
+    if ($description_poste >= 1 && $description_poste <= 100)
+    {
+      $this->_description_poste = $description_poste;
+    }
+  }
 }
 ?>

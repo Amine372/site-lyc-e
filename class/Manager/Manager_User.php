@@ -27,7 +27,7 @@ class Manager_User
     else
     {
 
-      //Envoie de mail
+      //Envoi de mail
       require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
       require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
       require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
@@ -80,7 +80,8 @@ class Manager_User
       {
         $_SESSION['role'] = $donnee['role'];
       }
-      if ($donnee['verif'] == 0) {
+      if ($donnee['verif'] == 0)
+      {
         header('location: ../view/recup_mdp.php');
         exit();
       }
@@ -128,7 +129,8 @@ class Manager_User
         return false;
       });</script>';
     }
-    else {
+    else
+    {
       $_SESSION['message_mdp'] = 'Mauvais mot de passe';
       header('location: ../view/parametres_du_compte.php#nav-password');
       echo '<scrip>$(document).ready(function(){
