@@ -220,7 +220,10 @@
                           {
                             if(isset($_POST['mettre_en_admin'])
                             {
-
+                              // on renseigne la classe que l'on veut uttiliser
+                              $get_event = new Manager_Evenements;
+                              // $donnee doit être le tableau avec tous les uttilisateurs, il est issu de la méthode "Admin" de la classe Manager_Evenements
+                              $donnee= $get_event->Admin_ajout();
                             }
                             elseif (isset($_POST['supprimer_les_droits_admin'])
                             {

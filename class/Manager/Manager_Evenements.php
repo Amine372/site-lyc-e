@@ -39,7 +39,7 @@ public function Admin()
     {
       return $donnee;
     }
-  else:
+    else
     {
       echo " erreur, contactez Amine, Loic ou Quentin";
     }
