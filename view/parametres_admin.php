@@ -184,11 +184,11 @@
                                 {
                                   foreach ($donnee as $clef)
                                   {
-                                    echo '<option value=$id '.$estpostive = ((isset($_POST['form']) &&  $_POST['form'] == $id )?   .' selected="selected" '.  :  .''. );** .'>'.$id. ". " .$nom. "</option>";
+                                    echo '<option value=$id '.((isset($_POST['form']) &&  $_POST['form'] == $id )? ' selected="selected" '  :  '' ) .'>'.$id. ". " .$nom. "</option>";
                                     }
                                     }
                                     echo "</optgroup>
-                                    </select>";
+                                    <select>name='nomprenometid'</select>";
                                 ?>
 												</div>
 											</div>
@@ -220,7 +220,11 @@
                           {
                             if(isset($_POST['mettre_en_admin'])
                             {
-
+                              $nomprenometid = $this->nomprenometid;
+                              // on renseigne la classe que l'on veut uttiliser
+                              $get_event = new Manager_Evenements;
+                              // $donnee doit être le tableau avec tous les uttilisateurs, il est issu de la méthode "Admin" de la classe Manager_Evenements
+                              $donnee= $get_event->Admin_ajout($nomprenometid);
                             }
                             elseif (isset($_POST['supprimer_les_droits_admin'])
                             {
