@@ -67,23 +67,20 @@ class Manager_Message
     return $donnees;
   }
 
-  // public function get_discussion_active($email, $discution_active)
-  // {
-  //   $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-  //   $req = $bdd->prepare('SELECT * from utilisateur inner join discussion on utilisateur.id = id_user1 inner join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) AND discussion.id = :discution_active order by date desc');
-  //   $req->execute(array('email'=>$email, 'discution_active'=>$discution_active));
-  //   $donnees = $req->fetchall();
-  //   $req = $bdd->prepare('SELECT * from utilisateur inner join discussion on utilisateur.id = id_user1 inner join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) AND discussion.id <> :discution_active order by date desc');
-  //   $req->execute(array('email'=>$email, 'discution_active'=>$discution_active));
-  //   array_push($donnees, $req->fetchall());
-  //   return $donnees;
-  // }
-
   public function get_messages($discussion)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('SELECT * from messages where id_discussion = ? order by date asc');
     $req->execute(array($discussion));
+    $donnees = $req->fetchall();
+    return $donnees;
+  }
+
+  public function get_liste_user()
+  {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur order by nom');
+    $req->execute();
     $donnees = $req->fetchall();
     return $donnees;
   }

@@ -12,6 +12,8 @@ $discussion_list = $manager->get_discussion_list($_SESSION['email']);
 
 $discussion = $manager->get_discussion($_SESSION['email']);
 
+$liste_user = $manager->get_liste_user();
+
 if(isset($_POST['discussion_active'])){
 	$discussion_id = $_POST['discussion_active'];
 	$first = false;
@@ -155,6 +157,7 @@ else {
 										<form method="post" action="messages.php">
 										<?php
 										$i = 0;
+										if(!is_null($discussion)){
 											foreach ($discussion as $key) {
 												if($first){
 													echo '
@@ -202,18 +205,24 @@ else {
 												}
 												$i = $i + 1;
 											}
+										}
 										 ?>
 
 									 </form>
 									 <li>
 											 <div class="usr-msg-details">
 												 <div class="usr-mg-info">
-													 <p>Nouvelle discussion</p>
-														<select id="select-state" placeholder="Pick a state...">
-															<option value="">Select a state...</option>
-															<option value="AL">Alabama</option>
-															<option value="AK">Alaska</option>
-															<option value="AZ">Arizona</option>
+													 <p>Nouvelle discussion avec :</p>
+														<select id="select-state" placeholder="Nom prénom">
+															<option value="">Nom prénom</option>
+															<?php
+																if(!is_null($liste_user)){
+																	foreach ($liste_user as $user) {
+																		echo '<option value="'.$user['id'].'">'.$user['nom'].' '.$user['prenom'].'</option>' ;
+																	}
+																}
+
+															 ?>
 														</select>
 													 <p></p>
 												 </div><!--usr-mg-info end-->
