@@ -172,9 +172,9 @@
 												<h5>A qui voulez vous avoir affaire ?</h5>
 												<div class="cpp-fiel">
                           <?php
-                          // on fait une boucle pour afficher tous les évenement
+                          // on renseigne la classe que l'on veut uttiliser
                           $get_event = new Manager_Evenements;
-                            // $donnee doit être le tableau avec tous les evennements
+                            // $donnee doit être le tableau avec tous les uttilisateurs, il est issu de la méthode "Admin" de la classe Manager_Evenements
                                 $donnee= $get_event->Admin();
                                 if(is_null($donnee))
                                 {
