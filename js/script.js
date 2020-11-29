@@ -1,16 +1,19 @@
-$(window).on("load", function() {
+$(window).on("load", function()
+{
     "use strict";
 
-    
+
 
     //  ============= POST PROJECT POPUP FUNCTION =========
 
-    $(".post_project").on("click", function(){
+    $(".post_project").on("click", function()
+    {
         $(".post-popup.pst-pj").addClass("active");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".post-project > a").on("click", function(){
+    $(".post-project > a").on("click", function()
+    {
         $(".post-popup.pst-pj").removeClass("active");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -18,12 +21,14 @@ $(window).on("load", function() {
 
     //  ============= POST JOB POPUP FUNCTION =========
 
-    $(".post-jb").on("click", function(){
+    $(".post-jb").on("click", function()
+    {
         $(".post-popup.job_post").addClass("active");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".post-project > a").on("click", function(){
+    $(".post-project > a").on("click", function()
+    {
         $(".post-popup.job_post").removeClass("active");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -31,7 +36,8 @@ $(window).on("load", function() {
 
     //  ============= SIGNIN CONTROL FUNCTION =========
 
-    $('.sign-control li').on("click", function(){
+    $('.sign-control li').on("click", function()
+    {
         var tab_id = $(this).attr('data-tab');
         $('.sign-control li').removeClass('current');
         $('.sign_in_sec').removeClass('current');
@@ -42,7 +48,8 @@ $(window).on("load", function() {
 
     //  ============= SIGNIN TAB FUNCTIONALITY =========
 
-    $('.signup-tab ul li').on("click", function(){
+    $('.signup-tab ul li').on("click", function()
+    {
         var tab_id = $(this).attr('data-tab');
         $('.signup-tab ul li').removeClass('current');
         $('.dff-tab').removeClass('current');
@@ -53,7 +60,8 @@ $(window).on("load", function() {
 
     //  ============= SIGNIN SWITCH TAB FUNCTIONALITY =========
 
-    $('.tab-feed ul li').on("click", function(){
+    $('.tab-feed ul li').on("click", function()
+    {
         var tab_id = $(this).attr('data-tab');
         $('.tab-feed ul li').removeClass('active');
         $('.product-feed-tab').removeClass('current');
@@ -71,12 +79,14 @@ $(window).on("load", function() {
 
     //  ============= OVERVIEW EDIT FUNCTION =========
 
-    $(".overview-open").on("click", function(){
+    $(".overview-open").on("click", function()
+    {
         $("#overview-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#overview-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -84,12 +94,14 @@ $(window).on("load", function() {
 
     //  ============= EXPERIENCE EDIT FUNCTION =========
 
-    $(".exp-bx-open").on("click", function(){
+    $(".exp-bx-open").on("click", function()
+    {
         $("#experience-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#experience-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -97,12 +109,14 @@ $(window).on("load", function() {
 
     //  ============= EDUCATION EDIT FUNCTION =========
 
-    $(".ed-box-open").on("click", function(){
+    $(".ed-box-open").on("click", function()
+    {
         $("#education-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#education-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -110,12 +124,14 @@ $(window).on("load", function() {
 
     //  ============= LOCATION EDIT FUNCTION =========
 
-    $(".lct-box-open").on("click", function(){
+    $(".lct-box-open").on("click", function()
+    {
         $("#location-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#location-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -123,12 +139,14 @@ $(window).on("load", function() {
 
     //  ============= SKILLS EDIT FUNCTION =========
 
-    $(".skills-open").on("click", function(){
+    $(".skills-open").on("click", function()
+    {
         $("#skills-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#skills-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -136,12 +154,14 @@ $(window).on("load", function() {
 
     //  ============= ESTABLISH EDIT FUNCTION =========
 
-    $(".esp-bx-open").on("click", function(){
+    $(".esp-bx-open").on("click", function()
+    {
         $("#establish-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#establish-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -149,12 +169,14 @@ $(window).on("load", function() {
 
     //  ============= CREATE PORTFOLIO FUNCTION =========
 
-    $(".gallery_pt > a").on("click", function(){
+    $(".gallery_pt > a").on("click", function()
+    {
         $("#create-portfolio").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#create-portfolio").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -162,12 +184,14 @@ $(window).on("load", function() {
 
     //  ============= EMPLOYEE EDIT FUNCTION =========
 
-    $(".emp-open").on("click", function(){
+    $(".emp-open").on("click", function()
+    {
         $("#total-employes").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#total-employes").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
@@ -175,26 +199,30 @@ $(window).on("load", function() {
 
     //  =============== Ask a Question Popup ============
 
-    $(".ask-question").on("click", function(){
+    $(".ask-question").on("click", function()
+    {
         $("#question-box").addClass("open");
         $(".wrapper").addClass("overlay");
         return false;
     });
-    $(".close-box").on("click", function(){
+    $(".close-box").on("click", function()
+    {
         $("#question-box").removeClass("open");
         $(".wrapper").removeClass("overlay");
         return false;
     });
 
 
-    //  ============== ChatBox ============== 
+    //  ============== ChatBox ==============
 
 
-    $(".chat-mg").on("click", function(){
+    $(".chat-mg").on("click", function()
+    {
         $(this).next(".conversation-box").toggleClass("active");
         return false;
     });
-    $(".close-chat").on("click", function(){
+    $(".close-chat").on("click", function()
+    {
         $(".conversation-box").removeClass("active");
         return false;
     });
@@ -202,7 +230,8 @@ $(window).on("load", function() {
     //  ================== Edit Options Function =================
 
 
-    $(".ed-opts-open").on("click", function(){
+    $(".ed-opts-open").on("click", function()
+    {
         $(this).next(".ed-options").toggleClass("active");
         return false;
     });
@@ -210,7 +239,8 @@ $(window).on("load", function() {
 
     // ============== Menu Script =============
 
-    $(".menu-btn > a").on("click", function(){
+    $(".menu-btn > a").on("click", function()
+    {
         $("nav").toggleClass("active");
         return false;
     });
@@ -289,5 +319,3 @@ $(window).on("load", function() {
 
 
 });
-
-
