@@ -19,19 +19,19 @@ use PHPMailer\PHPMailer\Exception;
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 
-$mail = new PHPMailer(); // create a new object
+$mail = new PHPMailer(); // fondation d'un nouvel objet
 $mail->CharSet = 'UTF-8';
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587
+$mail->Port = 465; // ou 587
 $mail->IsHTML(true);
 $mail->Username = "quentin.lignani.schuman@gmail.com";
 $mail->Password = "Admwb2000";
 $mail->SetFrom("q.lignani@lprs.fr");
-$mail->Subject = "[Robert Schuman] : Réservation au Snack";
+$mail->Subject = "[Robert Schuman] : Rï¿½servation au Snack";
 $mail->Body = "<tr><td style='border:none;'><strong>Subject:</strong> {$nom}, <strong>Email:</strong> {$email},<strong>Sujet:</strong> {$sujet},<strong>Message:</strong> {$message}</td></tr>";
 $mail->AddAddress("q.lignani@lprs.fr");
 
