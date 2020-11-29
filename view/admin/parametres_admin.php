@@ -131,6 +131,7 @@
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
 								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Modifier son mot de passe</a>
+                     <a class="nav-item nav-link active" id="nav-emplois-tab" data-toggle="tab" href="#nav-emplois" role="tab" aria-controls="nav-emplois" aria-selected="true"><i class="la la-user"></i>Emplois</a>
 								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
@@ -619,6 +620,14 @@
             </tr>
         </tfoot>
     </table>
+    <div class="col-lg-9">
+      <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-emplois" role="tabpanel" aria-labelledby="nav-emplois-tab">
+            <div class="acc-setting">
+              <h3>Emplois</h3>
+
+            </div><!--acc-setting end-->
+          </div>
 							  		</div><!--acc-setting end-->
 							  	</div>
 							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
