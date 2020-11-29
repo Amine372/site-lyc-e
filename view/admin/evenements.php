@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Evenements</title>
+<title>UFA Robert Schuman | Paramètres Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -653,7 +653,8 @@
                           {
                             echo $_SESSION['message_mdp'];
                             unset($_SESSION['message_mdp']);
-                          } ?>
+                          }
+                          ?>
 												</ul>
 											</div><!--save-stngs end-->
 										</form>
