@@ -2,7 +2,8 @@
 require '../class/Modele/Model_Message.php';
 require '../class/Manager/Manager_Message.php';
 session_start();
-if(!isset($_SESSION['email'])){
+if(!isset($_SESSION['email']))
+{
 	header('location: ../view/connexion.php');
 }
 $first = true;
@@ -14,12 +15,14 @@ $discussion = $manager->get_discussion($_SESSION['email']);
 
 $liste_user = $manager->get_liste_user();
 
-if(isset($_POST['discussion_active'])){
+if(isset($_POST['discussion_active']))
+{
 	$discussion_id = $_POST['discussion_active'];
 	$first = false;
 	$messages = $manager->get_messages($discussion_id);
 }
-else {
+else
+{
 	$discussion_id = $discussion_list[0]['id'];
 	$messages = $manager->get_messages($discussion_id);
 }
@@ -109,7 +112,8 @@ else {
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
 						<?php
-						if (isset($_SESSION['nom'])) {
+						if (isset($_SESSION['nom']))
+						{
 							echo '<div class="user-info">
 								<img src="http://via.placeholder.com/30x30" alt="">
 								<a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -123,7 +127,8 @@ else {
 								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
 							</div><!--fin des paramètres du compte utilisateur-->';
 						}
-						else {
+						else
+						{
 							echo '<div class="user-info">
 								<a href="#" title="">Connectez vous</a>
 								<i class="la la-sort-down"></i>
@@ -157,9 +162,12 @@ else {
 										<form method="post" action="messages.php">
 										<?php
 										$i = 0;
-										if(!is_null($discussion)){
-											foreach ($discussion as $key) {
-												if($first){
+										if(!is_null($discussion))
+										{
+											foreach ($discussion as $key)
+											{
+												if($first)
+												{
 													echo '
 														<li class="active">
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
@@ -175,7 +183,8 @@ else {
 													$id_interloq = $discussion_list[$i]['id'];
 													$first = false;
 												}
-												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active']) {
+												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active'])
+												{
 													echo '
 														<li class="active">
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
@@ -190,7 +199,8 @@ else {
 													$nom_interloq = $key[0]['nom'];
 													$id_interloq = $discussion_list[$i]['id'];
 												}
-												else {
+												else
+												{
 													echo '
 													<li>
 														<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
@@ -216,8 +226,10 @@ else {
 														<select id="select-state" placeholder="Nom prénom">
 															<option value="">Nom prénom</option>
 															<?php
-																if(!is_null($liste_user)){
-																	foreach ($liste_user as $user) {
+																if(!is_null($liste_user))
+																{
+																	foreach ($liste_user as $user)
+																	{
 																		echo '<option value="'.$user['id'].'">'.$user['nom'].' '.$user['prenom'].'</option>' ;
 																	}
 																}
