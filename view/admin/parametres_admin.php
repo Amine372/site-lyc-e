@@ -620,8 +620,7 @@
             </tr>
         </tfoot>
     </table>
-    <div class="col-lg-9">
-      <div class="tab-content" id="nav-tabContent">
+      <div class="tab-content" id="nav-tabEmplois">
           <div class="tab-pane fade show active" id="nav-emplois" role="tabpanel" aria-labelledby="nav-emplois-tab">
             <div class="acc-setting">
               <h3>Emplois</h3>
