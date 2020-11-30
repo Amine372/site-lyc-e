@@ -437,58 +437,28 @@
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
-		<div class="overview-box" id="create-portfolio">
-			<div class="overview-edit">
-				<h3>Create Portfolio</h3>
-				<form>
-					<input type="text" name="pf-name" placeholder="Portfolio Name">
-					<div class="file-submit nomg">
-						<input type="file" name="file">
-					</div>
-					<div class="pf-img">
-						<img src="http://via.placeholder.com/60x60" alt="">
-					</div>
-					<input type="text" name="website-url" placeholder="htp://www.example.com">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="establish-box">
-			<div class="overview-edit">
-				<h3>Establish Since</h3>
-				<form>
-					<div class="daty">
-						<input type="text" name="establish" placeholder="Select Date" class="datepicker">
-						<i class="fa fa-calendar"></i>
-					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-
-		<div class="overview-box" id="total-employes">
-			<div class="overview-edit">
-				<h3>Total Employees</h3>
-				<form>
-					<input type="text" name="employes" placeholder="Type in numbers">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
 
 
 
-	</div><!--theme-layout end-->
 
-
+	<footer><!--début du pied de page-->
+		<div class="footy-sec mn no-margin">
+			<div class="container">
+				<ul>
+					<li><a href="#" title="">Centre d'aide</a></li>
+					<li><a href="#" title="">Politique de confidentialité</a></li>
+					<li><a href="#" title="">Règles de la communauté</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
+					<li><a href="#" title="">Carières</a></li>
+					<li><a href="#" title="">Forum</a></li>
+					<li><a href="#" title="">Langage</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
+				</ul>
+				<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+				<img class="fl-rgt" src="images/logo2.png" alt="">
+			</div>
+		</div>
+	</footer><!--fin du pied de page-->
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
