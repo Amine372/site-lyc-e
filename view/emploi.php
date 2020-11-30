@@ -31,40 +31,44 @@ session_start();
     <div class="container">
       <div class="header-data">
         <div class="logo">
-          <a href="index.php" title=""><img src="images/logo.png" alt=""></a>
+          <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
+        <div class="search-bar">
+
+        </div><!--fin de la barre de recherche-->
         <nav>
           <ul>
             <li>
-              <a href="index.php" title="">
-                <span><img src="images/icon1.png" alt=""></span>
+              <a href="../index.php" title="">
+                <span><img src="../images/icon1.png" alt=""></span>
                 Accueil
               </a>
             </li>
             <li>
-              <a href="view/evenements.php" title="">
-                <span><img src="images/icon3.png" alt=""></span>
+              <a href="evenements.php" title="">
+                <span><img src="../images/icon3.png" alt=""></span>
                 Evénements
               </a>
             </li>
             <li>
-              <a href="view/emploi.php" title="">
-                <span><img src="images/icon5.png" alt=""></span>
+              <a href="emploi.php" title="">
+                <span><img src="../images/icon5.png" alt=""></span>
                 Annonces
               </a>
             </li>
             <li>
-              <a href="view/contact.php" title="">
-                <span><img src="images/icon6.png" alt=""></span>
+              <a href="contact.php" title="">
+                <span><img src="../images/icon6.png" alt=""></span>
                 Contact
               </a>
             </li>
             <li>
-              <a href="view/messages.php" title="">
-                <span><img src="images/icon4.png" alt=""></span>
+              <a href="messages.php" title="">
+                <span><img src="../images/icon4.png" alt=""></span>
                 Messages
               </a>
             </li>
+
           </ul>
         </nav><!--fin de la barre de navigation-->
         <div class="menu-btn">
@@ -79,12 +83,12 @@ session_start();
               <a href="#" title="">'.$_SESSION['nom'].'</a>
               <i class="la la-sort-down"></i>
             </div>
-            <div class="user-account-settingss">
+            <div class="user-account-settingss" style=";">
               <h3>Mon Compte</h3>
               <ul class="us-links">
-                <li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
+                <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
               </ul>
-              <h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           else
@@ -94,10 +98,9 @@ session_start();
               <i class="la la-sort-down"></i>
             </div>
             <div class="user-account-settingss">
-              <h3><a href="view/connexion.php" title="">Connexion</a></h3>
+              <h3><a href="connexion.php" title="">Connexion</a></h3>
 
-              <h3><a href="view/inscription.php" title="">Inscription</a></h3>
-
+              <h3><a href="inscription.php" title="">Inscription</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           ?>
