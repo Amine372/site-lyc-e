@@ -36,10 +36,7 @@ session_start();
           <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
         <div class="search-bar">
-          <form>
-            <input type="text" name="search" placeholder="Recherchez...">
-            <button type="submit"><i class="la la-search"></i></button>
-          </form>
+
         </div><!--fin de la barre de recherche-->
         <nav>
           <ul>
@@ -56,16 +53,6 @@ session_start();
               </a>
             </li>
             <li>
-              <a href="profils.php" title="">
-                <span><img src="../images/icon4.png" alt=""></span>
-                Profils
-              </a>
-              <ul>
-                <li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-                <li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-              </ul>
-            </li>
-            <li>
               <a href="emploi.php" title="">
                 <span><img src="../images/icon5.png" alt=""></span>
                 Annonces
@@ -77,6 +64,12 @@ session_start();
                 Contact
               </a>
             </li>
+            <li>
+              <a href="messages.php" title="">
+                <span><img src="../images/icon4.png" alt=""></span>
+                Messages
+              </a>
+            </li>
 
           </ul>
         </nav><!--fin de la barre de navigation-->
@@ -85,13 +78,14 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
               <i class="la la-sort-down"></i>
             </div>
-            <div class="user-account-settingss">
+            <div class="user-account-settingss" style=";">
               <h3>Mon Compte</h3>
               <ul class="us-links">
                 <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
@@ -205,7 +199,24 @@ session_start();
 		</main>
   </div>
 
-
+  <footer><!--début du pied de page-->
+    <div class="footy-sec mn no-margin">
+      <div class="container">
+        <ul>
+          <li><a href="#" title="">Centre d'aide</a></li>
+          <li><a href="#" title="">Politique de confidentialité</a></li>
+          <li><a href="#" title="">Règles de la communauté</a></li>
+          <li><a href="#" title="">Politique de Cookies</a></li>
+          <li><a href="#" title="">Carières</a></li>
+          <li><a href="#" title="">Forum</a></li>
+          <li><a href="#" title="">Langage</a></li>
+          <li><a href="#" title="">Politique de Cookies</a></li>
+        </ul>
+        <p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+        <img class="fl-rgt" src="images/logo2.png" alt="">
+      </div>
+    </div>
+  </footer><!--fin du pied de page-->
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>

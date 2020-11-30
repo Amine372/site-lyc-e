@@ -4857,6 +4857,7 @@ a:hover {
 	-o-border-radius: 15px;
 	border-radius: 15px;
 	width: 100%;
+	word-wrap:break-word;
 }
 .img-bx {
 	background-color: #efefef;

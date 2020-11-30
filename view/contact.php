@@ -34,10 +34,7 @@
           <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
         <div class="search-bar">
-          <form>
-            <input type="text" name="search" placeholder="Recherchez...">
-            <button type="submit"><i class="la la-search"></i></button>
-          </form>
+
         </div><!--fin de la barre de recherche-->
         <nav>
           <ul>
@@ -54,16 +51,6 @@
               </a>
             </li>
             <li>
-              <a href="profils.php" title="">
-                <span><img src="../images/icon4.png" alt=""></span>
-                Profils
-              </a>
-              <ul>
-                <li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-                <li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-              </ul>
-            </li>
-            <li>
               <a href="emploi.php" title="">
                 <span><img src="../images/icon5.png" alt=""></span>
                 Annonces
@@ -75,6 +62,12 @@
                 Contact
               </a>
             </li>
+            <li>
+              <a href="messages.php" title="">
+                <span><img src="../images/icon4.png" alt=""></span>
+                Messages
+              </a>
+            </li>
 
           </ul>
         </nav><!--fin de la barre de navigation-->
@@ -83,13 +76,14 @@
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
               <i class="la la-sort-down"></i>
             </div>
-            <div class="user-account-settingss">
+            <div class="user-account-settingss" style=";">
               <h3>Mon Compte</h3>
               <ul class="us-links">
                 <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
@@ -190,17 +184,18 @@
 			</div></center>
 		</main>
 
-		<div class="container">
+		<div class="container" style="padding-bottom: 20px;">
 <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.219618889888!2d2.4132023156387215!3d48.94930390225513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66b9c6b0800f7%3A0xa35833adc1739e08!2sLyc%C3%A9e%20Robert%20Schuman!5e0!3m2!1sfr!2sfr!4v1603789401466!5m2!1sfr!2sfr" width="700" height="350" frameborder="0" style="border:5;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center>
 </div>
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
-					<img class="fl-rgt" src="images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer><!--footer end-->
+<footer>
+  <div class="footy-sec mn no-margin">
+    <div class="container">
+
+      <p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
+      <img class="fl-rgt" src="../images/logo2.png" alt="">
+    </div>
+  </div>
+</footer>
 </div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>

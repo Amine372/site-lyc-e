@@ -37,11 +37,8 @@
 					<div class="logo">
 						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
+          <div class="search-bar">
+
 					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
@@ -277,15 +274,6 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
-					<img class="fl-rgt" src="images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer><!--footer end-->
 		<div class="overview-box" id="overview-box">
 			<div class="overview-edit">
 				<h3>Aperçu</h3>
@@ -411,7 +399,14 @@
 		</div><!--overview-box end-->
 
 	</div><!--theme-layout end-->
-
+  <footer><!--début du pied de page-->
+    <div class="footy-sec mn no-margin">
+      <div class="container">
+        <p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+        <img class="fl-rgt" src="images/logo2.png" alt="">
+      </div>
+    </div>
+  </footer><!--fin du pied de page-->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>

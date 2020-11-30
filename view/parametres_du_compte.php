@@ -29,17 +29,14 @@
 	<div class="wrapper">
 
 
-		<header>
+    <header>
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
 						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
+
 					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
@@ -56,16 +53,6 @@
 								</a>
 							</li>
 							<li>
-								<a href="profils.php" title="">
-									<span><img src="../images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'Alimentation de mon profil</a></li>
-								</ul>
-							</li>
-							<li>
 								<a href="emploi.php" title="">
 									<span><img src="../images/icon5.png" alt=""></span>
 									Annonces
@@ -77,6 +64,12 @@
 									Contact
 								</a>
 							</li>
+							<li>
+								<a href="messages.php" title="">
+									<span><img src="../images/icon4.png" alt=""></span>
+									Messages
+								</a>
+							</li>
 
 						</ul>
 					</nav><!--fin de la barre de navigation-->
@@ -86,13 +79,13 @@
 					<div class="user-account">
 						<?php
 						if (isset($_SESSION['nom']))
-            {
+						{
 							echo '<div class="user-info">
 								<img src="http://via.placeholder.com/30x30" alt="">
 								<a href="#" title="">'.$_SESSION['nom'].'</a>
 								<i class="la la-sort-down"></i>
 							</div>
-							<div class="user-account-settingss">
+							<div class="user-account-settingss" style=";">
 								<h3>Mon Compte</h3>
 								<ul class="us-links">
 									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
@@ -101,7 +94,7 @@
 							</div><!--fin des paramètres du compte utilisateur-->';
 						}
 						else
-            {
+						{
 							echo '<div class="user-info">
 								<a href="#" title="">Connectez vous</a>
 								<i class="la la-sort-down"></i>
@@ -209,21 +202,18 @@
 			</div>
 		</section>
 
-
-
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-					<p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
-					<img class="fl-rgt" src="../images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer>
-
 	</div><!--theme-layout end-->
 
 
+  <footer>
+    <div class="footy-sec mn no-margin">
+      <div class="container">
 
+        <p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
+        <img class="fl-rgt" src="../images/logo2.png" alt="">
+      </div>
+    </div>
+  </footer>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>

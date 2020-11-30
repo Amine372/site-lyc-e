@@ -77,7 +77,8 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 												<button type="submit" value="submit">Se connecter</button>
 											</div>
 											<?php
-												if (isset($_SESSION['erreur_co'])) {
+												if (isset($_SESSION['erreur_co']))
+                        {
 													echo "<div style='color:#ff0000'>
 																	Mauvais Mail ou mot de passe</div>";
 
@@ -94,19 +95,29 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 					</div>
 				</div><!--signin-pop end-->
 			</div><!--signin-popup end-->
-			<div class="footy-sec">
-				<div class="container">
-
-
-					<p><img src="../images/copy-icon.png" alt="">Copyright 2020</p>
-				</div>
-			</div><!--footy-sec end-->
 		</div><!--sign-in-page end-->
 
 
 	</div><!--theme-layout end-->
 
-
+  <footer><!--début du pied de page-->
+    <div class="footy-sec mn no-margin">
+      <div class="container">
+        <ul>
+          <li><a href="#" title="">Centre d'aide</a></li>
+          <li><a href="#" title="">Politique de confidentialité</a></li>
+          <li><a href="#" title="">Règles de la communauté</a></li>
+          <li><a href="#" title="">Politique de Cookies</a></li>
+          <li><a href="#" title="">Carières</a></li>
+          <li><a href="#" title="">Forum</a></li>
+          <li><a href="#" title="">Langage</a></li>
+          <li><a href="#" title="">Politique de Cookies</a></li>
+        </ul>
+        <p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+        <img class="fl-rgt" src="images/logo2.png" alt="">
+      </div>
+    </div>
+  </footer><!--fin du pied de page-->
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>

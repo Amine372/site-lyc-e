@@ -6,14 +6,19 @@ if(!isset($_SESSION['email']))
 {
 	header('location: ../view/connexion.php');
 }
+if(isset($_SESSION['discisssion_active'])){
+	$_POST['discussion_active'] = $_SESSION['discisssion_active'];
+	unset($_SESSION['discisssion_active']);
+}
 $first = true;
 $manager = new Manager_Message;
 
 $discussion_list = $manager->get_discussion_list($_SESSION['email']);
 
+
 $discussion = $manager->get_discussion($_SESSION['email']);
 
-$liste_user = $manager->get_liste_user();
+$liste_user = $manager->get_liste_user($_SESSION['email']);
 
 if(isset($_POST['discussion_active']))
 {
@@ -26,7 +31,6 @@ else
 	$discussion_id = $discussion_list[0]['id'];
 	$messages = $manager->get_messages($discussion_id);
 }
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -67,10 +71,7 @@ else
 						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
 					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
+
 					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
@@ -147,7 +148,7 @@ else
 
 
 
-		<section class="messasign-in.php">
+		<section style="padding-bottom: 20px;" class="messasign-in.php">
 			<div class="container">
 				<div class="messages-sec">
 					<div class="row">
@@ -159,28 +160,28 @@ else
 								</div><!--msg-title end-->
 								<div class="messages-list">
 									<ul>
-										<form method="post" action="messages.php">
+										<form method="post" action="">
 										<?php
 										$i = 0;
 										if(!is_null($discussion))
 										{
-											foreach ($discussion as $key)
+											foreach ($discussion as $key_disc)
 											{
-												if($first)
+												if($first == true)
 												{
 													echo '
 														<li class="active">
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
 																	<div class="usr-mg-info">
-																		<h3>'.$key[0]['nom'].'</h3>
+																		<h3>'.$key_disc[0]['nom'].'</h3>
 																		<p></p>
 																	</div><!--usr-mg-info end-->
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
-													$nom_interloq = $key[0]['nom'];
-													$id_interloq = $discussion_list[$i]['id'];
+													$nom_interloq = $key_disc[0]['nom'];
+													$id_interloq = $key_disc[0]['id'];
 													$first = false;
 												}
 												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active'])
@@ -190,14 +191,14 @@ else
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
 																	<div class="usr-mg-info">
-																		<h3>'.$key[0]['nom'].'</h3>
+																		<h3>'.$key_disc[0]['nom'].'</h3>
 																		<p></p>
 																	</div><!--usr-mg-info end-->
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
-													$nom_interloq = $key[0]['nom'];
-													$id_interloq = $discussion_list[$i]['id'];
+													$nom_interloq = $key_disc[0]['nom'];
+													$id_interloq = $key_disc[0]['id'];
 												}
 												else
 												{
@@ -206,7 +207,7 @@ else
 														<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 															<div class="usr-msg-details">
 																<div class="usr-mg-info">
-																	<h3>'.$key[0]['nom'].'</h3>
+																	<h3>'.$key_disc[0]['nom'].'</h3>
 																	<p></p>
 																</div><!--usr-mg-info end-->
 															</div><!--usr-msg-details end-->
@@ -216,14 +217,17 @@ else
 												$i = $i + 1;
 											}
 										}
+
 										 ?>
 
 									 </form>
+
 									 <li>
 											 <div class="usr-msg-details">
 												 <div class="usr-mg-info">
 													 <p>Nouvelle discussion avec :</p>
-														<select id="select-state" placeholder="Nom prénom">
+													 <form method="post" action="../traitement/traitement_discussion.php">
+														<select id="select-state"  placeholder="Nom prénom" name="id">
 															<option value="">Nom prénom</option>
 															<?php
 																if(!is_null($liste_user))
@@ -236,7 +240,10 @@ else
 
 															 ?>
 														</select>
-													 <p></p>
+														<div class="mf-field">
+															<button style="width: 30%; height: 34px;" type="submit">Créer</button>
+														</div>
+													</form>
 												 </div><!--usr-mg-info end-->
 											 </div><!--usr-msg-details end-->
 									 </li>
@@ -251,20 +258,23 @@ else
 										<div class="usr-mg-info">
 											<h3>
 											<?php
-												echo $nom_interloq;
+												if(isset($nom_interloq)){
+													echo $nom_interloq;
+												};
 											 ?>
 										 	</h3>
 										</div><!--usr-mg-info end-->
 									</div>
-									<a href="#" title=""><i class="fa fa-ellipsis-v"></i></a>
 								</div><!--message-bar-head end-->
 
 								<div class="messages-line">
 								<?php
-								if(!is_null($messages)) {
-
-									foreach ($messages as $key) {
-										if($key['id_utilisateur'] == $id_interloq){
+								if(!is_null($messages))
+								{
+									foreach ($messages as $key)
+									{
+										if($key['id_utilisateur'] == $id_interloq)
+										{
 											echo
 											'<div class="main-message-box st3">
 												<div class="message-dt st3">
@@ -279,7 +289,8 @@ else
 											</div>';
 										}
 
-										else {
+										else
+										{
 											echo
 											'<div class="main-message-box ta-right">
 												<div class="message-dt">
@@ -301,10 +312,11 @@ else
 
 								</div><!--messages-line end-->
 								<div class="message-send-area">
-									<form>
+									<form method="post" action="../traitement/traitement_message.php">
 										<div class="mf-field">
-											<input type="text" name="message" placeholder="Type a message here">
-											<button type="submit">Send</button>
+											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
+											<input type="text" name="message" placeholder="Votre message" required>
+											<button type="submit">Envoyer</button>
 										</div>
 									</form>
 								</div><!--message-send-area end-->
@@ -320,25 +332,14 @@ else
 		<footer>
 			<div class="footy-sec mn no-margin">
 				<div class="container">
-					<ul>
-						<li><a href="#" title="">Centre d'aide</a></li>
-						<li><a href="#" title="">Politique de confidentialité</a></li>
-						<li><a href="#" title="">Règles de la communauté</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-						<li><a href="#" title="">Carières</a></li>
-						<li><a href="#" title="">Forum</a></li>
-						<li><a href="#" title="">Langage</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-					</ul>
-					<p><img src="../images/copy-icon2.png" alt="">Copyright 2018</p>
+
+					<p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
 					<img class="fl-rgt" src="../images/logo2.png" alt="">
 				</div>
 			</div>
 		</footer>
 
 	</div><!--theme-layout end-->
-
-
 
 
 <script type="text/javascript" src="../js/popper.js"></script>
@@ -348,7 +349,8 @@ else
 <script type="text/javascript" src="../js/scrollbar.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 <script>
-$(document).ready(function () {
+$(document).ready(function ()
+{
 		$('select').selectize({
 				sortField: 'text'
 		});

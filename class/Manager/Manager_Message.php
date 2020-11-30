@@ -19,17 +19,17 @@ class Manager_Message
     $req->execute(array($user1, $user2));
   }
 
-  public function create_message(Message $message)
+  public function create_message($discussion_id, $id_user, $message, $date)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
     $req = $bdd->prepare('INSERT into messages (id_discussion, id_utilisateur, message, date) value(?, ?, ?, ?)');
-    $req->execute(array($message->getDiscussion(), $message->getUser(), $message->getMessage(),$message->getDate()));
+    $req->execute(array($discussion_id, $id_user, $message, $date));
   }
 
   public function get_discussion_list($email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT discussion.id from utilisateur inner join discussion on utilisateur.id = id_user1 inner join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) order by date desc');
+    $req = $bdd->prepare('SELECT discussion.id from utilisateur inner join discussion on utilisateur.id = id_user1 where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id');
     $req->execute(array('email'=>$email));
     $donnees = $req->fetchall();
     return $donnees;
@@ -38,7 +38,7 @@ class Manager_Message
   public function get_discussion($email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT discussion.id_user1, discussion.id_user2 from utilisateur inner join discussion on utilisateur.id = id_user1 inner join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id order by date desc');
+    $req = $bdd->prepare('SELECT discussion.id_user1, discussion.id_user2 from utilisateur join discussion on utilisateur.id = id_user1 where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id');
     $req->execute(array('email'=>$email));
     $donnees = $req->fetchall();
     $discussion = [];
@@ -47,24 +47,21 @@ class Manager_Message
       $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
       $req->execute(array('id'=>$key['id_user1'], 'email'=>$email));
       $result = $req->fetchall();
-      if ($result) {
-        $discussion[] = $req->fetchall();
+      if($result) {
+        $discussion[] = $result;
       }
     }
 
-    if($discussion){
-      return $discussion;
-    }
-    else{
-      foreach ($donnees as $key) {
+    foreach ($donnees as $key) {
         $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
         $req->execute(array('id'=>$key['id_user2'], 'email'=>$email));
-        $discussion[] = $req->fetchall();
+        $result = $req->fetchall();
+        if($result) {
+          $discussion[] = $result;
+        }
       }
       return $discussion;
-      }
 
-    return $donnees;
   }
 
   public function get_messages($discussion)
@@ -76,13 +73,22 @@ class Manager_Message
     return $donnees;
   }
 
-  public function get_liste_user()
+  public function get_liste_user($email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur order by nom');
-    $req->execute();
+    $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur WHERE email <> ? order by nom');
+    $req->execute(array($email));
     $donnees = $req->fetchall();
     return $donnees;
+  }
+
+  public function getUser_id($email)
+  {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $req = $bdd->prepare('SELECT id from utilisateur WHERE email = ?');
+    $req->execute(array($email));
+    $donnee = $req->fetch();
+    return $donnee;
   }
 }
 ?>

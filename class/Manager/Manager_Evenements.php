@@ -43,9 +43,10 @@ public function Admin()
     {
       echo " erreur, contactez Amine, Loic ou Quentin";
     }
+  }
 
-    public function Admin_ajout($nomprenometid)
-    {
+  public function Admin_ajout($nomprenometid)
+  {
 
         $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
         $bdd->exec("SET CHARACTER SET utf8");
@@ -61,7 +62,7 @@ public function Admin()
           echo " erreur, contactez Amine, Loic ou Quentin";
         }
 
-}
+  }
 }
 
  ?>
