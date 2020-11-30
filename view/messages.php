@@ -322,30 +322,26 @@ else
 			</div>
 		</section><!--messages-page end-->
 
-
-
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-					<ul>
-						<li><a href="#" title="">Centre d'aide</a></li>
-						<li><a href="#" title="">Politique de confidentialité</a></li>
-						<li><a href="#" title="">Règles de la communauté</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-						<li><a href="#" title="">Carières</a></li>
-						<li><a href="#" title="">Forum</a></li>
-						<li><a href="#" title="">Langage</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-					</ul>
-					<p><img src="../images/copy-icon2.png" alt="">Copyright 2018</p>
-					<img class="fl-rgt" src="../images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer>
-
 	</div><!--theme-layout end-->
 
-
+	<footer><!--début du pied de page-->
+		<div class="footy-sec mn no-margin">
+			<div class="container">
+				<ul>
+					<li><a href="#" title="">Centre d'aide</a></li>
+					<li><a href="#" title="">Politique de confidentialité</a></li>
+					<li><a href="#" title="">Règles de la communauté</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
+					<li><a href="#" title="">Carières</a></li>
+					<li><a href="#" title="">Forum</a></li>
+					<li><a href="#" title="">Langage</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
+				</ul>
+				<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+				<img class="fl-rgt" src="images/logo2.png" alt="">
+			</div>
+		</div>
+	</footer><!--fin du pied de page-->
 
 
 <script type="text/javascript" src="../js/popper.js"></script>
