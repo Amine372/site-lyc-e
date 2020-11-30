@@ -185,8 +185,8 @@
                                   foreach ($donnee as $clef)
                                   {
                                     echo '<option value=$id '.((isset($_POST['form']) &&  $_POST['form'] == $id )? ' selected="selected" '  :  '' ) .'>'.$id. ". " .$nom. "</option>";
-                                    }
-                                    }
+                                  }
+                                }
                                     echo "</optgroup>
                                     <select name='nomprenometid'></select>";
                                 ?>
@@ -196,6 +196,7 @@
 												<h5>Que voulez vous faire ?</h5>
 												<div class="cpp-fiel">
                           <div>
+                            <form>
 													<input type="radio" name="mettre_en_admin" id="mettre_en_admin" value="Mettre en Admin<" required>
                           <label for="mettre_en_admin">Mettre en Admin</label>
 												</div>
@@ -210,15 +211,18 @@
                     <div>
                     <input type="radio" name="envoyer_un_mail" id="envoyer_un_mail" value="Envoyer un Mail" required>
                     <label for="envoyer_un_mail">Envoyer un Mail</label>
+
+
+                    </form>
                     </div>
 											</div>
 											<div class="save-stngs pd2">
 												<ul>
 													<li><button name="xcv" type="submit">Continuer</button></li>
                           <?php
-                          if(isset($_POST['xcv'])
+                          if(isset($_POST['xcv']))
                           {
-                            if(isset($_POST['mettre_en_admin'])
+                            if(isset($_POST['mettre_en_admin']))
                             {
                               $nomprenometid = $this->nomprenometid;
                               // on renseigne la classe que l'on veut uttiliser
@@ -226,15 +230,15 @@
                               // $donnee doit être le tableau avec tous les uttilisateurs, il est issu de la méthode "Admin" de la classe Manager_Evenements
                               $donnee= $get_event->Admin_ajout($nomprenometid);
                             }
-                            elseif (isset($_POST['supprimer_les_droits_admin'])
+                            elseif (isset($_POST['supprimer_les_droits_admin']))
                             {
 
                             }
-                            elseif (isset($_POST['envoyer_un_message'])
+                            elseif (isset($_POST['envoyer_un_message']))
                             {
 
                             }
-                            elseif (isset($_POST['envoyer_un_mail'])
+                            elseif (isset($_POST['envoyer_un_mail']))
                             {
 
                             }
