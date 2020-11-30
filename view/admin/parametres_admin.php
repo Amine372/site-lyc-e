@@ -140,7 +140,7 @@
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
 							  			<h3>Mon Compte</h3>
-										<table id="example" class="display responsive nowrap" style="width:100%">
+										<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
