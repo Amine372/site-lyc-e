@@ -77,7 +77,8 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 												<button type="submit" value="submit">Se connecter</button>
 											</div>
 											<?php
-												if (isset($_SESSION['erreur_co'])) {
+												if (isset($_SESSION['erreur_co']))
+                        {
 													echo "<div style='color:#ff0000'>
 																	Mauvais Mail ou mot de passe</div>";
 
