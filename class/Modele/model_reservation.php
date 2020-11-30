@@ -1,6 +1,6 @@
 <?php
-require_once '../class/Manager/manager_reservation.php';
-require_once '../traitement/traitement_reservation.php';
+require_once '../site-lyc-e/class/Manager/manager_reservation.php';
+require_once '../site-lyc-e/traitement/traitement_reservation.php';
 class reservation { //Déclaration de la classe réservation
 //Déclaration des attributs
   private $_nom;
