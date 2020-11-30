@@ -1,6 +1,6 @@
 <?php
-require_once 'manager_reservation.php';
-require_once 'traitement_reservation.php';
+require_once '../class/Manager/manager_reservation.php';
+require_once '../traitement/traitement_reservation.php';
 class reservation { //Déclaration de la classe réservation
 //Déclaration des attributs
   private $_nom;
@@ -13,7 +13,7 @@ class reservation { //Déclaration de la classe réservation
       $this->setnom($nom);
       $this->setmail($mail);
       $this->setposte($poste);
-      $this->setnbplaces($ville);
+      $this->setville($ville);
 }
 
 public function setnom($nom){
@@ -37,12 +37,12 @@ public function setposte($poste){
   }
   $this->_poste = $poste;
 }
-public function setnbplaces($ville){
+public function setville($ville){
   if(empty($ville)){
     trigger_error('la variable doit etre un caractere');
     return;
   }
-  $this->_nbplaces = $nbplaces;
+  $this->_ville = $ville;
 }
 //Partie Get
 public function getnom(){
