@@ -139,7 +139,7 @@ session_start();
 
     <div class="form-group">
         <label for="">poste</label>
-        <input type="text" name="mail" class="form-control"/ required>
+        <input type="text" name="poste" class="form-control"/ required>
     </div>
 
     <div class="form-group">
@@ -167,6 +167,7 @@ session_start();
 <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
+<<<<<<< HEAD
                 <span><img src="../images/icon1.png" alt=""></span>
                 Accueil
               </a>
@@ -376,3 +377,5 @@ session_start();
 <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
+=======
+>>>>>>> e1bca2f5db29fad89f978491cac2d6831786255d
