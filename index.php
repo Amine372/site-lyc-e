@@ -396,7 +396,7 @@
 		</div><!--overview-box end-->
 
 	</div><!--theme-layout end-->
-  <footer>
+  <footer><!--début du pied de page-->
     <div class="footy-sec mn no-margin">
       <div class="container">
         <ul>
@@ -413,7 +413,7 @@
         <img class="fl-rgt" src="images/logo2.png" alt="">
       </div>
     </div>
-  </footer><!--footer end-->
+  </footer><!--fin du pied de page-->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>
