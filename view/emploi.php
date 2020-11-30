@@ -83,7 +83,8 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -118,7 +119,7 @@ session_start();
 <!-- Modal Ends -->
 
                     <div >
-                   
+
     <div class="search-sec">
       <div class="container">
         <div class="search-box">
@@ -155,7 +156,7 @@ session_start();
     <button type="submit" class="btn btn-primary">Je réserve</button>
 
 </form>
-   
+
   </div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -206,7 +207,8 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -305,10 +307,12 @@ session_start();
                     $get_event = new manager_job;
                       // $donnee doit être le tableau avec tous les evennements
                           $donnee= $get_event->Annonces();
-                          if(is_null($donnee)){
+                          if(is_null($donnee))
+                          {
                             echo "Aucun évènement";
                           }
-                          else{
+                          else
+                          {
                             foreach ($donnee as $clef)
                             {
                               echo '  <div class="post-bar">

@@ -85,7 +85,8 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
