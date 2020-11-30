@@ -6,14 +6,18 @@ if(!isset($_SESSION['email']))
 {
 	header('location: ../view/connexion.php');
 }
+if(isset($_SESSION['discisssion_active'])){
+	$_POST['discussion_active'] = $_SESSION['discisssion_active'];
+}
 $first = true;
 $manager = new Manager_Message;
 
 $discussion_list = $manager->get_discussion_list($_SESSION['email']);
 
+
 $discussion = $manager->get_discussion($_SESSION['email']);
 
-$liste_user = $manager->get_liste_user();
+$liste_user = $manager->get_liste_user($_SESSION['email']);
 
 if(isset($_POST['discussion_active']))
 {
@@ -23,9 +27,11 @@ if(isset($_POST['discussion_active']))
 }
 else
 {
+	var_dump($discussion_list);
 	$discussion_id = $discussion_list[0]['id'];
 	$messages = $manager->get_messages($discussion_id);
 }
+
 
  ?>
 <!DOCTYPE html>
@@ -159,27 +165,27 @@ else
 								</div><!--msg-title end-->
 								<div class="messages-list">
 									<ul>
-										<form method="post" action="messages.php">
+										<form method="post" action="">
 										<?php
 										$i = 0;
 										if(!is_null($discussion))
 										{
-											foreach ($discussion as $key)
+											foreach ($discussion as $key_disc)
 											{
-												if($first)
+												if($first == true)
 												{
 													echo '
 														<li class="active">
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
 																	<div class="usr-mg-info">
-																		<h3>'.$key[0]['nom'].'</h3>
+																		<h3>'.$key_disc[0]['nom'].'</h3>
 																		<p></p>
 																	</div><!--usr-mg-info end-->
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
-													$nom_interloq = $key[0]['nom'];
+													$nom_interloq = $key_disc[0]['nom'];
 													$id_interloq = $discussion_list[$i]['id'];
 													$first = false;
 												}
@@ -190,13 +196,13 @@ else
 															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
 																	<div class="usr-mg-info">
-																		<h3>'.$key[0]['nom'].'</h3>
+																		<h3>'.$key_disc[0]['nom'].'</h3>
 																		<p></p>
 																	</div><!--usr-mg-info end-->
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
-													$nom_interloq = $key[0]['nom'];
+													$nom_interloq = $key_disc[0]['nom'];
 													$id_interloq = $discussion_list[$i]['id'];
 												}
 												else
@@ -206,7 +212,7 @@ else
 														<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 															<div class="usr-msg-details">
 																<div class="usr-mg-info">
-																	<h3>'.$key[0]['nom'].'</h3>
+																	<h3>'.$key_disc[0]['nom'].'</h3>
 																	<p></p>
 																</div><!--usr-mg-info end-->
 															</div><!--usr-msg-details end-->
@@ -251,7 +257,9 @@ else
 										<div class="usr-mg-info">
 											<h3>
 											<?php
-												echo $nom_interloq;
+												if(isset($nom_interloq)){
+													echo $nom_interloq;
+												};
 											 ?>
 										 	</h3>
 										</div><!--usr-mg-info end-->
@@ -301,10 +309,11 @@ else
 
 								</div><!--messages-line end-->
 								<div class="message-send-area">
-									<form>
+									<form method="post" action="../traitement/traitement_message.php">
 										<div class="mf-field">
-											<input type="text" name="message" placeholder="Type a message here">
-											<button type="submit">Send</button>
+											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
+											<input type="text" name="message" placeholder="Votre message">
+											<button type="submit">Envoyer</button>
 										</div>
 									</form>
 								</div><!--message-send-area end-->
