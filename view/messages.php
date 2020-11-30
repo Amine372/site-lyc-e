@@ -148,7 +148,7 @@ else
 
 
 
-		<section class="messasign-in.php">
+		<section style="padding-bottom: 20px;" class="messasign-in.php">
 			<div class="container">
 				<div class="messages-sec">
 					<div class="row">
@@ -340,8 +340,6 @@ else
 		</footer>
 
 	</div><!--theme-layout end-->
-
-
 
 
 <script type="text/javascript" src="../js/popper.js"></script>
