@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Evènements</title>
+<title>Annonces</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -137,12 +137,12 @@ session_start();
     </div>
 
     <div class="form-group">
-        <label for="">mail</label>
-        <input type="text" name="mail" class="form-control"/ required>
+        <label for="">Mail</label>
+        <input type="mail" name="mail" class="form-control"/ required>
     </div>
 
     <div class="form-group">
-        <label for="">poste</label>
+        <label for="">Nom du poste</label>
         <input type="text" name="poste" class="form-control"/ required>
     </div>
 
