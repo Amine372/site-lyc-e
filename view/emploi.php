@@ -138,7 +138,7 @@ session_start();
 
     <div class="form-group">
         <label for="">Mail</label>
-        <input type="mail" name="mail" class="form-control"/ required>
+       <input type="mail" name="mail" class="form-control" required placeholder="Adresse éléctronique">
     </div>
 
     <div class="form-group">

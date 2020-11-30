@@ -1,6 +1,6 @@
 <?php
-require_once '../class/Modele/model_reservation.php';
-require_once '../traitement/traitement_reservation.php';
+require_once 'class/Modele/model_reservation.php';
+require_once 'traitement/traitement_reservation.php';
 class manager_reservation{ //Déclaration de la classe Manager
 public function reservation($donnee){
 
@@ -13,7 +13,7 @@ public function reservation($donnee){
      header("location: index.php");
     }
     else{
-     header("location: https://www.paypal.com/fr/signin"); //Redirection vers le lien de la page de paiement
+     header("location: emploi.php"); //Redirection 
     }
 
           }
