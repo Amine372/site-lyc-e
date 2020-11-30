@@ -261,10 +261,13 @@ else
 
 								<div class="messages-line">
 								<?php
-								if(!is_null($messages)) {
+								if(!is_null($messages))
+								{
 
-									foreach ($messages as $key) {
-										if($key['id_utilisateur'] == $id_interloq){
+									foreach ($messages as $key)
+									{
+										if($key['id_utilisateur'] == $id_interloq)
+										{
 											echo
 											'<div class="main-message-box st3">
 												<div class="message-dt st3">
@@ -279,7 +282,8 @@ else
 											</div>';
 										}
 
-										else {
+										else
+										{
 											echo
 											'<div class="main-message-box ta-right">
 												<div class="message-dt">
@@ -348,7 +352,8 @@ else
 <script type="text/javascript" src="../js/scrollbar.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 <script>
-$(document).ready(function () {
+$(document).ready(function ()
+{
 		$('select').selectize({
 				sortField: 'text'
 		});
