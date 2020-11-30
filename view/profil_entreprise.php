@@ -31,64 +31,77 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="../index.php" title=""><img src="images/logo.png" alt=""></a>
+						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
 							<li>
-								<a href="../index.php" title="">
+								<a href="index.php" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
 							</li>
 							<li>
-								<a href="evenements.php" title="">
+								<a href="view/evenements.php" title="">
 									<span><img src="images/icon3.png" alt=""></span>
-									Evènements
+									Evénements
 								</a>
 							</li>
 							<li>
-								<a href="profils.php" title="">
-									<span><img src="images/icon4.png" alt=""></span>
-									Profils
-								</a>
-								<ul>
-									<li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-									<li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="emploi.php" title="">
+								<a href="view/emploi.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
-									Emplois
+									Annonces
 								</a>
 							</li>
-
+              <li>
+								<a href="view/contact.php" title="">
+									<span><img src="images/icon6.png" alt=""></span>
+									Contact
+								</a>
+							</li>
+              <li>
+								<a href="view/messages.php" title="">
+									<span><img src="images/icon4.png" alt=""></span>
+									Messages
+								</a>
+							</li>
 						</ul>
 					</nav><!--fin de la barre de navigation-->
 					<div class="menu-btn">
-						<a href="" title=""><i class="fa fa-bars"></i></a>
+						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--fin du menu bouton-->
 					<div class="user-account">
-						<div class="user-info">
-							<img src="http://via.placeholder.com/30x30" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3><a href="#" title="">Mon Compte</a></h3>
-							<ul class="us-links">
-								<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-							</ul>
-							<h3 class="tc"><a href="connexion.php" title="">Se déconnecter</a></h3>
-						</div><!--fin des paramètres du compte utilisateur-->
-					</div>
+            <?php
+						if (isset($_SESSION['nom']))
+            {
+              echo '<div class="user-info">
+  							<img src="http://via.placeholder.com/30x30" alt="">
+  							<a href="#" title="">'.$_SESSION['nom'].'</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3>Mon Compte</h3>
+  							<ul class="us-links">
+  								<li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
+  							</ul>
+  							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            else
+            {
+              echo '<div class="user-info">
+  							<a href="#" title="">Connectez vous</a>
+  							<i class="la la-sort-down"></i>
+  						</div>
+  						<div class="user-account-settingss">
+  							<h3><a href="view/connexion.php" title="">Connexion</a></h3>
+
+  							<h3><a href="view/inscription.php" title="">Inscription</a></h3>
+
+  						</div><!--fin des paramètres du compte utilisateur-->';
+            }
+            ?>
+          </div>
 				</div><!--fin des données d'en-tête-->
 			</div>
 		</header><!--fin d'en-tête-->
@@ -294,188 +307,24 @@
 				</div>
 			</div>
 		</main>
-
-
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-					<ul>
-						<li><a href="#" title="">Centre d'aide</a></li>
-						<li><a href="#" title="">Politique de confidentialité</a></li>
-						<li><a href="#" title="">Règles de la communauté</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-						<li><a href="#" title="">Carières</a></li>
-						<li><a href="#" title="">Forum</a></li>
-						<li><a href="#" title="">Langage</a></li>
-						<li><a href="#" title="">Politique de Cookies</a></li>
-					</ul>
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2018</p>
-					<img class="fl-rgt" src="images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer><!--footer end-->
-
-
-		<div class="overview-box" id="overview-box">
-			<div class="overview-edit">
-				<h3>Overview</h3>
-				<span>5000 character left</span>
-				<form>
-					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-
-		<div class="overview-box" id="experience-box">
-			<div class="overview-edit">
-				<h3>Experience</h3>
-				<form>
-					<input type="text" name="subject" placeholder="Subject">
-					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="education-box">
-			<div class="overview-edit">
-				<h3>Education</h3>
-				<form>
-					<input type="text" name="school" placeholder="School / University">
-					<div class="datepicky">
-						<div class="row">
-							<div class="col-lg-6 no-left-pd">
-								<div class="datefm">
-									<input type="text" name="from" placeholder="From" class="datepicker">
-									<i class="fa fa-calendar"></i>
-								</div>
-							</div>
-							<div class="col-lg-6 no-righ-pd">
-								<div class="datefm">
-									<input type="text" name="to" placeholder="To" class="datepicker">
-									<i class="fa fa-calendar"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<input type="text" name="degree" placeholder="Degree">
-					<textarea placeholder="Description"></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="location-box">
-			<div class="overview-edit">
-				<h3>Location</h3>
-				<form>
-					<div class="datefm">
-						<select>
-							<option>Country</option>
-							<option value="pakistan">Pakistan</option>
-							<option value="england">England</option>
-							<option value="india">India</option>
-							<option value="usa">United Sates</option>
-						</select>
-						<i class="fa fa-globe"></i>
-					</div>
-					<div class="datefm">
-						<select>
-							<option>City</option>
-							<option value="london">London</option>
-							<option value="new-york">New York</option>
-							<option value="sydney">Sydney</option>
-							<option value="chicago">Chicago</option>
-						</select>
-						<i class="fa fa-map-marker"></i>
-					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="skills-box">
-			<div class="overview-edit">
-				<h3>Skills</h3>
+	<footer><!--début du pied de page-->
+		<div class="footy-sec mn no-margin">
+			<div class="container">
 				<ul>
-					<li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
-					<li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
-					<li><a href="#" title="" class="skl-name">css</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+					<li><a href="#" title="">Centre d'aide</a></li>
+					<li><a href="#" title="">Politique de confidentialité</a></li>
+					<li><a href="#" title="">Règles de la communauté</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
+					<li><a href="#" title="">Carières</a></li>
+					<li><a href="#" title="">Forum</a></li>
+					<li><a href="#" title="">Langage</a></li>
+					<li><a href="#" title="">Politique de Cookies</a></li>
 				</ul>
-				<form>
-					<input type="text" name="skills" placeholder="Skills">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="create-portfolio">
-			<div class="overview-edit">
-				<h3>Create Portfolio</h3>
-				<form>
-					<input type="text" name="pf-name" placeholder="Portfolio Name">
-					<div class="file-submit nomg">
-						<input type="file" name="file">
-					</div>
-					<div class="pf-img">
-						<img src="http://via.placeholder.com/60x60" alt="">
-					</div>
-					<input type="text" name="website-url" placeholder="htp://www.example.com">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-		<div class="overview-box" id="establish-box">
-			<div class="overview-edit">
-				<h3>Establish Since</h3>
-				<form>
-					<div class="daty">
-						<input type="text" name="establish" placeholder="Select Date" class="datepicker">
-						<i class="fa fa-calendar"></i>
-					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-
-		<div class="overview-box" id="total-employes">
-			<div class="overview-edit">
-				<h3>Total Employees</h3>
-				<form>
-					<input type="text" name="employes" placeholder="Type in numbers">
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
-				</form>
-				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
-
-
-
-	</div><!--theme-layout end-->
-
-
+				<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
+				<img class="fl-rgt" src="images/logo2.png" alt="">
+			</div>
+		</div>
+	</footer><!--fin du pied de page-->
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>

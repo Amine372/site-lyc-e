@@ -31,51 +31,40 @@ session_start();
     <div class="container">
       <div class="header-data">
         <div class="logo">
-          <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
+          <a href="index.php" title=""><img src="images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
-        <div class="search-bar">
-          <form>
-            <input type="text" name="search" placeholder="Recherchez...">
-            <button type="submit"><i class="la la-search"></i></button>
-          </form>
-        </div><!--fin de la barre de recherche-->
         <nav>
           <ul>
             <li>
-              <a href="../index.php" title="">
-                <span><img src="../images/icon1.png" alt=""></span>
+              <a href="index.php" title="">
+                <span><img src="images/icon1.png" alt=""></span>
                 Accueil
               </a>
             </li>
             <li>
-              <a href="evenements.php" title="">
-                <span><img src="../images/icon3.png" alt=""></span>
+              <a href="view/evenements.php" title="">
+                <span><img src="images/icon3.png" alt=""></span>
                 Evénements
               </a>
             </li>
             <li>
-              <a href="profils.php" title="">
-                <span><img src="../images/icon4.png" alt=""></span>
-                Profils
-              </a>
-              <ul>
-                <li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-                <li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="emploi.php" title="">
-                <span><img src="../images/icon5.png" alt=""></span>
+              <a href="view/emploi.php" title="">
+                <span><img src="images/icon5.png" alt=""></span>
                 Annonces
               </a>
             </li>
             <li>
-              <a href="contact.php" title="">
-                <span><img src="../images/icon6.png" alt=""></span>
+              <a href="view/contact.php" title="">
+                <span><img src="images/icon6.png" alt=""></span>
                 Contact
               </a>
             </li>
-
+            <li>
+              <a href="view/messages.php" title="">
+                <span><img src="images/icon4.png" alt=""></span>
+                Messages
+              </a>
+            </li>
           </ul>
         </nav><!--fin de la barre de navigation-->
         <div class="menu-btn">
@@ -83,7 +72,8 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -92,9 +82,9 @@ session_start();
             <div class="user-account-settingss">
               <h3>Mon Compte</h3>
               <ul class="us-links">
-                <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+                <li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
               </ul>
-              <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+              <h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           else
@@ -104,8 +94,10 @@ session_start();
               <i class="la la-sort-down"></i>
             </div>
             <div class="user-account-settingss">
-              <h3><a href="connexion.php" title="">Connexion</a></h3>
-              <h3><a href="inscription.php" title="">Inscription</a></h3>
+              <h3><a href="view/connexion.php" title="">Connexion</a></h3>
+
+              <h3><a href="view/inscription.php" title="">Inscription</a></h3>
+
             </div><!--fin des paramètres du compte utilisateur-->';
           }
           ?>
@@ -118,7 +110,7 @@ session_start();
 <!-- Modal Ends -->
 
                     <div >
-                   
+
     <div class="search-sec">
       <div class="container">
         <div class="search-box">
@@ -155,7 +147,7 @@ session_start();
     <button type="submit" class="btn btn-primary">Je réserve</button>
 
 </form>
-   
+
   </div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
