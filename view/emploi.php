@@ -128,7 +128,7 @@ session_start();
 
     <div class="form-group">
         <label for="">Votre nom et prénom</label>
-        <input type="text" name="nom" class="form-control"/ required>
+        <input type="text" name="nom" class="form-control" required>
     </div>
 
     <div class="form-group">
@@ -138,12 +138,12 @@ session_start();
 
     <div class="form-group">
         <label for="">Nom du poste</label>
-        <input type="text" name="poste" class="form-control"/ required>
+        <input type="text" name="poste" class="form-control" required>
     </div>
 
     <div class="form-group">
         <label for="">Votre ville</label>
-        <input type="text" name="ville" class="form-control"/ required>
+        <input type="text" name="ville" class="form-control" required>
     </div>
 
 <br>
@@ -152,6 +152,7 @@ session_start();
 </form>
 
   </div>
+</div>
   <footer><!--début du pied de page-->
     <div class="footy-sec mn no-margin">
       <div class="container">
