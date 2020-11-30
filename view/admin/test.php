@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
 
 </head>
-<table id="example" class="display responsive nowrap" style="width:100%">
+<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
