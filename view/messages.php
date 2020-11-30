@@ -265,7 +265,6 @@ else
 										 	</h3>
 										</div><!--usr-mg-info end-->
 									</div>
-									<a href="#" title=""><i class="fa fa-ellipsis-v"></i></a>
 								</div><!--message-bar-head end-->
 
 								<div class="messages-line">
