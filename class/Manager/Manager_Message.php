@@ -29,7 +29,7 @@ class Manager_Message
   public function get_discussion_list($email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT discussion.id from utilisateur inner join discussion on utilisateur.id = id_user1 join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id order by date asc');
+    $req = $bdd->prepare('SELECT discussion.id from utilisateur inner join discussion on utilisateur.id = id_user1 where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id');
     $req->execute(array('email'=>$email));
     $donnees = $req->fetchall();
     return $donnees;
@@ -38,7 +38,7 @@ class Manager_Message
   public function get_discussion($email)
   {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-    $req = $bdd->prepare('SELECT discussion.id_user1, discussion.id_user2 from utilisateur join discussion on utilisateur.id = id_user1 inner join messages on discussion.id = id_discussion where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id order by date asc');
+    $req = $bdd->prepare('SELECT discussion.id_user1, discussion.id_user2 from utilisateur join discussion on utilisateur.id = id_user1 where id_user1 = (SELECT id from utilisateur WHERE email = :email) or id_user2 = (SELECT id from utilisateur WHERE email = :email) group by discussion.id');
     $req->execute(array('email'=>$email));
     $donnees = $req->fetchall();
     $discussion = [];
@@ -47,24 +47,21 @@ class Manager_Message
       $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
       $req->execute(array('id'=>$key['id_user1'], 'email'=>$email));
       $result = $req->fetchall();
-      if ($result) {
-        $discussion[] = $req->fetchall();
+      if($result) {
+        $discussion[] = $result;
       }
     }
 
-    if($discussion){
-      return $discussion;
-    }
-    else{
-      foreach ($donnees as $key) {
+    foreach ($donnees as $key) {
         $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
         $req->execute(array('id'=>$key['id_user2'], 'email'=>$email));
-        $discussion[] = $req->fetchall();
+        $result = $req->fetchall();
+        if($result) {
+          $discussion[] = $result;
+        }
       }
       return $discussion;
-      }
 
-    return $donnees;
   }
 
   public function get_messages($discussion)

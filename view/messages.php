@@ -8,6 +8,7 @@ if(!isset($_SESSION['email']))
 }
 if(isset($_SESSION['discisssion_active'])){
 	$_POST['discussion_active'] = $_SESSION['discisssion_active'];
+	unset($_SESSION['discisssion_active']);
 }
 $first = true;
 $manager = new Manager_Message;
@@ -27,12 +28,9 @@ if(isset($_POST['discussion_active']))
 }
 else
 {
-	var_dump($discussion_list);
 	$discussion_id = $discussion_list[0]['id'];
 	$messages = $manager->get_messages($discussion_id);
 }
-
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -72,12 +70,6 @@ else
 					<div class="logo">
 						<a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
 							<li>
@@ -186,7 +178,7 @@ else
 															</button>
 														</li>';
 													$nom_interloq = $key_disc[0]['nom'];
-													$id_interloq = $discussion_list[$i]['id'];
+													$id_interloq = $key_disc[0]['id'];
 													$first = false;
 												}
 												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active'])
@@ -203,7 +195,7 @@ else
 															</button>
 														</li>';
 													$nom_interloq = $key_disc[0]['nom'];
-													$id_interloq = $discussion_list[$i]['id'];
+													$id_interloq = $key_disc[0]['id'];
 												}
 												else
 												{
@@ -222,14 +214,17 @@ else
 												$i = $i + 1;
 											}
 										}
+
 										 ?>
 
 									 </form>
+
 									 <li>
 											 <div class="usr-msg-details">
 												 <div class="usr-mg-info">
 													 <p>Nouvelle discussion avec :</p>
-														<select id="select-state" placeholder="Nom prénom">
+													 <form method="post" action="../traitement/traitement_discussion.php">
+														<select id="select-state"  placeholder="Nom prénom" name="id">
 															<option value="">Nom prénom</option>
 															<?php
 																if(!is_null($liste_user))
@@ -242,7 +237,10 @@ else
 
 															 ?>
 														</select>
-													 <p></p>
+														<div class="mf-field">
+															<button style="width: 30%; height: 34px;" type="submit">Créer</button>
+														</div>
+													</form>
 												 </div><!--usr-mg-info end-->
 											 </div><!--usr-msg-details end-->
 									 </li>
@@ -271,7 +269,6 @@ else
 								<?php
 								if(!is_null($messages))
 								{
-
 									foreach ($messages as $key)
 									{
 										if($key['id_utilisateur'] == $id_interloq)
@@ -316,7 +313,7 @@ else
 									<form method="post" action="../traitement/traitement_message.php">
 										<div class="mf-field">
 											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
-											<input type="text" name="message" placeholder="Votre message">
+											<input type="text" name="message" placeholder="Votre message" required>
 											<button type="submit">Envoyer</button>
 										</div>
 									</form>
