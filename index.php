@@ -37,12 +37,6 @@
 					<div class="logo">
 						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--fin du logotype-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Recherchez...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-					</div><!--fin de la barre de recherche-->
 					<nav>
 						<ul>
 							<li>
