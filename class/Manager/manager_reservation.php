@@ -1,6 +1,6 @@
 <?php
-require_once 'class/Modele/model_reservation.php';
-require_once 'traitement/traitement_reservation.php';
+require_once '../site-lyc-e/class/Modele/model_reservation.php';
+require_once '/site-lyc-e/traitement/traitement_reservation.php';
 class manager_reservation{ //Déclaration de la classe Manager
 public function reservation($donnee){
 
