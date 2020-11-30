@@ -1,6 +1,6 @@
 <?php
 //Modèle
-class User
+class Message
 {
 
   private $_discussion;
