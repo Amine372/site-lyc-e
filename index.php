@@ -271,15 +271,6 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-			<div class="footy-sec mn no-margin">
-				<div class="container">
-
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
-					<img class="fl-rgt" src="images/logo2.png" alt="">
-				</div>
-			</div>
-		</footer><!--footer end-->
 		<div class="overview-box" id="overview-box">
 			<div class="overview-edit">
 				<h3>Aperçu</h3>
@@ -418,7 +409,7 @@
           <li><a href="#" title="">Langage</a></li>
           <li><a href="#" title="">Politique de Cookies</a></li>
         </ul>
-        <p><img src="images/copy-icon2.png" alt="">Copyright 2018</p>
+        <p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
         <img class="fl-rgt" src="images/logo2.png" alt="">
       </div>
     </div>
