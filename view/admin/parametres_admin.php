@@ -662,10 +662,13 @@
                   <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
 										<h3>Inscrits</h3>
-										<form method="post" action="">
+										<form method="post" action="#">
 											<div class="cp-field">
 												<h5>Nombre d'Inscrits</h5>
-
+                      </div>
+                      <div class="cp-field">
+												<h5>Actifs et Inactifs</h5>
+                      </div>
 
 										</form>
 									</div><!--acc-setting end-->
