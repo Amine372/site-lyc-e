@@ -40,6 +40,7 @@
                     <div class="col-lg-12 no-pdd">
                       <div class="sn-field">
                         <input type="mail" name="email" required placeholder="Adresse éléctronique" style="width: 50%;">
+												<i class="la la-user"></i>
 												<br>
 												<?php
 												session_start();
@@ -63,28 +64,18 @@
           </div>
 
           </div>
+				</div>
+
+			</div><!--theme-layout end-->
+	</div>
+
+	<div class="footy-sec">
+		<div class="container">
 
 
-	</div><!--theme-layout end-->
-
-	<footer><!--début du pied de page-->
-		<div class="footy-sec mn no-margin">
-			<div class="container">
-				<ul>
-					<li><a href="#" title="">Centre d'aide</a></li>
-					<li><a href="#" title="">Politique de confidentialité</a></li>
-					<li><a href="#" title="">Règles de la communauté</a></li>
-					<li><a href="#" title="">Politique de Cookies</a></li>
-					<li><a href="#" title="">Carières</a></li>
-					<li><a href="#" title="">Forum</a></li>
-					<li><a href="#" title="">Langage</a></li>
-					<li><a href="#" title="">Politique de Cookies</a></li>
-				</ul>
-				<p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
-				<img class="fl-rgt" src="images/logo2.png" alt="">
-			</div>
+			<p><img src="../images/copy-icon.png" alt="">Copyright 2020.</p>
 		</div>
-	</footer><!--fin du pied de page-->
+	</div><!--footy-sec end-->
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
