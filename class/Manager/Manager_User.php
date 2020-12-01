@@ -80,8 +80,8 @@ class Manager_User
       $bdd->exec("SET CHARACTER SET utf8");
       $req = $bdd->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email='.$connexion->getEmail().';');
       $req->execute();
-      $donny = $req->fetchall();
-      var_dump($donny);
+      $donny = $req->fetch();
+      var_dump($donnee);
       if ($donnee['role'] == "admin")
       {
         $_SESSION['role'] = $donnee['role'];
