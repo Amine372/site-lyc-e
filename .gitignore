@@ -3,3 +3,4 @@ class/Modele/model_job.php
 view/admin/evenements.php
 view/admin/ss
 class/Manager/manager_reservation.php
+class/Manager/manager_reservation.php
