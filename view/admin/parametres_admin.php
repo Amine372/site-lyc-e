@@ -685,15 +685,6 @@
 												</div>
 											</div>
 											<div class="save-stngs pd2">
-												<ul>
-													<li><button type="submit">Enregistrer</button></li>
-                          <?php if(isset($_SESSION['message_mdp']))
-                          {
-                            echo $_SESSION['message_mdp'];
-                            unset($_SESSION['message_mdp']);
-                          }
-                          ?>
-												</ul>
 											</div><!--save-stngs end-->
 										</form>
 									</div><!--acc-setting end-->
