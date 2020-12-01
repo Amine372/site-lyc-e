@@ -659,12 +659,12 @@
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
-                  <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-password-tab">
+                  <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
-										<h3>Nombre d'Inscrits</h3>
-										<form method="post" action="../traitement/traitement_modif_mdp.php">
+										<h3>Inscrits</h3>
+										<form method="post" action="">
 											<div class="cp-field">
-												<h5>Ancien mot de passe</h5>
+												<h5>Nombre d'Inscrits</h5>
 
 
 										</form>
