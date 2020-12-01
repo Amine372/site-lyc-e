@@ -666,13 +666,13 @@
 											<div class="cp-field">
 												<h5>Nombre d'Inscrits</h5>
                         <div class="cpp-fiel">
-                          <input lang="fr" name="nombre_inscrits" id="nombre_inscrits" value="<?php echo $_SESSION['prenom']; ?>" required>
+                          <p lang="fr" name="nombre_inscrits" id="nombre_inscrits" ><?php echo $_SESSION['prenom']; ?></p>
                         </div>
                       </div>
                       <div class="cp-field">
 												<h5>Actifs et Inactifs</h5>
                         <div class="cpp-fiel">
-                          <input lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" value="<?php echo $_SESSION['prenom']; ?>" required>
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php echo $_SESSION['prenom']; ?></p>
                         </div>
                       </div>
 
