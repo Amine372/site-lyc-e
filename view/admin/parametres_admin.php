@@ -659,6 +659,45 @@
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
+                  <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+							  		<div class="acc-setting">
+										<h3>Changement de mot de passe</h3>
+										<form method="post" action="../traitement/traitement_modif_mdp.php">
+											<div class="cp-field">
+												<h5>Ancien mot de passe</h5>
+												<div class="cpp-fiel">
+													<input type="password" name="amdp" placeholder="" required>
+													<i class="fa fa-lock"></i>
+												</div>
+											</div>
+											<div class="cp-field">
+												<h5>Nouveau mot de passe</h5>
+												<div class="cpp-fiel">
+													<input type="password" name="mdp" placeholder="" required>
+													<i class="fa fa-lock"></i>
+												</div>
+											</div>
+											<div class="cp-field">
+												<h5>Retapez le mot de passe</h5>
+												<div class="cpp-fiel">
+													<input type="password" name="confirmmdp" placeholder="" required>
+													<i class="fa fa-lock"></i>
+												</div>
+											</div>
+											<div class="save-stngs pd2">
+												<ul>
+													<li><button type="submit">Enregistrer</button></li>
+                          <?php if(isset($_SESSION['message_mdp']))
+                          {
+                            echo $_SESSION['message_mdp'];
+                            unset($_SESSION['message_mdp']);
+                          }
+                          ?>
+												</ul>
+											</div><!--save-stngs end-->
+										</form>
+									</div><!--acc-setting end-->
+							  	</div>
 							</div>
 						</div>
 					</div>
