@@ -678,7 +678,13 @@
                       <div class="cp-field">
 												<h5>Actifs et Inactifs</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php echo $_SESSION['prenom']; ?></p>
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php
+                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+                          $bdd->exec("SET CHARACTER SET utf8");
+                          $req = $bdd->prepare('SELECT * FROM utilisateur WHERE date_connexion');
+                          $req->execute();
+                          $donnee = $req->fetchall();
+                          echo $donnee; ?></p>
                         </div>
                       </div>
 
