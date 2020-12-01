@@ -122,6 +122,7 @@
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
 								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Modifier son mot de passe</a>
                      <a class="nav-item nav-link active" id="nav-emplois-tab" data-toggle="tab" href="#nav-emplois" role="tab" aria-controls="nav-emplois" aria-selected="true"><i class="la la-user"></i>Emplois</a>
+                     <a class="nav-item nav-link active" id="nav-inscrits-tab" data-toggle="tab" href="#nav-inscrits" role="tab" aria-controls="nav-inscrits" aria-selected="true"><i class="la la-user"></i>Inscrits</a>
 								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
@@ -655,6 +656,32 @@
                           ?>
 												</ul>
 											</div><!--save-stngs end-->
+										</form>
+									</div><!--acc-setting end-->
+							  	</div>
+                  <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
+							  		<div class="acc-setting">
+										<h3>Inscrits</h3>
+										<form method="post" action="#">
+											<div class="cp-field">
+												<h5>Nombre d'Inscrits</h5>
+                        <div class="cpp-fiel">
+                          <p lang="fr" name="nombre_inscrits" id="nombre_inscrits" ><?php
+                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+                          $bdd->exec("SET CHARACTER SET utf8");
+                          $req = $bdd->prepare('SELECT COUNT(*) FROM utilisateur');
+                          $req->execute();
+                          $donnee = $req->fetchall();
+                          echo $donnee; ?></p>
+                        </div>
+                      </div>
+                      <div class="cp-field">
+												<h5>Actifs et Inactifs</h5>
+                        <div class="cpp-fiel">
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php echo $_SESSION['prenom']; ?></p>
+                        </div>
+                      </div>
+
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
