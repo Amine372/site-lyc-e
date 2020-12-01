@@ -171,16 +171,14 @@ else
 												{
 													echo '
 														<li class="active">
-															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+															<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
-																	<div class="usr-mg-info">
-																		<h3>'.$key_disc[0]['nom'].'</h3>
-																		<p></p>
-																	</div><!--usr-mg-info end-->
+																	<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
 													$nom_interloq = $key_disc[0]['nom'];
+													$prenom_interloq = $key_disc[0]['prenom'];
 													$id_interloq = $key_disc[0]['id'];
 													$first = false;
 												}
@@ -188,28 +186,23 @@ else
 												{
 													echo '
 														<li class="active">
-															<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+															<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 																<div class="usr-msg-details">
-																	<div class="usr-mg-info">
-																		<h3>'.$key_disc[0]['nom'].'</h3>
-																		<p></p>
-																	</div><!--usr-mg-info end-->
+																	<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
 																</div><!--usr-msg-details end-->
 															</button>
 														</li>';
 													$nom_interloq = $key_disc[0]['nom'];
+													$prenom_interloq = $key_disc[0]['prenom'];
 													$id_interloq = $key_disc[0]['id'];
 												}
 												else
 												{
 													echo '
 													<li>
-														<button type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+														<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
 															<div class="usr-msg-details">
-																<div class="usr-mg-info">
-																	<h3>'.$key_disc[0]['nom'].'</h3>
-																	<p></p>
-																</div><!--usr-mg-info end-->
+																<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
 															</div><!--usr-msg-details end-->
 														</button>
 													</li>';
@@ -223,7 +216,7 @@ else
 									 </form>
 
 									 <li>
-											 <div class="usr-msg-details">
+											 <div class="usr-msg-details" style="padding: 10px;">
 												 <div class="usr-mg-info">
 													 <p>Nouvelle discussion avec :</p>
 													 <form method="post" action="../traitement/traitement_discussion.php">
@@ -241,7 +234,7 @@ else
 															 ?>
 														</select>
 														<div class="mf-field">
-															<button style="width: 30%; height: 34px;" type="submit">Créer</button>
+															<button style="width: 80px; height: 34px; margin-left: 0px;" type="submit">Créer</button>
 														</div>
 													</form>
 												 </div><!--usr-mg-info end-->
@@ -259,7 +252,7 @@ else
 											<h3>
 											<?php
 												if(isset($nom_interloq)){
-													echo $nom_interloq;
+													echo $nom_interloq.' '.$prenom_interloq;
 												};
 											 ?>
 										 	</h3>
@@ -342,6 +335,7 @@ else
 	</div><!--theme-layout end-->
 
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>

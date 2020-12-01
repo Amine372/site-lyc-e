@@ -4689,7 +4689,6 @@ a:hover {
 .messages-list ul li {
 	float: left;
 	width: 100%;
-	padding: 20px;
 	border-bottom: 1px solid #eeeeee;
 	border-top: 1px solid #eeeeee;
 }
@@ -4937,6 +4936,15 @@ a:hover {
 	padding: 0 15px;
 	border: 1px solid #e6e6e6;
 	height: 45px;
+}
+
+.button-discussion{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	cursor: pointer;
+	background-color: white;
 }
 .mf-field button {
 	float: left;

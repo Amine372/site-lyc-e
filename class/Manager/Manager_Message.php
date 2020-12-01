@@ -44,7 +44,7 @@ class Manager_Message
     $discussion = [];
 
     foreach ($donnees as $key) {
-      $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
+      $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur where id = :id and email <> :email');
       $req->execute(array('id'=>$key['id_user1'], 'email'=>$email));
       $result = $req->fetchall();
       if($result) {
@@ -53,7 +53,7 @@ class Manager_Message
     }
 
     foreach ($donnees as $key) {
-        $req = $bdd->prepare('SELECT id, nom from utilisateur where id = :id and email <> :email');
+        $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur where id = :id and email <> :email');
         $req->execute(array('id'=>$key['id_user2'], 'email'=>$email));
         $result = $req->fetchall();
         if($result) {
