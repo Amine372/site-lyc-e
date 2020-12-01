@@ -669,23 +669,7 @@
 													<input type="password" name="amdp" placeholder="" required>
 													<i class="fa fa-lock"></i>
 												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Nouveau mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="mdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Retapez le mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="confirmmdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="save-stngs pd2">
-											</div><!--save-stngs end-->
+											</di
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
