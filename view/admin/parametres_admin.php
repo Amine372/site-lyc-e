@@ -665,9 +665,15 @@
 										<form method="post" action="#">
 											<div class="cp-field">
 												<h5>Nombre d'Inscrits</h5>
+                        <div class="cpp-fiel">
+                          <input type="text" name="prenom" placeholder="Prénom" value="<?php echo $_SESSION['prenom']; ?>" required>
+                        </div>
                       </div>
                       <div class="cp-field">
 												<h5>Actifs et Inactifs</h5>
+                        <div class="cpp-fiel">
+                          <input type="text" name="prenom" placeholder="Prénom" value="<?php echo $_SESSION['prenom']; ?>" required>
+                        </div>
                       </div>
 
 										</form>
