@@ -659,17 +659,14 @@
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
-                  <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+                  <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-password-tab">
 							  		<div class="acc-setting">
-										<h3>Changement de mot de passe</h3>
+										<h3>Nombre d'Inscrits</h3>
 										<form method="post" action="../traitement/traitement_modif_mdp.php">
 											<div class="cp-field">
 												<h5>Ancien mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="amdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</di
+
+
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
