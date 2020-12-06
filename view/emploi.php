@@ -87,7 +87,8 @@ session_start();
         </div><!--fin du menu bouton-->
         <div class="user-account">
           <?php
-          if (isset($_SESSION['nom'])) {
+          if (isset($_SESSION['nom']))
+          {
             echo '<div class="user-info">
               <img src="http://via.placeholder.com/30x30" alt="">
               <a href="#" title="">'.$_SESSION['nom'].'</a>
@@ -122,7 +123,7 @@ session_start();
 <!-- Modal Ends -->
 
                     <div >
-                   
+
     <div class="search-sec">
       <div class="container">
         <div class="search-box">
@@ -154,7 +155,7 @@ session_start();
                     </div>
                     <div class="col-md-6 py-5 px-sm-5 my-auto ">
 
-                       
+
  <form action="../class/Manager/manager_reservation.php" method="POST">
 
     <div class="form-group">
@@ -186,7 +187,7 @@ session_start();
         </div>
     </div>
 </div>
-   
+
   </div>
 
       <div class="main-section">
@@ -252,7 +253,7 @@ session_start();
                   </div><!--posts-section end-->
                 </div><!--main-ws-sec end-->
               </div>
-              
+
             </div>
           </div><!-- main-section-data end-->
         </div>

@@ -93,7 +93,8 @@ Etablissement habilité à percevoir la taxe d'apprentissage</p>
 													<button type="submit" value="submit">Commencer</button>
 												</div>
 												<?php
-													if (isset($_SESSION['erreur_inscr'])) {
+													if (isset($_SESSION['erreur_inscr']))
+                          {
 														echo "<div style='color:#ff0000'>
 																		".$_SESSION['erreur_inscr'];
 														unset($_SESSION['erreur_inscr']);
