@@ -486,12 +486,10 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Role</th>
+              <th>Mail</th>
             </tr>
         </tfoot>
     </table>
