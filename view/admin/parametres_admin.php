@@ -33,83 +33,86 @@
 
 
     <header>
-			<div class="container">
-				<div class="header-data">
-					<div class="logo">
-						<a href="index.php" title=""><img src="images/logo.png" alt=""></a>
-					</div><!--fin du logotype-->
-					<nav>
-						<ul>
-							<li>
-								<a href="index.php" title="">
-									<span><img src="images/icon1.png" alt=""></span>
-									Accueil
-								</a>
-							</li>
-							<li>
-								<a href="view/evenements.php" title="">
-									<span><img src="images/icon3.png" alt=""></span>
-									Evénements
-								</a>
-							</li>
-							<li>
-								<a href="view/emploi.php" title="">
-									<span><img src="images/icon5.png" alt=""></span>
-									Annonces
-								</a>
-							</li>
+      <div class="container">
+        <div class="header-data">
+          <div class="logo">
+            <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
+          </div><!--fin du logotype-->
+          <div class="search-bar">
+
+          </div><!--fin de la barre de recherche-->
+          <nav>
+            <ul>
               <li>
-								<a href="view/contact.php" title="">
-									<span><img src="images/icon6.png" alt=""></span>
-									Contact
-								</a>
-							</li>
+                <a href="../index.php" title="">
+                  <span><img src="../images/icon1.png" alt=""></span>
+                  Accueil
+                </a>
+              </li>
               <li>
-								<a href="view/messages.php" title="">
-									<span><img src="images/icon4.png" alt=""></span>
-									Messages
-								</a>
-							</li>
-						</ul>
-					</nav><!--fin de la barre de navigation-->
-					<div class="menu-btn">
-						<a href="#" title=""><i class="fa fa-bars"></i></a>
-					</div><!--fin du menu bouton-->
-					<div class="user-account">
+                <a href="evenements.php" title="">
+                  <span><img src="../images/icon3.png" alt=""></span>
+                  Evénements
+                </a>
+              </li>
+              <li>
+                <a href="emploi.php" title="">
+                  <span><img src="../images/icon5.png" alt=""></span>
+                  Annonces
+                </a>
+              </li>
+              <li>
+                <a href="contact.php" title="">
+                  <span><img src="../images/icon6.png" alt=""></span>
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="messages.php" title="">
+                  <span><img src="../images/icon4.png" alt=""></span>
+                  Messages
+                </a>
+              </li>
+
+            </ul>
+          </nav><!--fin de la barre de navigation-->
+          <div class="menu-btn">
+            <a href="#" title=""><i class="fa fa-bars"></i></a>
+          </div><!--fin du menu bouton-->
+          <div class="user-account">
             <?php
-						if (isset($_SESSION['nom']))
+            if (isset($_SESSION['nom']))
             {
               echo '<div class="user-info">
-  							<img src="http://via.placeholder.com/30x30" alt="">
-  							<a href="#" title="">'.$_SESSION['nom'].'</a>
-  							<i class="la la-sort-down"></i>
-  						</div>
-  						<div class="user-account-settingss">
-  							<h3>Mon Compte</h3>
-  							<ul class="us-links">
-  								<li><a href="view/parametres_du_compte.php" title="">Paramètre du compte</a></li>
-  							</ul>
-  							<h3 class="tc"><a href="traitement/deconnexion.php" title="">Se déconnecter</a></h3>
-  						</div><!--fin des paramètres du compte utilisateur-->';
+                <img src="http://via.placeholder.com/30x30" alt="">
+                <a href="#" title="">'.$_SESSION['nom'].'</a>
+                <i class="la la-sort-down"></i>
+              </div>
+              <div class="user-account-settingss" style=";">
+                <h3>Mon Compte</h3>
+                <ul class="us-links">
+                  <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+                </ul>
+                <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+              </div><!--fin des paramètres du compte utilisateur-->';
             }
             else
             {
               echo '<div class="user-info">
-  							<a href="#" title="">Connectez vous</a>
-  							<i class="la la-sort-down"></i>
-  						</div>
-  						<div class="user-account-settingss">
-  							<h3><a href="view/connexion.php" title="">Connexion</a></h3>
+                <a href="#" title="">Connectez vous</a>
+                <i class="la la-sort-down"></i>
+              </div>
+              <div class="user-account-settingss">
+                <h3><a href="connexion.php" title="">Connexion</a></h3>
 
-  							<h3><a href="view/inscription.php" title="">Inscription</a></h3>
-
-  						</div><!--fin des paramètres du compte utilisateur-->';
+                <h3><a href="inscription.php" title="">Inscription</a></h3>
+              </div><!--fin des paramètres du compte utilisateur-->';
             }
             ?>
           </div>
-				</div><!--fin des données d'en-tête-->
-			</div>
-		</header><!--fin d'en-tête-->
+        </div><!--fin des données d'en-tête-->
+      </div>
+    </header><!--fin d'en-tête-->
 
 
 		<section class="profile-account-setting">
@@ -134,10 +137,10 @@
 										<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Role</th>
-                <th>Mail</th>
+                <th><b>Nom</b></th>
+                <th><b>Prénom</b></th>
+                <th><b>Role</b></th>
+                <th><b>Mail</b></th>
             </tr>
         </thead>
         <tbody>
@@ -486,10 +489,10 @@
         </tbody>
         <tfoot>
             <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>Role</th>
-              <th>Mail</th>
+              <th><b>Nom</b></th>
+              <th><b>Prénom</b></th>
+              <th><b>Role</b></th>
+              <th><b>Mail</b></th>
             </tr>
         </tfoot>
     </table>
