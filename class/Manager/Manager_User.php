@@ -79,8 +79,7 @@ class Manager_User
       $bdo = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
       $bdo->exec("SET CHARACTER SET utf8");
       $ref = $bdo->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email='.$connexion->getEmail().';');
-      $ref->execute(array($modif->getNom(), $modif->getPrenom(), $email));
-      $ref->execute();
+      $ref->execute(array($connexion->getEmail());
       $donny = $ref->fetchall();
       if ($donnee['role'] == "admin")
       {
