@@ -260,56 +260,42 @@
                 <td>Personnel Lead</td>
                 <td>Edinburgh</td>
                 <td>35</td>
-                <td>2012/09/26</td>
-                <td>$217,500</td>
             </tr>
             <tr>
                 <td>Jenette Caldwell</td>
                 <td>Development Lead</td>
                 <td>New York</td>
                 <td>30</td>
-                <td>2011/09/03</td>
-                <td>$345,000</td>
             </tr>
             <tr>
                 <td>Yuri Berry</td>
                 <td>Chief Marketing Officer (CMO)</td>
                 <td>New York</td>
                 <td>40</td>
-                <td>2009/06/25</td>
-                <td>$675,000</td>
             </tr>
             <tr>
                 <td>Caesar Vance</td>
                 <td>Pre-Sales Support</td>
                 <td>New York</td>
                 <td>21</td>
-                <td>2011/12/12</td>
-                <td>$106,450</td>
             </tr>
             <tr>
                 <td>Doris Wilder</td>
                 <td>Sales Assistant</td>
                 <td>Sydney</td>
                 <td>23</td>
-                <td>2010/09/20</td>
-                <td>$85,600</td>
             </tr>
             <tr>
                 <td>Angelica Ramos</td>
                 <td>Chief Executive Officer (CEO)</td>
                 <td>London</td>
                 <td>47</td>
-                <td>2009/10/09</td>
-                <td>$1,200,000</td>
             </tr>
             <tr>
                 <td>Gavin Joyce</td>
                 <td>Developer</td>
                 <td>Edinburgh</td>
                 <td>42</td>
-                <td>2010/12/22</td>
-                <td>$92,575</td>
             </tr>
             <tr>
                 <td>Jennifer Chang</td>
