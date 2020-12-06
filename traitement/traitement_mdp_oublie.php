@@ -67,7 +67,7 @@ if($donne) // si la perssone existe bel et bien, on applique la condition qui su
 
 
 }
-else //Gestion d'erreur
+else //Gestion d'erreur, si le mail n'as pas été envoyé
 {
   $_SESSION['erreur_mail'] = 1;
   header('location:../view/mdp_oublie.php');
