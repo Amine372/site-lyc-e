@@ -392,40 +392,30 @@
                 <td>Support Engineer</td>
                 <td>Singapore</td>
                 <td>64</td>
-                <td>2011/02/03</td>
-                <td>$234,500</td>
             </tr>
             <tr>
                 <td>Bruno Nash</td>
                 <td>Software Engineer</td>
                 <td>London</td>
                 <td>38</td>
-                <td>2011/05/03</td>
-                <td>$163,500</td>
             </tr>
             <tr>
                 <td>Sakura Yamamoto</td>
                 <td>Support Engineer</td>
                 <td>Tokyo</td>
                 <td>37</td>
-                <td>2009/08/19</td>
-                <td>$139,575</td>
             </tr>
             <tr>
-                <td>Thor Walton</td>
+                <td>Rams Walton</td>
                 <td>Developer</td>
                 <td>New York</td>
                 <td>61</td>
-                <td>2013/08/11</td>
-                <td>$98,540</td>
             </tr>
             <tr>
                 <td>Finn Camacho</td>
                 <td>Support Engineer</td>
                 <td>San Francisco</td>
                 <td>47</td>
-                <td>2009/07/07</td>
-                <td>$87,500</td>
             </tr>
             <tr>
                 <td>Serge Baldwin</td>
