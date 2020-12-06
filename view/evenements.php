@@ -111,17 +111,6 @@ session_start();
     </div>
   </header><!--fin d'en-tête-->
 
-		<div class="search-sec">
-			<div class="container">
-				<div class="search-box">
-					<form>
-						<input type="text" name="search" placeholder="Recherche par mots clés">
-						<button type="submit">Chercher</button>
-					</form>
-				</div><!--search-box end-->
-			</div>
-		</div><!--search-sec end-->
-
 		<main>
 			<div class="main-section">
 				<div class="container">
@@ -160,7 +149,7 @@ session_start();
         													<li><img src="images/icon8.png" alt=""></li>
         												</ul>
         												<ul class="bk-links">
-        													<li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
+        													<li><a href="messages.php" title=""><i class="la la-envelope"></i></a></li>
         													<li><p title="" class="bid_now">Profil</p></li>
         												</ul>
         											</div>
