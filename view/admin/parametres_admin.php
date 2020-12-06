@@ -134,10 +134,10 @@
 										<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Role</th>
+                <th>Mail</th>
                 <th>Start date</th>
                 <th>Salary</th>
             </tr>
