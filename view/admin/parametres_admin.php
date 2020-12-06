@@ -139,7 +139,7 @@
             <tr>
                 <th><b>Nom</b></th>
                 <th><b>Prénom</b></th>
-                <th><b>Role</b></th>
+                <th><b>Rôle</b></th>
                 <th><b>Mail</b></th>
             </tr>
         </thead>
@@ -491,7 +491,7 @@
             <tr>
               <th><b>Nom</b></th>
               <th><b>Prénom</b></th>
-              <th><b>Role</b></th>
+              <th><b>Rôle</b></th>
               <th><b>Mail</b></th>
             </tr>
         </tfoot>
