@@ -5,7 +5,7 @@
                           $donnee= $get_event->Evenements();
                           if(is_null($donnee))
                           {
-                            echo "Aucun évènement";
+                            echo "Aucun Inscrits";
                           }
                           else
                           {
