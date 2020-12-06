@@ -33,16 +33,6 @@
         											<div class="job_descp">
         												<h3>'.$clef['titre'].'</h3>
         												<p>'.$clef['description'].'</p>
-        												<ul class="skill-tags">
-        													<li><a href="#" title="">HTML</a></li>
-        													<li><a href="#" title="">PHP</a></li>
-        													<li><a href="#" title="">CSS</a></li>
-        													<li><a href="#" title="">Javascript</a></li>
-        													<li><a href="#" title="">Wordpress</a></li>
-        													<li><a href="#" title="">Photoshop</a></li>
-        													<li><a href="#" title="">Illustrateur</a></li>
-        													<li><a href="#" title="">Corel Draw</a></li>
-        												</ul>
         											</div>
         										</div><!--post-bar end--> ';
                           }
