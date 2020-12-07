@@ -1,7 +1,7 @@
 <?php
-                    // on fait une boucle pour afficher tous les évenement
+                    // on fait une boucle pour afficher tous les eleves
                     $get_event = new Manager_Datatable;
-                      // $donnee doit être le tableau avec tous les evennements
+                      // $donnee doit être le tableau avec tous les eleves
                           $donnee= $get_event->Datatable();
                           if(is_null($donnee))
                           {
