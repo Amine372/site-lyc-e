@@ -8,7 +8,7 @@ session_start();
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Evènements</title>
+<title>Offres d'emploi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -136,7 +136,7 @@ session_start();
     </div><!--search-sec end-->
     <div class="demo-area">
     <center><button  type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
-        Ajouter une annonce
+        Ajouter une offre d'emloi
     </button></center>
 </div>
     <div class="modal fade   "  id="demoModal"  tabindex="-1" role="dialog"
@@ -160,22 +160,23 @@ session_start();
 
     <div class="form-group">
         <label for="exampleInputEmail1">Votre nom et prénom</label>
-        <input type="text" name="nom" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/ required>
+        <input type="text" name="nom" class="form-control" id="exampleInputEmail1" placeholder="Votre nom" / required>
     </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Adresse mail</label>
-        <input type="text" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/ required>
+        <input type="mail" name="mail" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse email" / required>
     </div>
 
     <div class="form-group">
         <label for="">Nom du poste</label>
-        <input type="text" name="poste" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/ required>
+        <input type="text" name="poste" class="form-control" id="exampleInputEmail1" placeholder="Nom du poste"/ required>
     </div>
 
+
     <div class="form-group">
-        <label for="exampleInputEmail1">Votre ville</label>
-        <input type="text" name="ville" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/ required>
+        <label for="">Description du poste</label>
+        <input type="text" name="description_poste" class="form-control" id="exampleInputEmail1" placeholder="Description du poste" / required>
     </div>
 
 <br>
