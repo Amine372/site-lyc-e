@@ -144,28 +144,11 @@ session_start();
         													</div>
         												</div>
         											</div>
-        											<div class="epi-sec">
-        												<ul class="descp">
-        													<li><img src="images/icon8.png" alt=""></li>
-        												</ul>
-        												<ul class="bk-links">
-        													<li><a href="messages.php" title=""><i class="la la-envelope"></i></a></li>
-        													<li><p title="" class="bid_now">Profil</p></li>
-        												</ul>
-        											</div>
+        											
         											<div class="job_descp">
         												<h3>'.$clef['titre'].'</h3>
         												<p>'.$clef['description'].'</p>
-        												<ul class="skill-tags">
-        													<li><a href="#" title="">HTML</a></li>
-        													<li><a href="#" title="">PHP</a></li>
-        													<li><a href="#" title="">CSS</a></li>
-        													<li><a href="#" title="">Javascript</a></li>
-        													<li><a href="#" title="">Wordpress</a></li>
-        													<li><a href="#" title="">Photoshop</a></li>
-        													<li><a href="#" title="">Illustrateur</a></li>
-        													<li><a href="#" title="">Corel Draw</a></li>
-        												</ul>
+        												
         											</div>
         										</div><!--post-bar end--> ';
                           }
