@@ -11,30 +11,12 @@
                           {
                             foreach ($donnee as $clef)
                             {
-                              echo '  <div class="post-bar">
-        											<div class="post_topbar">
-        												<div class="usy-dt">
-        													<img src="http://via.placeholder.com/50x50" alt="">
-        													<div class="usy-name">
-        														<h3> '.$clef['nom'].' '.$clef['prenom'].'</h3>
-        														<span><img src="images/clock.png" alt="">'.$clef['date'].'</span>
-        													</div>
-        												</div>
-        											</div>
-        											<div class="epi-sec">
-        												<ul class="descp">
-        													<li><img src="images/icon8.png" alt=""></li>
-        												</ul>
-        												<ul class="bk-links">
-        													<li><a href="messages.php" title=""><i class="la la-envelope"></i></a></li>
-        													<li><p title="" class="bid_now">Profil</p></li>
-        												</ul>
-        											</div>
-        											<div class="job_descp">
-        												<h3>'.$clef['titre'].'</h3>
-        												<p>'.$clef['description'].'</p>
-        											</div>
-        										</div><!--post-bar end--> ';
+                              echo '  <tr>
+                                  <td>'.$clef['description'].'</td>
+                                  <td>'.$clef['description'].'</td>
+                                  <td>'.$clef['description'].'</td>
+                                  <td>'.$clef['description'].'</td>
+                              </tr> ';
                           }
                         }
                           ?>
