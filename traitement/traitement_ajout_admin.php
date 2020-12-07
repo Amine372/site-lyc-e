@@ -1,4 +1,6 @@
 <?php
+if (isset($var)) {
+    echo 'Cette variable existe, donc je peux l\'afficher.';
   $nom= $_POST['ajout_admin_nom'];
   $prenom= $_POST['ajout_admin_prenom'];
   $email= $_POST['ajout_admin_email'];
@@ -10,4 +12,5 @@
   $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, email, role, mdp, verif) VALUES (?, ?, ?, NULL, ?, ?);');
   $req->execute(array('nom' => $nom, 'prenom' => $prenom, 'email' => $email, 'role' => $role, 'mdp' => $mdp));
   $donnee = $req->fetchall();
+}
 ?>
