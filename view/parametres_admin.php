@@ -163,9 +163,9 @@
 												<div class="cpp-fiel">
                           <?php
                           // on renseigne la classe que l'on veut uttiliser
-                          $get_event = new Manager_Evenements;
+                          $get_event = new Manager_Datatable;
                             // $donnee doit être le tableau avec tous les uttilisateurs, il est issu de la méthode "Admin" de la classe Manager_Evenements
-                                $donnee= $get_event->Admin();
+                                $donnee= $get_event->Datatable();
                                 if(is_null($donnee))
                                 {
                                   echo "Aucun Inscrit";
