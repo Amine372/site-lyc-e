@@ -1,30 +1,30 @@
 <?php
-    session_start();
+session_start();
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>UFA Robert Schuman | Paramètres Admin</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="../../css/animate.css">
-<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="../../css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../../css/style.css">
-<link rel="stylesheet" type="text/css" href="../../css/responsive.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
-<?php
- require '../../class/Manager/Manager_Datatable.php';
-// require '../class/Modele/Model_Datatable.php';
+  <meta charset="UTF-8">
+  <title>UFA Robert Schuman | Paramètres Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/line-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../../css/line-awesome-font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+  <?php
+  require '../../class/Manager/Manager_Datatable.php';
+  // require '../class/Modele/Model_Datatable.php';
   ?>
 </head>
 
@@ -32,7 +32,7 @@
 <body>
 
 
-	<div class="wrapper">
+  <div class="wrapper">
 
 
     <header>
@@ -84,28 +84,28 @@
             if (isset($_SESSION['nom']))
             {
               echo '<div class="user-info">
-                <img src="http://via.placeholder.com/30x30" alt="">
-                <a href="#" title="">'.$_SESSION['nom'].'</a>
-                <i class="la la-sort-down"></i>
+              <img src="http://via.placeholder.com/30x30" alt="">
+              <a href="#" title="">'.$_SESSION['nom'].'</a>
+              <i class="la la-sort-down"></i>
               </div>
               <div class="user-account-settingss" style=";">
-                <h3>Mon Compte</h3>
-                <ul class="us-links">
-                  <li><a href="../parametres_du_compte.php" title="">Paramètre du compte</a></li>
-                </ul>
-                <h3 class="tc"><a href="../../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+              <h3>Mon Compte</h3>
+              <ul class="us-links">
+              <li><a href="../parametres_du_compte.php" title="">Paramètre du compte</a></li>
+              </ul>
+              <h3 class="tc"><a href="../../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
               </div><!--fin des paramètres du compte utilisateur-->';
             }
             else
             {
               echo '<div class="user-info">
-                <a href="#" title="">Connectez vous</a>
-                <i class="la la-sort-down"></i>
+              <a href="#" title="">Connectez vous</a>
+              <i class="la la-sort-down"></i>
               </div>
               <div class="user-account-settingss">
-                <h3><a href="../connexion.php" title="">Connexion</a></h3>
+              <h3><a href="../connexion.php" title="">Connexion</a></h3>
 
-                <h3><a href="../inscription.php" title="">Inscription</a></h3>
+              <h3><a href="../inscription.php" title="">Inscription</a></h3>
               </div><!--fin des paramètres du compte utilisateur-->';
             }
             ?>
@@ -115,70 +115,60 @@
     </header><!--fin d'en-tête-->
 
 
-		<section class="profile-account-setting">
-			<div class="container">
-				<div class="account-tabs-setting">
-					<div class="row">
-						<div class="col-lg-3">
-							<div class="acc-leftbar">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
-                     <a class="nav-item nav-link active" id="nav-inscrits-tab1" data-toggle="tab" href="#nav-inscrits1" role="tab" aria-controls="nav-inscrits1" aria-selected="true"><i class="la la-user"></i>Ajouter un utilisateur</a>
-								  </div>
-								  </div>
-							</div><!--acc-leftbar end-->
-						</div>
-						<div class="col-lg-9">
-							<div class="tab-content" id="nav-tabContent">
-							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
-							  		<div class="acc-setting">
-							  			<h3>Inscrits</h3>
-										<table id="evenements" class="table table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th><b>Nom</b></th>
-                <th><b>Prénom</b></th>
-                <th><b>Rôle</b></th>
-                <th><b>Mail</b></th>
-            </tr>
-        </thead>
-        <tbody>
-          <?php
-                              // on fait une boucle pour afficher tous les eleves
-                              $get_event = new Manager_Datatable;
-                                // $donnee doit être le tableau avec tous les eleves
-                                    $donnee= $get_event->Datatable();
-                                    if(is_null($donnee))
-                                    {
-                                      echo "Aucun Eleve";
-                                    }
-                                    else
-                                    {
-                                      foreach ($donnee as $clef)
-                                      {
-                                        echo '  <tr>
-                                            <td>'.$clef['nom'].'</td>
-                                            <td>'.$clef['prenom'].'</td>
-                                            <td>'.$clef['role'].'</td>
-                                            <td>'.$clef['email'].'</td>
-                                        </tr> ';
-                                    }
-                                  }
-                                    ?>
-        </tbody>
+    <section class="profile-account-setting">
+      <div class="container" align="center">
+        <div class="account-tabs-setting">
+          <div class="col-lg-9">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+                <div class="acc-setting">
+                  <h3>Inscrits</h3>
+                  <table id="evenements" class="table table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th><b>Nom</b></th>
+                        <th><b>Prénom</b></th>
+                        <th><b>Rôle</b></th>
+                        <th><b>Mail</b></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                      // on fait une boucle pour afficher tous les eleves
+                      $get_event = new Manager_Datatable;
+                      // $donnee doit être le tableau avec tous les eleves
+                      $donnee= $get_event->Datatable();
+                      if(is_null($donnee))
+                      {
+                        echo "Aucun Eleve";
+                      }
+                      else
+                      {
+                        foreach ($donnee as $clef)
+                        {
+                          echo '  <tr>
+                          <td>'.$clef['nom'].'</td>
+                          <td>'.$clef['prenom'].'</td>
+                          <td>'.$clef['role'].'</td>
+                          <td>'.$clef['email'].'</td>
+                          </tr> ';
+                        }
+                      }
+                      ?>
+                    </tbody>
 
-    </table>
+                  </table>
 
-							  	</div>
-                  <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
-							  		<div class="acc-setting">
-										<h3>Inscrits</h3>
-										<!--form method="post" action="#"-->
-											<div class="cp-field">
-												<h5>Ajouter un uttilisateur</h5>
-                        <div class="cpp-fiel">
-                          <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" >
-                            <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
+                </div>
+                <!--div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab"-->
+                  <div class="acc-setting">
+                    <h3>Inscrits</h3>
+                    <!--form method="post" action="#"-->
+                    <div class="cp-field">
+                      <h5>Ajouter un uttilisateur</h5>
+                      <div class="cpp-fiel">
+                        <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" >
+                          <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
                             <div>
                               <label for="nom">Nom :</label>
                               <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
@@ -202,47 +192,47 @@
                             <div>
                               <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">
                             </div>
-                         </form></p>
+                          </form></p>
                         </div>
                       </div>
                       <div class="cp-field">
-												<h5>Ajouter un évènement</h5>
+                        <h5>Ajouter un évènement</h5>
                         <div class="cpp-fiel">
                           <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" >
                             <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
-                          <div>
-                            <label for="titre">Titre :</label>
-                            <input type="text" id="ajout_admin_evenements_titre" name="ajout_admin_evenements_titre">
-                          </div>
-                          <div>
-                            <label for="description">Description :</label>
-                            <input type="text" id="ajout_admin_evenements_description" name="ajout_admin_evenements_description">
-                          </div>
-                          <div>
-                            <label for="date">Date :</label>
-                            <input type="date" id="ajout_admin_evenements_date" name="ajout_admin_evenements_date">
-                          </div>
-                          <div>
-                            <label for="comm">Comm :</label>
-                            <input type="text" id="ajout_admin_evenements_comm" name="ajout_admin_evenements_comm">
-                          </div>
-                            <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement'">
-                          </div>
-                       </form></p>
+                              <div>
+                                <label for="titre">Titre :</label>
+                                <input type="text" id="ajout_admin_evenements_titre" name="ajout_admin_evenements_titre">
+                              </div>
+                              <div>
+                                <label for="description">Description :</label>
+                                <input type="text" id="ajout_admin_evenements_description" name="ajout_admin_evenements_description">
+                              </div>
+                              <div>
+                                <label for="date">Date :</label>
+                                <input type="date" id="ajout_admin_evenements_date" name="ajout_admin_evenements_date">
+                              </div>
+                              <div>
+                                <label for="comm">Comm :</label>
+                                <input type="text" id="ajout_admin_evenements_comm" name="ajout_admin_evenements_comm">
+                              </div>
+                              <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement'">
+                            </div>
+                          </form></p>
                         </div>
                       </div>
 
-										</form>
-									</div><!--acc-setting end-->
-							  	</div>
-							</div>
-						</div>
-					</div>
-				</div><!--account-tabs-setting end-->
-			</div>
-		</section>
+                    </form>
+                  </div><!--acc-setting end-->
+                <!--/div-->
+              </div>
+            </div>
+          </div>
+        </div><!--account-tabs-setting end-->
+      </div>
+    </section>
 
-	</div><!--theme-layout end-->
+  </div><!--theme-layout end-->
 
   <footer><!--début du pied de page-->
     <div class="footy-sec mn no-margin">
@@ -253,16 +243,16 @@
     </div>
   </footer><!--fin du pied de page-->
 
-<script type="text/javascript" src="/site-lyc-e/js/jquery.min.js"></script>
-<script type="text/javascript" src="/site-lyc-e/js/popper.js"></script>
-<script type="text/javascript" src="/site-lyc-e/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/site-lyc-e/js/jquery.mCustomScrollbar.js"></script>
-<script type="text/javascript" src="/site-lyc-e/lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="/site-lyc-e/js/script.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/js/popper.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/js/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/lib/slick/slick.min.js"></script>
+  <script type="text/javascript" src="/site-lyc-e/js/script.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
 
 
 </body>

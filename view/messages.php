@@ -40,28 +40,28 @@ else
 		$discussion_id = NULL;
 	}
 }
- ?>
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Vos messages</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="../css/animate.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="../css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="stylesheet" type="text/css" href="../css/responsive.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>Vos messages</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/line-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/line-awesome-font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="../lib/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -102,7 +102,7 @@ else
 									Annonces
 								</a>
 							</li>
-              <li>
+							<li>
 								<a href="contact.php" title="">
 									<span><img src="../images/icon6.png" alt=""></span>
 									Contact
@@ -125,28 +125,28 @@ else
 						if (isset($_SESSION['nom']))
 						{
 							echo '<div class="user-info">
-								<img src="http://via.placeholder.com/30x30" alt="">
-								<a href="#" title="">'.$_SESSION['nom'].'</a>
-								<i class="la la-sort-down"></i>
+							<img src="http://via.placeholder.com/30x30" alt="">
+							<a href="#" title="">'.$_SESSION['nom'].'</a>
+							<i class="la la-sort-down"></i>
 							</div>
 							<div class="user-account-settingss" style=";">
-								<h3>Mon Compte</h3>
-								<ul class="us-links">
-									<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
-								</ul>
-								<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+							<h3>Mon Compte</h3>
+							<ul class="us-links">
+							<li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+							</ul>
+							<h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
 							</div><!--fin des paramètres du compte utilisateur-->';
 						}
 						else
 						{
 							echo '<div class="user-info">
-								<a href="#" title="">Connectez vous</a>
-								<i class="la la-sort-down"></i>
+							<a href="#" title="">Connectez vous</a>
+							<i class="la la-sort-down"></i>
 							</div>
 							<div class="user-account-settingss">
-								<h3><a href="connexion.php" title="">Connexion</a></h3>
+							<h3><a href="connexion.php" title="">Connexion</a></h3>
 
-								<h3><a href="inscription.php" title="">Inscription</a></h3>
+							<h3><a href="inscription.php" title="">Inscription</a></h3>
 							</div><!--fin des paramètres du compte utilisateur-->';
 						}
 						?>
@@ -170,85 +170,85 @@ else
 								<div class="messages-list">
 									<ul>
 										<form method="post" action="">
-										<?php
-										$i = 0;
-										if(!is_null($discussion))
-										{
-											foreach ($discussion as $key_disc)
+											<?php
+											$i = 0;
+											if(!is_null($discussion))
 											{
-												if($first == true)
+												foreach ($discussion as $key_disc)
 												{
-													echo '
+													if($first == true)
+													{
+														echo '
 														<li class="active">
-															<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
-																<div class="usr-msg-details">
-																	<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
-																</div><!--usr-msg-details end-->
-															</button>
-														</li>';
-													$nom_interloq = $key_disc[0]['nom'];
-													$prenom_interloq = $key_disc[0]['prenom'];
-													$id_interloq = $key_disc[0]['id'];
-													$first = false;
-												}
-												elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active'])
-												{
-													echo '
-														<li class="active">
-															<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
-																<div class="usr-msg-details">
-																	<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
-																</div><!--usr-msg-details end-->
-															</button>
-														</li>';
-													$nom_interloq = $key_disc[0]['nom'];
-													$prenom_interloq = $key_disc[0]['prenom'];
-													$id_interloq = $key_disc[0]['id'];
-												}
-												else
-												{
-													echo '
-													<li>
 														<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
-															<div class="usr-msg-details">
-																<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
-															</div><!--usr-msg-details end-->
+														<div class="usr-msg-details">
+														<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
+														</div><!--usr-msg-details end-->
 														</button>
-													</li>';
+														</li>';
+														$nom_interloq = $key_disc[0]['nom'];
+														$prenom_interloq = $key_disc[0]['prenom'];
+														$id_interloq = $key_disc[0]['id'];
+														$first = false;
+													}
+													elseif(isset($_POST['discussion_active']) AND $discussion_list[$i]['id'] == $_POST['discussion_active'])
+													{
+														echo '
+														<li class="active">
+														<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+														<div class="usr-msg-details">
+														<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
+														</div><!--usr-msg-details end-->
+														</button>
+														</li>';
+														$nom_interloq = $key_disc[0]['nom'];
+														$prenom_interloq = $key_disc[0]['prenom'];
+														$id_interloq = $key_disc[0]['id'];
+													}
+													else
+													{
+														echo '
+														<li>
+														<button class="button-discussion" type="submit" value="'.$discussion_list[$i]['id'].'" name="discussion_active">
+														<div class="usr-msg-details">
+														<h3>'.$key_disc[0]['nom'].' '.$key_disc[0]['prenom'].'</h3>
+														</div><!--usr-msg-details end-->
+														</button>
+														</li>';
+													}
+													$i = $i + 1;
 												}
-												$i = $i + 1;
 											}
-										}
 
-										 ?>
+											?>
 
-									 </form>
+										</form>
 
-									 <li>
-											 <div class="usr-msg-details" style="padding: 10px;">
-												 <div class="usr-mg-info">
-													 <p>Nouvelle discussion avec :</p>
-													 <form method="post" action="../traitement/traitement_discussion.php">
+										<li>
+											<div class="usr-msg-details" style="padding: 10px;">
+												<div class="usr-mg-info">
+													<p>Nouvelle discussion avec :</p>
+													<form method="post" action="../traitement/traitement_discussion.php">
 														<select id="select-state"  placeholder="Nom prénom" name="id">
 															<option value="">Nom prénom</option>
 															<?php
-																if(!is_null($liste_user))
+															if(!is_null($liste_user))
+															{
+																foreach ($liste_user as $user)
 																{
-																	foreach ($liste_user as $user)
-																	{
-																		echo '<option value="'.$user['id'].'">'.$user['nom'].' '.$user['prenom'].'</option>' ;
-																	}
+																	echo '<option value="'.$user['id'].'">'.$user['nom'].' '.$user['prenom'].'</option>' ;
 																}
+															}
 
-															 ?>
+															?>
 														</select>
 														<div class="mf-field">
 															<button style="width: 80px; height: 34px; margin-left: 0px;" type="submit">Créer</button>
 														</div>
 													</form>
-												 </div><!--usr-mg-info end-->
-											 </div><!--usr-msg-details end-->
-									 </li>
+												</div><!--usr-mg-info end-->
+											</div><!--usr-msg-details end-->
+										</li>
 									</ul>
 								</div><!--messages-list end-->
 							</div><!--msgs-list end-->
@@ -259,60 +259,60 @@ else
 									<div class="usr-msg-details">
 										<div class="usr-mg-info">
 											<h3>
-											<?php
+												<?php
 												if(isset($nom_interloq))
 												{
 													echo $nom_interloq.' '.$prenom_interloq;
 												};
-											 ?>
-										 	</h3>
+												?>
+											</h3>
 										</div><!--usr-mg-info end-->
 									</div>
 								</div><!--message-bar-head end-->
 
 								<div class="messages-line">
-								<?php
-								if(isset($messages)){
-									if(!is_null($messages))
-									{
-										foreach ($messages as $key)
+									<?php
+									if(isset($messages)){
+										if(!is_null($messages))
 										{
-											if($key['id_utilisateur'] == $id_interloq)
+											foreach ($messages as $key)
 											{
-												echo
-												'<div class="main-message-box st3">
+												if($key['id_utilisateur'] == $id_interloq)
+												{
+													echo
+													'<div class="main-message-box st3">
 													<div class="message-dt st3">
-														<div class="message-inner-dt">
-															<p>'.$key['message'].'</p>
-														</div><!--message-inner-dt end-->
-														<span>'.$key['date'].'</span>
+													<div class="message-inner-dt">
+													<p>'.$key['message'].'</p>
+													</div><!--message-inner-dt end-->
+													<span>'.$key['date'].'</span>
 													</div><!--message-dt end-->
 													<div class="messg-usr-img">
-														'.$nom_interloq.'
+													'.$nom_interloq.'
 													</div><!--messg-usr-img end-->
-												</div>';
-											}
+													</div>';
+												}
 
-											else
-											{
-												echo
-												'<div class="main-message-box ta-right">
+												else
+												{
+													echo
+													'<div class="main-message-box ta-right">
 													<div class="message-dt">
-														<div class="message-inner-dt">
-															<p>'.$key['message'].'</p>
-														</div><!--message-inner-dt end-->
-														<span>'.$key['date'].'</span>
+													<div class="message-inner-dt">
+													<p>'.$key['message'].'</p>
+													</div><!--message-inner-dt end-->
+													<span>'.$key['date'].'</span>
 													</div><!--message-dt end-->
 													<div class="messg-usr-img">
-														'.$_SESSION['nom'].'
+													'.$_SESSION['nom'].'
 													</div><!--messg-usr-img end-->
-												</div><!--main-message-box end-->';
+													</div><!--main-message-box end-->';
+												}
 											}
 										}
 									}
-								}
 
-								 ?>
+									?>
 
 
 								</div><!--messages-line end-->
@@ -322,11 +322,11 @@ else
 											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
 											<input type="text" name="message" placeholder="Votre message" required>
 											<?php if($none_error == true){
-															echo '<button type="submit" style="background-color: #b3b3b3; cursor: not-allowed;" disabled>Envoyer</button>';
-														}
-														else {
-															echo '<button type="submit">Envoyer</button>';
-														} ?>
+												echo '<button type="submit" style="background-color: #b3b3b3; cursor: not-allowed;" disabled>Envoyer</button>';
+											}
+											else {
+												echo '<button type="submit">Envoyer</button>';
+											} ?>
 										</div>
 									</form>
 								</div><!--message-send-area end-->
@@ -352,20 +352,20 @@ else
 	</div><!--theme-layout end-->
 
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/popper.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>
-<script type="text/javascript" src="../lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="../js/scrollbar.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
-<script>
-$(document).ready(function ()
-{
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/popper.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript" src="../lib/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../js/scrollbar.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script>
+	$(document).ready(function ()
+	{
 		$('select').selectize({
-				sortField: 'text'
+			sortField: 'text'
 		});
-});
+	});
 </script>
 
 </body>
