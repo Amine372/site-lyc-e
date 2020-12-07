@@ -40,7 +40,6 @@
                     <div class="col-lg-12 no-pdd">
                       <div class="sn-field">
                         <input type="mail" name="email" required placeholder="Adresse éléctronique" style="width: 50%;">
-												<i class="la la-user"></i>
 												<br>
 												<?php
 												session_start();
@@ -51,8 +50,9 @@
 													}
 												}
 												?>
-		                      <button type="submit" value="submit">Confirmer</button>
+
                       </div><!--sn-field end-->
+											<button type="submit" value="submit">Confirmer</button>
 
                     </div>
                    </div>
