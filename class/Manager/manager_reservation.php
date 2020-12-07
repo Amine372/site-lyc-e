@@ -14,7 +14,7 @@ public function reservation($donnee){
      header("location: index.php");
     }
     else{
-     header("location: ../../view/emploi.php"); //Redirection vers le lien de la page de paiement
+     header("location: ../view/emploi.php"); //Redirection vers le lien de la page de paiement
     }
 
           }
