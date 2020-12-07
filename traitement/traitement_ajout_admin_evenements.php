@@ -9,8 +9,8 @@ if (isset($_POST['ajout_admin_evenenements_submit']))
 
   $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
   $bdd->exec("SET CHARACTER SET utf8");
-  $req = $bdd->prepare('INSERT INTO evenements (nom, prenom, email, role, mdp, verif) VALUES (?, ?, ?, ?, ?, ?);');
-  $req->execute(array($nom,$prenom,$email,$role, $mdp,$verif));
+  $req = $bdd->prepare('INSERT INTO evenements (id_utilisateur, titre, description, date, Comm) VALUES (?, ?, ?, ?, ?);');
+  $req->execute(array($id_utilisateur,$titre,$description,$date, $Comm));
   $donnee = $req->fetchall();
   header("Location: ../view/admin/parametres_admin.php");
 }
