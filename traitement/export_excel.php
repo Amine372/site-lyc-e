@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 
 
+
 //Setup des titres de la page Inscrit dans le fichier Excel
 $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet('export_user.xlsx');
 $sheet = $spreadsheet->getActiveSheet();
@@ -62,7 +63,7 @@ function donnee()
 }
 donnee();
 
-header("Content-type: application/vnd.ms-excel");
-header("Content-disposition: attachment; filename=export_user.xls");
+header("location: export_user.xlsx");
+
 
 ?>

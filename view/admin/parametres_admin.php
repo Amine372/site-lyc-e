@@ -122,6 +122,8 @@ session_start();
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
                 <div class="acc-setting">
+                  <a href="../../traitement/export_excel.php" target="_blank" style="background-color: #858383; border-color: #FFF;" class="btn btn-success btn-lg">
+                    <span class="glyphicon glyphicon-download-alt"></span>Exporter</a>
                   <h3>Inscrits</h3>
                   <table id="evenements" class="table table-bordered" style="width:100%">
                     <thead>

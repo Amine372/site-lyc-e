@@ -79,9 +79,11 @@ class Manager_User
       $ref = $bdd->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email=?');
       $ref->execute(array($connexion->getEmail()));
       $donny = $ref->fetchall();
-      if ($donnee['role'] == "admin")
+      if ($donnee['role'] == "ADMIN")
       {
         $_SESSION['role'] = $donnee['role'];
+        header('location: ../view/admin/parametres_admin.php');
+        exit();
       }
       if ($donnee['verif'] == 0)
       {
