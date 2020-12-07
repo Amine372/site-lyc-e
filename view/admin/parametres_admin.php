@@ -164,7 +164,7 @@
                                             <td>'.$clef['nom'].'</td>
                                             <td>'.$clef['prenom'].'</td>
                                             <td>'.$clef['role'].'</td>
-                                            <td>'.$clef['mail'].'</td>
+                                            <td>'.$clef['email'].'</td>
                                         </tr> ';
                                     }
                                   }
