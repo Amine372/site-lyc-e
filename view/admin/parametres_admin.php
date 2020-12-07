@@ -10,16 +10,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/animate.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/style.css">
-<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/line-awesome.css">
+<link rel="stylesheet" type="text/css" href="../../css/line-awesome-font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/responsive.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
 <?php
@@ -131,7 +131,7 @@
 							<div class="tab-content" id="nav-tabContent">
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
-							  			<h3>Inscrits/h3>
+							  			<h3>Inscrits</h3>
 										<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
