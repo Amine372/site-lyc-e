@@ -23,6 +23,7 @@ $liste_user = $manager->get_liste_user($_SESSION['email']);
 
 if(isset($_POST['discussion_active']))
 {
+	$none_error = false;
 	$discussion_id = $_POST['discussion_active'];
 	$first = false;
 	$messages = $manager->get_messages($discussion_id);
@@ -30,11 +31,13 @@ if(isset($_POST['discussion_active']))
 else
 {
 	if(isset($discussion_list[0]['id'])){
+		$none_error = false;
 		$discussion_id = $discussion_list[0]['id'];
 		$messages = $manager->get_messages($discussion_id);
 	}
 	else {
 		$none_error = true;
+		$discussion_id = NULL;
 	}
 }
  ?>
@@ -269,40 +272,42 @@ else
 
 								<div class="messages-line">
 								<?php
-								if(!is_null($messages))
-								{
-									foreach ($messages as $key)
+								if(isset($messages)){
+									if(!is_null($messages))
 									{
-										if($key['id_utilisateur'] == $id_interloq)
+										foreach ($messages as $key)
 										{
-											echo
-											'<div class="main-message-box st3">
-												<div class="message-dt st3">
-													<div class="message-inner-dt">
-														<p>'.$key['message'].'</p>
-													</div><!--message-inner-dt end-->
-													<span>'.$key['date'].'</span>
-												</div><!--message-dt end-->
-												<div class="messg-usr-img">
-													'.$nom_interloq.'
-												</div><!--messg-usr-img end-->
-											</div>';
-										}
+											if($key['id_utilisateur'] == $id_interloq)
+											{
+												echo
+												'<div class="main-message-box st3">
+													<div class="message-dt st3">
+														<div class="message-inner-dt">
+															<p>'.$key['message'].'</p>
+														</div><!--message-inner-dt end-->
+														<span>'.$key['date'].'</span>
+													</div><!--message-dt end-->
+													<div class="messg-usr-img">
+														'.$nom_interloq.'
+													</div><!--messg-usr-img end-->
+												</div>';
+											}
 
-										else
-										{
-											echo
-											'<div class="main-message-box ta-right">
-												<div class="message-dt">
-													<div class="message-inner-dt">
-														<p>'.$key['message'].'</p>
-													</div><!--message-inner-dt end-->
-													<span>'.$key['date'].'</span>
-												</div><!--message-dt end-->
-												<div class="messg-usr-img">
-													'.$_SESSION['nom'].'
-												</div><!--messg-usr-img end-->
-											</div><!--main-message-box end-->';
+											else
+											{
+												echo
+												'<div class="main-message-box ta-right">
+													<div class="message-dt">
+														<div class="message-inner-dt">
+															<p>'.$key['message'].'</p>
+														</div><!--message-inner-dt end-->
+														<span>'.$key['date'].'</span>
+													</div><!--message-dt end-->
+													<div class="messg-usr-img">
+														'.$_SESSION['nom'].'
+													</div><!--messg-usr-img end-->
+												</div><!--main-message-box end-->';
+											}
 										}
 									}
 								}
@@ -316,8 +321,8 @@ else
 										<div class="mf-field">
 											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
 											<input type="text" name="message" placeholder="Votre message" required>
-											<?php if($none_error){
-															echo '<button type="submit" disabled>Envoyer</button>';
+											<?php if($none_error == true){
+															echo '<button type="submit" style="background-color: #b3b3b3; cursor: not-allowed;" disabled>Envoyer</button>';
 														}
 														else {
 															echo '<button type="submit">Envoyer</button>';
