@@ -29,24 +29,6 @@ class Model_Evenements
       $this->_id = $id;
     }
   }
-  public function setdate($date)
-  {
-    $date = (int) $date;
-
-    if ($date >= 1 && $date <= 100)
-    {
-      $this->_date = $date;
-    }
-  }
-  public function setComm($Comm)
-  {
-    $Comm = (int) $Comm;
-
-    if ($Comm >= 1 && $Comm <= 100)
-    {
-      $this->_Comm = $Comm;
-    }
-  }
   public function setnom($nom)
   {
     $nom = (int) $nom;
