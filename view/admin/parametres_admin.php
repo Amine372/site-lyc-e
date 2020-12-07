@@ -116,7 +116,7 @@ session_start();
 
 
     <section class="profile-account-setting">
-      <div class="container">
+      <div class="container" align="center">
         <div class="account-tabs-setting">
           <div class="col-lg-9">
             <div class="tab-content" id="nav-tabContent">
