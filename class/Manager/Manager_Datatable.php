@@ -4,7 +4,7 @@ class Manager_Datatable
 {
 
   protected $_id;
-  protected $_mail;
+  protected $_email;
   protected $_nom;
   protected $_prenom;
   protected $_role;
