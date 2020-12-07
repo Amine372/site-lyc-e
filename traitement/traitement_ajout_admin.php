@@ -1,6 +1,6 @@
 <?php
-if (isset($var)) {
-    echo 'Cette variable existe, donc je peux l\'afficher.';
+if (isset($_POST['ajout_admin_submit'])) 
+{
   $nom= $_POST['ajout_admin_nom'];
   $prenom= $_POST['ajout_admin_prenom'];
   $email= $_POST['ajout_admin_email'];
