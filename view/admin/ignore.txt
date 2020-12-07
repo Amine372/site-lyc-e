@@ -1,1 +1,0 @@
-Cette pages de paremetres admin est provisoirement là. En effet, le but est pour quentin de finaliser l'affichage des évènements avec datatable et de faire le lien avec la base de données et our Amine de fusionner avec son prototypage du pannel admin
