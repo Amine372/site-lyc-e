@@ -10,16 +10,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/animate.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/line-awesome.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/lib/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/lib/slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/style.css">
-<link rel="stylesheet" type="text/css" href="/site-lyc-e/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/line-awesome.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/line-awesome-font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/lib/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../site-lyc-e/css/responsive.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
 <?php
@@ -39,7 +39,7 @@
       <div class="container">
         <div class="header-data">
           <div class="logo">
-            <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
+            <a href="../../index.php" title=""><img src="../../images/logo.png" alt=""></a>
           </div><!--fin du logotype-->
           <div class="search-bar">
 
@@ -48,31 +48,31 @@
             <ul>
               <li>
                 <a href="../index.php" title="">
-                  <span><img src="../images/icon1.png" alt=""></span>
+                  <span><img src="../../images/icon1.png" alt=""></span>
                   Accueil
                 </a>
               </li>
               <li>
                 <a href="evenements.php" title="">
-                  <span><img src="../images/icon3.png" alt=""></span>
+                  <span><img src="../../images/icon3.png" alt=""></span>
                   Evénements
                 </a>
               </li>
               <li>
                 <a href="emploi.php" title="">
-                  <span><img src="../images/icon5.png" alt=""></span>
+                  <span><img src="../../images/icon5.png" alt=""></span>
                   Annonces
                 </a>
               </li>
               <li>
                 <a href="contact.php" title="">
-                  <span><img src="../images/icon6.png" alt=""></span>
+                  <span><img src="../../images/icon6.png" alt=""></span>
                   Contact
                 </a>
               </li>
               <li>
                 <a href="messages.php" title="">
-                  <span><img src="../images/icon4.png" alt=""></span>
+                  <span><img src="../../images/icon4.png" alt=""></span>
                   Messages
                 </a>
               </li>
@@ -126,7 +126,6 @@
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
-								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Modifier son mot de passe</a>
                      <a class="nav-item nav-link active" id="nav-emplois-tab" data-toggle="tab" href="#nav-emplois" role="tab" aria-controls="nav-emplois" aria-selected="true"><i class="la la-user"></i>Emplois</a>
                      <a class="nav-item nav-link active" id="nav-inscrits-tab" data-toggle="tab" href="#nav-inscrits" role="tab" aria-controls="nav-inscrits" aria-selected="true"><i class="la la-user"></i>Inscrits</a>
 								  </div>
@@ -187,45 +186,6 @@
             </div><!--acc-setting end-->
           </div>
 							  		</div><!--acc-setting end-->
-							  	</div>
-							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
-							  		<div class="acc-setting">
-										<h3>Changement de mot de passe</h3>
-										<form method="post" action="../traitement/traitement_modif_mdp.php">
-											<div class="cp-field">
-												<h5>Ancien mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="amdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Nouveau mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="mdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Retapez le mot de passe</h5>
-												<div class="cpp-fiel">
-													<input type="password" name="confirmmdp" placeholder="" required>
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="save-stngs pd2">
-												<ul>
-													<li><button type="submit">Enregistrer</button></li>
-                          <?php if(isset($_SESSION['message_mdp']))
-                          {
-                            echo $_SESSION['message_mdp'];
-                            unset($_SESSION['message_mdp']);
-                          }
-                          ?>
-												</ul>
-											</div><!--save-stngs end-->
-										</form>
-									</div><!--acc-setting end-->
 							  	</div>
                   <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
@@ -290,18 +250,8 @@
   <footer><!--début du pied de page-->
     <div class="footy-sec mn no-margin">
       <div class="container">
-        <ul>
-          <li><a href="#" title="">Centre d'aide</a></li>
-          <li><a href="#" title="">Politique de confidentialité</a></li>
-          <li><a href="#" title="">Règles de la communauté</a></li>
-          <li><a href="#" title="">Politique de Cookies</a></li>
-          <li><a href="#" title="">Carières</a></li>
-          <li><a href="#" title="">Forum</a></li>
-          <li><a href="#" title="">Langage</a></li>
-          <li><a href="#" title="">Politique de Cookies</a></li>
-        </ul>
-        <p><img src="images/copy-icon2.png" alt="">Copyright 2020</p>
-        <img class="fl-rgt" src="images/logo2.png" alt="">
+        <p><img src="../../images/copy-icon2.png" alt="">Copyright 2020</p>
+        <img class="fl-rgt" src="../../images/logo2.png" alt="">
       </div>
     </div>
   </footer><!--fin du pied de page-->
