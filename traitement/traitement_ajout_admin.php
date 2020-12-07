@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['ajout_admin_submit'])) 
+if (isset($_POST['ajout_admin_submit']))
 {
   $nom= $_POST['ajout_admin_nom'];
   $prenom= $_POST['ajout_admin_prenom'];

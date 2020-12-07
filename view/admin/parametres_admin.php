@@ -230,7 +230,7 @@
                   <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
 										<h3>Inscrits</h3>
-										<form method="post" action="#">
+										<!--form method="post" action="#"-->
 											<div class="cp-field">
 												<h5>Ajouter un uttilisateur</h5>
                         <div class="cpp-fiel">
@@ -259,7 +259,7 @@
                             <div>
                               <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">
                             </div>
-<                         </form></p>
+                         </form></p>
                         </div>
                       </div>
                       <div class="cp-field">
