@@ -241,6 +241,10 @@
                               <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
                             </div>
                             <div>
+                              <label for="prenom">Prenom :</label>
+                              <input type="text" id="ajout_admin_prenom" name="ajout_admin_prenom">
+                            </div>
+                            <div>
                               <label for="mail">Mail :</label>
                               <input type="email" id="ajout_admin_email" name="ajout_admin_email">
                             </div>
