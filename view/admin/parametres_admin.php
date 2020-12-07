@@ -178,7 +178,7 @@
 							  	</div>
                   <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
-										<h3>Inscrits</h3>
+										<h3 id="nav-inscrits1">Inscrits</h3>
 										<!--form method="post" action="#"-->
 											<div class="cp-field">
 												<h5>Ajouter un uttilisateur</h5>
