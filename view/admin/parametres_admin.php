@@ -166,7 +166,7 @@
                                   }
                                     ?>
         </tbody>
-       
+
     </table>
 
 							  	</div>
@@ -178,7 +178,7 @@
 												<h5>Ajouter un uttilisateur</h5>
                         <div class="cpp-fiel">
                           <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" >
-                            <form action="../../traitement/traitement_ajout_admin.php" method="post">
+                            <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
                             <div>
                               <label for="nom">Nom :</label>
                               <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
@@ -208,7 +208,8 @@
                       <div class="cp-field">
 												<h5>Ajouter un évènement</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" >
+                            <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
                           <div>
                             <label for="titre">Titre :</label>
                             <input type="text" id="ajout_admin_evenements_titre" name="ajout_admin_evenements_titre">

@@ -178,7 +178,7 @@ session_start();
   </div>
 
 <div class="demo-area">
-  
+
     <center><button style="margin-top: 10px;" type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
         Ajouter une offre d'emloi
     </button></center>
@@ -216,7 +216,15 @@ session_start();
                                   </div>
                                 </div>
                               </div>
-                            
+                            <div class="epi-sec">
+                                <ul class="descp">
+                                  <li><img src="images/icon8.png" alt=""></li>
+                                </ul>
+                                <ul class="bk-links">
+                                  <li><a href="messages.php" title=""><i class="la la-envelope"></i></a></li>
+                                
+                                </ul>
+                              </div>
                               <div class="job_descp">
                                <h4><b>'.$clef['poste'].'</b></h4>
                                <br>
@@ -235,7 +243,17 @@ session_start();
             </div>
           </div><!-- main-section-data end-->
         </div>
+        <footer>
+  <div class="footy-sec mn no-margin">
+    <div class="container">
+
+      <p><img src="../images/copy-icon2.png" alt="">Copyright 2020</p>
+      <img class="fl-rgt" src="../images/logo2.png" alt="">
+    </div>
+  </div>
+</footer>
       </div>
+
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/popper.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
