@@ -161,10 +161,10 @@
                                       foreach ($donnee as $clef)
                                       {
                                         echo '  <tr>
-                                            <td><center>'.$clef['nom'].'</center></td>
-                                            <td><center>'.$clef['prenom'].'</center></td>
-                                            <td><center>'.$clef['role'].'</center></td>
-                                            <td><center>'.$clef['email'].'</center></td>
+                                            <td>'.$clef['nom'].'</td>
+                                            <td>'.$clef['prenom'].'</td>
+                                            <td>'.$clef['role'].'</td>
+                                            <td>'.$clef['email'].'</td>
                                         </tr> ';
                                     }
                                   }
