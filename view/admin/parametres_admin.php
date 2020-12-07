@@ -236,18 +236,22 @@
                         <div class="cpp-fiel">
                           <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" ><form action="/ma-page-de-traitement" method="post">
                             <div>
-                              <label for="name">Nom :</label>
-                              <input type="text" id="name" name="user_name">
+                              <label for="nom">Nom :</label>
+                              <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
                             </div>
                             <div>
-                              <label for="mail">e-mail :</label>
-                              <input type="email" id="mail" name="user_mail">
+                              <label for="mail">Mail :</label>
+                              <input type="email" id="ajout_admin_email" name="ajout_admin_email">
                             </div>
                             <div>
-                              <label for="msg">Message :</label>
-                              <textarea id="msg" name="user_message"></textarea>
+                              <label for="role">Role :</label>
+                              <input type="text" id="ajout_admin_role" name="ajout_admin_role">
                             </div>
-<                         /form></p>
+                            <div>
+                              <label for="mdp">Mot de passe :</label>
+                              <input type="text" id="ajout_admin_mdp" name="ajout_admin_mdp">
+                            </div>
+<                         </form></p>
                         </div>
                       </div>
                       <div class="cp-field">
