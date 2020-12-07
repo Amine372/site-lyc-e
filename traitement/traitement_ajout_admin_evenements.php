@@ -12,7 +12,6 @@ if (isset($_POST['ajout_admin_evenenements_submit']))
   $req = $bdd->prepare('INSERT INTO evenements (id_utilisateur, titre, description, date, Comm) VALUES (?, ?, ?, ?, ?);');
   $donnee = $req->execute(array($id_utilisateur,$titre,$description,$date, $Comm));
   $req->fetchall();
-  var_dump($donnee);die();
 
   header("Location: ../view/admin/parametres_admin.php");
 }
