@@ -147,13 +147,17 @@
                           <div class="fields clearfix">
                             <div class="left-column">
                               <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="nom" class="form-control" placeholder="Nom" required="required" data-error="Nom obligatoire">
+                                <input id="form_name" type="text" name="nom" value="<?php if(isset($_SESSION['nom'])){
+                                                      echo $_SESSION['nom'];
+                                                   }?>" class="form-control" placeholder="Nom" required="required" data-error="Nom obligatoire">
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Adresse éléctronique" required="required" data-error="Email non valide">
+                                <input id="form_email" type="email" name="email" value="<?php if(isset($_SESSION['email'])){
+                                                      echo $_SESSION['email'];
+                                                   }?>" class="form-control" placeholder="Adresse éléctronique" required="required" data-error="Email non valide">
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
