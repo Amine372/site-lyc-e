@@ -103,9 +103,9 @@
                 <i class="la la-sort-down"></i>
               </div>
               <div class="user-account-settingss">
-                <h3><a href="connexion.php" title="">Connexion</a></h3>
+                <h3><a href="../connexion.php" title="">Connexion</a></h3>
 
-                <h3><a href="inscription.php" title="">Inscription</a></h3>
+                <h3><a href="../inscription.php" title="">Inscription</a></h3>
               </div><!--fin des paramètres du compte utilisateur-->';
             }
             ?>
