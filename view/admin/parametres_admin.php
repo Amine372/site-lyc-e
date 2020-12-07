@@ -41,37 +41,34 @@
           <div class="logo">
             <a href="../../index.php" title=""><img src="../../images/logo.png" alt=""></a>
           </div><!--fin du logotype-->
-          <div class="search-bar">
-
-          </div><!--fin de la barre de recherche-->
           <nav>
             <ul>
               <li>
-                <a href="../index.php" title="">
+                <a href="../../index.php" title="">
                   <span><img src="../../images/icon1.png" alt=""></span>
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="evenements.php" title="">
+                <a href="../evenements.php" title="">
                   <span><img src="../../images/icon3.png" alt=""></span>
                   Evénements
                 </a>
               </li>
               <li>
-                <a href="emploi.php" title="">
+                <a href="../emploi.php" title="">
                   <span><img src="../../images/icon5.png" alt=""></span>
                   Annonces
                 </a>
               </li>
               <li>
-                <a href="contact.php" title="">
+                <a href="../contact.php" title="">
                   <span><img src="../../images/icon6.png" alt=""></span>
                   Contact
                 </a>
               </li>
               <li>
-                <a href="messages.php" title="">
+                <a href="../messages.php" title="">
                   <span><img src="../../images/icon4.png" alt=""></span>
                   Messages
                 </a>
@@ -94,9 +91,9 @@
               <div class="user-account-settingss" style=";">
                 <h3>Mon Compte</h3>
                 <ul class="us-links">
-                  <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
+                  <li><a href="../parametres_du_compte.php" title="">Paramètre du compte</a></li>
                 </ul>
-                <h3 class="tc"><a href="../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
+                <h3 class="tc"><a href="../../traitement/deconnexion.php" title="">Se déconnecter</a></h3>
               </div><!--fin des paramètres du compte utilisateur-->';
             }
             else
