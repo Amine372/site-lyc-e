@@ -232,15 +232,34 @@
 										<h3>Inscrits</h3>
 										<form method="post" action="#">
 											<div class="cp-field">
-												<h5>Nombre d'Inscrits</h5>
+												<h5>Ajouter un uttilisateur</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="nombre_inscrits" id="nombre_inscrits" ><?php
-                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-                          $bdd->exec("SET CHARACTER SET utf8");
-                          $req = $bdd->prepare('SELECT COUNT(*) FROM utilisateur');
-                          $req->execute();
-                          $donnee = $req->fetchall();
-                          echo $donnee; ?></p>
+                          <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" >
+                            <form action="../../traitement/traitement_ajout_admin.php" method="post">
+                            <div>
+                              <label for="nom">Nom :</label>
+                              <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
+                            </div>
+                            <div>
+                              <label for="prenom">Prenom :</label>
+                              <input type="text" id="ajout_admin_prenom" name="ajout_admin_prenom">
+                            </div>
+                            <div>
+                              <label for="mail">Mail :</label>
+                              <input type="email" id="ajout_admin_email" name="ajout_admin_email">
+                            </div>
+                            <div>
+                              <label for="role">Role (ADMIN/NULL) :</label>
+                              <input type="text" id="ajout_admin_role" name="ajout_admin_role">
+                            </div>
+                            <div>
+                              <label for="mdp">Mot de passe :</label>
+                              <input type="text" id="ajout_admin_mdp" name="ajout_admin_mdp">
+                            </div>
+                            <div>
+                              <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">
+                            </div>
+<                         </form></p>
                         </div>
                       </div>
                       <div class="cp-field">

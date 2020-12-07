@@ -77,8 +77,8 @@ class Manager_User
       $_SESSION['nom'] = $donnee['nom']; //on insère dans la session le non de l'uttilisateur
       $_SESSION['prenom'] = $donnee['prenom'];
       $bdo = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-      $ref = $bdo->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email='.$connexion->getEmail().';');
-      $ref->execute(array($connexion->getEmail());
+      $ref = $bdo->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email=?');
+      $ref->execute(array($connexion->getEmail()));
       $donny = $ref->fetchall();
       if ($donnee['role'] == "admin")
       {
