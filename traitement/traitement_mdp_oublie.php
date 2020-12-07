@@ -46,7 +46,7 @@ if($donne) // si la perssone existe bel et bien, on applique la condition qui su
    $mail->Password = "Admwb2000";
    $mail->SetFrom($email);
    $mail->Subject = "[Robert Schuman] : Mot de passe oublié";
-   $mail->Body = "<center><b></b><br><p>Bonjour ! Voilà votre mot de passe de secours : ".$mdp."</p></center></html>";
+   $mail->Body = "<center><b></b><br><p>Bonjour ! Voilà votre mot de passe de provisoire : ".$mdp.". Il faut sera demandé de le modifier à la prochaine Connexion.</p></center></html>";
    $mail->AddAddress($email);
    if(!$mail->Send())
    {
@@ -67,7 +67,7 @@ if($donne) // si la perssone existe bel et bien, on applique la condition qui su
 
 
 }
-else //Gestion d'erreur
+else //Gestion d'erreur, si le mail n'as pas été envoyé
 {
   $_SESSION['erreur_mail'] = 1;
   header('location:../view/mdp_oublie.php');

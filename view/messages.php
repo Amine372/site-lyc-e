@@ -6,7 +6,8 @@ if(!isset($_SESSION['email']))
 {
 	header('location: ../view/connexion.php');
 }
-if(isset($_SESSION['discisssion_active'])){
+if(isset($_SESSION['discisssion_active']))
+{
 	$_POST['discussion_active'] = $_SESSION['discisssion_active'];
 	unset($_SESSION['discisssion_active']);
 }
@@ -251,7 +252,8 @@ else
 										<div class="usr-mg-info">
 											<h3>
 											<?php
-												if(isset($nom_interloq)){
+												if(isset($nom_interloq))
+												{
 													echo $nom_interloq.' '.$prenom_interloq;
 												};
 											 ?>

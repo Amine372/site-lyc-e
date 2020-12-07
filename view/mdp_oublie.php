@@ -43,8 +43,10 @@
 												<br>
 												<?php
 												session_start();
-												if(isset($_SESSION['erreur_mail'])){
-													if($_SESSION['erreur_mail'] == 1) {
+												if(isset($_SESSION['erreur_mail']))
+												{
+													if($_SESSION['erreur_mail'] == 1)
+													{
 														echo "<div style='color: #e5200f'>E-mail non existant</div>";
 														$_SESSION['erreur_mail'] = 0;
 													}

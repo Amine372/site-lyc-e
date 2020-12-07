@@ -76,11 +76,10 @@ class Manager_User
       $_SESSION['email'] = $donnee['email']; //on insère dans la session l'addresse mail entrée par l'uttilisateur dans le formulaire
       $_SESSION['nom'] = $donnee['nom']; //on insère dans la session le non de l'uttilisateur
       $_SESSION['prenom'] = $donnee['prenom'];
-      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-      $bdd->exec("SET CHARACTER SET utf8");
-      $req = $bdd->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email= getEmail();');
-      $req->execute();
-      $donny = $req->fetchall();
+      $bdo = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $ref = $bdo->prepare('UPDATE utilisateur SET date_connexion = NOW() WHERE email='.$connexion->getEmail().';');
+      $ref->execute(array($connexion->getEmail());
+      $donny = $ref->fetchall();
       if ($donnee['role'] == "admin")
       {
         $_SESSION['role'] = $donnee['role'];
