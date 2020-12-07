@@ -5,6 +5,7 @@ class Model_Evenements
   protected $_mail;
   protected $_nom;
   protected $_prenom;
+  protected $_role;
   // Liste des getters
 
   public function id()
@@ -18,6 +19,10 @@ class Model_Evenements
   public function prenom()
   {
     return $this->_prenom;
+  }
+  public function role()
+  {
+    return $this->_role;
   }
   //Partie Setter
   public function setid($id)
@@ -45,6 +50,15 @@ class Model_Evenements
     if ($prenom >= 1 && $prenom <= 100)
     {
       $this->_prenom = $prenom;
+    }
+  }
+  public function setrole($role)
+  {
+    $role = (int) $role;
+
+    if ($role >= 1 && $role <= 100)
+    {
+      $this->_role = $role;
     }
   }
 }
