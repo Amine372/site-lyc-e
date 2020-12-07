@@ -215,29 +215,24 @@
                       <div class="cp-field">
 												<h5>Ajouter un évènement</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><form action="../../traitement/traitement_ajout_admin.php" method="post">
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
                           <div>
-                            <label for="nom">Nom :</label>
-                            <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
+                            <label for="titre">Titre :</label>
+                            <input type="text" id="ajout_admin_evenements_titre" name="ajout_admin_evenements_titre">
                           </div>
                           <div>
-                            <label for="prenom">Prenom :</label>
-                            <input type="text" id="ajout_admin_prenom" name="ajout_admin_prenom">
+                            <label for="description">Description :</label>
+                            <input type="text" id="ajout_admin_evenements_description" name="ajout_admin_evenements_description">
                           </div>
                           <div>
-                            <label for="mail">Mail :</label>
-                            <input type="email" id="ajout_admin_email" name="ajout_admin_email">
+                            <label for="date">Date :</label>
+                            <input type="date" id="ajout_admin_evenements_date" name="ajout_admin_evenements_date">
                           </div>
                           <div>
-                            <label for="role">Role (ADMIN/NULL) :</label>
-                            <input type="text" id="ajout_admin_role" name="ajout_admin_role">
+                            <label for="comm">Comm :</label>
+                            <input type="text" id="ajout_admin_evenements_comm" name="ajout_admin_evenements_comm">
                           </div>
-                          <div>
-                            <label for="mdp">Mot de passe :</label>
-                            <input type="password" id="ajout_admin_mdp" name="ajout_admin_mdp">
-                          </div>
-                          <div>
-                            <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">
+                            <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement'">
                           </div>
                        </form></p>
                         </div>
