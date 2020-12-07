@@ -254,7 +254,7 @@
                             </div>
                             <div>
                               <label for="mdp">Mot de passe :</label>
-                              <input type="text" id="ajout_admin_mdp" name="ajout_admin_mdp">
+                              <input type="password" id="ajout_admin_mdp" name="ajout_admin_mdp">
                             </div>
                             <div>
                               <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">

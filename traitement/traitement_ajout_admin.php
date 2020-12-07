@@ -10,7 +10,8 @@ if (isset($_POST['ajout_admin_submit']))
   $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
   $bdd->exec("SET CHARACTER SET utf8");
   $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, email, role, mdp, verif) VALUES (?, ?, ?, ?, ?, ?);');
-  $req->execute(array('nom' => $nom, 'prenom' => $prenom, 'email' => $email, 'role' => $role, 'mdp' => $mdp, 'verif' => $verif));
+  $req->execute(array($nom,$prenom,$email,$role, $mdp,$verif));
   $donnee = $req->fetchall();
+  header("Location: ../view/admin/parametres_admin.php");
 }
 ?>
