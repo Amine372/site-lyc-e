@@ -22,7 +22,10 @@
 <link rel="stylesheet" type="text/css" href="/site-lyc-e/css/responsive.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
-
+<?php
+ require '../class/Manager/Manager_Datatable.php';
+// require '../class/Modele/Model_Datatable.php';
+  ?>
 </head>
 
 
