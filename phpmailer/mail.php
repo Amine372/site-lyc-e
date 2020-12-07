@@ -20,8 +20,8 @@ $mail->IsHTML(true);
 $mail->Username = "quentin.lignani.schuman@gmail.com";
 $mail->Password = "Admwb2000";
 $mail->SetFrom("q.lignani@lprs.fr");
-$mail->Subject = "[Robert Schuman] : Réservation au Snack";
-$mail->Body = "<center><b>Réservation au Snack</b></center><br><center><p>Bonjour ! Mangez-vous au Snack cette semaine ?</p><br><p>Commandez dès maintenant votre panini ou votre salade sur le site internet officiel du Snack</p><br><p>Une fois la commande validée, rendez-vous au Snack à partir de 12h pour récupérer votre commande</p> </center><html><center><input type='button' value='Je commande !'></center></html>";
+$mail->Subject = "[Robert Schuman] : Contact";
+$mail->Body = "<center><b>Nouveau message du site</b></center></html>";
 $mail->AddAddress("q.lignani@lprs.fr");
 
  if(!$mail->Send())

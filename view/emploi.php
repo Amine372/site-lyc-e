@@ -31,17 +31,14 @@ session_start();
 
 <body>
 <div class="wrapper">
-  <header>
+    <header>
     <div class="container">
       <div class="header-data">
         <div class="logo">
           <a href="../index.php" title=""><img src="../images/logo.png" alt=""></a>
         </div><!--fin du logotype-->
         <div class="search-bar">
-          <form>
-            <input type="text" name="search" placeholder="Recherchez...">
-            <button type="submit"><i class="la la-search"></i></button>
-          </form>
+
         </div><!--fin de la barre de recherche-->
         <nav>
           <ul>
@@ -58,16 +55,6 @@ session_start();
               </a>
             </li>
             <li>
-              <a href="profils.php" title="">
-                <span><img src="../images/icon4.png" alt=""></span>
-                Profils
-              </a>
-              <ul>
-                <li><a href="profil_utilisateur.php" title="">Nom d'uttilisateur</a></li>
-                <li><a href="my-profile-feed.html" title="">L'alimentation de mon profil</a></li>
-              </ul>
-            </li>
-            <li>
               <a href="emploi.php" title="">
                 <span><img src="../images/icon5.png" alt=""></span>
                 Annonces
@@ -77,6 +64,12 @@ session_start();
               <a href="contact.php" title="">
                 <span><img src="../images/icon6.png" alt=""></span>
                 Contact
+              </a>
+            </li>
+            <li>
+              <a href="messages.php" title="">
+                <span><img src="../images/icon4.png" alt=""></span>
+                Messages
               </a>
             </li>
 
@@ -94,7 +87,7 @@ session_start();
               <a href="#" title="">'.$_SESSION['nom'].'</a>
               <i class="la la-sort-down"></i>
             </div>
-            <div class="user-account-settingss">
+            <div class="user-account-settingss" style=";">
               <h3>Mon Compte</h3>
               <ul class="us-links">
                 <li><a href="parametres_du_compte.php" title="">Paramètre du compte</a></li>
@@ -110,6 +103,7 @@ session_start();
             </div>
             <div class="user-account-settingss">
               <h3><a href="connexion.php" title="">Connexion</a></h3>
+
               <h3><a href="inscription.php" title="">Inscription</a></h3>
             </div><!--fin des paramètres du compte utilisateur-->';
           }
@@ -124,21 +118,7 @@ session_start();
 
                     <div >
 
-    <div class="search-sec">
-      <div class="container">
-        <div class="search-box">
-          <form>
-            <input type="text" name="search" placeholder="Recherche par mots clés">
-            <button type="submit">Chercher</button>
-          </form>
-        </div><!--search-box end-->
-      </div>
-    </div><!--search-sec end-->
-    <div class="demo-area">
-    <center><button  type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
-        Ajouter une offre d'emloi
-    </button></center>
-</div>
+    
     <div class="modal fade   "  id="demoModal"  tabindex="-1" role="dialog"
      aria-labelledby="demoModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered  modal-lg  " role="document">
@@ -156,7 +136,7 @@ session_start();
                     <div class="col-md-6 py-5 px-sm-5 my-auto ">
 
 
- <form action="../class/Manager/manager_reservation.php" method="POST">
+ <form action="../traitement/traitement_reservation.php" method="POST">
 
     <div class="form-group">
         <label for="exampleInputEmail1">Votre nom et prénom</label>
@@ -190,7 +170,13 @@ session_start();
 </div>
 
   </div>
-
+  <br>
+<div class="demo-area">
+    <center><button  type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
+        Ajouter une offre d'emloi
+    </button></center>
+</div>
+<br>
       <div class="main-section">
         <div class="container">
           <div class="main-section-data">
@@ -207,7 +193,7 @@ session_start();
                           $donnee= $get_event->Annonces();
                           if(is_null($donnee))
                           {
-                            echo "Aucun évènement";
+                            echo "0 annonces disponibles";
                           }
                           else
                           {
@@ -216,35 +202,19 @@ session_start();
                               echo '  <div class="post-bar">
                               <div class="post_topbar">
                                 <div class="usy-dt">
-                                  <img src="http://via.placeholder.com/50x50" alt="">
+                                  <img src="../images/logoschuman.png" width="50px" height="50px" alt="">
                                   <div class="usy-name">
-                                    <h3> '.$clef['nom'].' '.$clef['poste'].'</h3>
+                                    <h3> '.$clef['nom'].'</h3>
                                     <span><img src="images/clock.png" alt="">'.$clef['mail'].'</span>
                                   </div>
                                 </div>
                               </div>
-                              <div class="epi-sec">
-                                <ul class="descp">
-                                  <li><img src="images/icon8.png" alt=""></li>
-                                </ul>
-                                <ul class="bk-links">
-                                  <li><a href="messages.html" title=""><i class="la la-envelope"></i></a></li>
-                                  <li><p title="" class="bid_now">Profil</p></li>
-                                </ul>
-                              </div>
+                            
                               <div class="job_descp">
-                                <h3>'.$clef['ville'].'</h3>
-                                <p>'.$clef['poste'].'</p>
-                                <ul class="skill-tags">
-                                  <li><a href="#" title="">HTML</a></li>
-                                  <li><a href="#" title="">PHP</a></li>
-                                  <li><a href="#" title="">CSS</a></li>
-                                  <li><a href="#" title="">Javascript</a></li>
-                                  <li><a href="#" title="">Wordpress</a></li>
-                                  <li><a href="#" title="">Photoshop</a></li>
-                                  <li><a href="#" title="">Illustrateur</a></li>
-                                  <li><a href="#" title="">Corel Draw</a></li>
-                                </ul>
+                               <h4><b>'.$clef['poste'].'</b></h4>
+                               <br>
+                                <p>'.$clef['description_poste'].'</p>
+                               
                               </div>
                             </div><!--post-bar end--> ';
                           }
