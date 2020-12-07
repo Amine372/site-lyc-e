@@ -124,7 +124,6 @@
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
                      <a class="nav-item nav-link active" id="nav-inscrits-tab1" data-toggle="tab" href="#nav-inscrits1" role="tab" aria-controls="nav-inscrits1" aria-selected="true"><i class="la la-user"></i>Ajouter un utilisateur</a>
-                     <a class="nav-item nav-link active" id="nav-inscrits-tab2" data-toggle="tab" href="#nav-inscrits2" role="tab" aria-controls="nav-inscrits2" aria-selected="true"><i class="la la-user"></i>Ajouter un évènement</a>
 								  </div>
 								  </div>
 							</div><!--acc-leftbar end-->
@@ -207,15 +206,28 @@
                         </div>
                       </div>
                       <div class="cp-field">
-												<h5>Actifs et Inactifs</h5>
+												<h5>Ajouter un évènement</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php
-                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-                          $bdd->exec("SET CHARACTER SET utf8");
-                          $req = $bdd->prepare('SELECT * FROM utilisateur WHERE date_connexion');
-                          $req->execute();
-                          $donnee = $req->fetchall();
-                          echo $donnee; ?></p>
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
+                          <div>
+                            <label for="titre">Titre :</label>
+                            <input type="text" id="ajout_admin_evenements_titre" name="ajout_admin_evenements_titre">
+                          </div>
+                          <div>
+                            <label for="description">Description :</label>
+                            <input type="text" id="ajout_admin_evenements_description" name="ajout_admin_evenements_description">
+                          </div>
+                          <div>
+                            <label for="date">Date :</label>
+                            <input type="date" id="ajout_admin_evenements_date" name="ajout_admin_evenements_date">
+                          </div>
+                          <div>
+                            <label for="comm">Comm :</label>
+                            <input type="text" id="ajout_admin_evenements_comm" name="ajout_admin_evenements_comm">
+                          </div>
+                            <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement'">
+                          </div>
+                       </form></p>
                         </div>
                       </div>
 
