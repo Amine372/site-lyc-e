@@ -139,13 +139,19 @@ session_start();
  <form action="../traitement/traitement_reservation.php" method="POST">
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Votre nom et prénom</label>
-        <input type="text" name="nom" class="form-control" id="exampleInputEmail1" placeholder="Votre nom" / required>
+        <label for="exampleInputEmail1">Votre nom</label>
+        <input type="text" name="nom" value="<?php if(isset($_SESSION['nom'])){
+                                                      echo $_SESSION['nom'];
+                                                   }?>"
+         class="form-control" id="exampleInputEmail1" placeholder="Votre nom" / required>
     </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Adresse mail</label>
-        <input type="mail" name="mail" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse email" / required>
+        <input type="mail" name="mail" value="<?php if(isset($_SESSION['email'])){
+                                                echo $_SESSION['email'];
+                                              }?>"
+        class="form-control" id="exampleInputEmail1" placeholder="Votre adresse email" / required>
     </div>
 
     <div class="form-group">
@@ -170,9 +176,10 @@ session_start();
 </div>
 
   </div>
-  <br>
+
 <div class="demo-area">
-    <center><button  type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
+  
+    <center><button style="margin-top: 10px;" type="button"  class="btn btn-dark btn-cta" data-toggle="modal" data-target="#demoModal">
         Ajouter une offre d'emloi
     </button></center>
 </div>

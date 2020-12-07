@@ -1,8 +1,5 @@
 <?php
-//require './PHPMailer/src/Exception.php';
-//require './PHPMailer/src/PHPMailer.php';
-//require './PHPMailer/src/SMTP.php';
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -31,8 +28,8 @@ $mail->IsHTML(true);
 $mail->Username = "quentin.lignani.schuman@gmail.com";
 $mail->Password = "Admwb2000";
 $mail->SetFrom("q.lignani@lprs.fr");
-$mail->Subject = "[Robert Schuman] : R�servation au Snack";
-$mail->Body = "<tr><td style='border:none;'><strong>Subject:</strong> {$nom}, <strong>Email:</strong> {$email},<strong>Sujet:</strong> {$sujet},<strong>Message:</strong> {$message}</td></tr>";
+$mail->Subject = "[Robert Schuman] : Demande de contact";
+$mail->Body = "<tr><td style='border:none;'><strong>Nom:</strong> {$nom}<br> <strong>Email:</strong> {$email} <br> <strong>Sujet:</strong> {$sujet} <br> <strong>Message:</strong> {$message}</td></tr>";
 $mail->AddAddress("q.lignani@lprs.fr");
 
  if(!$mail->Send()) {

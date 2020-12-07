@@ -133,7 +133,7 @@
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
 							  			<h3>Inscrits</h3>
-										<table id="evenements" class="display responsive nowrap" style="width:100%">
+										<table id="evenements" class="table table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th><b>Nom</b></th>
@@ -166,14 +166,7 @@
                                   }
                                     ?>
         </tbody>
-        <tfoot>
-            <tr>
-              <th><b>Nom</b></th>
-              <th><b>Prénom</b></th>
-              <th><b>Rôle</b></th>
-              <th><b>Mail</b></th>
-            </tr>
-        </tfoot>
+       
     </table>
 
 							  	</div>
