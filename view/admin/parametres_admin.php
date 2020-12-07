@@ -123,8 +123,7 @@
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
-                     <a class="nav-item nav-link active" id="nav-emplois-tab" data-toggle="tab" href="#nav-emplois" role="tab" aria-controls="nav-emplois" aria-selected="true"><i class="la la-user"></i>Emplois</a>
-                     <a class="nav-item nav-link active" id="nav-inscrits-tab" data-toggle="tab" href="#nav-inscrits" role="tab" aria-controls="nav-inscrits" aria-selected="true"><i class="la la-user"></i>Inscrits</a>
+                     <a class="nav-item nav-link active" id="nav-inscrits-tab" data-toggle="tab" href="#nav-inscrits" role="tab" aria-controls="nav-inscrits" aria-selected="true"><i class="la la-user"></i>Ajoouter un utilisateur</a>
 								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
@@ -132,7 +131,7 @@
 							<div class="tab-content" id="nav-tabContent">
 							  	<div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
-							  			<h3>Mon Compte</h3>
+							  			<h3>Inscrits/h3>
 										<table id="evenements" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
@@ -175,14 +174,7 @@
             </tr>
         </tfoot>
     </table>
-      <div class="tab-content" id="nav-tabEmplois">
-          <div class="tab-pane fade show active" id="nav-emplois" role="tabpanel" aria-labelledby="nav-emplois-tab">
-            <div class="acc-setting">
-              <h3>Emplois</h3>
 
-            </div><!--acc-setting end-->
-          </div>
-							  		</div><!--acc-setting end-->
 							  	</div>
                   <div class="tab-pane fade" id="nav-inscrits" role="tabpanel" aria-labelledby="nav-inscrit-tab">
 							  		<div class="acc-setting">
