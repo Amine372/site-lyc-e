@@ -238,16 +238,21 @@
                                               // on fait une boucle pour afficher tous les eleves
                                               $get_event = new Ajout_Admin;
                                                 // $donnee doit être le tableau avec tous les eleves
-                                                    $donnee= $get_event->jout_Admin();
-                                                      foreach ($donnee as $clef)
-                                                      {
-                                                        echo '  <tr>
-                                                            <td>'.$clef['nom'].'</td>
-                                                            <td>'.$clef['prenom'].'</td>
-                                                            <td>'.$clef['role'].'</td>
-                                                            <td>'.$clef['email'].'</td>
-                                                        </tr> ';
-                                                    }
+                                                    $donnee= $get_event->Ajout_Admin();
+                                                        echo '  <form action="/ma-page-de-traitement" method="post">
+                                                            <div>
+                                                                <label for="name">Nom :</label>
+                                                                    <input type="text" id="name" name="user_name">
+                                                                        </div>
+                                                                          <div>
+                                                                              <label for="mail">e-mail :</label>
+                                                                            <input type="email" id="mail" name="user_mail">
+                                                                                  </div>
+                                                                                  <div>
+                                                                                      <label for="msg">Message :</label>
+                                                                                        <textarea id="msg" name="user_message"></textarea>
+                                                                                      </div>
+                                                                                        </form> ';
                                                     ?></p>
                         </div>
                       </div>
