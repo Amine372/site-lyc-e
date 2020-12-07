@@ -29,8 +29,13 @@ if(isset($_POST['discussion_active']))
 }
 else
 {
-	$discussion_id = $discussion_list[0]['id'];
-	$messages = $manager->get_messages($discussion_id);
+	if(isset($discussion_list[0]['id'])){
+		$discussion_id = $discussion_list[0]['id'];
+		$messages = $manager->get_messages($discussion_id);
+	}
+	else {
+		$none_error = true;
+	}
 }
  ?>
 <!DOCTYPE html>
@@ -311,7 +316,12 @@ else
 										<div class="mf-field">
 											<input type="hidden" name="discussion_id" value="<?php echo $discussion_id; ?>">
 											<input type="text" name="message" placeholder="Votre message" required>
-											<button type="submit">Envoyer</button>
+											<?php if($none_error){
+															echo '<button type="submit" disabled>Envoyer</button>';
+														}
+														else {
+															echo '<button type="submit">Envoyer</button>';
+														} ?>
 										</div>
 									</form>
 								</div><!--message-send-area end-->
