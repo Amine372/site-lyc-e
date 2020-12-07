@@ -124,7 +124,6 @@
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
                      <a class="nav-item nav-link active" id="nav-inscrits-tab1" data-toggle="tab" href="#nav-inscrits1" role="tab" aria-controls="nav-inscrits1" aria-selected="true"><i class="la la-user"></i>Ajouter un utilisateur</a>
-                     <a class="nav-item nav-link active" id="nav-inscrits-tab2" data-toggle="tab" href="#nav-inscrits2" role="tab" aria-controls="nav-inscrits2" aria-selected="true"><i class="la la-user"></i>Ajouter un évènement</a>
 								  </div>
 								  </div>
 							</div><!--acc-leftbar end-->
@@ -214,15 +213,33 @@
                         </div>
                       </div>
                       <div class="cp-field">
-												<h5>Actifs et Inactifs</h5>
+												<h5>Ajouter un évènement</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><?php
-                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-                          $bdd->exec("SET CHARACTER SET utf8");
-                          $req = $bdd->prepare('SELECT * FROM utilisateur WHERE date_connexion');
-                          $req->execute();
-                          $donnee = $req->fetchall();
-                          echo $donnee; ?></p>
+                          <p lang="fr" name="actifs_et_inactifs" id="actifs_et_inactifs" ><form action="../../traitement/traitement_ajout_admin.php" method="post">
+                          <div>
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
+                          </div>
+                          <div>
+                            <label for="prenom">Prenom :</label>
+                            <input type="text" id="ajout_admin_prenom" name="ajout_admin_prenom">
+                          </div>
+                          <div>
+                            <label for="mail">Mail :</label>
+                            <input type="email" id="ajout_admin_email" name="ajout_admin_email">
+                          </div>
+                          <div>
+                            <label for="role">Role (ADMIN/NULL) :</label>
+                            <input type="text" id="ajout_admin_role" name="ajout_admin_role">
+                          </div>
+                          <div>
+                            <label for="mdp">Mot de passe :</label>
+                            <input type="password" id="ajout_admin_mdp" name="ajout_admin_mdp">
+                          </div>
+                          <div>
+                            <input type="submit" id="ajout_admin_submit" name="ajout_admin_submit" value="Envoyer le formulaire">
+                          </div>
+                       </form></p>
                         </div>
                       </div>
 
