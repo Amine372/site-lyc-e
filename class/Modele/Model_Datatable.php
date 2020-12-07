@@ -2,7 +2,7 @@
 class Model_Evenements
 {
   protected $_id;
-  protected $_mail;
+  protected $_email;
   protected $_nom;
   protected $_prenom;
   protected $_role;
@@ -23,6 +23,10 @@ class Model_Evenements
   public function role()
   {
     return $this->_role;
+  }
+  public function email()
+  {
+    return $this->_email;
   }
   //Partie Setter
   public function setid($id)
@@ -59,6 +63,15 @@ class Model_Evenements
     if ($role >= 1 && $role <= 100)
     {
       $this->_role = $role;
+    }
+  }
+  public function setemail($email)
+  {
+    $email = (int) $email;
+
+    if ($email >= 1 && $email <= 100)
+    {
+      $this->_email = $email;
     }
   }
 }
