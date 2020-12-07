@@ -232,15 +232,23 @@
 										<h3>Inscrits</h3>
 										<form method="post" action="#">
 											<div class="cp-field">
-												<h5>Nombre d'Inscrits</h5>
+												<h5>Ajouter un uttilisateur</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="nombre_inscrits" id="nombre_inscrits" ><?php
-                          $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
-                          $bdd->exec("SET CHARACTER SET utf8");
-                          $req = $bdd->prepare('SELECT COUNT(*) FROM utilisateur');
-                          $req->execute();
-                          $donnee = $req->fetchall();
-                          echo $donnee; ?></p>
+                          <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" ><?php
+                                              // on fait une boucle pour afficher tous les eleves
+                                              $get_event = new Ajout_Admin;
+                                                // $donnee doit être le tableau avec tous les eleves
+                                                    $donnee= $get_event->jout_Admin();
+                                                      foreach ($donnee as $clef)
+                                                      {
+                                                        echo '  <tr>
+                                                            <td>'.$clef['nom'].'</td>
+                                                            <td>'.$clef['prenom'].'</td>
+                                                            <td>'.$clef['role'].'</td>
+                                                            <td>'.$clef['email'].'</td>
+                                                        </tr> ';
+                                                    }
+                                                    ?></p>
                         </div>
                       </div>
                       <div class="cp-field">
