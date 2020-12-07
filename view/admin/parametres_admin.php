@@ -234,26 +234,20 @@
 											<div class="cp-field">
 												<h5>Ajouter un uttilisateur</h5>
                         <div class="cpp-fiel">
-                          <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" ><?php
-                                              // on fait une boucle pour afficher tous les eleves
-                                              $get_event = new Ajout_Admin;
-                                                // $donnee doit être le tableau avec tous les eleves
-                                                    $donnee= $get_event->Ajout_Admin();
-                                                        echo '  <form action="/ma-page-de-traitement" method="post">
-                                                            <div>
-                                                                <label for="name">Nom :</label>
-                                                                    <input type="text" id="name" name="user_name">
-                                                                        </div>
-                                                                          <div>
-                                                                              <label for="mail">e-mail :</label>
-                                                                            <input type="email" id="mail" name="user_mail">
-                                                                                  </div>
-                                                                                  <div>
-                                                                                      <label for="msg">Message :</label>
-                                                                                        <textarea id="msg" name="user_message"></textarea>
-                                                                                      </div>
-                                                                                        </form> ';
-                                                    ?></p>
+                          <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" ><form action="/ma-page-de-traitement" method="post">
+                            <div>
+                              <label for="name">Nom :</label>
+                              <input type="text" id="name" name="user_name">
+                            </div>
+                            <div>
+                              <label for="mail">e-mail :</label>
+                              <input type="email" id="mail" name="user_mail">
+                            </div>
+                            <div>
+                              <label for="msg">Message :</label>
+                              <textarea id="msg" name="user_message"></textarea>
+                            </div>
+<                         /form></p>
                         </div>
                       </div>
                       <div class="cp-field">
