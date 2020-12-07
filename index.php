@@ -161,13 +161,7 @@
 										</div><!--star-descp end-->
 										<div class="tab-feed">
 											<ul>
-												<li data-tab="feed-dd" class="active">
-													<a href="#" title="">
-														<img src="images/ic1.png" alt="">
-														<span>Actualités</span>
-													</a>
-												</li>
-												<li data-tab="info-dd">
+												<li data-tab="info-dd" class="active">
 													<a href="#" title="">
 														<img src="images/ic2.png" alt="">
 														<span>Présentation</span>
@@ -182,13 +176,7 @@
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
-									<div class="product-feed-tab current" id="feed-dd">
-										<div class="posts-section">
-											<div class="process-comm">
-											</div><!--process-comm end-->
-										</div><!--posts-section end-->
-									</div><!--product-feed-tab end-->
-									<div class="product-feed-tab" id="info-dd">
+									<div class="product-feed-tab current" id="info-dd">
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="overview-open">Notre Histoire</a> <a href="#" title="" class="overview-open"></a></h3>
 											<p>L’établissement a été créé en 1920 par quelques ingénieurs centraliens chrétiens qui fondèrent une association pour alphabétiser des jeunes gens en difficultés : c’était la naissance de « l’Entraide Éducative ». Plus tard, s’ajouteront différentes formations professionnelles pour devenir le Lycée privé Robert Schuman (Sous contrat d’association avec l’État).</p>
