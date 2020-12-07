@@ -123,7 +123,9 @@
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="true"><i class="la la-user"></i>Les évenements</a>
-                     <a class="nav-item nav-link active" id="nav-inscrits-tab" data-toggle="tab" href="#nav-inscrits" role="tab" aria-controls="nav-inscrits" aria-selected="true"><i class="la la-user"></i>Ajoouter un utilisateur</a>
+                     <a class="nav-item nav-link active" id="nav-inscrits-tab1" data-toggle="tab" href="#nav-inscrits1" role="tab" aria-controls="nav-inscrits1" aria-selected="true"><i class="la la-user"></i>Ajouter un utilisateur</a>
+                     <a class="nav-item nav-link active" id="nav-inscrits-tab2" data-toggle="tab" href="#nav-inscrits2" role="tab" aria-controls="nav-inscrits2" aria-selected="true"><i class="la la-user"></i>Ajouter un évènement</a>
+								  </div>
 								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
