@@ -4,3 +4,4 @@ view/admin/evenements.php
 view/admin/ss
 class/Manager/manager_reservation.php
 class/Manager/manager_reservation.php
+class/Manager/manager_reservation.php

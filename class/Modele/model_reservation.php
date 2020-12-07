@@ -1,19 +1,19 @@
 <?php
-require_once '../class/Manager/manager_reservation.php';
-require_once '../traitement/traitement_reservation.php';
+require_once(__DIR__.'/../Manager/manager_reservation.php');
+require_once(__DIR__.'/../../traitement/traitement_reservation.php');
 class reservation { //Déclaration de la classe réservation
 //Déclaration des attributs
   private $_nom;
   private $_mail;
   private $_poste;
-  private $_ville;
+  private $_description_poste;
 
-  public function __construct($nom, $mail, $poste, $ville){
+  public function __construct($nom, $mail, $poste, $description_poste){
 //Partie SET
       $this->setnom($nom);
       $this->setmail($mail);
       $this->setposte($poste);
-      $this->setville($ville);
+      $this->setdescription_poste($description_poste);
 }
 
 public function setnom($nom){
@@ -37,12 +37,12 @@ public function setposte($poste){
   }
   $this->_poste = $poste;
 }
-public function setville($ville){
-  if(empty($ville)){
+public function setdescription_poste($description_poste){
+  if(empty($description_poste)){
     trigger_error('la variable doit etre un caractere');
     return;
   }
-  $this->_ville = $ville;
+  $this->_description_poste = $description_poste;
 }
 //Partie Get
 public function getnom(){
@@ -54,8 +54,8 @@ public function getmail(){
 public function getposte(){
   return $this->_poste;
 }
-public function getville(){
-  return $this->_ville;
+public function getdescription_poste(){
+  return $this->_description_poste;
 
 }
 }
