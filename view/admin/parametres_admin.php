@@ -249,7 +249,7 @@
                               <input type="email" id="ajout_admin_email" name="ajout_admin_email">
                             </div>
                             <div>
-                              <label for="role">Role :</label>
+                              <label for="role">Role (ADMIN/NULL) :</label>
                               <input type="text" id="ajout_admin_role" name="ajout_admin_role">
                             </div>
                             <div>
