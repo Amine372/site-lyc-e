@@ -411,9 +411,20 @@
 			padding: 0;
 			margin-top: 20px;
 		}
-		.mf-field input {width: 100%;margin-bottom: 20px;}
-		.mf-field button {margin-left: 0;margin-bottom: 10px;}
-		.message-inner-dt > img {margin-bottom: 10px;}
+		.mf-field input
+		{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.mf-field button
+		{
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+		.message-inner-dt > img
+		{
+			margin-bottom: 10px;
+		}
 	}
 
 
@@ -493,4 +504,11 @@
 	}
 	.video-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0;}
 
-	.video-responsive iframe { left:0; top:0; height:100%; width:100%; position:absolute;}
+	.video-responsive iframe
+	{
+		 left:0;
+		 top:0;
+		 height:100%;
+		 width:100%;
+		 position:absolute;
+	 }
