@@ -383,12 +383,34 @@
 			padding: 0;
 			margin-bottom: 20px;
 		}
-		.forum-links ul li a {color: #fff;font-size: 16px;}
-		.forum-questions .usr_quest {width: 100%;padding: 0;}
-		.forum-questions .usr_img {margin-bottom: 15px;}
-		.page-link {padding: 10px;}
-		.pvr {padding: 10px;}
-		.forum-post-view .usr_quest {width: 100%;padding: 0;margin-top: 20px;}
+		.forum-links ul li a
+		{
+			color: #fff;
+			font-size: 16px;
+		}
+		.forum-questions .usr_quest
+		{
+			width: 100%;
+			padding: 0;
+		}
+		.forum-questions .usr_img
+		{
+			margin-bottom: 15px;
+		}
+		.page-link
+		{
+			padding: 10px;
+		}
+		.pvr
+		{
+			padding: 10px;
+		}
+		.forum-post-view .usr_quest
+		{
+			width: 100%;
+			padding: 0;
+			margin-top: 20px;
+		}
 		.mf-field input {width: 100%;margin-bottom: 20px;}
 		.mf-field button {margin-left: 0;margin-bottom: 10px;}
 		.message-inner-dt > img {margin-bottom: 10px;}
