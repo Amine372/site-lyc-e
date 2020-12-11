@@ -4,16 +4,16 @@ require '../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-	$from = $_REQUEST['email'];
-    $nom = $_REQUEST['nom'];
-    $sujet = $_REQUEST['sujet'];
-    $message = $_REQUEST['message'];
+$from = $_REQUEST['email'];
+$nom = $_REQUEST['nom'];
+$sujet = $_REQUEST['sujet'];
+$message = $_REQUEST['message'];
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers = "From: $from";
+$headers = "From: " . $from . "\r\n";
+$headers .= "Reply-To: ". $from . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 
 $mail = new PHPMailer(); // fondation d'un nouvel objet
@@ -32,9 +32,9 @@ $mail->Subject = "[Robert Schuman] : Demande de contact";
 $mail->Body = "<tr><td style='border:none;'><strong>Nom:</strong> {$nom}<br> <strong>Email:</strong> {$email} <br> <strong>Sujet:</strong> {$sujet} <br> <strong>Message:</strong> {$message}</td></tr>";
 $mail->AddAddress("q.lignani@lprs.fr");
 
- if(!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
- } else {
-    header("Location: ../traitement/validatemail.php");
- }
- ?>
+if(!$mail->Send()) {
+	echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+	header("Location: ../traitement/validatemail.php");
+}
+?>
