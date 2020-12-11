@@ -342,13 +342,36 @@
 		{
 			padding: 0;
 		}
-		.sign-in-page {padding: 60px 0;}
-		.overview-box {width: 100%;}
-		.close-box {top: -23px;right: 2px;}
-		.forum-links ul li {margin-right: 20px;}
-		.forum-links ul li a {font-size: 13px;}
-		.forum-links-btn {display: block;}
-		.forum-links {position: fixed;top: 0;left: 0;width: 240px;background-color: #2d5c88;height: 100%;padding: 0 20px;opacity: 0;visibility: hidden;}
+		.sign-in-page
+		{
+			padding: 60px 0;
+		}
+		.overview-box
+		{
+			width: 100%;
+		}
+		.close-box
+		{
+			top: -23px;right: 2px;
+		}
+		.forum-links ul li
+		{
+			margin-right: 20px;
+		}
+		.forum-links ul li a
+		{
+			font-size: 13px;
+		}
+		.forum-links-btn
+		{
+			display: block;
+		}
+		.forum-links
+		{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 240px;background-color: #2d5c88;height: 100%;padding: 0 20px;opacity: 0;visibility: hidden;}
 		.forum-links ul li {float: left;width: 100%;padding: 0;margin-bottom: 20px;}
 		.forum-links ul li a {color: #fff;font-size: 16px;}
 		.forum-questions .usr_quest {width: 100%;padding: 0;}
