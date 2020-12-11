@@ -195,31 +195,60 @@
 		}
 		.companies-info
 		{
-			padding: 30px 0 60px 0;}
+			padding: 30px 0 60px 0;
+		}
 		.pf-gallery ul li
-		{width: auto;}
+		{
+			width: auto;
+		}
 		.social_links li a
-		{font-size: 13px;}
+		{
+			font-size: 13px;
+		}
 		.footy-sec.mn ul li
-		{margin-bottom: 10px;}
+		{
+			margin-bottom: 10px;
+		}
 		.user-pro-img > a
-		{left: 56%;}
+		{
+			left: 56%;
+		}
 		.no-pd
-		{padding: 0;}
+		{
+			padding: 0;
+		}
 		.footy-sec ul li
-		{margin-bottom: 10px;}
+		{
+			margin-bottom: 10px;
+		}
 		.cm-logo
-		{padding-left: 0;}
+		{
+			padding-left: 0;
+		}
 		.signin-pop::before
-		{display: none;}
+		{
+			display: none;
+		}
 		.cmp-info > img
-		{display: none;}
+		{
+			display: none;
+		}
 		.cm-logo
-		{margin-bottom: 0px;}
+		{
+			margin-bottom: 0px;
+		}
 		.sign-control
-		{text-align: left;}
-		.sign_in_sec {padding: 0 20px;}
-		.sign-control {padding-left: 20px;padding-right: 0;margin-bottom: 30px;}
+		{
+			text-align: left;
+		}
+		.sign_in_sec
+		{
+			padding: 0 20px;
+		}
+		.sign-control
+		{
+			padding-left: 20px;padding-right: 0;margin-bottom: 30px;
+		}
 		.login-resources ul li {float: none;width: auto;display: inline-block;margin-right: 10px;}
 		.login-resources ul li a {padding: 13px 15px;}
 		.signin-popup {width: 100%;padding: 0 20px;}
