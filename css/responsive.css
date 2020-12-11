@@ -161,27 +161,63 @@
 	}
 
 
-	@media (max-width: 991px) {
-		.sgt-text span {font-size: 14px;}
-		main {padding: 20px 0 60px 0;}
-		.user-specs span {font-size: 13px;}
-		.comment_box input {width: 275px;}
-		.job-details {width: auto;}
-		.hr-rate {margin-top: 15px;}
-		.suggestion-usd {padding: 15px 20px;}
-		.right-sidebar {margin-top: 50px;}
-		.companies-info {padding: 30px 0 60px 0;}
-		.pf-gallery ul li {width: auto;}
-		.social_links li a {font-size: 13px;}
-		.footy-sec.mn ul li {margin-bottom: 10px;}
-		.user-pro-img > a {left: 56%;}
-		.no-pd {padding: 0;}
-		.footy-sec ul li {margin-bottom: 10px;}
-		.cm-logo {padding-left: 0;}
-		.signin-pop::before {display: none;}
-		.cmp-info > img {display: none;}
-		.cm-logo {margin-bottom: 0px;}
-		.sign-control {text-align: left;}
+	@media (max-width: 991px)
+	{
+		.sgt-text span
+		{
+			font-size: 14px;
+		}
+		main {padding: 20px 0 60px 0;
+		}
+		.user-specs span
+		{
+			font-size: 13px;
+		}
+		.comment_box input
+		{
+			width: 275px;
+		}
+		.job-details
+		{
+			width: auto;
+		}
+		.hr-rate
+		{
+			margin-top: 15px;
+		}
+		.suggestion-usd
+		{
+			padding: 15px 20px;
+		}
+		.right-sidebar
+		{
+			margin-top: 50px;
+		}
+		.companies-info
+		{
+			padding: 30px 0 60px 0;}
+		.pf-gallery ul li
+		{width: auto;}
+		.social_links li a
+		{font-size: 13px;}
+		.footy-sec.mn ul li
+		{margin-bottom: 10px;}
+		.user-pro-img > a
+		{left: 56%;}
+		.no-pd
+		{padding: 0;}
+		.footy-sec ul li
+		{margin-bottom: 10px;}
+		.cm-logo
+		{padding-left: 0;}
+		.signin-pop::before
+		{display: none;}
+		.cmp-info > img
+		{display: none;}
+		.cm-logo
+		{margin-bottom: 0px;}
+		.sign-control
+		{text-align: left;}
 		.sign_in_sec {padding: 0 20px;}
 		.sign-control {padding-left: 20px;padding-right: 0;margin-bottom: 30px;}
 		.login-resources ul li {float: none;width: auto;display: inline-block;margin-right: 10px;}
