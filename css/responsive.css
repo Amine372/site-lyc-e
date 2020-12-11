@@ -428,8 +428,12 @@
 	}
 
 
-	@media (max-width: 576px) {
-		.signin-pop {margin-bottom: 40px;}
+	@media (max-width: 576px)
+	{
+		.signin-pop
+		{
+			margin-bottom: 40px;
+		}
 		.login-resources ul li {margin-bottom: 7px;}
 		.logo {width: 100%;text-align: center;}
 		.logo img {float: none;}
@@ -500,9 +504,18 @@
 		.message-inner-dt > p {padding: 10px;}
 		.request-info {width: 100%;padding: 0;margin: 15px 0;}
 		.accept-feat {width: 100%;}
-		.requests-list {padding-bottom: 50px;}
+		.requests-list
+		{
+			padding-bottom: 50px;
+		}
 	}
-	.video-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0;}
+	.video-responsive
+	{
+		 overflow:hidden;
+		 padding-bottom:56.25%;
+		 position:relative;
+		 height:0;
+	 }
 
 	.video-responsive iframe
 	{
