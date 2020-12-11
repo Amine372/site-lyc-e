@@ -473,7 +473,11 @@
 		{
 			width: 100%;
 		}
-		.comment_box input {width: 100%;margin-bottom: 10px;}
+		.comment_box input
+		{
+			width: 100%;
+			margin-bottom: 10px;
+		}
 		.comment_box form button {float: none;}
 		.post-comment {text-align: center;}
 		.comment_box form button {padding: 0 15px;}
@@ -523,10 +527,20 @@
 		.conversation-box {left: -20px;width: 280px;}
 	}
 
-	@media (max-width: 410px) {
-		.post-st ul li a {font-size: 12px;padding: 0 6px;}
-		.like-com li a {font-size: 12px;}
-		.job_descp h3 {font-size: 16px;}
+	@media (max-width: 410px)
+	{
+		.post-st ul li a
+		{
+		font-size: 12px;padding: 0 6px;
+	}
+		.like-com li a
+		{
+			font-size: 12px;
+		}
+		.job_descp h3
+		{
+			font-size: 16px;
+		}
 		.pf-gallery ul li {padding: 3px;}
 		.checky-sec > a {float: left;width: 100%;margin-top: 10px;padding-left: 20px;}
 		.checky-sec.st2 small {width: 85%;}
