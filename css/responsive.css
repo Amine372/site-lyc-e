@@ -82,7 +82,10 @@
 		}
 		.fl-rgt
 		{
-			float: none;margin-top: 0;padding-bottom: 20px;width: auto;padding-right: 0;
+			float: none;margin-top: 0;
+			padding-bottom: 20px;
+			width: auto;
+			padding-right: 0;
 		}
 		.footy-sec.mn p
 		{
@@ -116,7 +119,9 @@
 		}
 		.footy-sec p
 		{
-			width: 100%;text-align: center;margin-top: 15px;
+			width: 100%;
+			text-align: center;
+			margin-top: 15px;
 		}
 		.footy-sec p img
 		{
