@@ -20,7 +20,7 @@ class Manager_Admin
         return $donnee;
       }
 
-}
+  }
 }
 
- ?>
+?>
