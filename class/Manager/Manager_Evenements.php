@@ -14,7 +14,7 @@ class Manager_Evenements
   public function Evenements()
   {
 
-      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
       $bdd->exec("SET CHARACTER SET utf8");
       // SELECT * FROM Users where 0
       // execute()
@@ -30,7 +30,7 @@ class Manager_Evenements
 public function Admin()
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $bdd->exec("SET CHARACTER SET utf8");
     $req = $bdd->prepare('SELECT nom, prenom, id from utilisateur');
     $req->execute();
@@ -48,7 +48,7 @@ public function Admin()
   public function Admin_ajout($nomprenometid)
   {
 
-        $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+        $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
         $bdd->exec("SET CHARACTER SET utf8");
         $req = $bdd->prepare('UPDATE utilisateur SET role = "ADMIN" WHERE id=:id;');
         $req->execute();

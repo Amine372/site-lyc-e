@@ -12,7 +12,7 @@ class Manager_Datatable
   public function Datatable()
   {
 
-      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
       $bdd->exec("SET CHARACTER SET utf8");
       $req = $bdd->prepare('SELECT nom, prenom, id, email, role from  utilisateur;');
       $req->execute();

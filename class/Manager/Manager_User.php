@@ -15,7 +15,7 @@ class Manager_User
 //Inscription dans la bdd
   public function inscription(User $inscrit)
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscrit->getEmail()));
     $donnee = $req->fetch();
@@ -67,7 +67,7 @@ class Manager_User
   // Partie Connexion
   public function connexion(User $connexion) //méthode de connexion de l'uttilisateur, entre parenthèse, il y a les informations saisies par l'uttilisateur
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root',''); //on uttilise PDO, pour faire le pont entre PDO et PHP, on y entre si on veut se connecter en local, en l'occurence oui, le nom de la base de donnée, ainsi que les identifiants avec lesquels on uttilise SQL
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo'); //on uttilise PDO, pour faire le pont entre PDO et PHP, on y entre si on veut se connecter en local, en l'occurence oui, le nom de la base de donnée, ainsi que les identifiants avec lesquels on uttilise SQL
     $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?'); // dans la variable req (alias requete), on prépare la requete SQL, littéralement, on demande dans la table 'uttilisateurs' si l'identifiant et le hash du mot de passe entré par l'uttilisateur existent dans la table au travers d'une même ligne
     $req->execute(array($connexion->getEmail(), SHA1($connexion->getMdp())));
     $donnee = $req->fetch();// on demande enfin d'executer la requet qui a été préalablement préparée. Dans la variable donnée, on trouve les informations de la ligne qui correspond à l'uttilisateur entré et le hash du mot de passe entré. Si tant est qu'ils existebt au sein d'une meme ligne. Sinon, la variable donnée n'a pas d'affectation
@@ -103,7 +103,7 @@ class Manager_User
   //Update des données utilisateur dans la bdd
   public function modification(User $modif, $email)
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ? WHERE email = ?');
     $req->execute(array($modif->getNom(), $modif->getPrenom(), $email));
     $_SESSION['succes_modif'] = 'Modification enregistré';
@@ -119,7 +119,7 @@ class Manager_User
   //Update des données utilisateur dans la bdd
   public function modif_mdp(User $verif, $mdp, $email)
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->prepare('SELECT * from utilisateur where email = ? AND mdp = ?');
     $req->execute(array($email, SHA1($verif->getMdp())));
     $donnee = $req->fetch();
@@ -149,7 +149,7 @@ class Manager_User
   //Update des données utilisateur dans la bdd
   public function recup_mdp(User $change, $email)
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->prepare('UPDATE utilisateur SET mdp = ?, verif = 1 WHERE email = ?');
     $req->execute(array(SHA1($change->getMdp()), $email));
     header('location: ../index.php');
@@ -159,7 +159,7 @@ class Manager_User
   //inscription d'un compte admin
   public function inscrip_admin(User $inscription)
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $req->execute(array('email'=>$inscription->getEmail()));
     $donnee = $req->fetch();
@@ -181,7 +181,7 @@ class Manager_User
   //récupération des données utilisateur pour un affichage
   public function recup_user()
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
     $req = $bdd->query('SELECT * FROM utilisateur');
     $donnee = $req->fetchall();
     return $donnee;

@@ -10,7 +10,7 @@ class Manager_Admin
   public function Admin()
   {
 
-      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
       $bdd->exec("SET CHARACTER SET utf8");
       $req = $bdd->prepare('SELECT id, nom, prenom from utilisateur ORDER BY `utilisateur`.`prenom` DESC');
       $req->execute();

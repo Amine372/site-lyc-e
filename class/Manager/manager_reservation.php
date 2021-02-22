@@ -32,7 +32,7 @@ class manager_annonce
   public function Annonces()
   {
 
-      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','root','');
+      $bdd = new PDO('mysql:host=localhost;dbname=projet_lycee','demo','demo');
       $bdd->exec("SET CHARACTER SET utf8");
       // SELECT * FROM Users where 0
       // execute()
