@@ -178,11 +178,11 @@ session_start();
                   </div><!--user-tab-sec end-->
                   <div class="product-feed-tab current" id="info-dd">
                     <div class="user-profile-ov">
-                      <h3><a href="#" title="" class="overview-open">Notre Histoire</a> <a href="#" title="" class="overview-open"></a></h3>
+                      <h3><div title="" class="overview">Notre Histoire</div> <div title="" class="overview"></div></h3>
                       <p>L’établissement a été créé en 1920 par quelques ingénieurs centraliens chrétiens qui fondèrent une association pour alphabétiser des jeunes gens en difficultés : c’était la naissance de « l’Entraide Éducative ». Plus tard, s’ajouteront différentes formations professionnelles pour devenir le Lycée privé Robert Schuman (Sous contrat d’association avec l’État).</p>
                     </div><!--user-profile-ov end-->
                     <div class="user-profile-ov st2">
-                      <h3><a href="#" title="" class="esp-bx-open">Formations</a><a href="#" title="" class="esp-bx-open"></a></h3>
+                      <h3><div title="" class="esp-bx">Formations</div><div title="" class="esp-bx"></div></h3>
                       <span><center><u>Aujourd’hui le lycée Robert SCHUMAN propose des formations diverses : </u></center></span>
                       <br>
                       <br>
@@ -204,11 +204,11 @@ session_start();
                         <center><p>Soit actuellement 300 élèves, guidés par une équipe exigeante dont l’objectif est  non seulement de donner une formation professionnelle et une formation générale, mais aussi une formation humaine fondée sur la ponctualité, l’assiduité, la rigueur, le respect de soi et des autres ainsi que le sens de l’effort.</p></center>
                       </div><!--user-profile-ov end-->
                       <div class="user-profile-ov">
-                        <h3><a href="#" title="" class="emp-open">Employés</a> <a href="#" title="" class="emp-open"></a></h3>
+                        <h3><div title="" class="emp">Employés</div> <div title="" class="emp"></div></h3>
                         <span>50 employés</span>
                       </div><!--user-profile-ov end-->
                       <div class="user-profile-ov">
-                        <h3><a href="#" title="" class="lct-box-open">Adresse</a> <a href="#" title="" class="lct-box-open"></a></h3>
+                        <h3><div title="" class="lct-box">Adresse</div> <div title="" class="lct-box"></div></h3>
                         <h4>France</h4>
                         <p> 5 Avenue du Général de Gaulle, 93440 Dugny</p>
                       </div><!--user-profile-ov end-->

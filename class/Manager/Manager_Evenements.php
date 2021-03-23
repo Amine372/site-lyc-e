@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/../modele/Model_Evenements.php');
+require_once(__DIR__.'/../Modele/Model_Evenements.php');
 class Manager_Evenements
 {
 

@@ -5,7 +5,7 @@ require_once(__DIR__.'/../../traitement/traitement_reservation.php');
 class manager_reservation{ //Déclaration de la classe Manager
 public function reservation($donnee){
 
-      $bdd=new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8', 'root', ''); //Connexion à la BDD
+      $bdd=new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8', 'demo', 'demo'); //Connexion à la BDD
     $req=$bdd->prepare('INSERT into annonces (nom, mail, poste, description_poste) VALUES(:nom, :mail, :poste, :description_poste)'); //Préparation de la table réservations avec les valeurs de la table
     $req->execute(array('nom'=>$donnee->getnom(),'mail'=>$donnee->getmail(), 'poste'=>$donnee->getposte(), 'description_poste'=>$donnee->getdescription_poste())); //Execution des requêtes
     $donnee = $req->fetch();

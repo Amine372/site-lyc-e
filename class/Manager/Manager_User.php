@@ -1,6 +1,8 @@
 <?php
 //Manager
-require_once(__DIR__.'/../modele/User.php');
+require_once(__DIR__.'/../Modele/User.php');
+require '../vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -27,11 +29,6 @@ class Manager_User
     else
     {
 
-      //Envoi de mail
-      require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
-      require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
-      require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
-
       $mail = new PHPMailer(); // fondation d'un nouvel objet
       $mail->CharSet = 'UTF-8';
       $mail->IsSMTP(); // activer SMTP
@@ -41,11 +38,11 @@ class Manager_User
       $mail->Host = "smtp.gmail.com";
       $mail->Port = 465; // or 587
       $mail->IsHTML(true);
-      $mail->Username = "quentin.lignani.schuman@gmail.com";
+      $mail->Username = "lignani.quentin.schuman@gmail.com";
       $mail->Password = "Admwb2000";
       $mail->SetFrom($inscrit->getEmail());
       $mail->Subject = "Ouverture de compte réussie";
-      $mail->Body = "<center><b>Lycée Robert Schumann</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
+      $mail->Body = "<center><b>Lycée Robert Schuman</b><br><p>Bonjour ! Votre compte a été ouvert.</p></center></html>";
       $mail->AddAddress($inscrit->getEmail());
       if(!$mail->Send())
       {
@@ -82,20 +79,20 @@ class Manager_User
       if ($donnee['role'] == "ADMIN")
       {
         $_SESSION['role'] = $donnee['role'];
-        header('location: ../view/admin/parametres_admin.php');
+        header('Location: ../view/admin/parametres_admin.php');
         exit();
       }
       if ($donnee['verif'] == 0)
       {
-        header('location: ../view/recup_mdp.php');
+        header('Location: ../view/recup_mdp.php');
         exit();
       }
-      header('location: ../index.php');
+      header('Location: ../index.php');
     }
     else
     {
       $_SESSION['erreur_co'] = true;
-      header('location: ../view/connexion.php');
+      header('Location: ../view/connexion.php');
     }
   }
 

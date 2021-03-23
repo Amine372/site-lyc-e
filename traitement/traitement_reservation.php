@@ -9,3 +9,5 @@ if(isset($_POST['nom']) && $_POST['mail'] && $_POST['poste'] && $_POST['descript
   $co = new manager_reservation();
   $co->reservation($reservation);
 }
+
+?>

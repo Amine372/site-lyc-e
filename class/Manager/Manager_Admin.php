@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/../modele/Model_Admin.php');
+require_once(__DIR__.'/../Modele/Model_Admin.php');
 class Manager_Admin
 {
 

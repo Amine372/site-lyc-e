@@ -3,7 +3,7 @@ include('../view/evenements.php');
 
           try
           {
-            $conn = new PDO("mysql:host=localhost;dbname=projet_lycee", "root", "");
+            $conn = new PDO("mysql:host=localhost;dbname=projet_lycee", "demo", "demo");
             //On définit le mode d'erreur de PDO sur Exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           }

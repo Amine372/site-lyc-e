@@ -25,7 +25,7 @@ $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465; // ou 587
 $mail->IsHTML(true);
-$mail->Username = "quentin.lignani.schuman@gmail.com";
+$mail->Username = "lignani.quentin.schuman@gmail.com";
 $mail->Password = "Admwb2000";
 $mail->SetFrom("q.lignani@lprs.fr");
 $mail->Subject = "[Robert Schuman] : Demande de contact";

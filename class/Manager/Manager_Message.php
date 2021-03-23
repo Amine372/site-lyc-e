@@ -1,6 +1,6 @@
 <?php
 //Manager
-require_once(__DIR__.'/../modele/Model_Message.php');
+require_once(__DIR__.'/../Modele/Model_Message.php');
 
 
 class Manager_Message

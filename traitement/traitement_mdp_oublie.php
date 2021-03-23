@@ -1,12 +1,10 @@
 <?php
 session_start();
 
+require '../vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
-require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
-require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
 //fonction pour généré un mot de passe aléatoire
 function Genere_Password($size)
@@ -24,7 +22,7 @@ function Genere_Password($size)
     //cette page sert au traitement php de la page d'oublie de mdp
     $email=$_POST['email'];
 
-    $bdd= new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8','root',''); // on se connecte à la base de donnée "snack", avec l'uttilisateur "root" avec l'encodage utf-8
+    $bdd= new PDO('mysql:host=localhost;dbname=projet_lycee;charset=utf8','demo','demo'); // on se connecte à la base de donnée "snack", avec l'uttilisateur "root" avec l'encodage utf-8
 
     $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email') ;  //on prepare la requete de php pour accéder aux identifiants dans la base de données en sql
     $reponse->execute(array('email'=>$email)); //on insère sous forme de tableau les données que l'on veut récupérer de la base
@@ -42,11 +40,11 @@ function Genere_Password($size)
       $mail->Host = "smtp.gmail.com";
       $mail->Port = 465; // or 587
       $mail->IsHTML(true);
-      $mail->Username = "quentin.lignani.schuman@gmail.com";
+      $mail->Username = "lignani.quentin.schuman@gmail.com";
       $mail->Password = "Admwb2000";
       $mail->SetFrom($email);
       $mail->Subject = "[Robert Schuman] : Mot de passe oublié";
-      $mail->Body = "<center><b></b><br><p>Bonjour ! Voilà votre mot de passe de provisoire : ".$mdp.". Il faut sera demandé de le modifier à la prochaine Connexion.</p></center></html>";
+      $mail->Body = "<center><b></b><br><p>Bonjour ! Voilà votre mot de passe de provisoire : ".$mdp.". Il sera demandé de le modifier à la prochaine Connexion.</p></center></html>";
       $mail->AddAddress($email);
       if(!$mail->Send())
       {

@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/../modele/Model_Datatable.php');
+require_once(__DIR__.'/../Modele/Model_Datatable.php');
 class Manager_Datatable
 {
 

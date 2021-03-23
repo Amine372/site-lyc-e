@@ -170,7 +170,7 @@ session_start();
                       <h5>Ajouter un uttilisateur</h5>
                       <div class="cpp-fiel">
                         <p lang="fr" name="ajouter_utilisateur" id="ajouter_utilisateur" >
-                          <form action="../../traitement/traitement_ajout_admin_evenements.php" method="post">
+                          <form action="../../traitement/traitement_ajout_admin.php" method="post">
                             <div>
                               <label for="nom">Nom :</label>
                               <input type="text" id="ajout_admin_nom" name="ajout_admin_nom">
@@ -218,13 +218,11 @@ session_start();
                                 <label for="comm">Comm :</label>
                                 <input type="text" id="ajout_admin_evenements_comm" name="ajout_admin_evenements_comm">
                               </div>
-                              <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement'">
-                            </div>
+                              <input type="submit" id="ajout_admin_evenenements_submit" name="ajout_admin_evenenements_submit" value="Envoyer l'Evenement">
                           </form></p>
                         </div>
                       </div>
 
-                    </form>
                   </div><!--acc-setting end-->
                 <!--/div-->
               </div>
